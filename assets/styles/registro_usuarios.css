@@ -94,6 +94,7 @@ h4{
 #btnRegistrar:hover {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
   }
+  
 /* Barras laterales */
 #lateralIzq{
     text-align: right;
