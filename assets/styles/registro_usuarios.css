@@ -17,67 +17,6 @@ nav{
     height: 70px;
 }
 
-
-/* Diseño base de etiqueta body*/
-body{
-    text-align: center;
-    font-family: "Roboto", sans-serif;;
-    color: #707070;
-}
-
-/* Titulos */
-h1{
-    text-align: center;
-    margin-top: 30px;
-}
-
-h4{
-    text-align: center;
-    margin-top: 30px;
-}
-
-/* Parrafo principal */
-#txtInicio{
-    font-size: 14px;
-    text-align: left;
-}
-
-/*Alineacion de filas verticalmente*/
-#formulario{
-    /* display: grid; */
-    place-items: center;
-}
-#seccionForm{
-    border: 1px solid black;
-}
-
-/* Imagenes iniciales */
-#imgVSv2{
-    width: 50px;
-    height: 50px;
-}
-
-#imgSN{
-    width: 210px;
-    height: 180px;
-    margin: 15px;
-}
-
-/* Redes sociales del equipo (imagen) */
-#imgRed{
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    margin-bottom: 25px;
-}
-
-/* Imagenes del equipo */
-#imgPerfil{
-    border-radius: 100px;
-    width: 200px;
-    height: 200px;
-}
-
 #imgIcono{
     width: 40px;
     height: 35px;
@@ -93,26 +32,86 @@ h4{
     height: 35px;
 }
 
-/* Barra divisora */
-#barraDivisora{
-    width: 100%;
-    height: 30px;
+
+/* Diseño base de etiqueta body*/
+body{
+    text-align: center;
+    font-family: "Roboto", sans-serif;;
+    color: #707070;
 }
+
+/* Titulos */
+h1{
+    text-align: center;
+    margin-top: 10px;
+}
+h4{
+    text-align: center;
+    margin-top: 10px;
+}
+#tituloEnlace{
+    margin-top: 10px;
+    text-align: center;
+}
+#preguntaCuenta{ /*cambiar el color del subrayado del enlace*/
+    color: #d71787;
+    text-decoration: underline;
+    text-decoration-color: #d71787;
+}
+
+
+/*div del formulario*/
+#formulario{
+    place-items: center;
+}
+#seccionForm{
+    margin-bottom: 20px;
+    position: relative;
+}
+.datos{
+    width: 80%;
+    &:focus{/*Cuando se da click en los inputs, se crea un resplandor*/
+        color: #707070;
+        font-weight: bold;
+    border: none;
+   box-shadow: 0 0 5px #d71787;
+   outline: 0px;
+    }
+}
+
+.divInputs{
+    padding-top: 5px;
+    padding-bottom: 35px;
+}
+#terminosYCondiciones{
+    align-items: center;
+}
+#btnRegistrar {
+    background-color: #d71787; /* Cambia el color de fondo */
+    color: #fff; /* Cambia el color del texto a blanco */
+    border-color: #d71787;
+  }
+#btnRegistrar:hover {
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+  }
+  
+/* Barras laterales */
 #lateralIzq{
     text-align: right;
+    position: relative;
 }
 #lateralDer{
     text-align: left;
+    position: relative;
 }
 #imgLateral{
-    width: 40%;
+    max-width: 30px;
+    width: 30px;
     max-height: 100%;
-    height: auto;
+    height: 520px;
 }
-input{
-    width: 80%;
-}
-/* Media query para centrar titulos */
+
+/* Media query para centrar titulos y ocultar carrito dentro de la barra */
 @media (max-width: 992px){
     h1{
         text-align: center;
@@ -123,8 +122,77 @@ input{
     }
 }
 
+/* Media query para ocultar icono de carrito en vista lg */
 @media (min-width: 992px){
     #imgIcono2{
         display: none;
     }
+}
+
+/* Media query para ocultar iconos centrales del footer en vista md */
+@media (min-width: 768px){
+    #iconoFooter{
+        display: none;
+    }
+
+}
+
+/* Media query para ocultar columnas laterales para tamaño sm*/
+@media (max-width: 768px){
+    #col-2{
+        display: none;
+    }
+
+}
+
+/*Media query para ocultar barras laterales*/
+@media (max-width: 768px){
+    #imgLateral{
+        display: none;
+    }
+}
+
+/*FOOTER*/
+footer{
+    background-color: #D71787;
+    color: white;
+    padding-top: 30px;;
+}
+
+/* Enlaces de footer (quitar formato subrayado)*/
+footer a{
+    text-decoration: none;
+    color: white;
+}
+/* Listas de enlaces, quitar formato */
+footer ul, h5{
+    list-style: none;
+    padding-left: 0px;
+    text-align: left;
+}
+
+/* Imagen principal del footer */
+#imgFooter{
+    width: 210px;
+    height: 150px;
+}
+
+/* Iconos de redes sociales del footer (centrales)*/
+#iconoFooter{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+/* Iconos de redes sociales del footer (laterales)*/
+#iconoFooterLg{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+/* Tamaño de letra chiquita derechos de best finds */
+#licencia{
+    font-size: 12px;
 }
