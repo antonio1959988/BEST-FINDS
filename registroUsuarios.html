@@ -61,39 +61,53 @@
           </div>
         </div>
       </nav>
+
     <!-- Seccion principal -->
     <div class="container">
-        <a href="./login.html"><h4>¿Tienes una cuenta?</h4></a>
+      <h5 id="tituloEnlace"><a href="./login.html" id="preguntaCuenta">¿Tienes una cuenta?</a></h5>
+        <h4>o</h4>
         <h1>Crear una cuenta</h1>
+        <hr>
+
+        <!-- Sección con barras divisoras y formulario -->
         <div class="row" id="seccionForm">
             <!-- Formulario -->
-            <div class="col-sm-1 col-md-1 col-lg-1"  id="lateralIzq">
+            <div class="col-sm-12 col-md-2 col-lg-2"  id="lateralIzq">
                 <img src="./assets/img/barraBFv1_Vert.jpeg" alt="Barra lateral izquierda" class="img-fluid" id="imgLateral">
             </div>
-            <div class="col-sm-10 col-md-10 col-lg-10" id="formulario">
-                <div class="container">
+            <div class="col-sm-12 col-md-8 col-lg-8" id="formulario">
+                <div class="divInputs">
                 <label for="nomUsuario">Nombre:</label><br>
-                <input type="text" id="nomUsuario">
+                <input type="text" class="datos" id="nomUsuario">
               </div>
-              <div class="container">
-                <label for="nomUsuario">Apellido (s):</label><br>
-                <input type="text" id="nomUsuario">
+              <div class="divInputs">
+                <label for="apUsuario">Apellido (s):</label><br>
+                <input type="text" class="datos" id="apellidoUsuario">
               </div>
-              <div class="container">
-                <label for="nomUsuario">Correo:</label><br>
-                <input type="text" id="nomUsuario">
+              <div class="divInputs">
+                <label for="correo">Correo electrónico:</label><br>
+                <input type="email" class="datos" id="emailUsuario">
               </div>
-              <div class="container">
-                <label for="nomUsuario">Contraseña:</label><br>
-                <input type="text" id="nomUsuario">
+              <div class="divInputs">
+                <label for="password">Contraseña:</label><br>
+                <input type="password" class="datos" id="inputPassword">
+              </div>
+              <div class="divInputs">
+                <input type="checkbox">
+                <label for="aceptar" id="terminosYCondiciones">Aceptar Teminos y condiciones</label>
+              </div>
+              <div class="divInputs">
+                <button type="submit" class="btn btn-primary mb-3" id="btnRegistrar">Registrarme</button>
               </div>
             </div>
-            <div class="col-sm-1 col-md-1 col-lg-1" id="lateralDer">
-            <img src="./assets/img/barraBFv1_Vert.jpeg" alt="Barra lateral derecha" class="img-fluid" id="imgLateral">
+            <div class="col-sm-12 col-md-2 col-lg-2" id="lateralDer">
+            <img src="./assets/img/barraBFv2_Vert.jpeg" alt="Barra lateral derecha" class="img-fluid" id="imgLateral">
             </div>
             
         </div>
+        <hr>
     </div>
+    
     <br>
 
 
@@ -102,69 +116,75 @@
 
     <!-- Pie de pagina -->
     <footer>
-        <div class="container">
-            <div class="row">
-                <!-- Columna secundaria con mas informacion -->
-                <div class="col">
-                    <h4>Más Información</h4>
-                    <ul>
-                        <li><a href="#" target="_blank">Preguntas frecuentes</a></li>
-                        <li><a href="#" target="_blank">Contáctanos</a></li>
-                        <li><a href="#" target="_blank">Sobre nosotros</a></li>
-                        <li><a href="#" target="_blank">Política de privacidad</a></li>
-                        <li><a href="#" target="_blank">Términos y condiciones</a></li>
-                    </ul>
-                </div>
-                <!-- Columna principal con logotipo-->
-                <div class="col">
-                    <img src="./assets/img/logoBFv2.jpg" alt="Logo Best Finds" class="img-fluid" id="imgFooter">
-                    <div class="container">
-                        <a href="http://www.linkedin.com/in/oscar-aceves-lopez" target="_blank">
-                            <img src="./assets/img/Nosotros/logoLinkedin.jpeg" alt="Imagen de redsocial" class="img-fluid" id="imgRed">
-                        </a>  
-                        <a href="http://www.linkedin.com/in/oscar-aceves-lopez" target="_blank">
-                            <img src="./assets/img/Nosotros/logoLinkedin.jpeg" alt="Imagen de redsocial" class="img-fluid" id="imgRed">
-                        </a>  
-                        <a href="http://www.linkedin.com/in/oscar-aceves-lopez" target="_blank">
-                            <img src="./assets/img/Nosotros/logoLinkedin.jpeg" alt="Imagen de redsocial" class="img-fluid" id="imgRed">
-                        </a>  
-                        <a href="http://www.linkedin.com/in/oscar-aceves-lopez" target="_blank">
-                            <img src="./assets/img/Nosotros/logoLinkedin.jpeg" alt="Imagen de redsocial" class="img-fluid" id="imgRed">
-                        </a>  
-                    </div>
-                    <span><a href="#" target="_blank">Política de privacidad | Términos y condiciones</a></span>
-                    <span><a href="#" target="_blank">© 2023 Best Finds - Una E-commerce desarrollada por Money Makers</a></span>
-                </div>
-                <!-- Columna secundaria con redes sociales -->
-                <div class="col">
-                    <h4>¡Síguenos en nuestras redes sociales!</h4>
-                    <ul>
-                        <li>
-                            <a href="http://www.linkedin.com/in/oscar-aceves-lopez" target="_blank">
-                                <img src="./assets/img/Nosotros/logoLinkedin.jpeg" alt="Imagen de redsocial" class="img-fluid" id="imgRed">Best Finds México
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="http://www.linkedin.com/in/oscar-aceves-lopez" target="_blank">
-                                <img src="./assets/img/Nosotros/logoLinkedin.jpeg" alt="Imagen de redsocial" class="img-fluid" id="imgRed">@bestfinds.mx
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="http://www.linkedin.com/in/oscar-aceves-lopez" target="_blank">
-                                <img src="./assets/img/Nosotros/logoLinkedin.jpeg" alt="Imagen de redsocial" class="img-fluid" id="imgRed">@bestfinds.mx
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="http://www.linkedin.com/in/oscar-aceves-lopez" target="_blank">
-                                <img src="./assets/img/Nosotros/logoLinkedin.jpeg" alt="Imagen de redsocial" class="img-fluid" id="imgRed">33-22-11-22-33
-                            </a> 
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
->>>>>>> 9d5e70a3a43d8e38f8da32394d9ca510628bf712
+      <div class="container">
+          <div class="row">
+              <!-- Columna secundaria con mas informacion -->
+              <div class="col-sm-12 col-md-4 col-lg-3" id="col-2"> <!--Este div se oculta en tamaño sm-->
+                  <h5>Más Información</h5>
+                  <ul>
+                      <li><a href="#" target="_blank">Preguntas frecuentes</a></li>
+                      <li><a href="#" target="_blank">Contáctanos</a></li>
+                      <li><a href="#" target="_blank">Sobre nosotros</a></li>
+                      <li><a href="#" target="_blank">Política de privacidad</a></li>
+                      <li><a href="#" target="_blank">Términos y condiciones</a></li>
+                  </ul>
+              </div>
+              <!-- Columna principal con logotipo y redes sociales-->
+              <div class="col-sm-12 col-md-4 col-lg-6">
+                  <br>
+                  <img src="./assets/img/logoBFv2.jpg" alt="Logo Best Finds" class="img-fluid" id="imgFooter">
+                  <div class="container">
+                      <!-- Con estas id se ocultaran los icono en tamaño lg -->
+                      <a href="https://www.facebook.com/bestfinds.mx?mibextid=LQQJ4d" target="_blank">
+                          <img src="./assets/icons/faceRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+                      </a>  
+                      <a href="https://www.instagram.com/bestfinds.mx" target="_blank">
+                          <img src="./assets/icons/instaRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+                      </a>  
+                      <a href="#" target="_blank">
+                          <img src="./assets/icons/tiktokRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+                      </a>  
+                      <a href="https://wa.me/message/TTKTHJMTBUQTM1" target="_blank">
+                          <img src="./assets/icons/whatsappRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+                      </a>  
+                  </div>
+                  <!-- Secciones span para links inferiores -->
+                  <span><a href="#" target="_blank">Política de privacidad</a> | <a href="#" target="_blank">Términos y condiciones</a></span><br>
+                  <span id="licencia"><a href="#" target="_blank">© 2023 Best Finds - Una E-commerce desarrollada por Money Makers</a></span>
+                  <br><br>
+              </div>
+              <!-- Columna secundaria con redes sociales -->
+              <div class="col-sm-12 col-md-4 col-lg-3" id="col-2">  <!--Este div se oculta en tamaño sm-->
+                  <!--Titulo de seccion con salto de linea-->
+                  <h5>¡Síguenos en nuestras <br> redes sociales!</h5>
+                  <!--Lista de redes para vista desktop-->
+                  <ul>
+                      <li>
+                          <a href="https://www.facebook.com/bestfinds.mx?mibextid=LQQJ4d" target="_blank">
+                              <img src="./assets/icons/faceRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">Best Finds México
+                          </a> 
+                      </li>
+                      <li>
+                          <a href="https://www.instagram.com/bestfinds.mx" target="_blank">
+                              <img src="./assets/icons/instaRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">@bestfinds.mx
+                          </a> 
+                      </li>
+                      <li>
+                          <a href="#" target="_blank">
+                              <img src="./assets/icons/tiktokRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">@bestfinds.mx
+                          </a> 
+                      </li>
+                      <li>
+                          <a href="https://wa.me/message/TTKTHJMTBUQTM1" target="_blank">
+                              <img src="./assets/icons/whatsappRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">33-22-11-22-33
+                          </a> 
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+  </footer>
+
 
 
     <!--Script de bootstrap en la pagina-->
