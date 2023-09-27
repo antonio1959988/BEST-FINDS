@@ -1,0 +1,175 @@
+/* Barra de navegacion */
+#logoBF{
+    width: 75px;
+    height: 60px;
+}
+
+#lista li{
+    margin-right: 16px;
+}
+
+#barra{
+    background-color: white;
+}
+
+nav{
+    background-color: white;
+    height: 70px;
+}
+
+/* Iconos de barra navehacion */
+#imgIcono{
+    width: 40px;
+    height: 35px;
+}
+
+#imgIcono2{
+    width: 40px;
+    height: 35px;
+}
+
+#imgIcono3{
+    width: 40px;
+    height: 35px;
+}
+
+
+/* Diseño base de etiqueta body*/
+body{
+    text-align: center;
+    font-family: "Roboto", sans-serif;;
+    color: #707070;
+}
+
+/* Titulos */
+h1{
+    text-align: left;
+    margin-top: 30px;
+}
+
+/* Parrafo principal */
+#txtInicio{
+    font-size: 14px;
+    text-align: left;
+}
+
+/*Alineacion de filas verticalmente*/
+#seccion1{
+    display: grid;
+    place-items: center;
+}
+
+/* Imagenes iniciales */
+#imgVSv2{
+    width: 50px;
+    height: 50px;
+}
+
+/* Imagen sobre nosotros */
+#imgSN{
+    width: 210px;
+    height: 180px;
+    margin: 15px;
+}
+
+/* Redes sociales del equipo (imagen) */
+#imgRed{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    margin-bottom: 25px;
+}
+
+/* Imagenes del equipo */
+#imgPerfil{
+    border-radius: 100px;
+    width: 200px;
+    height: 200px;
+}
+
+/* Barra divisora */
+#barraDivisora{
+    width: 100%;
+    height: 30px;
+}
+
+/*Footer */
+footer{
+    background-color: #D71787;
+    color: white;
+    padding-top: 30px;;
+}
+
+/* Enlaces de footer (quitar formato subrayado)*/
+footer a{
+    text-decoration: none;
+    color: white;
+}
+
+/* Listas de enlaces, quitar formato */
+footer ul, h5{
+    list-style: none;
+    padding-left: 0px;
+    text-align: left;
+}
+
+/* Imagen principal del footer */
+#imgFooter{
+    width: 210px;
+    height: 150px;
+}
+
+/* Iconos de redes sociales del footer (centrales)*/
+#iconoFooter{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+/* Iconos de redes sociales del footer (laterales)*/
+#iconoFooterLg{
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+}
+
+/* Tamaño de letra chiquita derechos de best finds */
+#licencia{
+    font-size: 12px;
+}
+
+/* Media query para centrar titulos y ocultar carrito dentro de la barra*/
+@media (max-width: 992px){
+    h1{
+        text-align: center;
+    }
+
+    #imgIcono3{
+        display: none;;
+    }
+
+}
+
+/* Media query para ocultar icono de carrito en vista lg */
+@media (min-width: 992px){
+    #imgIcono2{
+        display: none;
+    }
+}
+
+/* Media query para ocultar iconos centrales del footer en vista md */
+@media (min-width: 768px){
+    #iconoFooter{
+        display: none;
+    }
+
+}
+
+/* Media query para ocultar columnas laterales para tamaño sm*/
+@media (max-width: 768px){
+    #col-2{
+        display: none;
+    }
+
+}
