@@ -128,3 +128,7 @@ input{
         display: none;
     }
 }
+
+#button{
+    background: 1px solid black;
+}
