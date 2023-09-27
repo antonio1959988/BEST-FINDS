@@ -47,98 +47,60 @@ h1{
     margin-top: 30px;
 }
 
-/* Parrafo principal */
-#txtInicio{
-    font-size: 14px;
-    text-align: left;
+/*imagen de perfil*/
+#imgPerfil{
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-top: 30px;
+}
+ 
+/* Diseño de contenedor de icono unido del lado izquierdo del contenedor nombreUsuario color amarillo */
+#icons {
+    background-color: #F9D423;
+    width: 250px;
+    height: 50px;
+    border-radius: 19px;
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 10px;
+    font-size: 20px;
+    position: relative; /* Establece la posición relativa para ambos contenedores */
 }
 
-<<<<<<< HEAD
-=======
-#nombreProducto{
-    font-size: 14px;
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
+/*agregar el icono del lado izquierdo y dentro del contenedor icons*/
+#icono {
+    width: 28px;
+    position: absolute; /* Establece la posición absoluta para el icono */
+    left: 15px; /* Ajusta el valor negativo para desplazar el icono hacia la izquierda */
 }
 
-#precio{
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-
->>>>>>> f124bc34ba422c182cd591cad2dbea12c3e0b770
-/*Alineacion de filas verticalmente*/
-#verticalAlign{
-    display: grid;
-    place-items: center;
-}
-
-/* Imagen productos */
-#imgProductos{
-<<<<<<< HEAD
-    width: 210px;
-    height: 180px;
-    margin: 15px;
-=======
-    width: 600px;
-    height: 300px;
-}
-
-#imgProducto{
-    margin-bottom: 10px;
-}
-
-#contenedor{
-    border: 2px solid #d1d1d1;
-    margin: 10px;
-    padding: 10px;
-}
-
-#contenedorInferior{
-    border: 2px solid #d1d1d1;
-    padding: 20px;
-    margin: 12px;
-    width: 100%;
-}
-
-#contenedorFiltros{
-    border: 2px solid #d1d1d1;
-    padding: 20px;
-    margin: 12px;
-    width: 100%;
-    max-height: 620px;
-}
-
-#contenedorFiltros button{
-    margin-top: 14px;
+/* Diseño de nombre de usuario centrado, en un contenedor ovalado, dividido en dos colores rosa y amarillo */
+#nombreUsuario {
     background-color: #D71787;
-    border: none;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-#contenedorInferior button{
-    margin-top: 14px;
-    background-color: #D71787;
-    border: none;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-#cantidadProducto{
-    text-align: center;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 19px;
+    margin: auto;
+    margin-top: -50px;
+    padding-top: 10px;
+    font-size: 20px;
+    position: relative; /* Establece la posición relativa para ambos contenedores */
+    z-index: 1; /* Coloca el contenedor rosa por encima del amarillo */
+    left: 40px; /* Ajusta el valor negativo para desplazar el contenedor rosa hacia la izquierda */
 }
 
 
 
-#formFiltros{
-    text-align: left;
->>>>>>> f124bc34ba422c182cd591cad2dbea12c3e0b770
+
+
+
+
+/* Barra divisora */
+#barraDivisora{
+    width: 100%;
+    height: 30px;
 }
 
 /*Footer */
@@ -221,3 +183,5 @@ footer ul, h5{
     }
 
 }
+
+

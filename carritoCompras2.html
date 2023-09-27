@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Finds Carrito</title>
+
+    <!--Estilos Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- Estilos css de la pagina-->
+    <link rel="stylesheet" href="./assets/styles/carritoCompras2.css">
+</head>
+<body>
+    <!-- Barra de navegacion -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" >
+        <div class="container-fluid"  id="barra">
+          <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="#" target="_blank"><img src="./assets/img/logoMini.jpg" alt="Lupa" class="img-fluid" id="logoBF"></a>
+          <a href="#" target="_blank"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid" id="imgIcono2"></a>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="lista">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Marcas
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorías
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Ofertas</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Noticias</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control ms-4" type="search" placeholder="Buscar..." aria-label="Search">
+              <a href="#" target="_blank"><img src="./assets/icons/buscarIcono.jpg" alt="Lupa" class="img-fluid" id="imgIcono"></a>
+              <a href="#" target="_blank"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid" id="imgIcono3"></a>
+              <a href="#" target="_blank"><img src="./assets/icons/cuentaIcono.jpg" alt="Lupa" class="img-fluid" id="imgIcono"></a>
+            </form>
+          </div>
+        </div>
+    </nav>
+
+        <h1>Información de envio</h1>
+         <!-- Barra divisora -->
+         <img src="./assets/img/barraBFv1.jpeg" alt="BarraSuperior" class="img-fluid" id="barraDivisora">
+         <br><br>
+
+    <div class="container">
+        
+
+
+        <!-- Tarjeta envio -->
+        <div class="container text-center" id="tarjeta">
+            <div class="row justify-content-center g-0">
+                <div class="col-12 col-sm-8 col-md-10 col-lg-10 pt-2 g-0 d-flex justify-content-center align-item-center" id="formulario">
+                    <div class="p-4 rounded-4 text-center" id="card">
+                        <div class="container">
+                            <div class="row">
+                                <!-- Logo y encabezado -->
+                                <div class="col-12 col-lg-2 col-md-2" id="logo">
+                                    <img src="./assets/img/logoBFv1.png" alt="login-icon" width="70px">
+                                </div>
+                                <div class="col-12 col-lg-8 col-md-8 pt-2" id="encabezado">
+                                       
+                                        <h4 class="container align-items-center" id="tituloCoffeeKode">Información de Envío</h4>
+                                    
+                                </div>
+                                <div class="col-12 col-lg-2 col-md-2" id="logo">
+                                   
+                                </div>
+                            </div>
+                           
+                        </div>
+                        <!-- Formulario envio -->
+                        <form class="row g-3 p-2" id="alinearTexto">
+                            <div class="col-md-6">
+                              <label for="inputRecibe" class="form-label">Enviar a</label>
+                              <input type="text" class="form-control" id="inputReciver" placeholder="Nombre de quien recibe">
+                            </div>
+                            <div class="col-md-6">
+                              <label for="inputPassword4" class="form-label">Dirección de envio</label>
+                              <input type="text" class="form-control" id="inputAddress" placeholder="Calle y Número">
+                            </div>
+
+                            <div class="col-md-7">
+                              <label for="inputAddress" class="form-label">Colonia</label>
+                              <input type="text" class="form-control" id="inputAddress2" placeholder="">
+                            </div>
+                            <div class="col-md-5">
+                              <label for="inputAddress2" class="form-label">Ciudad</label>
+                              <input type="text" class="form-control" id="inputCity" placeholder="">
+                            </div>
+                            
+                            <div class="col-md-5">
+                              <label for="inputState" class="form-label">Estado</label>
+                              <select id="inputState" class="form-select"list="EstadosR">
+                                <datalist id="EstadosR">
+                                <option selected>Seleccione su estado</option>
+                                <option value="Aguascalientes">Aguascalientes</option>
+                                <option value="Baja California">Baja California</option>
+                                <option value="Baja California Sur">Baja California Sur</option>
+                                <option value="Campeche">Campeche</option>
+                                <option value="Chiapas">Chiapas</option>
+                                <option value="Chihuahua">Chihuahua</option>
+                                <option value="Ciudad de Mexico">Ciudad de México</option>
+                                <option value="Coahuila">Coahuila</option>
+                                <option value="Colima">Colima</option>
+                                <option value="Durango">Durango</option>
+                                <option value="Estado de Mexico">Estado de México</option>
+                                <option value="Guanajuato">Guanajuato</option>
+                                <option value="Guerrero">Guerrero</option>
+                                <option value="Hidalgo">Hidalgo</option>
+                                <option value="Jalisco">Jalisco</option>
+                                <option value="Michoacan">Michoacán</option>
+                                <option value="Morelos">Morelos</option>
+                                <option value="Nayarit">Nayarit</option>
+                                <option value="Nuevo Leon">Nuevo León</option>
+                                <option value="Oaxaca">Oaxaca</option>
+                                <option value="Puebla">Puebla</option>
+                                <option value="Queretaro">Querétaro</option>
+                                <option value="Quintana Roo">Quintana Roo</option>
+                                <option value="San Luis Potosi">San Luis Potosí</option>
+                                <option value="Sinaloa">Sinaloa</option>
+                                <option value="Sonora">Sonora</option>
+                                <option value="Tabasco">Tabasco</option>
+                                <option value="Tamaulipas">Tamaulipas</option>
+                                <option value="Tlaxcala">Tlaxcala</option>
+                                <option value="Veracruz">Veracruz</option>
+                                <option value="Yucatan">Yucatán</option>
+                                <option value="Zacatecas">Zacatecas</option>
+                                </datalist>
+                              </select>
+                            </div>
+                            <div class="col-md-2">
+                              <label for="inputZip" class="form-label">Código Postal</label>
+                              <input type="text" class="form-control" id="inputZip" placeholder="C.P.">
+                            </div>
+                            <div class="col-md-5">
+                                <label for="inputCity" class="form-label">Telefono</label>
+                                <input type="text" class="form-control" id="inputPhone" placeholder="+ 52">
+                            </div>
+                        </form>
+                        
+                        
+                        
+                    </div>    
+                </div>
+            </div>
+        </div>
+    </div>    
+        
+    <!-- Barra divisora -->
+    <img src="./assets/img/barraBFv2.jpeg" alt="BarraInferior" class="img-fluid" id="barraDivisora">
+        <br><br>
+        
+        <div class="container">
+
+            <div class="rowpagos">
+        
+              <div class="card mb-3" style="max-width: 700px;">
+                <div class="row">
+        
+                  <div class="col-md-9">
+                    <div class="card-body btn-pago">
+        
+                      <input type="radio" name="visa" id="visa">  Tarjeta de credito/débito
+        
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="visa">
+        
+                      <img src="./assets/img/visalogo.png" class="img-fluid rounded-start" alt="Visa">
+                      <img src="./assets/img/MasterCardlogo.png" class="img-fluid rounded-start" alt="Mastercard">
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>        
+        
+        
+        
+        
+              <div class="card mb-3" style="max-width: 700px;">
+                <div class="row g-0">
+        
+                  <div class="col-md-9">
+                    <div class="card-body">
+        
+                      <input type="radio" name="visa" id="Mercado-pago"> Mercado Pago
+        
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="visarow">
+        
+                      <img src="./assets/img/mercadopagologo.png" class="img-fluid rounded-start" alt="Mercado-pago">
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+        
+        
+        
+              <div class="card mb-3" style="max-width: 700px;">
+                <div class="row g-0">
+        
+                  <div class="col-md-9">
+                    <div class="card-body">
+        
+                      <input type="radio" name="visa" id="Paypal"> Paypal
+        
+                    </div>
+                  </div>
+                  <div class="col-md-3">
+                    <div class="tarjetasrow">
+        
+        
+                      <img src="./assets/img/PayPalLogo.png" class="img-fluid rounded-start" alt="PayPal">
+        
+                    </div>
+                  </div>
+                </div>
+              </div>
+        
+        
+            </div>
+        
+        
+        </div>
+
+        
+		<!-- Formulario -->
+		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+			<div class="grupo">
+				<label for="inputNumero">Número Tarjeta</label>
+				<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+			</div>
+			<div class="grupo">
+				<label for="inputNombre">Nombre</label>
+				<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+			</div>
+			<div class="flexbox">
+				<div class="grupo expira">
+					<label for="selectMes">Expiracion</label>
+					<div class="flexbox">
+						<div class="grupo-select">
+							<select name="mes" id="selectMes">
+								<option disabled selected>Mes</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+						<div class="grupo-select">
+							<select name="year" id="selectYear">
+								<option disabled selected>Año</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="grupo ccv">
+					<label for="inputCCV">CCV</label>
+					<input type="text" id="inputCCV" maxlength="3">
+				</div>
+			</div>
+			<button type="" class="btn-enviar">Enviar</button>
+		</form>
+	</div>
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Pie de pagina -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <!-- Columna secundaria con mas informacion -->
+                <div class="col-sm-12 col-md-4 col-lg-3" id="col-2"> <!--Este div se oculta en tamaño sm-->
+                    <h5>Más Información</h5>
+                    <ul>
+                        <li><a href="#" target="_blank">Preguntas frecuentes</a></li>
+                        <li><a href="#" target="_blank">Contáctanos</a></li>
+                        <li><a href="#" target="_blank">Sobre nosotros</a></li>
+                        <li><a href="#" target="_blank">Política de privacidad</a></li>
+                        <li><a href="#" target="_blank">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+                <!-- Columna principal con logotipo y redes sociales-->
+                <div class="col-sm-12 col-md-4 col-lg-6">
+                    <br>
+                    <img src="./assets/img/logoBFv2.jpg" alt="Logo Best Finds" class="img-fluid" id="imgFooter">
+                    <div class="container">
+                        <!-- Con estas id se ocultaran los icono en tamaño lg -->
+                        <a href="https://www.facebook.com/bestfinds.mx?mibextid=LQQJ4d" target="_blank">
+                            <img src="./assets/icons/faceRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+                        </a>  
+                        <a href="https://www.instagram.com/bestfinds.mx" target="_blank">
+                            <img src="./assets/icons/instaRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+                        </a>  
+                        <a href="#" target="_blank">
+                            <img src="./assets/icons/tiktokRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+                        </a>  
+                        <a href="https://wa.me/message/TTKTHJMTBUQTM1" target="_blank">
+                            <img src="./assets/icons/whatsappRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+                        </a>  
+                    </div>
+                    <!-- Secciones span para links inferiores -->
+                    <span><a href="#" target="_blank">Política de privacidad</a> | <a href="#" target="_blank">Términos y condiciones</a></span><br>
+                    <span id="licencia"><a href="#" target="_blank">© 2023 Best Finds - Una E-commerce desarrollada por Money Makers</a></span>
+                    <br><br>
+                </div>
+                <!-- Columna secundaria con redes sociales -->
+                <div class="col-sm-12 col-md-4 col-lg-3" id="col-2">  <!--Este div se oculta en tamaño sm-->
+                    <!--Titulo de seccion con salto de linea-->
+                    <h5>¡Síguenos en nuestras <br> redes sociales!</h5>
+                    <!--Lista de redes para vista desktop-->
+                    <ul>
+                        <li>
+                            <a href="https://www.facebook.com/bestfinds.mx?mibextid=LQQJ4d" target="_blank">
+                                <img src="./assets/icons/faceRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">Best Finds México
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/bestfinds.mx" target="_blank">
+                                <img src="./assets/icons/instaRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">@bestfinds.mx
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="#" target="_blank">
+                                <img src="./assets/icons/tiktokRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">@bestfinds.mx
+                            </a> 
+                        </li>
+                        <li>
+                            <a href="https://wa.me/message/TTKTHJMTBUQTM1" target="_blank">
+                                <img src="./assets/icons/whatsappRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">33-22-11-22-33
+                            </a> 
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!--Script de bootstrap en la pagina-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <!-- Scripts JS de la pagina -->
+
+</body>
+</html>

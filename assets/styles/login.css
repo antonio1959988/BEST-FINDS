@@ -34,112 +34,114 @@ nav{
 }
 
 
-/* Diseño base de etiqueta body*/
+/* Diseño base de etiqueta body login*/
 body{
     text-align: center;
     font-family: "Roboto", sans-serif;;
     color: #707070;
 }
 
-/* Titulos */
+/* Titulos Login */
 h1{
-    text-align: left;
+    text-align: center;
+    font-size: 64px;
     margin-top: 30px;
 }
 
-/* Parrafo principal */
+/* Parrafos Formulario Login */
 #txtInicio{
-    font-size: 14px;
-    text-align: left;
-}
-
-<<<<<<< HEAD
-=======
-#nombreProducto{
-    font-size: 14px;
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-}
-
-#precio{
-    font-size: 16px;
-    font-weight: bold;
-    display: block;
-    margin-bottom: 10px;
-    text-align: left;
-}
-
-
->>>>>>> f124bc34ba422c182cd591cad2dbea12c3e0b770
-/*Alineacion de filas verticalmente*/
-#verticalAlign{
-    display: grid;
-    place-items: center;
-}
-
-/* Imagen productos */
-#imgProductos{
-<<<<<<< HEAD
-    width: 210px;
-    height: 180px;
-    margin: 15px;
-=======
-    width: 600px;
-    height: 300px;
-}
-
-#imgProducto{
-    margin-bottom: 10px;
-}
-
-#contenedor{
-    border: 2px solid #d1d1d1;
-    margin: 10px;
-    padding: 10px;
-}
-
-#contenedorInferior{
-    border: 2px solid #d1d1d1;
-    padding: 20px;
-    margin: 12px;
-    width: 100%;
-}
-
-#contenedorFiltros{
-    border: 2px solid #d1d1d1;
-    padding: 20px;
-    margin: 12px;
-    width: 100%;
-    max-height: 620px;
-}
-
-#contenedorFiltros button{
-    margin-top: 14px;
-    background-color: #D71787;
-    border: none;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-#contenedorInferior button{
-    margin-top: 14px;
-    background-color: #D71787;
-    border: none;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-#cantidadProducto{
     text-align: center;
+    font-family: "Roboto", sans-serif;;
+    font-size: 39px;
+    color: #707070;
+}
+#txtRecuperarContraseña{
+    text-align: center;
+    font-family: "Roboto", sans-serif;;
+    font-size: 39px;
+    color: #707070;
+    text-decoration: underline;
+}
+
+
+/*id div para centrar formulario*/
+#centrado{
+
+    display: flex;
+    justify-content: center;
+    
+}
+
+
+/*id para label del formulario*/
+#tamaño{
+    width: 755px;
+     height: 87px;
+     display: flex;
+     justify-content: center;
+     
+}
+
+/*Boton de check*/
+.form-check {
+  display: flex;
+  align-items: center;
+}
+
+/*Espaciado del boton*/
+.form-check-label {
+  margin-right: 100px; /* Ajusta el espacio entre el texto y el botón de verificación según tus preferencias */
+}
+/*Tamaño boton de check*/
+#check-input {
+    transform: scale(2); /* Ajusta el valor según el tamaño deseado */
+   
+  }
+/*color del check al ser precionado*/
+.form-check-input:checked {
+    background-color: #D71787; /* Cambia el color de fondo cuando está marcado  */
+  }
+
+/*color botones*/
+#colorB {
+    background-color: #D71787;
+    font-family: "Roboto", sans-serif;;
+    width: 300px;
+     height: 80px;
+     font-size: 25px;
+     border-radius: 40px;
+     margin-left: 30px;
+}
+
+#colorB2 {
+    background-color: #D71787;
+    font-family: "Roboto", sans-serif;;
+    width: 300px;
+     height: 60px;
+     font-size: 25px;
+     border-radius: 40px;
+     margin-left: 30px;
+     
 }
 
 
 
-#formFiltros{
-    text-align: left;
->>>>>>> f124bc34ba422c182cd591cad2dbea12c3e0b770
-}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*Footer */
 footer{
@@ -198,6 +200,22 @@ footer ul, h5{
     }
 
 }
+
+/* Titulo de login */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Media query para ocultar icono de carrito en vista lg */
 @media (min-width: 992px){
