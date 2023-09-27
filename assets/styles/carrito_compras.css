@@ -1,0 +1,31 @@
+#titulo1Carrito {
+    text-align: center;
+}
+
+
+.imgProductos {
+    width: 200px;
+    height: 200px;
+}
+
+
+.rowPosition {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.btn-number {
+    border: solid 2px #D71787;
+}
+
+.icon-trash {
+    color: #D71787;
+}
+
+.input-number {
+    border: solid 2px #D71787;
+    text-align: center;
+    width: 50px !important;
+}
