@@ -4,13 +4,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inicio</title>
-    <link rel="icon" href="./assets/icons/logoMini.ico" type="image/x-icon">
+    <title>Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
     <!-- Estilos css de la pagina-->
-    <link rel="stylesheet" href="./assets/styles/index.css">
+    <link rel="stylesheet" href="./assets/styles/productos2.css">
 
 </head>
 
@@ -73,148 +72,90 @@
             </div>
         </div>
     </nav>
-    <!--ANKARET ABRE -->
-    <!-- Carrusel con el banner -->
-    <div id="#BannerIndex" class="carousel slide">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner promocional">
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner Promocional 2">
-            </div>
-            <div class="carousel-item">
-                <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner Promocional 3">
-            </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#BannerIndex" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#BannerIndex" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div> <!-- Termina carrusel con el banner -->
 
-    <h1>Best Sellers</h1> <!-- Titulo-->
-    <br><!--Boton de ver productos-->
-    <a href="https://www.ejemplo.com/todos-los-productos" class="btn btn-primary btn-lg" id="colorB">Ver todos los
-        productos</a><!--termina boton falta el link-->
-    </div>
-    <br>
-    <br>
-    <!--Los bestsellers-->
+    <!-- Seccion principal de productos -->
     <div class="container">
-        <div class="row">
-            <!-- Producto 1 -->
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <div id="contenedorInferior">
-                    <img src="./assets/img/EscapePod.png" alt="producto" class="img-fluid" id="imgProducto">
-                    <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                    <span id="precio">$1992.00</span>
-                    <form>
-                        <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                        <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
-                    </form>
+        <div id="contenedor">
+            <a href="#" target="_blank"><h4>Retroceder</h4></a>
+            <div class="row">
+                <div class="col-lg-6" id="verticalAlign">
+                    <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="Producto" class="img-fluid" id="imgProductoPrincipal">
+                </div>
+
+                <div class="col-lg-6">
+                    <div id="descripcionProducto">
+                        <h2>Producto</h2>
+                        <p id="precioPrincipal">$1999.00</p>
+                        <form id="datosProducto">
+                            <label for="cantidad" id="cantidadPrincipal">Cantidad</label>
+                            <input type="number" class="form-control" id="cantidadProductoPrincipal" min="0" max="100" value="0">
+                            <div class="btn-group" role="group" aria-label="Basic example" id="colorSelector">
+                                <button type="button" class="btn btn-primary" id="tono1"></button>
+                                <button type="button" class="btn btn-primary" id="tono2"></button>
+                                <button type="button" class="btn btn-primary" id="tono3"></button>
+                                <button type="button" class="btn btn-primary" id="tono4"></button>
+                              </div>
+                            <div class="row">
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Aplicar Filtros</button>
+                                </div>
+                                <div class="col-sm-12 col-md-6 col-lg-6">
+                                    <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Aplicar Filtros</button>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Aplicar Filtros</button>
+                        </form>
+                    </div>
                 </div>
             </div>
 
-            <!-- Producto 2 (Repite el mismo código para los otros productos) -->
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <div id="contenedorInferior">
-                    <img src="./assets/img/EscapePod.png" alt="producto" class="img-fluid" id="imgProducto">
-                    <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                    <span id="precio">$1992.00</span>
-                    <form>
-                        <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                        <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
-                    </form>
-                </div>
-            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="seccionComentarios">
 
-            <!-- Producto 3 -->
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <div id="contenedorInferior">
-                    <img src="./assets/img/EscapePod.png" alt="producto" class="img-fluid" id="imgProducto">
-                    <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                    <span id="precio">$1992.00</span>
-                    <form>
-                        <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                        <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
-                    </form>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Producto 4 -->
-            <div class="col-sm-6 col-md-6 col-lg-3">
-                <div id="contenedorInferior">
-                    <img src="./assets/img/EscapePod.png" alt="producto" class="img-fluid" id="imgProducto">
-                    <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                    <span id="precio">$1992.00</span>
-                    <form>
-                        <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                        <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
-                    </form>
-                </div>
-            </div>
+                <div class="col">
+                    <div id="seccionSugerencias">
+                        <div class="row">
+                            <div class="col">
+                                <a href="#" id="enlaceProducto">
+                                    <div id="contenedorInferior">
+                                      <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
+                                        id="imgProducto">
+                                      <br>
+                                      <span id="nombreProducto">Eaze Drop Stick Blur</span>
+                                      <span id="precio">$1992.00</span>
+                                      <form>
+                                        <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+                                        <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
+                                      </form>
+                                    </div>
+                                  </a>
+                            </div>
 
-        </div>
-    </div><!--Acaban los bestsellers-->
-    <h1>Marcas</h1>
-  <!--carrusel de marcas-->
-  <div class="container">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <!-- Primer slide con 5 imágenes -->
-            <div class="carousel-item active">
-                <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <img src="https://searchlogovector.com/wp-content/uploads/2019/06/tangle-teezer-logo-vector.png" alt="Imagen 1" id="logos">
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <img src="https://vectorseek.com/wp-content/uploads/2023/07/Rare-Beauty-Logo-Vector.svg-.png" alt="Imagen 2" id="logos">
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <img src="https://ww2.freelogovectors.net/wp-content/uploads/2018/07/too-faced-logo.png?lossy=1&w=2560&ssl=1" alt="Imagen 3" id="logos">
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <img src="https://searchlogovector.com/wp-content/uploads/2020/06/barbie-logo-vector.png" alt="Imagen 4" id="logos">
-                    </div>
-                </div>
-            </div>
-            <!-- Segundo slide con otras 5 imágenes -->
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <img src="https://vectorseek.com/wp-content/uploads/2021/01/Urban-Decay-Logo-Vector.png" alt="Imagen 6" id="logos">
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <img src="https://vectorseek.com/wp-content/uploads/2023/08/Colourpop-Logo-Vector.svg-.png" alt="Imagen 7" id="logos">
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <img src="https://vectorseek.com/wp-content/uploads/2023/05/ANASTASIA-BEVERLY-HILLS-LOGO-Vector.jpg" alt="Imagen 8" id="logos">
-                    </div>
-                    <div class="col-sm-6 col-md-6 col-lg-3">
-                        <img src="https://vectorseek.com/wp-content/uploads/2023/07/Jeffree-Star-Logo-Vector.svg-.png" alt="Imagen 9" id="logos">
+                            <div class="col">
+                                <a href="#" id="enlaceProducto">
+                                    <div id="contenedorInferior">
+                                      <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
+                                        id="imgProducto">
+                                      <br>
+                                      <span id="nombreProducto">Eaze Drop Stick Blur</span>
+                                      <span id="precio">$1992.00</span>
+                                      <form>
+                                        <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+                                        <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
+                                      </form>
+                                    </div>
+                                  </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <!-- Controles -->
-        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev" id="btnIzq">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel" data-slide="next" id="btnIzq">
-            <span class="carousel-control-next-icon"></span>
-        </a>
     </div>
-</div>
-
-
-<!--cierra carrusel de marcas-->
-    <!--ANKARET CIERRA -->
 
 
     <!-- Pie de pagina -->
@@ -222,7 +163,7 @@
         <div class="container">
             <div class="row">
                 <!-- Columna secundaria con mas informacion -->
-                <div class="col-sm-6 col-md-4 col-lg-3" id="col-2"> <!--Este div se oculta en tamaño sm-->
+                <div class="col-sm-12 col-md-4 col-lg-3" id="col-2"> <!--Este div se oculta en tamaño sm-->
                     <h5>Más Información</h5>
                     <ul>
                         <li><a href="#" target="_blank">Preguntas frecuentes</a></li>
@@ -233,7 +174,7 @@
                     </ul>
                 </div>
                 <!-- Columna principal con logotipo y redes sociales-->
-                <div class="col-sm-6 col-md-4 col-lg-6">
+                <div class="col-sm-12 col-md-4 col-lg-6">
                     <br>
                     <img src="./assets/img/logoBFv2.jpg" alt="Logo Best Finds" class="img-fluid" id="imgFooter">
                     <div class="container">
@@ -257,13 +198,15 @@
                     </div>
                     <!-- Secciones span para links inferiores -->
                     <span><a href="#" target="_blank">Política de privacidad</a> | <a href="#" target="_blank">Términos
-                            y condiciones</a></span><br>
+                            y
+                            condiciones</a></span><br>
                     <span id="licencia"><a href="#" target="_blank">© 2023 Best Finds - Una E-commerce desarrollada por
-                            Money Makers</a></span>
+                            Money
+                            Makers</a></span>
                     <br><br>
                 </div>
                 <!-- Columna secundaria con redes sociales -->
-                <div class="col-sm-6 col-md-4 col-lg-3" id="col-2"> <!--Este div se oculta en tamaño sm-->
+                <div class="col-sm-12 col-md-4 col-lg-3" id="col-2"> <!--Este div se oculta en tamaño sm-->
                     <!--Titulo de seccion con salto de linea-->
                     <h5>¡Síguenos en nuestras <br> redes sociales!</h5>
                     <!--Lista de redes para vista desktop-->
@@ -302,13 +245,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
         crossorigin="anonymous"></script>
-    <!-- Scripts de Bootstrap -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- Scripts JS de la pagina -->
-    <script src="./assets/js/index.js"></script>
+    <script src="./assets/js/productos2.js"></script>
+
+
 </body>
 
 </html>
