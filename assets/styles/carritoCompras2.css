@@ -58,7 +58,7 @@ h1{
     place-items: center;
 }
 
-.visa img{
+/* .visa img{
     width: 40%;
 }
 .visarow img{
@@ -66,9 +66,80 @@ h1{
 }
 .tarjetasrow img{
     width: 50%;
+} */
+
+.containerpay{
+    text-align:left;
+}
+
+#imgMasterCard img{
+    width: 50px;
+    /* display: inline; */
+}
+#imgMercadoPago,  img{
+    width: 100px;
+    /* display: inline; */
+}
+#imgPaypal img{
+    width: 100px;
+    /* display: inline; */
+}
+
+#paymethods{
+    /* border: 2px solid #707070 ; */
+    box-shadow: 0 0 5px #d71787;
+    align-items: center;
+    border-radius: 25px;
+    margin-left: 30%;
+    margin-right: 30%;
 }
 
 
+#paymethods2{
+    /* border: 2px solid #707070 ; */
+    box-shadow: 0 0 5px #d71787;
+    align-items: center;
+    border-radius: 25px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+#paymethods3{
+    /* border: 2px solid #707070 ; */
+    box-shadow: 0 0 5px #d71787;
+    align-items: center;
+    border-radius: 25px;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+
+
+#form-tarjeta{
+      display: none;
+}
+
+.formulario-tarjeta {
+    text-align: center;
+    /* visibility: collapse;   */
+    
+}
+
+#Visa:checked ~ * .form-tarjeta{
+    
+    visibility: visible;
+
+}
+
+/* .rowpay{
+    max-width: 600px;
+} */
+
+
+
+/* .paymethods img {
+    width: 50px;
+} */
 
 /* Barra divisora */
 #barraDivisora{
@@ -76,9 +147,24 @@ h1{
     height: 30px;
 }
 
+input[type="radio"]:checked{
+    border: 8px solid #d71787;
+    /* accent-color: #d71787; */
+    box-shadow: 0 0 5px #d71787;
+    background-color: #707070;
+}
 
+.form-control, .form-select, .form-check-input {
 
-
+    &:focus {
+        /*Cuando se da click en los inputs, se crea un resplandor*/
+        color: #707070;
+        font-weight: bold;
+        border: none;
+        box-shadow: 0 0 5px #d71787;
+        outline: 0px;
+    }
+}
 
 
 
