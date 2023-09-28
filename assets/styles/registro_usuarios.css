@@ -70,6 +70,7 @@ h4{
 }
 .datos{
     width: 80%;
+    color: #707070;
     &:focus{/*Cuando se da click en los inputs, se crea un resplandor*/
         color: #707070;
         font-weight: bold;
@@ -83,6 +84,11 @@ h4{
     padding-top: 5px;
     padding-bottom: 35px;
 }
+.form-control{
+    color: #707070; /* Cambia el color del texto a #707070 */
+    font-family: "Roboto", sans-serif; /* Cambia la fuente del texto a "Roboto" */
+}
+
 #terminosYCondiciones{
     align-items: center;
 }
@@ -90,10 +96,19 @@ h4{
     background-color: #d71787; /* Cambia el color de fondo */
     color: #fff; /* Cambia el color del texto a blanco */
     border-color: #d71787;
+    border-radius: 40px;
   }
 #btnRegistrar:hover {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
   }
+/*color del check al ser precionado*/
+#checkinput:checked {
+    background-color: #D71787; /* Cambia el color de fondo cuando está marcado  */
+    border-color: #707070;
+    box-shadow: 0 0 5px #d71787;
+    border: none;
+  }
+
   
 /* Barras laterales */
 #lateralIzq{
