@@ -14,7 +14,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
   <!-- Estilos css de la pagina-->
-  <link rel="stylesheet" href="./assets/styles/sobre_nosotros.css">
   <link rel="stylesheet" href="./assets/styles/carrito_compras.css">
 
 </head>
@@ -77,19 +76,31 @@
   </nav>
 
   <img src="./assets/img/carritoCompras/BF_Header.png" alt="Header" id="imgHeader" class="img-fluid">
+
+
   <!--Container carritoCompras-->
-  <div class="container">
+  <div class="container" id="carrito">
     <h1 id="titulo1Carrito">Carrito de compras</h1>
     <div class="row rowPosition"> <!--Inicio row encabezado-->
-      <div class="col">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <h6>PRODUCTO</h6>
       </div>
 
-      <div class="col">
-        <h6>CANTIDAD</h6>
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+        
+
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+          </div>
+
+          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+            <h6>CANTIDAD</h6>
+          </div>
+        </div>
       </div>
 
-      <div class="col">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
         <H6>TOTAL</H6>
       </div>
     </div> <!--Cierre row encabezado-->
@@ -97,44 +108,46 @@
 
     <div class="row rowPosition"> <!--Row producto1-->
       <!--PRODUCTO1-->
-      <div class="col-2 col-md-2 col-sm-2"> <!-- div  col Imagen-->
-        <img src="./assets/img/carritoCompras/producto1.jpg" alt="producto1" class="imgProductos">
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> <!-- div  col Imagen-->
+        <img src="./assets/img/carritoCompras/producto1.jpg" alt="producto1" id="imgProductos">
       </div> <!-- div col imagen-->
-      <div class="col-2 col-md-2 col-sm-2"> <!--DescripcioProducto-->
-        <h6><b>Lorem</b></h6>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-      </div> <!--Col descripcion-->
+      
+      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> <!--DescripcioProducto-->
 
+        <div class="row">
+          <div class="col-xs-4 col-sm-12 col-md-6 col-lg-6">
+            <h6><b>Lorem</b></h6>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
 
-
-
-      <!--CANTIDAD PRODUCTO1-->
-      <div class="col"> <!-- Inicio  div col2 cantidad-->
-        <div class="d-inline-block">
-          <div class="input-group">
-            <button type="button" class="btn btn-number" onclick="decrementarCantidad();">
-              <i class="fa-solid fa-minus"></i>
-            </button>
-            <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1"
-              max="100">
-            <button type="button" class="btn btn-number" onclick="incrementarCantidad();">
-              <i class="fa-solid fa-plus"></i>
+          <div class="col-xs-4 col-sm-12 col-md-6 col-lg-6">
+            <!-- Seccion contador -->
+          <div class="d-inline-block">
+            <div class="input-group">
+              <button type="button" class="btn btn-number" onclick="decrementarCantidad();">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1"
+                max="100">
+              <button type="button" class="btn btn-number" onclick="incrementarCantidad();">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+          </div>
+          <div class="d-inline-block">
+            <button type="button" class="btn">
+              <i class="fa-regular fa-trash-can fa-xl icon-trash"></i>
             </button>
           </div>
+          </div>
+
+  
+
         </div>
-        <div class="d-inline-block">
-          <button type="button" class="btn">
-            <i class="fa-regular fa-trash-can fa-xl icon-trash"></i>
-          </button>
-        </div>
-
-
-
-      </div><!--Cierre div col2 cantidad-->
-
+      </div> <!--Col descripcion-->
 
       <!--TOTAL PRODUCTO 1-->
-      <div class="col"><!--Inicio div col3 total-->
+      <div class="col-sm-4 col-md-4 col-lg-4"><!--Inicio div col3 total-->
         <p>$621.00</p>
 
       </div> <!--Cierre col3 total-->

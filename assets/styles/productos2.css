@@ -42,15 +42,146 @@ body{
 }
 
 /* Titulos */
-h1{
+h2{
     text-align: left;
-    margin-top: 30px;
 }
 
-/* Parrafo principal */
-#txtInicio{
+h4{
+    text-align: left;
+    margin: 30px;
+}
+
+/* Descripcion del producto */
+#txtDescripcion{
     font-size: 14px;
     text-align: left;
+}
+
+/* Precio del producto */
+#precioPrincipal{
+    font-size: 22px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/*Alineacion de filas verticalmente*/
+#verticalAlign{
+    display: grid;
+    place-items: center;
+}
+
+#contenedor{
+    border: 2px solid #d1d1d1;
+    margin: 2px;
+    padding: 10px;
+}
+
+#contenedor a{
+    text-decoration: none;
+    color: #707070;
+}
+
+#contenedorInferior{
+    border: 2px solid #d1d1d1;
+    padding: 20px;
+    margin-top: 12px;
+    width: 100%;
+}
+
+#enlaceProducto{
+    color: #707070;
+    text-decoration: none;
+}
+
+#cantidadPrincipal{
+    display: block;
+    font-size: 18px;
+    text-align: left;
+}
+
+#colorSelector{
+    display: block;
+    text-align: left;
+    margin-top: 10px;
+}
+
+#tono1{
+    margin: 5px;
+    background-color: #D71787;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+#tono2{
+    margin: 5px;
+    background-color: #D71787;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+#tono3{
+    margin: 5px;
+    background-color: #D71787;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+#tono4{
+    margin: 5px;
+    background-color: #D71787;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+}
+
+#cantidadProductoPrincipal{
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+#btnComprarPrincipal{
+    background-color: #D71787;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    width: 100%;
+    margin: 7px;
+    border-radius: 10px;
+}
+
+#btnAplicar{
+    margin-top: 14px;
+    background-color: #D71787;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+
+
+
+
+#imgProducto{
+    margin-bottom: 10px;
 }
 
 #nombreProducto{
@@ -68,83 +199,22 @@ h1{
     text-align: left;
 }
 
-
-/*Alineacion de filas verticalmente*/
-#verticalAlign{
-    display: grid;
-    place-items: center;
-}
-
-/* Imagen productos */
-#imgProductos{
-    width: 600px;
-    height: 250px;
-}
-
-#imgProducto{
-    margin-bottom: 10px;
-}
-
-#contenedor{
-    border: 2px solid #d1d1d1;
-    margin: 2px;
-    padding: 10px;
-}
-
-#contenedorInferior{
-    border: 2px solid #d1d1d1;
-    padding: 20px;
-    margin-top: 12px;
-    width: 100%;
-}
-
-#contenedorFiltros{
-    border: 2px solid #d1d1d1;
-    padding: 20px;
-    margin-top: 12px;
-    width: 100%;
-    max-height: 650px;
-}
-
-#contenedorFiltros button{
-    margin-top: 14px;
-    background-color: #D71787;
-    border: none;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-#contenedorInferior button{
-    margin-top: 14px;
-    background-color: #D71787;
-    border: none;
-    font-size: 12px;
-    font-weight: bold;
-}
-
 #cantidadProducto{
     text-align: center;
 }
 
-#formFiltros{
-    text-align: left;
-}
 
-#enlaceProducto{
-    color: #707070;
-    text-decoration: none;
-}
 
-.datos{
-    width: 80%;
-    &:focus{/*Cuando se da click en los inputs, se crea un resplandor*/
-        color: #707070;
-        font-weight: bold;
-    border: none;
-   box-shadow: 0 0 5px #d71787;
-   outline: 0px;
-    }
-}
+
+
+
+
+
+
+
+
+
+
 
 /*Footer */
 footer{
@@ -226,4 +296,3 @@ footer ul, h5{
     }
 
 }
-

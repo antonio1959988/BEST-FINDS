@@ -88,26 +88,23 @@
     </div>
     <!-- Formulario -->
     <div class="container" id="formulario"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
-      <form>
+      <form action="">
         <div class="divInputs">
-          <label
-            for="nomUsuario">Nombre:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
-          <input type="text" class="datos" id="nomUsuario">
+          <label for="nomUsuario">Nombre:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
+          <input type="text" class="datos" id="txtNomUsuario" pattern="[A-Z]{3}" title="Ingresa un nombre valido" require>
         </div>
         <div class="divInputs">
-          <label for="correo">Correo
-            electrónico:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
-          <input type="email" class="datos" id="emailUsuario">
+          <label for="correo">Correo electrónico:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
+          <input type="text" class="datos" id="txtEmailUsuario" pattern="[A-Z]{3}" title="Ingresa un nombre valido" require>
         </div>
         <div class="divInputs">
-          <label
-            for="apUsuario">Teléfono</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
-          <input type="text" class="datos" id="telUsuario">
+          <label for="apUsuario">Teléfono:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
+          <input type="text" class="datos" id="txtTelUsuario" pattern="[A-Z]{3}" title="Ingresa un nombre valido" require>
         </div>
         <div class="divInputs">
-          <label for="apUsuario">Mensaje</label><br>
-          <textarea name="comentarios" id="comentario" cols="45" rows="6"
-            placeholder="Escribe aqui tus comentarios"></textarea> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
+          <label for="apUsuario">Mensaje:</label><br>
+          <textarea name="comentarios" id="txtMensaje" cols="38" rows="6"
+            placeholder="Escribe aquí tus comentarios..."></textarea> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
         </div>
         <!-- El botón envía los datos del formulario -->
         <div class="divInputs">
@@ -241,7 +238,7 @@
     crossorigin="anonymous"></script>
 
   <!-- Scripts JS de la pagina -->
-  <script src="./assets/js/sobre_nosotros.js"></script>
+  <script src="./assets/js//contacto.js"></script>
 </body>
 
 </html>
