@@ -17,7 +17,6 @@ nav{
     height: 70px;
 }
 
-/* Iconos de barra navehacion */
 #imgIcono{
     width: 40px;
     height: 35px;
@@ -43,57 +42,139 @@ body{
 
 /* Titulos */
 h1{
-    text-align: left;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* //////////////////////////////////////////////////////////////////// */
+#divContacto {
     margin-top: 30px;
-}
-
-/* Parrafo principal */
-#txtInicio{
-    font-size: 14px;
-    text-align: left;
-}
-
-/*Alineacion de filas verticalmente*/
-#seccion1{
-    display: grid;
-    place-items: center;
-}
-
-/* Imagenes iniciales */
-#imgVSv2{
-    width: 50px;
-    height: 50px;
-}
-
-/* Imagen sobre nosotros */
-#imgSN{
-    width: 210px;
-    height: 180px;
-    margin: 15px;
-}
-
-/* Redes sociales del equipo (imagen) */
-#imgRed{
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    margin-bottom: 25px;
-}
-
-/* Imagenes del equipo */
-#imgPerfil{
-    border-radius: 100px;
-    width: 200px;
-    height: 200px;
+    height: 80px;
 }
 
 /* Barra divisora */
-#barraDivisora{
+#barraDivisora {
     width: 100%;
     height: 30px;
 }
 
-/*Footer */
+
+/* Seccion de pregunta */
+#titulo{
+    margin: 20px;
+    text-align: center;
+}
+
+
+/*div del formulario*/
+#formulario {
+    width: 500px;
+
+}
+
+.datos {
+    width: 80%;
+
+    &:focus {
+        /*Cuando se da click en los inputs, se crea un resplandor*/
+        color: #707070;
+        font-weight: bold;
+        border: none;
+        box-shadow: 0 0 5px #d71787;
+        outline: 0px;
+    }
+}
+
+.divInputs {
+    padding-top: 5px;
+    padding-bottom: 35px;
+}
+
+#btnEnviar {
+    background-color: #d71787;
+    /* Cambia el color de fondo */
+    color: #fff;
+    /* Cambia el color del texto a blanco */
+    border-color: #d71787;
+}
+
+#btnEnviar:hover {
+    background-color: #ff8c66;
+    /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
+/* Iconos pequeños */
+#iconoContacto{
+    width: 40px;
+    height: 40px;
+}
+
+#msgContacto{
+    display: block;
+    font-weight: bold;
+    margin-bottom: 30px;
+   
+}
+
+#enlace{
+    font-size: 18px;
+    text-decoration: none;
+    color: #707070;
+}
+
+
+
+
+
+
+
+  
+
+/* //////////////////////////////////////////////////////////////////// */
+
+
+/* Media query para centrar titulos y ocultar carrito dentro de la barra */
+@media (max-width: 992px){
+    h1{
+        text-align: center;
+    }
+
+    #imgIcono3{
+        display: none;;
+    }
+}
+
+/* Media query para ocultar icono de carrito en vista lg */
+@media (min-width: 992px){
+    #imgIcono2{
+        display: none;
+    }
+}
+
+/* Media query para ocultar iconos centrales del footer en vista md */
+@media (min-width: 768px){
+    #iconoFooter{
+        display: none;
+    }
+
+}
+
+/* Media query para ocultar columnas laterales para tamaño sm*/
+@media (max-width: 768px){
+    #col-2{
+        display: none;
+    }
+
+}
+
+/*Media query para ocultar barras laterales*/
+@media (max-width: 768px){
+    #imgLateral{
+        display: none;
+    }
+}
+
+/*FOOTER*/
 footer{
     background-color: #D71787;
     color: white;
@@ -105,7 +186,6 @@ footer a{
     text-decoration: none;
     color: white;
 }
-
 /* Listas de enlaces, quitar formato */
 footer ul, h5{
     list-style: none;
@@ -137,39 +217,4 @@ footer ul, h5{
 /* Tamaño de letra chiquita derechos de best finds */
 #licencia{
     font-size: 12px;
-}
-
-/* Media query para centrar titulos y ocultar carrito dentro de la barra*/
-@media (max-width: 992px){
-    h1{
-        text-align: center;
-    }
-
-    #imgIcono3{
-        display: none;;
-    }
-
-}
-
-/* Media query para ocultar icono de carrito en vista lg */
-@media (min-width: 992px){
-    #imgIcono2{
-        display: none;
-    }
-}
-
-/* Media query para ocultar iconos centrales del footer en vista md */
-@media (min-width: 768px){
-    #iconoFooter{
-        display: none;
-    }
-
-}
-
-/* Media query para ocultar columnas laterales para tamaño sm*/
-@media (max-width: 768px){
-    #col-2{
-        display: none;
-    }
-
 }
