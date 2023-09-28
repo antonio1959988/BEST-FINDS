@@ -29,3 +29,27 @@
     text-align: center;
     width: 50px !important;
 }
+
+#imgHeader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1300px;
+    height: 350px;
+
+
+}
+
+#colorButton {
+    background-color: #D71787;
+    border-color: #D71787;
+
+    width: 80%;
+    /*Cuando se da click en los inputs, se crea un resplandor*/
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 0 5px #d71787;
+    outline: 0px;
+
+
+}

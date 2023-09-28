@@ -144,9 +144,6 @@ h4{
     }
 }
 
-#button{
-    background: 1px solid black;
-}
 /* Media query para ocultar iconos centrales del footer en vista md */
 @media (min-width: 768px){
     #iconoFooter{
@@ -213,5 +210,4 @@ footer ul, h5{
 /* Tamaño de letra chiquita derechos de best finds */
 #licencia{
     font-size: 12px;
-
 }

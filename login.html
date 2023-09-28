@@ -76,28 +76,30 @@
 
     <br>
     <!-- Seccion principal -->
+    
     <div class="container">
 
 
-        <div class="row">
+        <div class="row" id="tamañoFormulario">
             <!-- Formulario -->
-            <div class="col-sm-1 col-md-1 col-lg-1" id="lateralIzq">
-                <img src="./assets/img/barraBFv1_Vert.jpeg" alt="Barra lateral izquierda" class="img-fluid"
+            
+            <div class="col-sm-1 col-md-1 col-lg-1">
+                <img id="col-2" src="./assets/img/barraBFv1_Vert.jpeg" alt="Barra lateral izquierda" class="img-fluid"
                     id="imgLateral">
             </div>
             <div class="col-sm-10 col-md-10 col-lg-10">
+                
                 <br>
                 <h1>Iniciar Sesión</h1>
                 <form>
                     <div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label" id="txtInicio">Correo electrónico</label>
-                        <div id="centrado"> <input type="email" class="form-control" id="tamaño" id="exampleInputEmail1"
-                                aria-describedby="emailHelp"></div>
+                        <div id="centrado" > <input  id="datos" type="email" class="form-control"></div>
 
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label" id="txtInicio">Contraseña:</label>
-                        <div id="centrado"><input type="password" class="form-control" id="tamaño"
+                        <label for="exampleInputPassword1"  class="form-label" id="txtInicio">Contraseña:</label>
+                        <div id="centrado" ><input id="datos" type="password" class="form-control" 
                                 id="exampleInputPassword1">
                         </div>
                     </div>
@@ -115,7 +117,7 @@
                     <div class="mb-3">
                         <label id="txtRecuperarContraseña">Olvidé mi contraseña</label>
                         <p>Escribe el correo relacionado a tu cuenta para recuperar tu contraseña:</p>
-                        <div id="centrado"> <input type="email" class="form-control" placeholder="Correo electrónico" id="tamaño" style="font-size: 30px;"></div>
+                        <div id="centrado"> <input  id="datos" type="email" class="form-control" placeholder="Correo electrónico" ></div>
 
                     </div>
                     <br>
@@ -135,15 +137,20 @@
 
                 </form>
             </div>
-            <div class="col-sm-1 col-md-1 col-lg-1" id="lateralDer">
-                <img src="./assets/img/barraBFv2_Vert.jpeg" alt="Barra lateral derecha" class="img-fluid"
+            <div class="col-sm-1 col-md-1 col-lg-1">
+                <img id="col-2" src="./assets/img/barraBFv2_Vert.jpeg" alt="Barra lateral derecha" class="img-fluid"
                     id="imgLateral">
             </div>
+            
 
         </div>
     </div>
+    
     <br>
 
+
+
+    
     <!-- Pie de pagina -->
     <footer>
         <div class="container">

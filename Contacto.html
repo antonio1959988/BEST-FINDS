@@ -1,214 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Finds</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Best Finds Registro</title>
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-    <!-- Estilos css de la pagina-->
-    <link rel="stylesheet" href="./assets/styles/sobre_nosotros.css">
+  <!-- Estilos css de la pagina-->
+  <link rel="stylesheet" href="./assets/styles/contacto.css">
 
 </head>
+
 <body>
-    <!-- Barra de navegacion -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" >
-        <div class="container-fluid"  id="barra">
-          <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <a href="#" target="_blank"><img src="./assets/img/logoMini.jpg" alt="Lupa" class="img-fluid" id="logoBF"></a>
-          <a href="#" target="_blank"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid" id="imgIcono2"></a>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="lista">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Inicio</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Marcas
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Categorías
-                </a>
-                <ul class="dropdown-menu">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Ofertas</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Noticias</a>
-              </li>
+  <!-- Barra de navegacion -->
+  <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
+    <div class="container-fluid" id="barra"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
+      <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a href="#" target="_blank"><img src="./assets/img/logoMini.jpg" alt="Lupa" class="img-fluid" id="logoBF"></a>
+      <a href="#" target="_blank"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid"
+          id="imgIcono2"></a>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="lista">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Marcas
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
             </ul>
-            <form class="d-flex" role="search">
-              <input class="form-control ms-4" type="search" placeholder="Buscar..." aria-label="Search">
-              <a href="#" target="_blank"><img src="./assets/icons/buscarIcono.jpg" alt="Lupa" class="img-fluid" id="imgIcono"></a>
-              <a href="#" target="_blank"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid" id="imgIcono3"></a>
-              <a href="#" target="_blank"><img src="./assets/icons/cuentaIcono.jpg" alt="Lupa" class="img-fluid" id="imgIcono"></a>
-            </form>
-          </div>
-        </div>
-      </nav>
-    <!-- Seccion principal de logos -->
-    <div class="container">
-       
-    <!-- Seccion integrantes -->
-    <div class="container">
-        <br>
-        <br>
-<!-- Seccion principal -->
-<div class="container">
-    <h4>Contacto</h4>
-    <h1>¿Tienes alguna queja, sugerencia o algo que quieras compartirnos?</h1>
-    <br>
-    <br>
-    <div class="row" id="seccionForm">
-        <!-- Formulario -->
-        <div class="col-sm-1 col-md-1 col-lg-1"  id="lateralIzq">
-            <img src="./assets/img/barraBFv1_Vert.jpeg" alt="Barra lateral izquierda" class="img-fluid" id="imgLateral">
-        </div>
-        <div class="col-sm-10 col-md-10 col-lg-10" id="formulario">
-            <div class="container">
-            <label for="nomUsuario">Nombre:</label><br>
-            <input type="text" id="nomUsuario">
-          </div>
-          <div class="container">
-            <label for="nomUsuario">Correo electrónico:</label><br>
-            <input type="text" id="nomUsuario">
-          </div>
-          <div class="container">
-            <label for="nomUsuario">Teléfono:</label><br>
-            <input type="text" id="nomUsuario">
-          </div>
-          <div class="container">
-            <label for="nomUsuario">Mensaje:</label><br>
-            <input type="text" id="nomUsuario">
-          </div>
-          <br>
-          <!-- Botón para envíar -->
-        <button style="background-color:mediumvioletred;border-color:mediumvioletred;=" button class="btn btn-primary" id="btnRegistrarPaciente">Enviar</button>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Categorías
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ofertas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Noticias</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control ms-4" type="search" placeholder="Buscar..." aria-label="Search">
+          <a href="#" target="_blank"><img src="./assets/icons/buscarIcono.jpg" alt="Lupa" class="img-fluid"
+              id="imgIcono"></a>
+          <a href="#" target="_blank"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid"
+              id="imgIcono3"></a>
+          <a href="#" target="_blank"><img src="./assets/icons/cuentaIcono.jpg" alt="Lupa" class="img-fluid"
+              id="imgIcono"></a>
         </form>
-        </div>
-        <div class="col-sm-1 col-md-1 col-lg-1" id="lateralDer">
-        <img src="./assets/img/barraBFv1_Vert.jpeg" alt="Barra lateral derecha" class="img-fluid" id="imgLateral">
-        </div>
-        
+      </div>
     </div>
-</div>
-<br>
+  </nav>
+  <!-- Primer encabezado -->
+  <div class="container" id="divContacto"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
+    <h1>Contacto</h1>
+  </div>
+
+  <!-- Barra divisora -->
+  <img src="./assets/img/barraBFv1.jpeg" alt="BarraSuperior" class="img-fluid" id="barraDivisora">
 
 
-
-
-            <!-- Columna con redes sociales -->
-            <div class="col">
-                <img src="./assets/img/mensaje.jpg" alt="Barra lateral derecha" class="img-fluid" id="imgLateral">
-                <h4>O escribenos a hola@bestfinds.mx</h4>
-                <ul>
-
-
-                    <!-- Columna secundaria con redes sociales -->
-            <div class="col">
-                <img src="./assets/img/whatsappcontacto.jpg" alt="Barra lateral derecha" class="img-fluid" id="imgLateral">
-                <h4>O puedes mandarnos un whatsapp 33-22-11-22-33</h4>
-                <ul>
-
-                </div>
-            </div>
-        </div>
+  <!-- Sección con formulario -->
+  <div class="row">
+    <!-- Sección principal -->
+    <div class="row" id="titulo">
+      <h2>¿Tienes alguna queja, sugerencia<br>
+        o algo que quieras compartirnos?</h2>
     </div>
-    <br>
-    <!-- Barra divisora -->
-    <img src="./assets/img/barraBFv2.jpeg" alt="BarraSuperior" class="img-fluid" id="barraDivisora">    
-
-    <!-- Pie de pagina -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <!-- Columna secundaria con mas informacion -->
-                <div class="col-sm-12 col-md-4 col-lg-3" id="col-2"> <!--Este div se oculta en tamaño sm-->
-                    <h5>Más Información</h5>
-                    <ul>
-                        <li><a href="#" target="_blank">Preguntas frecuentes</a></li>
-                        <li><a href="#" target="_blank">Contáctanos</a></li>
-                        <li><a href="#" target="_blank">Sobre nosotros</a></li>
-                        <li><a href="#" target="_blank">Política de privacidad</a></li>
-                        <li><a href="#" target="_blank">Términos y condiciones</a></li>
-                    </ul>
-                </div>
-                <!-- Columna principal con logotipo y redes sociales-->
-                <div class="col-sm-12 col-md-4 col-lg-6">
-                    <br>
-                    <img src="./assets/img/logoBFv2.jpg" alt="Logo Best Finds" class="img-fluid" id="imgFooter">
-                    <div class="container">
-                        <!-- Con estas id se ocultaran los icono en tamaño lg -->
-                        <a href="https://www.facebook.com/bestfinds.mx?mibextid=LQQJ4d" target="_blank">
-                            <img src="./assets/icons/faceRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
-                        </a>  
-                        <a href="https://www.instagram.com/bestfinds.mx" target="_blank">
-                            <img src="./assets/icons/instaRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
-                        </a>  
-                        <a href="#" target="_blank">
-                            <img src="./assets/icons/tiktokRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
-                        </a>  
-                        <a href="https://wa.me/message/TTKTHJMTBUQTM1" target="_blank">
-                            <img src="./assets/icons/whatsappRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
-                        </a>  
-                    </div>
-                    <!-- Secciones span para links inferiores -->
-                    <span><a href="#" target="_blank">Política de privacidad</a> | <a href="#" target="_blank">Términos y condiciones</a></span><br>
-                    <span id="licencia"><a href="#" target="_blank">© 2023 Best Finds - Una E-commerce desarrollada por Money Makers</a></span>
-                    <br><br>
-                </div>
-                <!-- Columna secundaria con redes sociales -->
-                <div class="col-sm-12 col-md-4 col-lg-3" id="col-2">  <!--Este div se oculta en tamaño sm-->
-                    <!--Titulo de seccion con salto de linea-->
-                    <h5>¡Síguenos en nuestras <br> redes sociales!</h5>
-                    <!--Lista de redes para vista desktop-->
-                    <ul>
-                        <li>
-                            <a href="https://www.facebook.com/bestfinds.mx?mibextid=LQQJ4d" target="_blank">
-                                <img src="./assets/icons/faceRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">Best Finds México
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="https://www.instagram.com/bestfinds.mx" target="_blank">
-                                <img src="./assets/icons/instaRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">@bestfinds.mx
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="#" target="_blank">
-                                <img src="./assets/icons/tiktokRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">@bestfinds.mx
-                            </a> 
-                        </li>
-                        <li>
-                            <a href="https://wa.me/message/TTKTHJMTBUQTM1" target="_blank">
-                                <img src="./assets/icons/whatsappRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooterLg">33-22-11-22-33
-                            </a> 
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Formulario -->
+    <div class="container" id="formulario"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
+      <form>
+        <div class="divInputs">
+          <label
+            for="nomUsuario">Nombre:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
+          <input type="text" class="datos" id="nomUsuario">
         </div>
-    </footer>
+        <div class="divInputs">
+          <label for="correo">Correo
+            electrónico:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
+          <input type="email" class="datos" id="emailUsuario">
+        </div>
+        <div class="divInputs">
+          <label
+            for="apUsuario">Teléfono</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
+          <input type="text" class="datos" id="telUsuario">
+        </div>
+        <div class="divInputs">
+          <label for="apUsuario">Mensaje</label><br>
+          <textarea name="comentarios" id="comentario" cols="45" rows="6"
+            placeholder="Escribe aqui tus comentarios"></textarea> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
+        </div>
+        <!-- El botón envía los datos del formulario -->
+        <div class="divInputs">
+          <button type="submit" class="btn btn-primary mb-3" id="btnEnviar">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+<!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <!-- Imagen simple de mensaje de correo electrónico -->
+        <div>
+          <img src="./assets/img/Contacto/correoContacto.jpg" id="iconoContacto">
+        </div>
+        <div>
+          <a href="mailto:hola@bestfinds.mx" target="_blank" id="enlace">
+            <span id="msgContacto">
+              O escríbenos a <br>
+              hola@bestfinds.mx
+            </span>
+          </a>
+        </div>
 
-    <!--Script de bootstrap en la pagina-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      </div>
+      <!-- Imagen simple de WhatsApp -->
+      <div class="col-sm-6 col-md-6 col-lg-6">
+        <div>
+          <img src="./assets/img/Contacto/whatsappContacto.jpg" id="iconoContacto">
+        </div>
+        <div>
+          <a href="https://wa.me/message/TTKTHJMTBUQTM1" target="_blank"
+            id="enlace"> <!-- Enlace interno en la página web que redirecciona a WhatsApp -->
+            <span id="msgContacto">
+              O puedes mandarnos <br>
+              un whatsapp 33-22-11-22-33
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
 
-    <!-- Scripts JS de la pagina -->
-    <script src="./assets/js/sobre_nosotros.js"></script>
+
+  <!-- Barra divisora -->
+  <img src="./assets/img/barraBFv2.jpeg" alt="BarraSuperior" class="img-fluid" id="barraDivisora">
+
+  <!-- Pie de página -->
+  <footer>
+    <div class="container"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
+      <div class="row">
+        <!-- Columna secundaria con más información -->
+        <div class="col-sm-12 col-md-4 col-lg-3" id="col-2"> <!--Este div se oculta en tamaño sm-->
+          <h5>Más Información</h5>
+          <ul>
+            <li><a href="#" target="_blank">Preguntas frecuentes</a></li>
+            <li><a href="#" target="_blank">Contáctanos</a></li>
+            <li><a href="#" target="_blank">Sobre nosotros</a></li>
+            <li><a href="#" target="_blank">Política de privacidad</a></li>
+            <li><a href="#" target="_blank">Términos y condiciones</a></li>
+          </ul>
+        </div>
+        <!-- Columna principal con logotipo y redes sociales-->
+        <div class="col-sm-12 col-md-4 col-lg-6">
+          <br>
+          <img src="./assets/img/logoBFv2.jpg" alt="Logo Best Finds" class="img-fluid" id="imgFooter">
+          <div class="container"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
+            <!-- Con estas id se ocultaran los icono en tamaño lg -->
+            <a href="https://www.facebook.com/bestfinds.mx?mibextid=LQQJ4d" target="_blank">
+              <img src="./assets/icons/faceRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+            </a>
+            <a href="https://www.instagram.com/bestfinds.mx" target="_blank">
+              <img src="./assets/icons/instaRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+            </a>
+            <a href="#" target="_blank">
+              <img src="./assets/icons/tiktokRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+            </a>
+            <a href="https://wa.me/message/TTKTHJMTBUQTM1" target="_blank">
+              <img src="./assets/icons/whatsappRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
+            </a>
+          </div>
+          <!-- Secciones span para links inferiores -->
+          <span><a href="#" target="_blank">Política de privacidad</a> | <a href="#" target="_blank">Términos y
+              condiciones</a></span><br>
+          <span id="licencia"><a href="#" target="_blank">© 2023 Best Finds - Una E-commerce desarrollada por Money
+              Makers</a></span>
+          <br><br>
+        </div>
+        <!-- Columna secundaria con redes sociales -->
+        <div class="col-sm-12 col-md-4 col-lg-3" id="col-2"> <!--Este div se oculta en tamaño sm-->
+          <!--Titulo de seccion con salto de linea-->
+          <h5>¡Síguenos en nuestras <br> redes sociales!</h5>
+          <!--Lista de redes para vista desktop-->
+          <ul>
+            <li>
+              <a href="https://www.facebook.com/bestfinds.mx?mibextid=LQQJ4d" target="_blank">
+                <img src="./assets/icons/faceRosa.jpg" alt="Imagen de redsocial" class="img-fluid"
+                  id="iconoFooterLg">Best Finds México
+              </a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/bestfinds.mx" target="_blank">
+                <img src="./assets/icons/instaRosa.jpg" alt="Imagen de redsocial" class="img-fluid"
+                  id="iconoFooterLg">@bestfinds.mx
+              </a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img src="./assets/icons/tiktokRosa.jpg" alt="Imagen de redsocial" class="img-fluid"
+                  id="iconoFooterLg">@bestfinds.mx
+              </a>
+            </li>
+            <li>
+              <a href="https://wa.me/message/TTKTHJMTBUQTM1" target="_blank">
+                <img src="./assets/icons/whatsappRosa.jpg" alt="Imagen de redsocial" class="img-fluid"
+                  id="iconoFooterLg">33-22-11-22-33
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+
+  <!--Script de bootstrap en la pagina-->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- Scripts JS de la pagina -->
+  <script src="./assets/js/sobre_nosotros.js"></script>
 </body>
 
 </html>

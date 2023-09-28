@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
   <title>Carrito</title>
 
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -73,6 +76,7 @@
     </div>
   </nav>
 
+  <img src="./assets/img/carritoCompras/BF_Header.png" alt="Header" id="imgHeader" class="img-fluid">
   <!--Container carritoCompras-->
   <div class="container">
     <h1 id="titulo1Carrito">Carrito de compras</h1>
@@ -93,17 +97,15 @@
 
     <div class="row rowPosition"> <!--Row producto1-->
       <!--PRODUCTO1-->
-      <div class="col"> <!--Inicio col1-->
-        <div class="row rowPosition"> <!--Inicio row producto-->
-          <div class="col"> <!-- div  col Imagen-->
-            <img src="./assets/img/carritoCompras/producto1.jpg" alt="producto1" class="imgProductos">
-          </div> <!-- div col imagen-->
-          <div class="col"> <!--DescripcioProducto-->
-            <h6><b>Lorem</b></h6>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div> <!--Col descripcion-->
-        </div> <!--Cierre row producto-->
-      </div><!--Cierre div col1-->
+      <div class="col-2 col-md-2 col-sm-2"> <!-- div  col Imagen-->
+        <img src="./assets/img/carritoCompras/producto1.jpg" alt="producto1" class="imgProductos">
+      </div> <!-- div col imagen-->
+      <div class="col-2 col-md-2 col-sm-2"> <!--DescripcioProducto-->
+        <h6><b>Lorem</b></h6>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      </div> <!--Col descripcion-->
+
+
 
 
       <!--CANTIDAD PRODUCTO1-->
@@ -125,6 +127,9 @@
             <i class="fa-regular fa-trash-can fa-xl icon-trash"></i>
           </button>
         </div>
+
+
+
       </div><!--Cierre div col2 cantidad-->
 
 
@@ -138,8 +143,16 @@
   </div> <!--Cierre container carritoCompras-->
 
 
-  <!-- Barra divisora -->
-  <img src="./assets/img/barraBFv2.jpeg" alt="BarraSuperior" class="img-fluid" id="barraDivisora">
+
+
+
+
+  <div> <!-- Inicio Boton continuarCompra-->
+    <button type="submit" class="btn btn-primary btn-lg" id="colorButton">Continuar Compra</button>
+  </div> <!--Cierre boton continuar compra-->
+  <br>
+
+
 
   <!-- Pie de pagina -->
   <footer>
@@ -151,7 +164,7 @@
           <ul>
             <li><a href="#" target="_blank">Preguntas frecuentes</a></li>
             <li><a href="#" target="_blank">Contáctanos</a></li>
-            <li><a href="#" target="_blank">Sobre nosotros</a></li>
+            <li><a href="./sobre_nosotros.html" target="_blank">Sobre nosotros</a></li>
             <li><a href="#" target="_blank">Política de privacidad</a></li>
             <li><a href="#" target="_blank">Términos y condiciones</a></li>
           </ul>

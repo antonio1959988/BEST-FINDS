@@ -73,14 +73,8 @@ h1{
 }
 
 
-/*id para label del formulario*/
-#tamaño{
-    width: 755px;
-     height: 87px;
-     display: flex;
-     justify-content: center;
-     
-}
+
+
 
 /*Boton de check*/
 .form-check {
@@ -92,9 +86,11 @@ h1{
 .form-check-label {
   margin-right: 100px; /* Ajusta el espacio entre el texto y el botón de verificación según tus preferencias */
 }
-/*Tamaño boton de check*/
+/*Tamaño color y brode de boton de check*/
 #check-input {
+    box-shadow: 0 0 5px #d71787;
     transform: scale(2); /* Ajusta el valor según el tamaño deseado */
+    border: none;
    
   }
 /*color del check al ser precionado*/
@@ -102,7 +98,7 @@ h1{
     background-color: #D71787; /* Cambia el color de fondo cuando está marcado  */
   }
 
-/*color botones*/
+/*color y tamaño de botones*/
 #colorB {
     background-color: #D71787;
     font-family: "Roboto", sans-serif;;
@@ -111,6 +107,7 @@ h1{
      font-size: 25px;
      border-radius: 40px;
      margin-left: 30px;
+     border: none;
 }
 
 #colorB2 {
@@ -121,7 +118,42 @@ h1{
      font-size: 25px;
      border-radius: 40px;
      margin-left: 30px;
+     border: none;
      
+}
+/*Tamaño del formulario*/
+#tamañoFormulario {
+    transform: scale(.9); /* Ajusta el valor según el tamaño deseado */
+
+}
+
+
+/*Color de las letras en labels*/
+#colorDatos{ 
+    color: #707070; /* Cambia el color del texto a #707070 */
+    font-family: "Roboto", sans-serif; /* Cambia la fuente del texto a "Roboto" */
+  }
+  
+
+/*Color de los labels al ser presionados*/
+#datos {
+    width: 80%;
+
+    &:focus {
+        /*Cuando se da click en los inputs, se crea un resplandor*/
+        color: #707070;
+        font-weight: bold;
+        border: none;
+        box-shadow: 0 0 5px #d71787;
+        outline: 0px;
+    }
+}
+
+
+/*Color input */
+.form-control{
+    color: #707070; /* Cambia el color del texto a #707070 */
+    font-family: "Roboto", sans-serif; /* Cambia la fuente del texto a "Roboto" */
 }
 
 
@@ -133,17 +165,7 @@ h1{
 
 
 
-
-
-
-
-
-
-
-
-
-
-/*Footer */
+/*////////////////////////////////Footer */
 footer{
     background-color: #D71787;
     color: white;
@@ -189,7 +211,7 @@ footer ul, h5{
     font-size: 12px;
 }
 
-/* Media query para centrar titulos y ocultar carrito dentro de la barra*/
+/*////////////////////////////// Media query para centrar titulos y ocultar carrito dentro de la barra/////////////////////////////*/
 @media (max-width: 992px){
     h1{
         text-align: center;
@@ -200,21 +222,6 @@ footer ul, h5{
     }
 
 }
-
-/* Titulo de login */
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 /* Media query para ocultar icono de carrito en vista lg */
