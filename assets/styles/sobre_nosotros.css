@@ -36,14 +36,14 @@ nav{
 
 /* Diseño base de etiqueta body*/
 body{
-    text-align: center;
+    text-align: left;
     font-family: "Roboto", sans-serif;;
     color: #707070;
 }
 
 /* Titulos */
 h1{
-    text-align: left;
+    text-align: center;
     margin-top: 30px;
 }
 
