@@ -17,7 +17,7 @@
 <body>
   <!-- Barra de navegacion -->
   <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top">
-    <div class="container-fluid" id="barra">
+    <div class="container-fluid" id="barra"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
       <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation">
@@ -70,8 +70,8 @@
       </div>
     </div>
   </nav>
-
-  <div class="container" id="divContacto">
+  <!-- Primer encabezado -->
+  <div class="container" id="divContacto"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
     <h1>Contacto</h1>
   </div>
 
@@ -81,43 +81,46 @@
 
   <!-- Sección con formulario -->
   <div class="row">
-    <!-- Seccion principal -->
+    <!-- Sección principal -->
     <div class="row" id="titulo">
       <h2>¿Tienes alguna queja, sugerencia<br>
         o algo que quieras compartirnos?</h2>
     </div>
     <!-- Formulario -->
-    <div class="container" id="formulario">
+    <div class="container" id="formulario"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
       <form>
         <div class="divInputs">
-          <label for="nomUsuario">Nombre:</label><br>
+          <label
+            for="nomUsuario">Nombre:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
           <input type="text" class="datos" id="nomUsuario">
         </div>
         <div class="divInputs">
-          <label for="correo">Correo electrónico:</label><br>
+          <label for="correo">Correo
+            electrónico:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
           <input type="email" class="datos" id="emailUsuario">
         </div>
         <div class="divInputs">
-          <label for="apUsuario">Teléfono</label><br>
+          <label
+            for="apUsuario">Teléfono</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
           <input type="text" class="datos" id="telUsuario">
         </div>
         <div class="divInputs">
           <label for="apUsuario">Mensaje</label><br>
           <textarea name="comentarios" id="comentario" cols="45" rows="6"
-            placeholder="Escribe aqui tus comentarios"></textarea>
+            placeholder="Escribe aqui tus comentarios"></textarea> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
         </div>
-
+        <!-- El botón envía los datos del formulario -->
         <div class="divInputs">
           <button type="submit" class="btn btn-primary mb-3" id="btnEnviar">Enviar</button>
         </div>
       </form>
     </div>
   </div>
-
+<!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
   <div class="container">
     <div class="row">
       <div class="col-sm-6 col-md-6 col-lg-6">
-
+        <!-- Imagen simple de mensaje de correo electrónico -->
         <div>
           <img src="./assets/img/Contacto/correoContacto.jpg" id="iconoContacto">
         </div>
@@ -131,13 +134,14 @@
         </div>
 
       </div>
-
+      <!-- Imagen simple de WhatsApp -->
       <div class="col-sm-6 col-md-6 col-lg-6">
         <div>
           <img src="./assets/img/Contacto/whatsappContacto.jpg" id="iconoContacto">
         </div>
         <div>
-          <a href="https://wa.me/message/TTKTHJMTBUQTM1" target="_blank" id="enlace">
+          <a href="https://wa.me/message/TTKTHJMTBUQTM1" target="_blank"
+            id="enlace"> <!-- Enlace interno en la página web que redirecciona a WhatsApp -->
             <span id="msgContacto">
               O puedes mandarnos <br>
               un whatsapp 33-22-11-22-33
@@ -152,11 +156,11 @@
   <!-- Barra divisora -->
   <img src="./assets/img/barraBFv2.jpeg" alt="BarraSuperior" class="img-fluid" id="barraDivisora">
 
-  <!-- Pie de pagina -->
+  <!-- Pie de página -->
   <footer>
-    <div class="container">
+    <div class="container"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
       <div class="row">
-        <!-- Columna secundaria con mas informacion -->
+        <!-- Columna secundaria con más información -->
         <div class="col-sm-12 col-md-4 col-lg-3" id="col-2"> <!--Este div se oculta en tamaño sm-->
           <h5>Más Información</h5>
           <ul>
@@ -171,7 +175,7 @@
         <div class="col-sm-12 col-md-4 col-lg-6">
           <br>
           <img src="./assets/img/logoBFv2.jpg" alt="Logo Best Finds" class="img-fluid" id="imgFooter">
-          <div class="container">
+          <div class="container"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
             <!-- Con estas id se ocultaran los icono en tamaño lg -->
             <a href="https://www.facebook.com/bestfinds.mx?mibextid=LQQJ4d" target="_blank">
               <img src="./assets/icons/faceRosa.jpg" alt="Imagen de redsocial" class="img-fluid" id="iconoFooter">
