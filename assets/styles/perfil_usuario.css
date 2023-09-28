@@ -76,7 +76,7 @@ h1{
 }
 
 /* Diseño de nombre de usuario centrado, en un contenedor ovalado, dividido en dos colores rosa y amarillo */
-#nombreUsuario {
+#menuPerfil {
     background-color: #D71787;
     color: white;
     width: 200px;
