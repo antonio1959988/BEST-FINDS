@@ -58,9 +58,20 @@ h1{
 
 
 #imgProductos {
-    width: 80px;
-    height: 80px;
+    width: 10rem;
+    height: 10rem;
+
+
 }
+
+@media (max-width: 576px) { 
+    #imgProductos {
+        width: 8rem;
+        height: 8rem;
+    
+    
+    }
+ }
 
 
 .rowPosition {
@@ -71,6 +82,7 @@ h1{
 }
 
 .btn-number {
+    width: 2.4rem;
     border: solid 2px #D71787;
 }
 
@@ -81,7 +93,7 @@ h1{
 .input-number {
     border: solid 2px #D71787;
     text-align: center;
-    width: 50px !important;
+    width: 2.4rem !important;
 }
 
 #imgHeader {
@@ -92,8 +104,15 @@ h1{
 #colorButton {
     background-color: #D71787;
     border-color: #D71787;
+    width: 14rem;
 
-    width: 80%;
+
+
+}
+
+
+#colorButton:focus {
+
     /*Cuando se da click en los inputs, se crea un resplandor*/
     font-weight: bold;
     border: none;
@@ -102,7 +121,6 @@ h1{
 
 
 }
-
 
 /*//////////////////////////////////////////////////////////////
 
