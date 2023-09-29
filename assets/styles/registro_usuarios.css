@@ -1,44 +1,4 @@
-/* Barra de navegacion */
-#logoBF{
-    width: 75px;
-    height: 60px;
-}
 
-#lista li{
-    margin-right: 16px;
-}
-
-#barra{
-    background-color: white;
-}
-
-nav{
-    background-color: white;
-    height: 70px;
-}
-
-#imgIcono{
-    width: 40px;
-    height: 35px;
-}
-
-#imgIcono2{
-    width: 40px;
-    height: 35px;
-}
-
-#imgIcono3{
-    width: 40px;
-    height: 35px;
-}
-
-
-/* Diseño base de etiqueta body*/
-body{
-    text-align: center;
-    font-family: "Roboto", sans-serif;;
-    color: #707070;
-}
 
 /* Titulos */
 h1{
@@ -102,6 +62,10 @@ h4{
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
   }
 /*color del check al ser precionado*/
+#checkinput{
+    box-shadow: none;
+    border: 1px solid #707070;
+}
 #checkinput:checked {
     background-color: #D71787; /* Cambia el color de fondo cuando está marcado  */
     border-color: #707070;
@@ -126,39 +90,9 @@ h4{
     height: 520px;
 }
 
-/* Media query para centrar titulos y ocultar carrito dentro de la barra */
-@media (max-width: 992px){
-    h1{
-        text-align: center;
-    }
 
-    #imgIcono3{
-        display: none;;
-    }
-}
 
-/* Media query para ocultar icono de carrito en vista lg */
-@media (min-width: 992px){
-    #imgIcono2{
-        display: none;
-    }
-}
 
-/* Media query para ocultar iconos centrales del footer en vista md */
-@media (min-width: 768px){
-    #iconoFooter{
-        display: none;
-    }
-
-}
-
-/* Media query para ocultar columnas laterales para tamaño sm*/
-@media (max-width: 768px){
-    #col-2{
-        display: none;
-    }
-
-}
 
 /*Media query para ocultar barras laterales*/
 @media (max-width: 768px){
@@ -167,47 +101,3 @@ h4{
     }
 }
 
-/*FOOTER*/
-footer{
-    background-color: #D71787;
-    color: white;
-    padding-top: 30px;;
-}
-
-/* Enlaces de footer (quitar formato subrayado)*/
-footer a{
-    text-decoration: none;
-    color: white;
-}
-/* Listas de enlaces, quitar formato */
-footer ul, h5{
-    list-style: none;
-    padding-left: 0px;
-    text-align: left;
-}
-
-/* Imagen principal del footer */
-#imgFooter{
-    width: 210px;
-    height: 150px;
-}
-
-/* Iconos de redes sociales del footer (centrales)*/
-#iconoFooter{
-    width: 50px;
-    height: 50px;
-    margin: 5px;
-    margin-bottom: 15px;
-}
-
-/* Iconos de redes sociales del footer (laterales)*/
-#iconoFooterLg{
-    width: 40px;
-    height: 40px;
-    margin: 5px;
-}
-
-/* Tamaño de letra chiquita derechos de best finds */
-#licencia{
-    font-size: 12px;
-}
