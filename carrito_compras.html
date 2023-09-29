@@ -75,52 +75,73 @@
     </div>
   </nav>
 
-  <img src="./assets/img/carritoCompras/BF_Header.png" alt="Header" id="imgHeader" class="img-fluid">
+  <!-- Carrusel con el banner -->
+  <div id="#BannerIndex" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner promocional">
+        </div>
+        <div class="carousel-item">
+            <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner Promocional 2">
+        </div>
+        <div class="carousel-item">
+            <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner Promocional 3">
+        </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#BannerIndex" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#BannerIndex" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+    </button>
+</div> <!-- Termina carrusel con el banner -->
 
 
   <!--Container carritoCompras-->
   <div class="container" id="carrito">
     <h1 id="titulo1Carrito">Carrito de compras</h1>
     <div class="row rowPosition"> <!--Inicio row encabezado-->
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div class="col">
         <h6>PRODUCTO</h6>
       </div>
 
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+      <div class="col-4 col-sm-4 col-md-6 col-lg-6">
         
 
         <div class="row">
-          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
 
           </div>
 
-          <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
-            <h6>CANTIDAD</h6>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+            <h6 class="d-none d-md-block">CANTIDAD</h6>
           </div>
         </div>
       </div>
 
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-        <H6>TOTAL</H6>
+      <div class="col">
+        <H6 class="d-none d-md-block">TOTAL</H6>
       </div>
     </div> <!--Cierre row encabezado-->
 
 
-    <div class="row rowPosition"> <!--Row producto1-->
+    <div class="row rowPosition  mb-3"> <!--Row producto1-->
       <!--PRODUCTO1-->
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> <!-- div  col Imagen-->
+      <div class="col"> <!-- div  col Imagen-->
         <img src="./assets/img/carritoCompras/producto1.jpg" alt="producto1" id="imgProductos">
       </div> <!-- div col imagen-->
       
-      <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"> <!--DescripcioProducto-->
+      <div class="col-4 col-sm-4 col-md-6 col-lg-6"> <!--DescripcioProducto-->
 
         <div class="row">
-          <div class="col-xs-4 col-sm-12 col-md-6 col-lg-6">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
             <h6><b>Lorem</b></h6>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           </div>
 
-          <div class="col-xs-4 col-sm-12 col-md-6 col-lg-6">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
             <!-- Seccion contador -->
           <div class="d-inline-block">
             <div class="input-group">
@@ -147,11 +168,16 @@
       </div> <!--Col descripcion-->
 
       <!--TOTAL PRODUCTO 1-->
-      <div class="col-sm-4 col-md-4 col-lg-4"><!--Inicio div col3 total-->
+      <div class="col"><!--Inicio div col3 total-->
         <p>$621.00</p>
 
       </div> <!--Cierre col3 total-->
     </div> <!--Cierre div row producto1-->
+
+    <div> <!-- Inicio Boton continuarCompra-->
+      <button type="submit" class="btn btn-primary btn-lg" id="colorButton">Continuar Compra</button>
+    </div> <!--Cierre boton continuar compra-->
+    <br>
 
   </div> <!--Cierre container carritoCompras-->
 
@@ -160,10 +186,7 @@
 
 
 
-  <div> <!-- Inicio Boton continuarCompra-->
-    <button type="submit" class="btn btn-primary btn-lg" id="colorButton">Continuar Compra</button>
-  </div> <!--Cierre boton continuar compra-->
-  <br>
+ 
 
 
 
