@@ -57,3 +57,57 @@ function contabilizarLikes(comentarioId) {
 // Llamar a la función para cada comentario en un bucle)
 contabilizarLikes(1); // Para el primer comentario
 contabilizarLikes(2); // Para el segundo comentario, etc.
+
+
+
+
+/////////////////////////////Collapse de comentarios//////////////////////////////
+let comentariosDiv = document.getElementById('comentariosDiv');
+comentariosDiv.innerHTML=` <div id="contenedorDeComentarios">
+<h4>Comentarios</h4>
+<div id="contenedorAgregarComentario">
+    <h5>Agrega un comentario</h5>
+    <form>
+        <textarea class="form-control" id="txtComentario" rows="2"
+            placeholder="Tu opinion nos ayuda mucho :)..."></textarea>
+        <div id="der">
+            <button type="button" class="btn btn-primary"
+                id="btnEnviarComentario">Enviar</button>
+        </div>
+    </form>
+</div>
+
+<div id="contenedorInferior">
+    <h5>Usuario Anónimo</h5>
+    <p id="comentario">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium
+        expedita
+        dolore eligendi cumque commodi harum impedit facere mollitia ad quibusdam deleniti
+        cupiditate reiciendis ullam dolorum, eius, magni aliquam! Similique.
+    </p>
+    <div id="der">
+        <button id="boton-corazon-1" class="boton-corazon">
+            <!-- Utilizamos "fa" para FontAwesome -->
+            <span id="contador-likes-1">0</span>
+            <i class="fa fa-heart"></i>
+        </button>
+    </div>
+</div>
+
+<div id="contenedorInferior">
+    <h5>Usuario Anónimo</h5>
+    <p id="comentario">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium
+        expedita
+        dolore eligendi cumque commodi harum impedit facere mollitia ad quibusdam deleniti
+        cupiditate reiciendis ullam dolorum, eius, magni aliquam! Similique.
+    </p>
+    <div id="der">
+        <button id="boton-corazon-2" class="boton-corazon">
+            <!-- Utilizamos "fa" para FontAwesome -->
+            <span id="contador-likes-2">0</span>
+            <i class="fa fa-heart"></i>
+        </button>
+    </div>
+</div>
+</div>`;
