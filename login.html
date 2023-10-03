@@ -39,14 +39,13 @@
                 <h1>Iniciar Sesión</h1>
                 <form>
                     <div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label" id="txtInicio">Correo electrónico</label>
-                        <div id="centrado" > <input  id="datos" type="email" class="form-control"></div>
+                        <label for="email" class="form-label" id="txtInicio">Correo electrónico</label>
+                        <div id="centrado" ><input type="email" class="form-control" id="datos" name="email" autocomplete="username"></div>
 
                     </div>
                     <div class="mb-3">
-                        <label for="exampleInputPassword1"  class="form-label" id="txtInicio">Contraseña:</label>
-                        <div id="centrado" ><input id="datos" type="password" class="form-control" 
-                                id="exampleInputPassword1">
+                        <label for="password"  class="form-label" id="txtInicio">Contraseña:</label>
+                        <div id="centrado" ><input type="password"  class="form-control" id="datos" id="contraseña" name="password" autocomplete="current-password">
                         </div>
                     </div>
 
@@ -55,29 +54,36 @@
 
                     <div class="mb-3 form-check" id="centrado">
                         <label class="form-check-label" for="exampleCheck1" id="txtInicio">Recuérdame</label>
-                        <input type="checkbox" class="form-check-input" id="check-input" id="exampleCheck1">
+                        <input type="checkbox" class="form-check-input" id="check-input" name="exampleCheck1">
+                        
                     </div>
+                    <button type="submit" class="btn btn-primary btn-lg" id="colorB"  onclick="login" id="botonL">Iniciar Sesión</button>
 
-
+                    <br> <br> <br> 
 
                     <div class="mb-3">
-                        <label id="txtRecuperarContraseña">Olvidé mi contraseña</label>
-                        <p>Escribe el correo relacionado a tu cuenta para recuperar tu contraseña:</p>
+                        <label id="txtRecuperarContraseña" id="boton" onclick="mostrar();">Olvidé mi contraseña</label>
+
+
+                        <div id="ocultar">
+                        <p >Escribe el correo relacionado a tu cuenta para recuperar tu contraseña:</p>
                         <div id="centrado"> <input  id="datos" type="email" class="form-control" placeholder="Correo electrónico" ></div>
 
-                    </div>
+                    
                     <br>
                     <br>
-                    <div id="centrado">
-                        <button type="submit" class="btn btn-primary btn-lg" id="colorB">Iniciar Sesión</button>
+                    <div>
+
                         <button type="submit" class="btn btn-primary btn-lg" id="colorB">Recuperar Contraseña</button>
                     </div>
+                </div>
+            </div>
                     <br> <br> <br> <br> <br> <br>
                     
                     <p>¿No tienes una cuenta?</p>
                     <div id="centrado">
-                   <a href="./registroUsuarios.html" class="btn btn-primary btn-lg" id="colorB2" style="margin-left: 00px;" >Registrate</></a>
-                  
+                   <a href="./registroUsuarios.html" class="btn btn-primary btn-lg" id="colorB2" style="margin-left: 00px;" >Regístrate</></a>
+                   <p class="warnings" id="warnings"></p>
                 </div>
 
 
@@ -106,7 +112,7 @@
         crossorigin="anonymous"></script>
 
     <!-- Scripts JS de la pagina -->
-    <script src="./assets/js/sobre_nosotros.js"></script>
+    <script src="./assets/js/login.js"></script>
       <!-- Scripts JS de la pagina -->
   <script src="./assets/js/navbarYFooter.js"></script>
 </body>
