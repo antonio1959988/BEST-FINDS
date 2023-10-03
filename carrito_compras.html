@@ -19,6 +19,7 @@
 
 </head>
 
+<body onload="agregarProductos();">
 
   <!-- Barra de navegacion -->
   <div id="nav-bar" class="sticky-top"></div>
@@ -27,25 +28,25 @@
   <!-- Carrusel con el banner -->
   <div id="#BannerIndex" class="carousel slide">
     <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner promocional">
-        </div>
-        <div class="carousel-item">
-            <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner Promocional 2">
-        </div>
-        <div class="carousel-item">
-            <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner Promocional 3">
-        </div>
+      <div class="carousel-item active">
+        <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner promocional">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner Promocional 2">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner Promocional 3">
+      </div>
     </div>
     <button class="carousel-control-prev" type="button" data-bs-target="#BannerIndex" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
     </button>
     <button class="carousel-control-next" type="button" data-bs-target="#BannerIndex" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
     </button>
-</div> <!-- Termina carrusel con el banner -->
+  </div> <!-- Termina carrusel con el banner -->
 
 
   <!--Container carritoCompras-->
@@ -57,7 +58,7 @@
       </div>
 
       <div class="col-4 col-sm-4 col-md-6 col-lg-6">
-        
+
 
         <div class="row">
           <div class="col-12 col-sm-12 col-md-6 col-lg-6">
@@ -75,60 +76,14 @@
       </div>
     </div> <!--Cierre row encabezado-->
 
+  </div> <!--Cierre container carritoCompras-->
 
-    <div class="row rowPosition  mb-3"> <!--Row producto1-->
-      <!--PRODUCTO1-->
-      <div class="col"> <!-- div  col Imagen-->
-        <img src="./assets/img/carritoCompras/producto1.jpg" alt="producto1" id="imgProductos">
-      </div> <!-- div col imagen-->
-      
-      <div class="col-4 col-sm-4 col-md-6 col-lg-6"> <!--DescripcioProducto-->
-
-        <div class="row">
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-            <h6><b>Lorem</b></h6>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-
-          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-            <!-- Seccion contador -->
-          <div class="d-inline-block">
-            <div class="input-group">
-              <button type="button" class="btn btn-number" onclick="decrementarCantidad();">
-                <i class="fa-solid fa-minus"></i>
-              </button>
-              <input type="text" id="quantity" name="quantity" class="form-control input-number" value="1" min="1"
-                max="100">
-              <button type="button" class="btn btn-number" onclick="incrementarCantidad();">
-                <i class="fa-solid fa-plus"></i>
-              </button>
-            </div>
-          </div>
-          <div class="d-inline-block">
-            <button type="button" class="btn">
-              <i class="fa-regular fa-trash-can fa-xl icon-trash"></i>
-            </button>
-          </div>
-          </div>
-
-  
-
-        </div>
-      </div> <!--Col descripcion-->
-
-      <!--TOTAL PRODUCTO 1-->
-      <div class="col"><!--Inicio div col3 total-->
-        <p>$621.00</p>
-
-      </div> <!--Cierre col3 total-->
-    </div> <!--Cierre div row producto1-->
-
+  <div class="container mb-4">
     <div> <!-- Inicio Boton continuarCompra-->
       <button type="submit" class="btn btn-primary btn-lg" id="colorButton">Continuar Compra</button>
     </div> <!--Cierre boton continuar compra-->
-    <br>
 
-  </div> <!--Cierre container carritoCompras-->
+  </div>
 
 
 
@@ -149,7 +104,7 @@
 
   <!--Scripts JS carrito-->
   <script src="./assets/js/carrito_compras.js"></script>
-<!--JS navBar y Footer-->
+  <!--JS navBar y Footer-->
   <script src="./assets/js/navbarYFooter.js"></script>
 
 </body>
