@@ -76,48 +76,65 @@
                             debitis odit fugiat expedita minima eligendi qui ducimus corrupti officiis impedit? Vitae
                             nulla repudiandae ducimus quis, quo accusantium blanditiis rerum dolore facilis.
                         </p>
-                        <h4>Comentarios</h4>
-                        <div id="contenedorAgregarComentario">
-                            <h5>Agrega un comentario</h5>
-                            <form>
-                                <textarea class="form-control" id="txtComentario" rows="2"
-                                    placeholder="Tu opinion nos ayuda mucho :)..."></textarea>
-                                <div id="der">
-                                    <button type="button" class="btn btn-primary" id="btnEnviarComentario">Enviar</button>
-                                </div>
-                            </form>
-                        </div>
-
-
-                        <div id="contenedorInferior">
-                            <h5>Usuario Anónimo</h5>
-                            <p id="comentario">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium expedita
-                                dolore eligendi cumque commodi harum impedit facere mollitia ad quibusdam deleniti
-                                cupiditate reiciendis ullam dolorum, eius, magni aliquam! Similique.
-                            </p>
-                            <div id="der">
-                                <button id="boton-corazon-1" class="boton-corazon">
-                                    <!-- Utilizamos "fa" para FontAwesome -->
-                                    <span id="contador-likes-1">0</span>
-                                    <i class="fa fa-heart"></i>
-                                </button>
+                        <div id="contenedorComentarios" class="filtro-container d-md-none">
+                            <!-- Botón desplegable para mostrar/ocultar comentarios en dispositivos móviles -->
+                            <button class="btn btn-primary filtro-toggle" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#comentariosCollapse" aria-expanded="false"
+                                aria-controls="comentariosCollapse">
+                                Mostrar Comentarios
+                            </button>
+                            <br>
+                            <div id="comentariosCollapse" class="collapse">
+                                <div id="comentariosDiv"></div>
                             </div>
                         </div>
 
-                        <div id="contenedorInferior">
-                            <h5>Usuario Anónimo</h5>
-                            <p id="comentario">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium expedita
-                                dolore eligendi cumque commodi harum impedit facere mollitia ad quibusdam deleniti
-                                cupiditate reiciendis ullam dolorum, eius, magni aliquam! Similique.
-                            </p>
-                            <div id="der">
-                                <button id="boton-corazon-2" class="boton-corazon">
-                                    <!-- Utilizamos "fa" para FontAwesome -->
-                                    <span id="contador-likes-2">0</span>
-                                    <i class="fa fa-heart"></i>
-                                </button>
+                        <div id="contenedorDeComentarios" class="-3 d-none d-md-block">
+                            <h4>Comentarios</h4>
+                            <div id="contenedorAgregarComentario">
+                                <h5>Agrega un comentario</h5>
+                                <form>
+                                    <textarea class="form-control" id="txtComentario" rows="2"
+                                        placeholder="Tu opinion nos ayuda mucho :)..."></textarea>
+                                    <div id="der">
+                                        <button type="button" class="btn btn-primary"
+                                            id="btnEnviarComentario">Enviar</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="contenedorInferior">
+                                <h5>Usuario Anónimo</h5>
+                                <p id="comentario">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium
+                                    expedita
+                                    dolore eligendi cumque commodi harum impedit facere mollitia ad quibusdam deleniti
+                                    cupiditate reiciendis ullam dolorum, eius, magni aliquam! Similique.
+                                </p>
+                                <div id="der">
+                                    <button id="boton-corazon-1" class="boton-corazon">
+                                        <!-- Utilizamos "fa" para FontAwesome -->
+                                        <span id="contador-likes-1">0</span>
+                                        <i class="fa fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="contenedorInferior">
+                                <h5>Usuario Anónimo</h5>
+                                <p id="comentario">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium
+                                    expedita
+                                    dolore eligendi cumque commodi harum impedit facere mollitia ad quibusdam deleniti
+                                    cupiditate reiciendis ullam dolorum, eius, magni aliquam! Similique.
+                                </p>
+                                <div id="der">
+                                    <button id="boton-corazon-2" class="boton-corazon">
+                                        <!-- Utilizamos "fa" para FontAwesome -->
+                                        <span id="contador-likes-2">0</span>
+                                        <i class="fa fa-heart"></i>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -218,9 +235,6 @@
 
     <!-- Scripts JS de la pagina -->
     <script src="./assets/js/productos2.js"></script>
-
-    <!-- Scripts JS de la pagina -->
-    <script src="./assets/js/productosLikes.js"></script>
 
     <!-- Script JS del footer -->
     <script src="./assets/js/navbarYFooter.js"></script>
