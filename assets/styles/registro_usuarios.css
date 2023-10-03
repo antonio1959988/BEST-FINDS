@@ -27,18 +27,12 @@ h4{
 #seccionForm{
     margin-bottom: 20px;
     position: relative;
+   
+    align-items: center;
+    
 }
-.datos{
-    width: 80%;
-    color: #707070;
-    &:focus{/*Cuando se da click en los inputs, se crea un resplandor*/
-        color: #707070;
-        font-weight: bold;
-    border: none;
-   box-shadow: 0 0 5px #d71787;
-   outline: 0px;
-    }
-}
+
+/*Inputs*/
 
 .divInputs{
     padding-top: 5px;
@@ -47,11 +41,23 @@ h4{
 .form-control{
     color: #707070; /* Cambia el color del texto a #707070 */
     font-family: "Roboto", sans-serif; /* Cambia la fuente del texto a "Roboto" */
+    width: 80%;
+    color: #707070;
+    border: 1px solid #707070;
+    display: inline;
+    &:focus{/*Cuando se da click en los inputs, se crea un resplandor*/
+        color: #707070;
+        font-weight: bold;
+    border: none;
+   box-shadow: 0 0 5px #d71787;
+   outline: 0px;
+}
 }
 
 #terminosYCondiciones{
     align-items: center;
 }
+/* Boton */
 #btnRegistrar {
     background-color: #d71787; /* Cambia el color de fondo */
     color: #fff; /* Cambia el color del texto a blanco */
@@ -73,25 +79,43 @@ h4{
     border: none;
   }
 
+/*Alertas*/
+.alert{
+    max-width: 80%;
+    display: none;
+}
+
+/*Alertas activadas*/
+.alert-activa{
+    
+    display: block;
+}
+/*Alertas activadas*/
+.alert-noactiva{
+    
+    display: none;
+}
+
+
+
   
 /* Barras laterales */
 #lateralIzq{
     text-align: right;
     position: relative;
+    align-items: center;
+    
 }
 #lateralDer{
     text-align: left;
     position: relative;
 }
 #imgLateral{
-    max-width: 30px;
     width: 30px;
-    max-height: 100%;
-    height: 520px;
+    max-height: fit-content;
+    height:auto;
+
 }
-
-
-
 
 
 /*Media query para ocultar barras laterales*/
