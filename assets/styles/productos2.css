@@ -1,11 +1,10 @@
 /* Titulos */
-h2{
-    text-align: left;
+h4{
+    margin-top: 20px;
 }
 
-h4{
+#izq, h2{
     text-align: left;
-    margin: 30px;
 }
 
 /* Descripcion del producto */
@@ -40,11 +39,20 @@ h4{
     color: #707070;
 }
 
-#contenedorInferior{
+#contenedorInferior, #contenedorAgregarComentario{
     border: 2px solid #d1d1d1;
     padding: 20px;
     margin-top: 12px;
     width: 100%;
+}
+
+#contenedorInferiorConProductos{
+    border: 2px solid #d1d1d1;
+    padding: 20px;
+    margin-top: 12px;
+    width: 220px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #enlaceProducto{
@@ -66,7 +74,7 @@ h4{
 
 #tono1{
     margin: 5px;
-    background-color: #D71787;
+    background-color: #6F2222;
     border: none;
     width: 50px;
     height: 50px;
@@ -75,7 +83,7 @@ h4{
 
 #tono2{
     margin: 5px;
-    background-color: #D71787;
+    background-color: #B8934B;
     border: none;
     width: 50px;
     height: 50px;
@@ -84,7 +92,7 @@ h4{
 
 #tono3{
     margin: 5px;
-    background-color: #D71787;
+    background-color: #8E1818;
     border: none;
     width: 50px;
     height: 50px;
@@ -93,7 +101,7 @@ h4{
 
 #tono4{
     margin: 5px;
-    background-color: #D71787;
+    background-color: #331C00;
     border: none;
     width: 50px;
     height: 50px;
@@ -123,13 +131,14 @@ h4{
     border-radius: 10px;
 }
 
-#btnAplicar{
+#btnAplicar, #btnEnviarComentario{
     margin-top: 14px;
     background-color: #D71787;
     border: none;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: bold;
 }
+
 
 
 
@@ -161,6 +170,42 @@ h4{
 }
 
 
+/* ///////////////////SECCION INFERIOR IZQUIERDA /////////////////////////////// */
+
+/* Estilos de la seccion inferior con la descripcion del producto y comentarios*/
+#seccionDescYComentarios{
+    text-align: left;
+}
+
+#comentario{
+    text-align: left;
+}
+
+#acercaDeProducto{
+    margin-top: 20px;
+}
+
+#der{
+    text-align: right;
+}
+
+
+
+
+ /* Estilos para el botón de corazón */
+ .boton-corazon {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    color: #707070;
+    transition: color 0.3s;
+}
+
+/* Estilos para el botón de corazón cuando está activo (seleccionado) */
+.boton-corazon.activo {
+    color: #D71787;
+}
 
 
 

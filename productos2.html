@@ -13,6 +13,9 @@
     <!-- Estilos css de la pagina-->
     <link rel="stylesheet" href="./assets/styles/productos2.css">
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- Incluimos FontAwesome -->
+
 </head>
 
 <body>
@@ -23,15 +26,15 @@
     <div class="container">
         <div id="contenedor">
             <a href="#" target="_blank">
-                <h4>Retroceder</h4>
+                <h4 id="izq">Retroceder</h4>
             </a>
             <div class="row">
-                <div class="col-lg-6" id="verticalAlign">
+                <div class="col-md-7 col-lg-6" id="verticalAlign">
                     <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="Producto" class="img-fluid"
                         id="imgProductoPrincipal">
                 </div>
 
-                <div class="col-lg-6">
+                <div class="col-md-5 col-lg-6">
                     <div id="descripcionProducto">
                         <h2>Producto</h2>
                         <p id="precioPrincipal">$1999.00</p>
@@ -46,35 +49,87 @@
                                 <button type="button" class="btn btn-primary" id="tono4"></button>
                             </div>
                             <div class="row">
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Aplicar
-                                        Filtros</button>
+                                <div class="col-sm-12 col-md-12 col-lg-6">
+                                    <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Añadir al
+                                        carrito</button>
                                 </div>
-                                <div class="col-sm-12 col-md-6 col-lg-6">
-                                    <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Aplicar
-                                        Filtros</button>
+                                <div class="col-sm-12 col-md-12 col-lg-6">
+                                    <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Comprar
+                                        ahora</button>
                                 </div>
                             </div>
-                            <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Aplicar
-                                Filtros</button>
+                            <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Mostrar
+                                sugerencias</button>
                         </form>
                     </div>
                 </div>
             </div>
 
             <div class="row">
-                <div class="col">
-                    <div class="seccionComentarios">
+                <div class="col-sm-12 col-md-7 col-lg-6">
+                    <div id="seccionDescYComentarios">
+                        <p id="acercaDeProducto">
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sint doloribus exercitationem
+                            nesciunt, provident ipsam dolore ullam quas omnis sapiente quod inventore illo itaque quasi
+                            sed magni aliquam fugiat praesentium alias libero vero, quae repudiandae pariatur! Fugit
+                            rerum eius, aperiam provident, saepe reprehenderit illo error magnam incidunt nobis cumque,
+                            debitis odit fugiat expedita minima eligendi qui ducimus corrupti officiis impedit? Vitae
+                            nulla repudiandae ducimus quis, quo accusantium blanditiis rerum dolore facilis.
+                        </p>
+                        <h4>Comentarios</h4>
+                        <div id="contenedorAgregarComentario">
+                            <h5>Agrega un comentario</h5>
+                            <form>
+                                <textarea class="form-control" id="txtComentario" rows="2"
+                                    placeholder="Tu opinion nos ayuda mucho :)..."></textarea>
+                                <div id="der">
+                                    <button type="button" class="btn btn-primary" id="btnEnviarComentario">Enviar</button>
+                                </div>
+                            </form>
+                        </div>
 
+
+                        <div id="contenedorInferior">
+                            <h5>Usuario Anónimo</h5>
+                            <p id="comentario">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium expedita
+                                dolore eligendi cumque commodi harum impedit facere mollitia ad quibusdam deleniti
+                                cupiditate reiciendis ullam dolorum, eius, magni aliquam! Similique.
+                            </p>
+                            <div id="der">
+                                <button id="boton-corazon-1" class="boton-corazon">
+                                    <!-- Utilizamos "fa" para FontAwesome -->
+                                    <span id="contador-likes-1">0</span>
+                                    <i class="fa fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="contenedorInferior">
+                            <h5>Usuario Anónimo</h5>
+                            <p id="comentario">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium expedita
+                                dolore eligendi cumque commodi harum impedit facere mollitia ad quibusdam deleniti
+                                cupiditate reiciendis ullam dolorum, eius, magni aliquam! Similique.
+                            </p>
+                            <div id="der">
+                                <button id="boton-corazon-2" class="boton-corazon">
+                                    <!-- Utilizamos "fa" para FontAwesome -->
+                                    <span id="contador-likes-2">0</span>
+                                    <i class="fa fa-heart"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="col">
+                <div class="col-sm-12 col-md-5 col-lg-6">
                     <div id="seccionSugerencias">
+                        <h4>Productos Similares</h4>
                         <div class="row">
-                            <div class="col">
+                            <div class="col-sm-12 col-md-12 col-lg-6">
                                 <a href="#" id="enlaceProducto">
-                                    <div id="contenedorInferior">
+                                    <div id="contenedorInferiorConProductos">
                                         <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
                                             class="img-fluid" id="imgProducto">
                                         <br>
@@ -90,9 +145,47 @@
                                 </a>
                             </div>
 
-                            <div class="col">
+                            <div class="col-sm-12 col-md-12 col-lg-6">
                                 <a href="#" id="enlaceProducto">
-                                    <div id="contenedorInferior">
+                                    <div id="contenedorInferiorConProductos">
+                                        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
+                                            class="img-fluid" id="imgProducto">
+                                        <br>
+                                        <span id="nombreProducto">Eaze Drop Stick Blur</span>
+                                        <span id="precio">$1992.00</span>
+                                        <form>
+                                            <input type="number" class="form-control" id="cantidadProducto" min="0"
+                                                max="100" value="0">
+                                            <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
+                                                carrito</button>
+                                        </form>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <a href="#" id="enlaceProducto">
+                                    <div id="contenedorInferiorConProductos">
+                                        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
+                                            class="img-fluid" id="imgProducto">
+                                        <br>
+                                        <span id="nombreProducto">Eaze Drop Stick Blur</span>
+                                        <span id="precio">$1992.00</span>
+                                        <form>
+                                            <input type="number" class="form-control" id="cantidadProducto" min="0"
+                                                max="100" value="0">
+                                            <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
+                                                carrito</button>
+                                        </form>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <div class="col-sm-12 col-md-12 col-lg-6">
+                                <a href="#" id="enlaceProducto">
+                                    <div id="contenedorInferiorConProductos">
                                         <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
                                             class="img-fluid" id="imgProducto">
                                         <br>
@@ -126,8 +219,14 @@
     <!-- Scripts JS de la pagina -->
     <script src="./assets/js/productos2.js"></script>
 
+    <!-- Scripts JS de la pagina -->
+    <script src="./assets/js/productosLikes.js"></script>
+
     <!-- Script JS del footer -->
     <script src="./assets/js/navbarYFooter.js"></script>
+
+    <!-- Uso de iconos -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
 </body>
 
