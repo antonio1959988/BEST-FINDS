@@ -1,72 +1,76 @@
 /* Barra de navegacion */
-#logoBF{
+#logoBF {
     width: 75px;
     height: 60px;
 }
 
-#lista li{
+#lista li {
     margin-right: 16px;
 }
 
-#barra{
+#barra {
     background-color: white;
 }
 
-nav{
+nav {
     background-color: white;
     height: 70px;
 }
 
-#imgIcono{
+#imgIcono {
     width: 40px;
     height: 35px;
 }
 
-#imgIcono2{
+#imgIcono2 {
     width: 40px;
     height: 35px;
 }
 
-#imgIcono3{
+#imgIcono3 {
     width: 40px;
     height: 35px;
 }
 
 
 /* Diseño base de etiqueta body*/
-body{
+body {
     text-align: center !important;
-    font-family: "Roboto", sans-serif;;
+    font-family: "Roboto", sans-serif;
+    ;
     color: #707070;
 }
 
 /*FOOTER*/
-footer{
+footer {
     background-color: #D71787;
     color: white;
-    padding-top: 30px;;
+    padding-top: 30px;
+    ;
 }
 
 /* Enlaces de footer (quitar formato subrayado)*/
-footer a{
+footer a {
     text-decoration: none;
     color: white;
 }
+
 /* Listas de enlaces, quitar formato */
-footer ul, h5{
+footer ul,
+h5 {
     list-style: none;
     padding-left: 0px;
     text-align: left;
 }
 
 /* Imagen principal del footer */
-#imgFooter{
+#imgFooter {
     width: 210px;
     height: 150px;
 }
 
 /* Iconos de redes sociales del footer (centrales)*/
-#iconoFooter{
+#iconoFooter {
     width: 50px;
     height: 50px;
     margin: 5px;
@@ -74,57 +78,60 @@ footer ul, h5{
 }
 
 /* Iconos de redes sociales del footer (laterales)*/
-#iconoFooterLg{
+#iconoFooterLg {
     width: 40px;
     height: 40px;
     margin: 5px;
 }
 
 /* Tamaño de letra chiquita derechos de best finds */
-#licencia{
+#licencia {
     font-size: 12px;
 }
 
-.form-select, .form-control{
-    &:focus{/*Cuando se da click en los inputs, se crea un resplandor*/
+.form-select,
+.form-control {
+    &:focus {
+        /*Cuando se da click en los inputs, se crea un resplandor*/
         color: #707070;
         font-weight: bold;
-    border: none;
-   box-shadow: 0 0 5px #d71787;
-   outline: 0px;
+        border: none;
+        box-shadow: 0 0 5px #d71787;
+        outline: 0px;
     }
 }
 
-.nav-link:hover{
+.nav-link:hover {
     background-color: #ffdff1;
     border-radius: 15px;
 }
 
-.dropdown-item:hover{
+.dropdown-item:hover {
     background-color: #ffdff1;
 }
 
 /* Media query para centrar titulos y ocultar carrito dentro de la barra */
-@media (max-width: 992px){
-    h1{
+@media (max-width: 992px) {
+    h1 {
         text-align: center;
     }
 
-    #imgIcono3{
-        display: none;;
+    #imgIcono3 {
+        display: none;
+        ;
     }
 }
 
 /* Media query para ocultar icono de carrito en vista lg */
-@media (min-width: 992px){
-    #imgIcono2{
+@media (min-width: 992px) {
+    #imgIcono2 {
         display: none;
     }
 }
 
 /* Media query para ocultar iconos centrales del footer en vista md */
-@media (min-width: 768px){
-    #iconoFooter{
+@media (min-width: 768px) {
+    #iconoFooter {
         display: none;
     }
 
