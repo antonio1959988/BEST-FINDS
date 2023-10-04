@@ -49,6 +49,7 @@ h1{
         box-shadow: 0 0 5px #d71787;
         outline: 0px;
     }
+    border: 2px solid #d1d1d1;
 }
 
 .divInputs {
@@ -56,15 +57,17 @@ h1{
     padding-bottom: 35px;
 }
 
-#btnEnviar {
-    background-color: #d71787;
-    /* Cambia el color de fondo */
-    color: #fff;
-    /* Cambia el color del texto a blanco */
-    border-color: #d71787;
+#colorB {
+    background-color: #D71787;
+    font-family: "Roboto", sans-serif;;
+    width: 150px;
+     height: 50px;
+     font-size: 25px;
+     border-radius: 40px;
+     border: none;
 }
 
-#btnEnviar:hover {
+#colorB:hover {
     background-color: #ff8c66;
     /* Cambia el color de fondo al pasar el mouse por encima */
 }
@@ -87,6 +90,25 @@ h1{
     text-decoration: none;
     color: #707070;
 }
+
+/*Alertas*/
+.alert{
+    max-width: 80%;
+    display: none;
+}
+
+/*Alertas activadas*/
+.alert-activa{
+    
+    display: block;
+}
+/*Alertas activadas*/
+.alert-noactiva{
+    
+    display: none;
+}
+
+
 
 
 
