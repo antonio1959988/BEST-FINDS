@@ -8,7 +8,14 @@
     font-size: 20px;
     border-radius: 30px;
 }
-
+#colorL {
+    background-color: #D71787;
+    font-family: "Roboto", sans-serif;
+    width: 100px;
+    height: 40px;
+    font-size: 15px;
+    border-radius: 30px;
+}
 #logos {
     height: 100px;
     width: 200px;
@@ -26,6 +33,9 @@
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}
+#imgNot{
+    width:100px ;
 }
 
 /*Cierro lo que agregue yo Ankaret*/
