@@ -76,6 +76,14 @@ h1{
      border: none;
 }
 
+#colorB:hover {
+    background-color: #ff8c66;
+    /* Cambia el color de fondo al pasar el mouse por encima */
+}
+#colorB2:hover {
+    background-color: #ff8c66;
+    /* Cambia el color de fondo al pasar el mouse por encima */
+}
 #colorB2 {
     background-color: #D71787;
     font-family: "Roboto", sans-serif;;
