@@ -35,27 +35,39 @@
     </div>
     <!-- Formulario -->
     <div class="container" id="formulario"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
-      <form action="">
+      <form id="formFormulario">
         <div class="divInputs">
           <label for="nomUsuario">Nombre:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
-          <input type="text" class="datos" id="txtNomUsuario" pattern="[A-Z]{3}" title="Ingresa un nombre valido" require>
+          <input type="text" class="datos"  name="nombre" id="nombre" require>
+
+          <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertNombre">
+            Formato no valido. Favor de ingresar solo letras en mayúsculas y minúscula.
+          </div>
         </div>
         <div class="divInputs">
           <label for="correo">Correo electrónico:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
-          <input type="text" class="datos" id="txtEmailUsuario" pattern="[A-Z]{3}" title="Ingresa un nombre valido" require>
+          <input type="text" class="datos"  name="correo" id="correo" require>
+
+          <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertCorreo">
+            Formato incorrecto. Favor de ingresar un correo válido.
+          </div>
         </div>
         <div class="divInputs">
           <label for="apUsuario">Teléfono:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
-          <input type="text" class="datos" id="txtTelUsuario" pattern="[A-Z]{3}" title="Ingresa un nombre valido" require>
+          <input type="text" class="datos"  name="telefono" id="telefono" require>
+
+          <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertTelefono">
+            Formato no valido. Favor de ingresar solo números.
+          </div>
         </div>
         <div class="divInputs">
           <label for="apUsuario">Mensaje:</label><br>
           <textarea name="comentarios" id="txtMensaje" cols="38" rows="6"
-            placeholder="Escribe aquí tus comentarios..."></textarea> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
+            placeholder="Escribe aquí tus comentarios..." class="datos"></textarea> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
         </div>
         <!-- El botón envía los datos del formulario -->
         <div class="divInputs">
-          <button type="submit" class="btn btn-primary mb-3" id="btnEnviar">Enviar</button>
+          <button type="submit" class="btn btn-primary mb-3" id="colorB">Enviar</button>
         </div>
       </form>
     </div>
