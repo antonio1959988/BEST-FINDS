@@ -8,7 +8,7 @@
     <link rel="icon" href="./assets/icons/logoMini.ico" type="image/x-icon">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <link rel="stylesheet" href="./assets/styles/navbarYFooterStyle.css">
+    <link rel="stylesheet" href="./assets/styles/navbarYFooterStyle.css">
     <!-- Estilos css de la pagina-->
     <link rel="stylesheet" href="./assets/styles/index.css">
 
@@ -26,10 +26,10 @@
                 <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner promocional">
             </div>
             <div class="carousel-item">
-                <img src="./assets/img/Banner2.png" class="d-block w-100" alt="Banner Promocional 2">
+                <img src="./assets/img/Index/Banner2.png" class="d-block w-100" alt="Banner Promocional 2">
             </div>
             <div class="carousel-item">
-                <img src="./assets/img/Banner3.png" class="d-block w-100" alt="Banner Promocional 3">
+                <img src="./assets/img/Index/Banner3.png" class="d-block w-100" alt="Banner Promocional 3">
             </div>
         </div>
         <button class="carousel-control-prev" type="button" data-bs-target="#BannerIndex" data-bs-slide="prev">
@@ -44,8 +44,8 @@
     <!-- Termina carrusel con el banner -->
     <h1>Best Sellers</h1> <!-- Titulo-->
     <br><!--Boton de ver productos-->
-    <a href="https://www.ejemplo.com/todos-los-productos" class="btn btn-primary btn-lg" id="colorB">Ver todos los
-        productos</a><!--termina boton falta el link-->
+    <a href="./productos.html" class="btn btn-primary btn-lg" id="colorB">Ver todos los
+        productos</a><!--termina boton-->
     </div>
     <br>
     <br>
@@ -167,26 +167,26 @@
 
 
     <!--cierra carrusel de marcas-->
-<br>
-<br>
+    <br>
+    <br>
 
     <!-- Abre  fila con iconos y textos  -->
     <div class="container">
         <div class="row">
             <div class="col-sm-6 col-md-6 col-lg-2">
-                <img src="./assets/img/Envios.png" alt="Envios" class="img-fluid">
+                <img src="./assets/img/Index/Envios.png" alt="Envios" class="img-fluid">
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2">
                 <p id="textoIcono">Envíos Seguros</p>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2">
-                <img src="./assets/img/Proteccion.png" alt="Proteccion de Compra" class="img-fluid">
+                <img src="./assets/img/Index/Proteccion.png" alt="Proteccion de Compra" class="img-fluid">
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2">
                 <p id="textoIcono">Protección de Compra</p>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2">
-                <img src="./assets/img/Atencion.png" alt="Atencion Personalizada" class="img-fluid">
+                <img src="./assets/img/Index/Atencion.png" alt="Atencion Personalizada" class="img-fluid">
             </div>
             <div class="col-sm-6 col-md-6 col-lg-2">
                 <p id="textoIcono">Atención Personalizada</p>
@@ -194,51 +194,103 @@
         </div>
     </div>
     <!-- Cierra fila con iconos y textos -->
-
-     <!--carrusel de noticias-->
-     <div class="container">
+    <br>
+    <br>
+    <h1>NotiFinds</h1>
+    <!--carrusel de noticias-->
+    <div class="container">
         <div id="myCarousel2" class="carousel slide">
             <div class="carousel-inner">
-                <!-- Primer slide con 5 imágenes -->
+                <!-- Primer slide con 2 noticias -->
                 <div class="carousel-item active">
                     <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="https://searchlogovector.com/wp-content/uploads/2019/06/tangle-teezer-logo-vector.png"
-                                alt="Imagen 1" id="logos">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <!-- card -->
+                            <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="./assets/img/Index/Noticia1.jpeg" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Noticia 1</h5>
+                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quaerat repellat odio.</p>
+                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                    ago</small></p>
+                                                    <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer más</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- cierra card  -->
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="https://vectorseek.com/wp-content/uploads/2023/07/Rare-Beauty-Logo-Vector.svg-.png"
-                                alt="Imagen 2" id="logos">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                             <!-- card -->
+                             <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="./assets/img/Index/Noticia2.webp" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Noticia 2</h5>
+                                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, ipsum! Inventore sint quia ad.</p>
+                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                    ago</small></p>
+                                                    <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer más</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- cierra card  -->
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="https://ww2.freelogovectors.net/wp-content/uploads/2018/07/too-faced-logo.png?lossy=1&w=2560&ssl=1"
-                                alt="Imagen 3" id="logos">
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="https://searchlogovector.com/wp-content/uploads/2020/06/barbie-logo-vector.png"
-                                alt="Imagen 4" id="logos">
-                        </div>
+
                     </div>
                 </div>
-                <!-- Segundo slide con otras 5 imágenes -->
+                <!-- Segundo slide con otras 2 noticias -->
                 <div class="carousel-item">
                     <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="https://vectorseek.com/wp-content/uploads/2021/01/Urban-Decay-Logo-Vector.png"
-                                alt="Imagen 6" id="logos">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                           <!-- card -->
+                           <div class="card mb-3" style="max-width: 540px;">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./assets/img/Index/Noticia1.jpeg" class="img-fluid rounded-start" alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Noticia 3</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero est vitae labore similiqu.</p>
+                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                ago</small></p>
+                                                <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer más</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="https://vectorseek.com/wp-content/uploads/2023/08/Colourpop-Logo-Vector.svg-.png"
-                                alt="Imagen 7" id="logos">
+                        <!-- cierra card  -->
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="https://vectorseek.com/wp-content/uploads/2023/05/ANASTASIA-BEVERLY-HILLS-LOGO-Vector.jpg"
-                                alt="Imagen 8" id="logos">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                              <!-- card -->
+                              <div class="card mb-3" style="max-width: 540px;">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="./assets/img/Index/Noticia1.jpeg" class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Noticia 4</h5>
+                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores p.</p>
+                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
+                                                    ago</small></p>
+                                                    <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer más</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- cierra card  -->
                         </div>
-                        <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="https://vectorseek.com/wp-content/uploads/2023/07/Jeffree-Star-Logo-Vector.svg-.png"
-                                alt="Imagen 9" id="logos">
-                        </div>
+
                     </div>
                 </div>
             </div>
