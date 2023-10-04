@@ -8,7 +8,7 @@ navbarContainer.innerHTML=` <div class="container-fluid" id="barra">
   <span class="navbar-toggler-icon"></span>
 </button>
 <a href="./index_bf.html" target="_self"><img src="./assets/img/logoMini.jpg" alt="Lupa" class="img-fluid" id="logoBF"></a>
-<a href="#" target="_blank"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid"
+<a href="./carrito_compras.html" target="_self"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid"
     id="imgIcono2"></a>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="lista">
@@ -49,7 +49,7 @@ navbarContainer.innerHTML=` <div class="container-fluid" id="barra">
         id="imgIcono"></a>
     <a href="./carrito_compras.html" target="_self"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid"
         id="imgIcono3"></a>
-    <a href="./Perfil_axel.html" target="_self"><img src="./assets/icons/cuentaIcono.jpg" alt="Lupa" class="img-fluid"
+    <a href="./registroUsuarios.html" target="_self"><img src="./assets/icons/cuentaIcono.jpg" alt="Lupa" class="img-fluid"
         id="imgIcono"></a>
   </form>
 </div>
