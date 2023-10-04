@@ -13,8 +13,8 @@
     <!-- Estilos css de la pagina-->
     <link rel="stylesheet" href="./assets/styles/productos2.css">
 
+    <!--FontAwesome para uso de iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <!-- Incluimos FontAwesome -->
 
 </head>
 
@@ -24,16 +24,21 @@
 
     <!-- Seccion principal de productos -->
     <div class="container">
+        <!-- Contenedor con marcos grisaceos -->
         <div id="contenedor">
-            <a href="#" target="_blank">
+            <!-- Enlace de retroceso en navegacion -->
+            <a href="./productos.html" target="_blank">
                 <h4 id="izq">Retroceder</h4>
             </a>
+            <!-- Inicio de primera fila con la informacion superior de la pagina -->
             <div class="row">
+                <!-- Columna izquierda con la imagen del producto -->
                 <div class="col-md-7 col-lg-6" id="verticalAlign">
                     <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="Producto" class="img-fluid"
                         id="imgProductoPrincipal">
                 </div>
 
+                <!--Columna derecha con nombre del producto y botones de personalizacion -->
                 <div class="col-md-5 col-lg-6">
                     <div id="descripcionProducto">
                         <h2>Producto</h2>
@@ -48,6 +53,7 @@
                                 <button type="button" class="btn btn-primary" id="tono3"></button>
                                 <button type="button" class="btn btn-primary" id="tono4"></button>
                             </div>
+                            <!-- Fila para implementar responsividad de botones -->
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-6">
                                     <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Añadir al
@@ -63,9 +69,11 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> <!-- Fin de la primera fila con la informacion superior de la pagina -->
 
+            <!-- Inicio de segunda fila con la informacion inferior de la pagina (Comentarios y sugerencuias)-->
             <div class="row">
+                <!-- Columna izquierda con descripcion de producto, uso y manejo de comentarios -->
                 <div class="col-sm-12 col-md-7 col-lg-6">
                     <div id="seccionDescYComentarios">
                         <p id="acercaDeProducto">
@@ -76,21 +84,11 @@
                             debitis odit fugiat expedita minima eligendi qui ducimus corrupti officiis impedit? Vitae
                             nulla repudiandae ducimus quis, quo accusantium blanditiis rerum dolore facilis.
                         </p>
-                        <div id="contenedorComentarios" class="filtro-container d-md-none">
-                            <!-- Botón desplegable para mostrar/ocultar comentarios en dispositivos móviles -->
-                            <button class="btn btn-primary filtro-toggle" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#comentariosCollapse" aria-expanded="false"
-                                aria-controls="comentariosCollapse">
-                                Mostrar Comentarios
-                            </button>
-                            <br>
-                            <div id="comentariosCollapse" class="collapse">
-                                <div id="comentariosDiv"></div>
-                            </div>
-                        </div>
 
-                        <div id="contenedorDeComentarios" class="-3 d-none d-md-block">
+
+                        <div id="contenedorDeComentarios">
                             <h4>Comentarios</h4>
+                            <!-- Contenedor para agregar comentario -->
                             <div id="contenedorAgregarComentario">
                                 <h5>Agrega un comentario</h5>
                                 <form>
@@ -103,6 +101,7 @@
                                 </form>
                             </div>
 
+                            <!-- Contenedor para mostrar comentarios -->
                             <div id="contenedorInferior">
                                 <h5>Usuario Anónimo</h5>
                                 <p id="comentario">
@@ -140,9 +139,11 @@
                     </div>
                 </div>
 
+                <!-- Columna derecha con productos similares -->
                 <div class="col-sm-12 col-md-5 col-lg-6">
                     <div id="seccionSugerencias">
                         <h4>Productos Similares</h4>
+                        <!-- Primera fila de productos -->
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-6">
                                 <a href="#" id="enlaceProducto">
@@ -179,8 +180,9 @@
                                     </div>
                                 </a>
                             </div>
-                        </div>
+                        </div> <!-- Fin de la primera fila de productos -->
 
+                        <!-- Segunda fila de productos -->
                         <div class="row">
                             <div class="col-sm-12 col-md-12 col-lg-6">
                                 <a href="#" id="enlaceProducto">
@@ -217,12 +219,12 @@
                                     </div>
                                 </a>
                             </div>
-                        </div>
+                        </div> <!-- Fin de la segunda fila de productos -->
                     </div>
-                </div>
-            </div>
+                </div> <!-- Fin de la columna derecha con productos similares -->
+            </div> <!-- Fin de la segunda fila con la informacion inferior de la pagina (Comentarios y sugerencuias)-->
         </div>
-    </div>
+    </div> <!-- Fin de la seccion principal de productos -->
 
 
     <!-- Pie de pagina -->

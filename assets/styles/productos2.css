@@ -28,6 +28,7 @@ h4{
     place-items: center;
 }
 
+/* Contenedor de la seccion superior */
 #contenedor{
     border: 2px solid #d1d1d1;
     margin: 2px;
@@ -39,6 +40,7 @@ h4{
     color: #707070;
 }
 
+/* Implementacion de bordes acordes a los contenedores */
 #contenedorInferior, #contenedorAgregarComentario{
     border: 2px solid #d1d1d1;
     padding: 20px;
@@ -46,6 +48,7 @@ h4{
     width: 100%;
 }
 
+/* Contenedor de seccion sugerencias aplicado a cada div de producto */
 #contenedorInferiorConProductos{
     border: 2px solid #d1d1d1;
     padding: 20px;
@@ -55,23 +58,27 @@ h4{
     margin-right: auto;
 }
 
+/* Color de enlaces sin formato */
 #enlaceProducto{
     color: #707070;
     text-decoration: none;
 }
 
+/* Formato de contador de productos */
 #cantidadPrincipal{
     display: block;
     font-size: 18px;
     text-align: left;
 }
 
+/* Contenedor de botones selectores */
 #colorSelector{
     display: block;
     text-align: left;
     margin-top: 10px;
 }
 
+/*Formato de selectores de color */
 #tono1{
     margin: 5px;
     background-color: #6F2222;
@@ -108,19 +115,14 @@ h4{
     border-radius: 100px;
 }
 
+/* Contador de productos superior */
 #cantidadProductoPrincipal{
     display: block;
     width: 100px;
     text-align: center;
 }
 
-
-
-
-
-
-
-
+/* Boton de la seccion principal es mas grande */
 #btnComprarPrincipal{
     background-color: #D71787;
     border: none;
@@ -131,6 +133,9 @@ h4{
     border-radius: 10px;
 }
 
+/* /////////SECCION INFERIOR DERECHA (SUGERENCIAS)/////////////////// */
+
+/* Boton de la seccion inferior es mas pequeño */
 #btnAplicar, #btnEnviarComentario{
     margin-top: 14px;
     background-color: #D71787;
@@ -139,18 +144,12 @@ h4{
     font-weight: bold;
 }
 
-
-
-
-
-
-
-
-
+/* Imagen del producto de sugerencias */
 #imgProducto{
     margin-bottom: 10px;
 }
 
+/* Formato de nombre de los productos en sugerencias */
 #nombreProducto{
     font-size: 14px;
     display: block;
@@ -158,6 +157,7 @@ h4{
     margin-bottom: 5px;
 }
 
+/* Formato de precio de los productos en sugerencias */
 #precio{
     font-size: 16px;
     font-weight: bold;
@@ -166,30 +166,35 @@ h4{
     text-align: left;
 }
 
+/* Formato de cantidad de los productos en sugerencias */
 #cantidadProducto{
     text-align: center;
 }
 
 
-/* ///////////////////SECCION INFERIOR IZQUIERDA /////////////////////////////// */
+/* ///////////////SECCION INFERIOR IZQUIERDA (DESCRIPCION Y COMENTARIOS) //////////// */
 
 /* Estilos de la seccion inferior con la descripcion del producto y comentarios*/
 #seccionDescYComentarios{
     text-align: left;
 }
 
+/* Comentario escrito */
 #comentario{
     text-align: left;
 }
 
+/* Contenedor de descripcion producto */
 #acercaDeProducto{
     margin-top: 20px;
 }
 
+/* Alineacion derecha para contador de likes */
 #der{
     text-align: right;
 }
 
+/* Contenedor de comentarios */
 #contenedorComentarios{
     border: 2px solid #d1d1d1;
     padding: 20px;
@@ -198,8 +203,6 @@ h4{
     max-height: 650px;
     text-align: center;
 }
-
-
 
  /* Estilos para el botón de corazón */
  .boton-corazon {
