@@ -54,6 +54,7 @@ function contabilizarLikes(comentarioId) {
     botonCorazon.addEventListener('click', actualizarLikes);
 }
 
+
 // Llamar a la función para cada comentario en un bucle)
 contabilizarLikes(1); // Para el primer comentario
 contabilizarLikes(2); // Para el segundo comentario, etc.
