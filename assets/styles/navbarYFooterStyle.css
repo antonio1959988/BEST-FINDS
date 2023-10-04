@@ -84,6 +84,26 @@ footer ul, h5{
 #licencia{
     font-size: 12px;
 }
+
+.form-select, .form-control{
+    &:focus{/*Cuando se da click en los inputs, se crea un resplandor*/
+        color: #707070;
+        font-weight: bold;
+    border: none;
+   box-shadow: 0 0 5px #d71787;
+   outline: 0px;
+    }
+}
+
+.nav-link:hover{
+    background-color: #ffdff1;
+    border-radius: 15px;
+}
+
+.dropdown-item:hover{
+    background-color: #ffdff1;
+}
+
 /* Media query para centrar titulos y ocultar carrito dentro de la barra */
 @media (max-width: 992px){
     h1{
