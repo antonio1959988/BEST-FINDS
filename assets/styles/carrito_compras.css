@@ -71,9 +71,6 @@ h1{
     background-color: #D71787;
     border-color: #D71787;
     width: 14rem;
-
-
-
 }
 
 
@@ -84,8 +81,12 @@ h1{
     border: none;
     box-shadow: 0 0 5px #d71787;
     outline: 0px;
+}
 
-
+.costo-color{
+    font-size:20px;
+    text-shadow: 2px 2px 5px #F13C91 ;
+    color: #D71787;
 }
 
 /*//////////////////////////////////////////////////////////////
