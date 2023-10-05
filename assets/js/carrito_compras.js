@@ -1,4 +1,17 @@
 
+// Selecciona el carrusel por su id
+const carousel = document.getElementById('BannerIndex');
+
+// Configura el intervalo de transición automática (5 segundos)
+const interval = 5000; // 5000 milisegundos (5 segundos)
+
+// Inicializa el carrusel con la opción "ride"
+const myCarousel = new bootstrap.Carousel(carousel, {
+    interval: interval,
+    pause: 'hover', // Pausa la transición al pasar el ratón sobre el carrusel
+});
+
+
 //Lista de productos que se cargarán en el carrito de compras
 let listaProductos = [ //array de objetos
     {
@@ -69,17 +82,13 @@ function agregarProductos() {
     
          <!--TOTAL PRODUCTO 1-->
         <div class="col"><!--Inicio div col3 total-->
-            <p id="costo-${index}">$${producto.costo}</p>
+            <p id="costo-${index}" class="costo-color">$${producto.costo}</p>
         </div> <!--Cierre col3 total-->`;
 
         carrito.appendChild(rowProducto);
 
     });
 }
-
-
-
-
 
 //Funciones para el contador
 function incrementarCantidad(boton) {
@@ -111,11 +120,11 @@ function eliminarProducto(boton) {
 //Calcular precio
 function calcularPrecio(boton) {
     let index = boton.id.split("-")[1];
-    let costo = document.getElementById(`costo-${index}`) //row
+    let costo = document.getElementById(`costo-${index}`); //row
     let inputCantidad = document.getElementById(`cantidad-${index}`);
     let cantidad = parseInt(inputCantidad.value);
     let calculo = listaProductos[index].costo * cantidad;
-    costo.innerHTML = calculo;
+    costo.innerHTML = `$${calculo}`;
 }
 
 
