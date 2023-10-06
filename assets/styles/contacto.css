@@ -108,7 +108,11 @@ h1{
     display: none;
 }
 
-
+body {
+    background-image: url("/assets/img/otra\ opcion.webp");
+    background-size: cover;
+    background-repeat:no-repeat ;
+}
 
 
 
