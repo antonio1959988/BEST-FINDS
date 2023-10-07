@@ -76,6 +76,14 @@ h1{
      border: none;
 }
 
+#colorB:hover {
+    background-color: #ff8c66;
+    /* Cambia el color de fondo al pasar el mouse por encima */
+}
+#colorB2:hover {
+    background-color: #ff8c66;
+    /* Cambia el color de fondo al pasar el mouse por encima */
+}
 #colorB2 {
     background-color: #D71787;
     font-family: "Roboto", sans-serif;;
@@ -89,7 +97,7 @@ h1{
 }
 /*Tamaño del formulario*/
 #tamañoFormulario {
-    transform: scale(.9); /* Ajusta el valor según el tamaño deseado */
+    transform: scale(.8); /* Ajusta el valor según el tamaño deseado */
 
 }
 
@@ -128,7 +136,22 @@ h1{
     justify-content: center;
     
 }
+/*Alertas*/
+.alert{
+    max-width: 100%;
+    display: none;
+}
 
+/*Alertas activadas*/
+.alert-activa{
+    
+    display: block;
+}
+/*Alertas activadas*/
+.alert-noactiva{
+    
+    display: none;
+}
 
 
 
