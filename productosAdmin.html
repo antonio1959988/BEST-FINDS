@@ -54,9 +54,9 @@
 
     <!-- Seccion inferior con filtros y productos -->
     <div class="container">
-        <!-- Fila inferior de filtros y productos -->
+        <!-- Fila inferior de productos -->
         <div class="row">
-            <!-- Columna izquierda con filtros -->
+            <!-- Columna izquierda -->
             <div class="col-sm-12 col-md-4 col-lg-3 d-none d-md-block">
                 <div id="contenedorFiltros">
                     <br>
@@ -68,189 +68,64 @@
                             <input type="text" name="nombre" id="nombre" class="form-control">
                             <br>
                             <label for="nomProducto">Descripción:</label><br>
-                            <input type="text" name="descripcion" id="descripcion" class="form-control">
+                            <textarea name="comentarios" id="descripcion" 
+            placeholder="Escribe aquí la desceripción del producto..." class="form-control"></textarea> 
                             <br>
                             <label for="nomProducto">Precio:</label><br>
-                            <input type="text" name="precio" id="precio" class="form-control">
+                            <input type="number" name="precio" id="precio" class="form-control">
                             <br>
                             <label for="nomProducto">Fecha de Lanzamiento:</label><br>
-                            <input type="text" name="fecha" id="fecha" class="form-control">
-                            <br>
-                            <label for="nomProducto">Colores disponibles:</label><br>
-                            <input type="text" name="nombre" id="nombre" class="form-control">
+                            <input type="date" name="fecha" id="fecha" class="form-control">
                             <br>
                             <label for="nomProducto">Categoría:</label><br>
-                            <select class="form-select">
+                            <select class="form-select" id="cboCategorias">
                                 <option disabled selected>Seleccione</option>
-                                <option value="1">Uno</option>
-                                <option value="2">Dos</option>
-                                <option value="3">Tres</option>
+                                <option value="Ojos">Ojos</option>
+                                <option value="Rostro">Rostro</option>
+                                <option value="Labios">Labios</option>
                             </select>
                             <br>
                             <label for="nomProducto">Marca:</label><br>
-                            <select class="form-select">
+                            <select class="form-select" id="cboMarcas">
                                 <option disabled selected>Seleccione</option>
-                                <option value="1">Uno</option>
-                                <option value="2">Dos</option>
-                                <option value="3">Tres</option>
+                                <option value="Colourpop">Colourpop</option>
+                                <option value="Too Faced">Too Faced</option>
+                                <option value="Urban Decay">Urban Decay</option>
+                                <option value="Rare Beauty">Rare Beauty</option>
                             </select>
+                            <br>
+                            <label for="nomProducto">Tonos disponibles:</label><br>
+                            <label>
+                                <input type="checkbox" class="form-check-input" id="color-checkbox" name="Very light 04">
+                                Very light 04                  
+                            </label><br>
+                            <label>
+                                <input type="checkbox" class="form-check-input" id="color-checkbox" name="Light 04">
+                                Light 04            
+                            </label><br>
+                            <label>
+                                <input type="checkbox" class="form-check-input" id="color-checkbox" name="Medium 01">
+                                Medium 01                   
+                            </label><br>
+                            <label>
+                                <input type="checkbox" class="form-check-input" id="color-checkbox" name="Medium Tan 01">
+                                Medium Tan 01               
+                            </label>  
+                            <br>
                             <br>
                             <button type="button" class="btn btn-primary" id="btnAplicar">Agregar</button>
                         </div>
                     </form>
                 </div>
-            </div> <!-- Fin columna izquierda con filtros -->
+            </div> <!-- Fin columna izquierda -->
 
             <!-- Columna derecha con productos -->
             <div class="col-sm-12 col-md-8 col-lg-9">
                 <!-- Inicio de fila de productos -->
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <a href="./productos2.html" id="enlaceProducto" target="_self">
-                            <div id="contenedorInferior">
-                                <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                    class="img-fluid" id="imgProducto">
-                                <br>
-                                <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                <span id="precio">$1992.00</span>
-                                <form>
-                                    <input type="number" class="form-control" id="cantidadProducto" min="0" max="100"
-                                        value="0">
-                                    <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                        carrito</button>
-                                </form>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <a href="./productos2.html" id="enlaceProducto" target="_self">
-                            <div id="contenedorInferior">
-                                <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                    class="img-fluid" id="imgProducto">
-                                <br>
-                                <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                <span id="precio">$1992.00</span>
-                                <form>
-                                    <input type="number" class="form-control" id="cantidadProducto" min="0" max="100"
-                                        value="0">
-                                    <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                        carrito</button>
-                                </form>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <a href="./productos2.html" id="enlaceProducto" target="_self">
-                            <div id="contenedorInferior">
-                                <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                    class="img-fluid" id="imgProducto">
-                                <br>
-                                <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                <span id="precio">$1992.00</span>
-                                <form>
-                                    <input type="number" class="form-control" id="cantidadProducto" min="0" max="100"
-                                        value="0">
-                                    <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                        carrito</button>
-                                </form>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <a href="./productos2.html" id="enlaceProducto" target="_self">
-                            <div id="contenedorInferior">
-                                <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                    class="img-fluid" id="imgProducto">
-                                <br>
-                                <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                <span id="precio">$1992.00</span>
-                                <form>
-                                    <input type="number" class="form-control" id="cantidadProducto" min="0" max="100"
-                                        value="0">
-                                    <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                        carrito</button>
-                                </form>
-                            </div>
-                        </a>
-                    </div>
-                </div> <!-- Fin de fila de productos -->
-
-                <!-- Inicio de fila de productos -->
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <a href="./productos2.html" id="enlaceProducto" target="_self">
-                            <div id="contenedorInferior">
-                                <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                    class="img-fluid" id="imgProducto">
-                                <br>
-                                <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                <span id="precio">$1992.00</span>
-                                <form>
-                                    <input type="number" class="form-control" id="cantidadProducto" min="0" max="100"
-                                        value="0">
-                                    <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                        carrito</button>
-                                </form>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <a href="./productos2.html" id="enlaceProducto" target="_self">
-                            <div id="contenedorInferior">
-                                <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                    class="img-fluid" id="imgProducto">
-                                <br>
-                                <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                <span id="precio">$1992.00</span>
-                                <form>
-                                    <input type="number" class="form-control" id="cantidadProducto" min="0" max="100"
-                                        value="0">
-                                    <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                        carrito</button>
-                                </form>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <a href="./productos2.html" id="enlaceProducto" target="_self">
-                            <div id="contenedorInferior">
-                                <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                    class="img-fluid" id="imgProducto">
-                                <br>
-                                <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                <span id="precio">$1992.00</span>
-                                <form>
-                                    <input type="number" class="form-control" id="cantidadProducto" min="0" max="100"
-                                        value="0">
-                                    <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                        carrito</button>
-                                </form>
-                            </div>
-                        </a>
-                    </div>
-
-                    <div class="col-sm-12 col-md-6 col-lg-3">
-                        <a href="./productos2.html" id="enlaceProducto" target="_self">
-                            <div id="contenedorInferior">
-                                <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                    class="img-fluid" id="imgProducto">
-                                <br>
-                                <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                <span id="precio">$1992.00</span>
-                                <form>
-                                    <input type="number" class="form-control" id="cantidadProducto" min="0" max="100"
-                                        value="0">
-                                    <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                        carrito</button>
-                                </form>
-                            </div>
-                        </a>
-                    </div>
+                <div class="row" id="containerDatos">
+             
+                        <!-- Aquí se mostrarán los datos ingresados -->
+           
                 </div> <!-- Fin de fila de productos -->
 
 
