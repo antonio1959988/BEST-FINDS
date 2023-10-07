@@ -17,14 +17,19 @@
 <body>
   <!-- Barra de navegacion -->
   <div id="nav-bar" class="sticky-top"></div>
+  <!-- Barra divisora -->
+  <img src="./assets/img/barraBFv1.jpeg" alt="BarraSuperior" class="img-fluid" id="barraDivisora">
+<div class="imagen">
+
+  
+
+
   <!-- Primer encabezado -->
   <div class="container" id="divContacto"> <!-- Su utilidad principal es visual, permitiendo organizar y dar estructura y diseño -->
     <h1>Contacto</h1>
   </div>
 
-  <!-- Barra divisora -->
-  <img src="./assets/img/barraBFv1.jpeg" alt="BarraSuperior" class="img-fluid" id="barraDivisora">
-
+  
 
   <!-- Sección con formulario -->
   <div class="row">
@@ -38,7 +43,7 @@
       <form id="formFormulario">
         <div class="divInputs">
           <label for="nomUsuario">Nombre:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
-          <input type="text" class="datos"  name="nombre" id="nombre" require>
+          <input type="text" class="form-control"  name="nombre" id="nombre" require>
 
           <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertNombre">
             Formato no valido. Favor de ingresar solo letras en mayúsculas y minúscula.
@@ -46,7 +51,7 @@
         </div>
         <div class="divInputs">
           <label for="correo">Correo electrónico:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
-          <input type="text" class="datos"  name="correo" id="correo" require>
+          <input type="text" class="form-control"  name="correo" id="correo" require>
 
           <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertCorreo">
             Formato incorrecto. Favor de ingresar un correo válido.
@@ -54,7 +59,7 @@
         </div>
         <div class="divInputs">
           <label for="apUsuario">Teléfono:</label><br> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
-          <input type="text" class="datos"  name="telefono" id="telefono" require>
+          <input type="text" class="form-control"  name="telefono" id="telefono" require>
 
           <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertTelefono">
             Formato no valido. Favor de ingresar solo números.
@@ -63,7 +68,7 @@
         <div class="divInputs">
           <label for="apUsuario">Mensaje:</label><br>
           <textarea name="comentarios" id="txtMensaje" cols="38" rows="6"
-            placeholder="Escribe aquí tus comentarios..." class="datos"></textarea> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
+            placeholder="Escribe aquí tus comentarios..." class="form-control"></textarea> <!-- Representa una etiqueta para un elemento en una interfaz de usuario. -->
         </div>
         <!-- El botón envía los datos del formulario -->
         <div class="divInputs">
