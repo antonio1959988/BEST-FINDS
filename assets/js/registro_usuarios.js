@@ -76,9 +76,7 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validarFormulario);//Cada que se de click fuera del input
 });
 
-formulario.addEventListener('submit', (e) => {
-	e.preventDefault();
-});
+
 
 
 
@@ -86,7 +84,7 @@ formulario.addEventListener('submit', (e) => {
 //Creacion del objeto JSON
 var usuarios = [];
 
-document.getElementById("btnAplicar").addEventListener("click", function () {
+document.getElementById("btnRegistrar").addEventListener("click", function () {
 	// Obtener los valores de los campos del formulario
 	const nombre = document.getElementById("nombre").value;
 	const nombreUsuario = document.getElementById("nombreUsuario").value;
