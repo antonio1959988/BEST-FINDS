@@ -8,6 +8,9 @@
     font-size: 20px;
     border-radius: 30px;
 }
+#colorB:hover {
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+} 
 #colorL {
     background-color: #D71787;
     font-family: "Roboto", sans-serif;
@@ -36,6 +39,15 @@
 }
 #imgNot{
     width:100px ;
+}
+#contenedorInferior:hover{
+    box-shadow: 0px 3px 3px 0px rgba(255, 41, 155, 0.75);
+    width: 87%;
+}
+.barraPromocion{
+    background-color: #D71787;
+    color: white;
+    align-items: center;
 }
 
 /*Cierro lo que agregue yo Ankaret*/
@@ -73,31 +85,16 @@ h1 {
 
 
 
-/*Alineacion de filas verticalmente*/
-#verticalAlign {
-    display: grid;
-    place-items: center;
-}
+
 
 /* Imagen productos */
-#imgProductos {
 
-    width: 210px;
-    height: 180px;
-    margin: 15px;
-    width: 600px;
-    height: 300px;
-}
 
 #imgProducto {
     margin-bottom: 10px;
 }
 
-#contenedor {
-    border: 2px solid #d1d1d1;
-    margin: 10px;
-    padding: 10px;
-}
+
 
 #contenedorInferior {
     border: 2px solid #d1d1d1;
@@ -117,13 +114,18 @@ h1 {
     height: 40px;
     margin-top: 50px;
 }
-
+#btnAplicar:hover {
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+} 
 #btnNot {
     border-radius: 100px;
     width: 40px;
     height: 40px;
     margin-top: 50px;
 }
+#colorL:hover {
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+} 
 
 
 #contenedorInferior button {

@@ -17,7 +17,13 @@
 <body>
     <!-- Barra de navegacion -->
     <div id="nav-bar" class="sticky-top"></div>
-
+    <div class="barraPromocion">
+        <!-- Banner promocional -->
+        <marquee direction= left>
+            <h3>¡Aprovecha el envío gratis sin mínimo de compra del 5 al 27 de octubre!</h3>
+        </marquee>
+        <!-- cierra banner promocional -->
+    </div>
     <!--ANKARET ABRE -->
     <!-- Carrusel con el banner -->
     <div id="BannerIndex" class="carousel slide" data-bs-ride="carousel">
@@ -106,6 +112,8 @@
 
         </div>
     </div><!--Acaban los bestsellers-->
+    <br>
+    <br>
     <h1>Marcas</h1>
     <!--carrusel de marcas-->
     <div class="container">
@@ -115,20 +123,20 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="https://searchlogovector.com/wp-content/uploads/2019/06/tangle-teezer-logo-vector.png"
-                                alt="Imagen 1" id="logos">
+                            <img src="./assets/img/Index/kaleidos.webp"
+                                alt="Kaleidos" id="logos">
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <img src="https://vectorseek.com/wp-content/uploads/2023/07/Rare-Beauty-Logo-Vector.svg-.png"
-                                alt="Imagen 2" id="logos">
+                                alt="Rare Beauty" id="logos">
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <img src="https://ww2.freelogovectors.net/wp-content/uploads/2018/07/too-faced-logo.png?lossy=1&w=2560&ssl=1"
-                                alt="Imagen 3" id="logos">
+                                alt="Too Faced" id="logos">
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="https://searchlogovector.com/wp-content/uploads/2020/06/barbie-logo-vector.png"
-                                alt="Imagen 4" id="logos">
+                            <img src="https://seeklogo.com/images/G/glossier-logo-B9986A0849-seeklogo.com.png"
+                                alt="Glossier" id="logos">
                         </div>
                     </div>
                 </div>
@@ -148,8 +156,8 @@
                                 alt="Imagen 7" id="logos">
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="https://vectorseek.com/wp-content/uploads/2023/07/Jeffree-Star-Logo-Vector.svg-.png"
-                                alt="Imagen 8" id="logos">
+                            <img src="./assets/img/Index/Jeffree_Star_Cosmetics_Logo.png"
+                                alt="Jeffree Star" id="logos">
                         </div>
                     </div>
                 </div>
@@ -197,113 +205,129 @@
     <br>
     <br>
     <h1>NotiFinds</h1>
-    <!--carrusel de noticias-->
-    <div class="container">
-        <div id="myCarousel2" class="carousel slide">
-            <div class="carousel-inner">
-                <!-- Primer slide con 2 noticias -->
-                <div class="carousel-item active">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                            <!-- card -->
-                            <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="./assets/img/Index/Noticia1.jpeg" class="img-fluid rounded-start" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Noticia 1</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem quaerat repellat odio.</p>
-                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
-                                                    ago</small></p>
-                                                    <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer más</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- cierra card  -->
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                             <!-- card -->
-                             <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="./assets/img/Index/Noticia2.webp" class="img-fluid rounded-start" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Noticia 2</h5>
-                                            <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis, ipsum! Inventore sint quia ad.</p>
-                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
-                                                    ago</small></p>
-                                                    <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer más</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- cierra card  -->
-                        </div>
-
-                    </div>
-                </div>
-                <!-- Segundo slide con otras 2 noticias -->
-                <div class="carousel-item">
-                    <div class="row">
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                           <!-- card -->
-                           <div class="card mb-3" style="max-width: 540px;">
+   <!-- Carrusel de noticias -->
+<div class="container">
+    <div id="myCarousel2" class="carousel slide">
+        <div class="carousel-inner">
+            <!-- Primer slide con 2 noticias -->
+            <div class="carousel-item active">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <!-- Card -->
+                        <div class="card mb-3">
                             <div class="row g-0">
                                 <div class="col-md-4">
-                                    <img src="./assets/img/Index/Noticia1.jpeg" class="img-fluid rounded-start" alt="...">
+                                    <img src="./assets/img/Index/Noticia1.jpeg" class="img-fluid rounded-start"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Noticia 1</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Quidem quaerat repellat odio.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                        <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer
+                                            más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cierra Card -->
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <!-- Card -->
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./assets/img/Index/Noticia2.webp" class="img-fluid rounded-start"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Noticia 2</h5>
+                                        <p class="card-text">Lorem ipsum dolor, sit amet consectetur adipisicing
+                                            elit. Reiciendis, ipsum! Inventore sint quia ad.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                        <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer
+                                            más</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Cierra Card -->
+                    </div>
+                </div>
+            </div>
+            <!-- Cierra Primer Slide -->
+
+            <!-- Segundo slide con otras 2 noticias -->
+            <div class="carousel-item">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <!-- Card -->
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./assets/img/Index/Noticia1.jpeg" class="img-fluid rounded-start"
+                                        alt="...">
                                 </div>
                                 <div class="col-md-8">
                                     <div class="card-body">
                                         <h5 class="card-title">Noticia 3</h5>
-                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero est vitae labore similiqu.</p>
-                                        <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
-                                                ago</small></p>
-                                                <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer más</a>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Vero est vitae labore similiqu.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                        <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer
+                                            más</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <!-- cierra card  -->
-                        </div>
-                        <div class="col-sm-6 col-md-6 col-lg-6">
-                              <!-- card -->
-                              <div class="card mb-3" style="max-width: 540px;">
-                                <div class="row g-0">
-                                    <div class="col-md-4">
-                                        <img src="./assets/img/Index/Noticia1.jpeg" class="img-fluid rounded-start" alt="...">
-                                    </div>
-                                    <div class="col-md-8">
-                                        <div class="card-body">
-                                            <h5 class="card-title">Noticia 4</h5>
-                                            <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores p.</p>
-                                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins
-                                                    ago</small></p>
-                                                    <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer más</a>
-                                        </div>
+                        <!-- Cierra Card -->
+                    </div>
+                    <div class="col-sm-12 col-md-6">
+                        <!-- Card -->
+                        <div class="card mb-3">
+                            <div class="row g-0">
+                                <div class="col-md-4">
+                                    <img src="./assets/img/Index/Noticia1.jpeg" class="img-fluid rounded-start"
+                                        alt="...">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Noticia 4</h5>
+                                        <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing
+                                            elit. Maiores p.</p>
+                                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small>
+                                        </p>
+                                        <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer
+                                            más</a>
                                     </div>
                                 </div>
                             </div>
-                            <!-- cierra card  -->
                         </div>
-
+                        <!-- Cierra Card -->
                     </div>
                 </div>
             </div>
-
-            <!-- Controles -->
-            <a class="carousel-control-prev" href="#myCarousel2" data-slide="prev" id="btnNot">
-                <span class="carousel-control-prev-icon"></span>
-            </a>
-            <a class="carousel-control-next" href="#myCarousel2" data-slide="next" id="btnNot">
-                <span class="carousel-control-next-icon"></span>
-            </a>
+            <!-- Cierra Segundo Slide -->
         </div>
+        <!-- Cierra carousel-inner -->
+
+        <!-- Controles -->
+        <a class="carousel-control-prev" href="#myCarousel2" role="button" data-slide="prev" id="btnNot">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel2" role="button" data-slide="next" id="btnNot">
+            <span class="carousel-control-next-icon"></span>
+        </a>
     </div>
+</div>
+<!-- Cierra Carrusel de Noticias -->
+
 
 
     <!--cierra carrusel de noticias-->
