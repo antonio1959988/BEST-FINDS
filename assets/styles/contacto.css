@@ -93,7 +93,7 @@ h1{
 
 /*Alertas*/
 .alert{
-    max-width: 80%;
+    max-width: 100%;
     display: none;
 }
 
