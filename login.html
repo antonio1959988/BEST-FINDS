@@ -41,7 +41,6 @@
                     <div class="mb-3">
                         <label for="email" class="form-label" id="txtInicio">Correo electrónico</label>
                         <input name="correo" id="correo" type="email" class="form-control"
-                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingresa un correo valido"
                             required>
                         <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert"
                             id="alertCorreo">
@@ -51,8 +50,8 @@
                     </div>
                     <div class="mb-3">
                         <label for="password" class="form-label" id="txtInicio">Contraseña:</label>
-                        <input type="password" name="password" id="password" class="form-control" pattern="[a-zA-Z0-9._%+-]{8,}"
-                        title="La contraseña debe ser mayor a 8 digitos" required>
+                        <input type="password" name="password" id="password" class="form-control" 
+                         required>
                         <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertPassword">
                           Formato no valido. Solo se permiten letras (a-z), números(0-9) y puntos (.).
                         </div>
@@ -66,7 +65,7 @@
                         <input type="checkbox" class="form-check-input" id="check-input" name="exampleCheck1">
 
                     </div>
-                    <button type="submit" class="btn btn-primary btn-lg" id="colorB" onclick="login" id="botonL">Iniciar
+                    <button type="submit" class="btn btn-primary btn-lg" id="btnSesion" onclick="login">Iniciar
                         Sesión</button>
 
                     <br> <br> <br>
