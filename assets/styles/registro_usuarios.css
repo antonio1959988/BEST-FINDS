@@ -34,15 +34,16 @@ h4{
 
 /*Inputs*/
 
+
 .divInputs{
     padding-top: 5px;
     padding-bottom: 35px;
 }
+
 .form-control{
     color: #707070; /* Cambia el color del texto a #707070 */
     font-family: "Roboto", sans-serif; /* Cambia la fuente del texto a "Roboto" */
     width: 80%;
-    color: #707070;
     border: 1px solid #707070;
     display: inline;
     &:focus{/*Cuando se da click en los inputs, se crea un resplandor*/
@@ -52,7 +53,11 @@ h4{
    box-shadow: 0 0 5px #d71787;
    outline: 0px;
 }
+    &::placeholder{
+        color: #a3a3a3;
+    }
 }
+
 
 #terminosYCondiciones{
     align-items: center;
