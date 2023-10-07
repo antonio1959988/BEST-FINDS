@@ -59,56 +59,16 @@ function contabilizarLikes(comentarioId) {
 contabilizarLikes(1); // Para el primer comentario
 contabilizarLikes(2); // Para el segundo comentario, etc.
 
+/////////////////////////LOCAL STORAGE//////////////////////////////////
 
+// Recuperar los datos JSON del almacenamiento local
+var productosArray = JSON.parse(localStorage.getItem("productosArray"));
 
+let nombreProducto = document.getElementById("tituloNombre");
+let precioProducto = document.getElementById("precioPrincipal");
+let descripcionProducto = document.getElementById("acercaDeProducto");
 
-/////////////////////////////Collapse de comentarios//////////////////////////////
-let comentariosDiv = document.getElementById('comentariosDiv');
-comentariosDiv.innerHTML=` <div id="contenedorDeComentarios">
-<h4>Comentarios</h4>
-<div id="contenedorAgregarComentario">
-    <h5>Agrega un comentario</h5>
-    <form>
-        <textarea class="form-control" id="txtComentario" rows="2"
-            placeholder="Tu opinion nos ayuda mucho :)..."></textarea>
-        <div id="der">
-            <button type="button" class="btn btn-primary"
-                id="btnEnviarComentario">Enviar</button>
-        </div>
-    </form>
-</div>
+nombreProducto.textContent = productosArray[0].nombre;
+precioProducto.textContent = "$" + productosArray[0].precio;
+descripcionProducto.textContent = productosArray[0].descripcion;
 
-<div id="contenedorInferior">
-    <h5>Usuario Anónimo</h5>
-    <p id="comentario">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium
-        expedita
-        dolore eligendi cumque commodi harum impedit facere mollitia ad quibusdam deleniti
-        cupiditate reiciendis ullam dolorum, eius, magni aliquam! Similique.
-    </p>
-    <div id="der">
-        <button id="boton-corazon-1" class="boton-corazon">
-            <!-- Utilizamos "fa" para FontAwesome -->
-            <span id="contador-likes-1">0</span>
-            <i class="fa fa-heart"></i>
-        </button>
-    </div>
-</div>
-
-<div id="contenedorInferior">
-    <h5>Usuario Anónimo</h5>
-    <p id="comentario">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta, praesentium
-        expedita
-        dolore eligendi cumque commodi harum impedit facere mollitia ad quibusdam deleniti
-        cupiditate reiciendis ullam dolorum, eius, magni aliquam! Similique.
-    </p>
-    <div id="der">
-        <button id="boton-corazon-2" class="boton-corazon">
-            <!-- Utilizamos "fa" para FontAwesome -->
-            <span id="contador-likes-2">0</span>
-            <i class="fa fa-heart"></i>
-        </button>
-    </div>
-</div>
-</div>`;

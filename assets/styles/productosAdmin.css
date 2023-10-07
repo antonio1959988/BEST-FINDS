@@ -1,0 +1,135 @@
+/* Titulos */
+h1 {
+    text-align: left;
+    margin-top: 30px;
+}
+
+/* Parrafo principal */
+#txtInicio {
+    font-size: 14px;
+    text-align: left;
+}
+
+#nombreProducto {
+    font-size: 14px;
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+#precio {
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+
+/*Alineacion de filas verticalmente*/
+#verticalAlign {
+    display: grid;
+    place-items: center;
+}
+
+/* Imagen productos */
+#imgProductos {
+    width: 600px;
+    height: 250px;
+}
+
+#imgProducto {
+    margin-bottom: 10px;
+}
+
+#contenedor {
+    border: 2px solid #d1d1d1;
+    margin: 2px;
+    padding: 10px;
+}
+
+#contenedorInferior {
+    border: 2px solid #d1d1d1;
+    padding: 20px;
+    margin-top: 12px;
+    width: 100%;
+    width: 190px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 15px;
+}
+
+#contenedorInferior:hover {
+    box-shadow: 0px 3px 3px 0px rgba(255, 41, 155, 0.75);
+}
+
+
+#contenedorFiltros {
+    border: 2px solid #d1d1d1;
+    padding: 20px;
+    margin-top: 12px;
+    width: 100%;
+    max-height: 1200px;
+}
+
+#contenedorFiltros button {
+    margin-top: 14px;
+    background-color: #D71787;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#contenedorInferior button {
+    margin-top: 14px;
+    background-color: #D71787;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+#cantidadProducto {
+    text-align: center;
+}
+
+#formProductos {
+    text-align: left;
+}
+
+#enlaceProducto {
+    color: #707070;
+    text-decoration: none;
+}
+
+.form-select,
+.form-control {
+    width: 80%;
+
+    &:focus {
+        /*Cuando se da click en los inputs, se crea un resplandor*/
+        color: #707070;
+        font-weight: bold;
+        border: none;
+        box-shadow: 0 0 5px #d71787;
+        outline: 0px;
+    }
+}
+
+.form-control,
+.form-select {
+    width: 100%;
+    ;
+}
+
+/*Tamaño color y brode de boton de check*/
+#color-checkbox {
+    box-shadow: 0 0 5px #d71787;
+    border: none;
+   
+  }
+/*color del check al ser precionado*/
+.form-check-input:checked {
+    background-color: #D71787; /* Cambia el color de fondo cuando está marcado  */
+  }
+  
+
