@@ -1,10 +1,13 @@
 ////////////////////AGREGAR COMENTARIO/////////////////////////
 // Se obtiene el elemento del botón de agregar comentario mediante su ID
+// Se obtiene el elemento del botón de agregar comentario mediante su ID
 const botonComentario = document.getElementById('btnEnviarComentario');
 let comentarios = document.getElementById('txtComentario');
 let seccionComentarios = document.getElementById('seccionDescYComentarios');
 
+var contador = 3;
 function agregarComentario() {
+    contador++;
     let comentario = comentarios.value;
     let nuevoComentario = document.createElement('div');
     nuevoComentario.innerHTML = `<div id="contenedorInferior">
@@ -13,28 +16,18 @@ function agregarComentario() {
         ${comentario}
     </p>
     <div id="der">
-        <button id="boton-corazon" class="boton-corazon">
-            <span id="contador-likes">0</span>
+        <button id="boton-corazon-${contador}" class="boton-corazon">
+            <span id="contador-likes-${contador}">0</span>
             <i class="fa fa-heart"></i>
         </button>
     </div>
 </div>`;
+
     seccionComentarios.appendChild(nuevoComentario);
     comentarios.value = "";
-}
 
-botonComentario.addEventListener("click", agregarComentario);
-
-
-
-
-
-
-
-// Función que contabiliza los likes para un comentario específico
-function contabilizarLikes(comentarioId) {
-    const botonCorazon = document.getElementById(`boton-corazon-${comentarioId}`);
-    const contadorLikes = document.getElementById(`contador-likes-${comentarioId}`);
+    const botonCorazon = document.getElementById(`boton-corazon-${contador}`);
+    const contadorLikes = document.getElementById(`contador-likes-${contador}`);
 
     let likes = 0;
     let Liked = false;
@@ -52,16 +45,31 @@ function contabilizarLikes(comentarioId) {
     }
 
     botonCorazon.addEventListener('click', actualizarLikes);
+
+}
+
+botonComentario.addEventListener("click", agregarComentario);
+
+
+
+
+
+
+
+
+// Función que contabiliza los likes para un comentario específico
+function contabilizarLikes(comentarioId) {
+
 }
 
 
 // Llamar a la función para cada comentario en un bucle)
-contabilizarLikes(1); // Para el primer comentario
-contabilizarLikes(2); // Para el segundo comentario, etc.
+
 
 /////////////////////////LOCAL STORAGE//////////////////////////////////
 
 // Recuperar los datos JSON del almacenamiento local
+/*
 var productosArray = JSON.parse(localStorage.getItem("productosArray"));
 
 let nombreProducto = document.getElementById("tituloNombre");
@@ -72,3 +80,4 @@ nombreProducto.textContent = productosArray[0].nombre;
 precioProducto.textContent = "$" + productosArray[0].precio;
 descripcionProducto.textContent = productosArray[0].descripcion;
 
+*/
