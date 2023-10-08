@@ -1,15 +1,16 @@
 let navbarDiv = document.getElementById("nav-bar");
 let navbarContainer=document.createElement('nav');
 navbarContainer.className="navbar navbar-expand-lg bg-body-tertiary sticky-top";
-navbarContainer.innerHTML=` <div class="container-fluid" id="barra">
+navbarContainer.innerHTML=`    <div class="container-fluid" id="barra">
 <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse"
   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
   aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
-<a href="./index_bf.html" target="_self"><img src="./assets/img/logoMini.jpg" alt="Lupa" class="img-fluid" id="logoBF"></a>
-<a href="./carrito_compras.html" target="_self"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid"
-    id="imgIcono2"></a>
+<a href="./index_bf.html" target="_self"><img src="./assets/img/logoMini.jpg" alt="Lupa" class="img-fluid"
+    id="logoBF"></a>
+<a href="./carrito_compras.html" target="_self"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa"
+    class="img-fluid" id="imgIcono2"></a>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="lista">
     <li class="nav-item">
@@ -45,12 +46,39 @@ navbarContainer.innerHTML=` <div class="container-fluid" id="barra">
   </ul>
   <form class="d-flex" role="search">
     <input class="form-control ms-4" type="search" placeholder="Buscar..." aria-label="Search">
-    <a href="./productos.html" target="_self"><img src="./assets/icons/buscarIcono.jpg" alt="Lupa" class="img-fluid"
-        id="imgIcono"></a>
-    <a href="./carrito_compras.html" target="_self"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid"
-        id="imgIcono3"></a>
-    <a href="./registroUsuarios.html" target="_self"><img src="./assets/icons/cuentaIcono.jpg" alt="Lupa" class="img-fluid"
-        id="imgIcono"></a>
+    <a href="./productos.html" target="_self"><img src="./assets/icons/buscarIcono.jpg" alt="Lupa"
+        class="img-fluid" id="imgIcono"></a>
+
+    <div>
+      <ul id="ul">
+        <li class="submenu">
+          <a href="./carrito_compras.html" target="_self">
+            <img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid" id="imgIcono3">
+          </a>
+          <div id="carritoNav">
+
+            <table id="lista-carritoNav" class="u-full-width">
+              <thead>
+                <tr>
+                  <th>Imagen</th>
+                  <th>Nombre</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+
+            <button id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</button>
+
+          </div>
+        </li>
+      </ul>
+    </div>
+
+    <a href="./registroUsuarios.html" target="_self"><img src="./assets/icons/cuentaIcono.jpg" alt="Lupa"
+        class="img-fluid" id="imgIcono"></a>
   </form>
 </div>
 </div>`;

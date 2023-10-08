@@ -32,6 +32,63 @@ nav {
     height: 35px;
 }
 
+/*CARRITO DE COMPRAS*/
+
+.submenu {
+    position: relative;
+    list-style: none;
+}
+
+.submenu #carritoNav {
+    display: none;
+}
+
+.submenu:hover #carritoNav {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-height: 400px;
+    min-width: 500px;
+}
+
+
+.button {
+    background-color: #D71787;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.button:hover {
+    background-color: #ff8c66; 
+}
+
+#ul {
+    margin: 0;
+    padding: 0;
+}
+
+.borrar-producto {
+    background-color: #D71787;
+    border-radius: 50%;
+    padding: 6px 10px;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.u-full-width{
+    width: 100%;
+}
+
 
 /* Diseño base de etiqueta body*/
 body {

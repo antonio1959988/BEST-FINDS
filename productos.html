@@ -64,20 +64,20 @@
             <div class="form-group">
               <label for="categoria">Categoría:</label><br>
               <select class="form-select" id="cboCategorias">
-                  <option disabled selected>Seleccione</option>
-                  <option value="Ojos">Ojos</option>
-                  <option value="Rostro">Rostro</option>
-                  <option value="Labios">Labios</option>
+                <option disabled selected>Seleccione</option>
+                <option value="Ojos">Ojos</option>
+                <option value="Rostro">Rostro</option>
+                <option value="Labios">Labios</option>
               </select>
               <br>
 
               <label for="marca">Marca:</label><br>
               <select class="form-select" id="cboMarcas">
-                  <option disabled selected>Seleccione</option>
-                  <option value="Colourpop">Colourpop</option>
-                  <option value="Too Faced">Too Faced</option>
-                  <option value="Urban Decay">Urban Decay</option>
-                  <option value="Rare Beauty">Rare Beauty</option>
+                <option disabled selected>Seleccione</option>
+                <option value="Colourpop">Colourpop</option>
+                <option value="Too Faced">Too Faced</option>
+                <option value="Urban Decay">Urban Decay</option>
+                <option value="Rare Beauty">Rare Beauty</option>
               </select>
               <br>
 
@@ -112,7 +112,7 @@
       </div> <!-- Fin columna izquierda con filtros -->
 
       <!-- Columna derecha con productos -->
-      <div class="col-sm-12 col-md-8 col-lg-9">
+      <div class="col-sm-12 col-md-8 col-lg-9" id="listaProductos">
         <!-- Inicio de fila de productos -->
         <div class="row">
           <div class="col-sm-12 col-md-6 col-lg-3">
@@ -126,7 +126,7 @@
             </a>
             <form>
               <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-              <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
+              <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="1">Agregar al carrito</button>
             </form>
           </div>
         </div>
@@ -139,118 +139,113 @@
               <br>
               <span id="nombreProducto">Eaze Drop Stick Blur</span>
               <span id="precio">$1992.00</span>
-            </a>
-              <form>
-                <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
-              </form>
-            </div>
+          </a>
+          <form>
+            <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+            <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="2">Agregar al carrito</button>
+          </form>
         </div>
+      </div>
 
-        <div class="col-sm-12 col-md-6 col-lg-3">
-          <a href="./productos2.html" id="enlaceProducto" target="_self">
-            <div id="contenedorInferior">
-              <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
-                id="imgProducto">
-              <br>
-              <span id="nombreProducto">Eaze Drop Stick Blur</span>
-              <span id="precio">$1992.00</span>
-            </a>
-              <form>
-                <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
-              </form>
-            </div>
-        </div>
+      <div class="col-sm-12 col-md-6 col-lg-3">
+        <a href="./productos2.html" id="enlaceProducto" target="_self">
+          <div id="contenedorInferior">
+            <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
+              id="imgProducto">
+            <br>
+            <span id="nombreProducto">Eaze Drop Stick Blur</span>
+            <span id="precio">$1992.00</span>
+        </a>
+        <form>
+          <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+          <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="3">Agregar al carrito</button>
+        </form>
+      </div>
+    </div>
 
-        <div class="col-sm-12 col-md-6 col-lg-3">
-          <a href="./productos2.html" id="enlaceProducto" target="_self">
-            <div id="contenedorInferior">
-              <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
-                id="imgProducto">
-              <br>
-              <span id="nombreProducto">Eaze Drop Stick Blur</span>
-              <span id="precio">$1992.00</span>
-            </a>
-              <form>
-                <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
-              </form>
-            </div>
-        </div>
-      </div> <!-- Fin de fila de productos -->
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <a href="./productos2.html" id="enlaceProducto" target="_self">
+        <div id="contenedorInferior">
+          <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid" id="imgProducto">
+          <br>
+          <span id="nombreProducto">Eaze Drop Stick Blur</span>
+          <span id="precio">$1992.00</span>
+      </a>
+      <form>
+        <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+        <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="4">Agregar al carrito</button>
+      </form>
+    </div>
+  </div>
+  </div> <!-- Fin de fila de productos -->
 
-      <!-- Inicio de fila de productos -->
-      <div class="row">
-        <div class="col-sm-12 col-md-6 col-lg-3">
-          <a href="./productos2.html" id="enlaceProducto" target="_self">
-            <div id="contenedorInferior">
-              <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
-                id="imgProducto">
-              <br>
-              <span id="nombreProducto">Eaze Drop Stick Blur</span>
-              <span id="precio">$1992.00</span>
-            </a>
-              <form>
-                <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
-              </form>
-            </div>
-        </div>
+  <!-- Inicio de fila de productos -->
+  <div class="row">
+    <div class="col-sm-12 col-md-6 col-lg-3">
+      <a href="./productos2.html" id="enlaceProducto" target="_self">
+        <div id="contenedorInferior">
+          <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid" id="imgProducto">
+          <br>
+          <span id="nombreProducto">Eaze Drop Stick Blur</span>
+          <span id="precio">$1992.00</span>
+      </a>
+      <form>
+        <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+        <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="5">Agregar al carrito</button>
+      </form>
+    </div>
+  </div>
 
-        <div class="col-sm-12 col-md-6 col-lg-3">
-          <a href="./productos2.html" id="enlaceProducto" target="_self">
-            <div id="contenedorInferior">
-              <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
-                id="imgProducto">
-              <br>
-              <span id="nombreProducto">Eaze Drop Stick Blur</span>
-              <span id="precio">$1992.00</span>
-            </a>
-              <form>
-                <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
-              </form>
-            </div>
-        </div>
+  <div class="col-sm-12 col-md-6 col-lg-3">
+    <a href="./productos2.html" id="enlaceProducto" target="_self">
+      <div id="contenedorInferior">
+        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid" id="imgProducto">
+        <br>
+        <span id="nombreProducto">Eaze Drop Stick Blur</span>
+        <span id="precio">$1992.00</span>
+    </a>
+    <form>
+      <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+      <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="6">Agregar al carrito</button>
+    </form>
+  </div>
+  </div>
 
-        <div class="col-sm-12 col-md-6 col-lg-3">
-          <a href="./productos2.html" id="enlaceProducto" target="_self">
-            <div id="contenedorInferior">
-              <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
-                id="imgProducto">
-              <br>
-              <span id="nombreProducto">Eaze Drop Stick Blur</span>
-              <span id="precio">$1992.00</span>
-            </a>
-              <form>
-                <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
-              </form>
-            </div>
-        </div>
+  <div class="col-sm-12 col-md-6 col-lg-3">
+    <a href="./productos2.html" id="enlaceProducto" target="_self">
+      <div id="contenedorInferior">
+        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid" id="imgProducto">
+        <br>
+        <span id="nombreProducto">Eaze Drop Stick Blur</span>
+        <span id="precio">$1992.00</span>
+    </a>
+    <form>
+      <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+      <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="7">Agregar al carrito</button>
+    </form>
+  </div>
+  </div>
 
-        <div class="col-sm-12 col-md-6 col-lg-3">
-          <a href="./productos2.html" id="enlaceProducto" target="_self">
-            <div id="contenedorInferior">
-              <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
-                id="imgProducto">
-              <br>
-              <span id="nombreProducto">Eaze Drop Stick Blur</span>
-              <span id="precio">$1992.00</span>
-            </a>
-              <form>
-                <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al carrito</button>
-              </form>
-            </div>
-        </div>
-      </div> <!-- Fin de fila de productos -->
+  <div class="col-sm-12 col-md-6 col-lg-3">
+    <a href="./productos2.html" id="enlaceProducto" target="_self">
+      <div id="contenedorInferior">
+        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid" id="imgProducto">
+        <br>
+        <span id="nombreProducto">Eaze Drop Stick Blur</span>
+        <span id="precio">$1992.00</span>
+    </a>
+    <form>
+      <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+      <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="8">Agregar al carrito</button>
+    </form>
+  </div>
+  </div>
+  </div> <!-- Fin de fila de productos -->
 
 
 
 
-    </div> <!-- Fin columna derecha con productos -->
+  </div> <!-- Fin columna derecha con productos -->
   </div>
   </div>
 
@@ -265,8 +260,11 @@
   <!-- Scripts JS de la pagina -->
   <script src="./assets/js/productos.js"></script>
 
-  <!-- Script JS del footer -->
+  <!-- Script de la barra de navegacion -->
   <script src="./assets/js/navbarYFooter.js"></script>
+
+  <!-- Script carrito de compras -->
+  <script src="./assets/js/navbarCarrito.js"></script>
 
 
 </body>
