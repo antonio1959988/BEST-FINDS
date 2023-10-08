@@ -1,23 +1,23 @@
 /* Titulos */
-h1{
+h1 {
     text-align: left;
     margin-top: 30px;
 }
 
 /* Parrafo principal */
-#txtInicio{
+#txtInicio {
     font-size: 14px;
     text-align: left;
 }
 
-#nombreProducto{
+#nombreProducto {
     font-size: 14px;
     display: block;
     text-align: left;
     margin-bottom: 5px;
 }
 
-#precio{
+#precio {
     font-size: 16px;
     font-weight: bold;
     display: block;
@@ -27,28 +27,28 @@ h1{
 
 
 /*Alineacion de filas verticalmente*/
-#verticalAlign{
+#verticalAlign {
     display: grid;
     place-items: center;
 }
 
 /* Imagen productos */
-#imgProductos{
+#imgProductos {
     width: 600px;
     height: 250px;
 }
 
-#imgProducto{
+#imgProducto {
     margin-bottom: 10px;
 }
 
-#contenedor{
+#contenedor {
     border: 2px solid #d1d1d1;
     margin: 2px;
     padding: 10px;
 }
 
-#contenedorInferior{
+#contenedorInferior {
     border: 2px solid #d1d1d1;
     padding: 20px;
     margin-top: 12px;
@@ -59,12 +59,12 @@ h1{
     border-radius: 15px;
 }
 
-#contenedorInferior:hover{
+#contenedorInferior:hover {
     box-shadow: 0px 3px 3px 0px rgba(255, 41, 155, 0.75);
 }
 
 
-#contenedorFiltros{
+#contenedorFiltros {
     border: 2px solid #d1d1d1;
     padding: 20px;
     margin-top: 12px;
@@ -72,7 +72,7 @@ h1{
     max-height: 650px;
 }
 
-#contenedorFiltros button{
+#contenedorFiltros button {
     margin-top: 14px;
     background-color: #D71787;
     border: none;
@@ -80,7 +80,7 @@ h1{
     font-weight: bold;
 }
 
-#contenedorInferior button{
+#contenedorInferior button {
     margin-top: 14px;
     background-color: #D71787;
     border: none;
@@ -88,27 +88,30 @@ h1{
     font-weight: bold;
 }
 
-#cantidadProducto{
+#cantidadProducto {
     text-align: center;
 }
 
-#formFiltros{
+#formFiltros {
     text-align: left;
 }
 
-#enlaceProducto{
+#enlaceProducto {
     color: #707070;
     text-decoration: none;
 }
 
-.form-select, .form-control{
+.form-select,
+.form-control {
     width: 80%;
-    &:focus{/*Cuando se da click en los inputs, se crea un resplandor*/
+
+    &:focus {
+        /*Cuando se da click en los inputs, se crea un resplandor*/
         color: #707070;
         font-weight: bold;
-    border: none;
-   box-shadow: 0 0 5px #d71787;
-   outline: 0px;
+        border: none;
+        box-shadow: 0 0 5px #d71787;
+        outline: 0px;
     }
 }
 
