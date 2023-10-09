@@ -91,10 +91,10 @@ menuPerfiles.forEach((menuPerfil) => {
         contenedorVisible = infoContainer;
         
         // Cambia el color de fondo al hacer clic
-        if (infoContainer.classList.contains("hidden")) {
-            menuPerfil.style.backgroundColor = "#D71787";
-        } else {
-            menuPerfil.style.backgroundColor = "#F89DC8";
-        }
+        // if (infoContainer.classList.contains("hidden")) {
+        //     menuPerfil.style.backgroundColor = "#D71787";
+        // } else {
+        //     menuPerfil.style.backgroundColor = "#F89DC8";
+        // }
     });
 });
