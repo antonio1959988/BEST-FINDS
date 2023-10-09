@@ -113,7 +113,17 @@ body {
     background-size: cover;
     background-repeat:no-repeat ;
 }
-
+/*Imagen del container ccolor rosa*/
+.container-1 {
+    
+    padding: 25px;
+    width: 500px;
+    margin-left: auto; /* Corrección: "margin-left" en lugar de "margin left" */
+    margin-right: auto; /* Corrección: "margin-right" en lugar de "margin-right" */
+    text-align: center;
+    border-radius: 3%;
+    background-color: rgb(255, 111, 212);
+    }
 
 
 
