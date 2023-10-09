@@ -33,6 +33,13 @@ h1{
     }
  }
 
+
+
+ /* Estilos titulos de encabezado*/
+ .encabezado{
+    font-size:large;
+ }
+
 .rowPosition {
     display: flex;
     justify-content: center;
@@ -61,6 +68,7 @@ h1{
 }
 
 /*Estilo boton cotinuar compra */
+/* Estilos botones modal- notas del pedido*/
 .colorButtonRosa {
     background-color: #D71787;
     border-color: #D71787;
@@ -77,6 +85,12 @@ h1{
     outline: 0px;
     background-color: #D71787;
     color: #fff;
+}
+
+.colorButtonRosa:hover{
+    background-color: #ff8c66;
+    width: auto;
+
 }
 
 /* Estilo para costo unitario del pedido*/
@@ -103,25 +117,6 @@ h1{
     
 }
 
-
-/* Estilos botones modal- notas del pedido*/
-.colorButtonAmarillo {
-    background-color: #F9D423;
-    border-color: #F9D423;
-    color: black;
-}
-
-
-.colorButtonAmarillo:hover {
-
-    /*Cuando se da click en los inputs, se crea un resplandor*/
-    font-weight: bold;
-    border: none;
-    box-shadow: 0 0 5px #F9D423;
-    outline: 0px;
-    background-color: #F9D423;
-    color: black;
-}
  /*Estilo bolsas de entregas */
 
  .bolsaEntrega {
