@@ -19,73 +19,145 @@
 
 </head>
 
-<body onload="agregarProductos();">
+<body onload="agregarProductos(); calcularCostoTotal();">
 
   <!-- Barra de navegacion -->
   <div id="nav-bar" class="sticky-top"></div>
 
 
-<!-- Carrusel con el banner -->
-<div id="BannerIndex" class="carousel slide" data-bs-ride="carousel">
-  <div class="carousel-inner">
+  <!-- Carrusel con el banner -->
+  <div id="BannerIndex" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
       <div class="carousel-item active">
-          <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner promocional">
+        <img src="./assets/img/BF_Header.png" class="d-block w-100" alt="Banner promocional">
       </div>
       <div class="carousel-item">
-          <img src="./assets/img/Index/Banner2.png" class="d-block w-100" alt="Banner Promocional 2">
+        <img src="./assets/img/Index/Banner2.png" class="d-block w-100" alt="Banner Promocional 2">
       </div>
       <div class="carousel-item">
-          <img src="./assets/img/Index/Banner3.png" class="d-block w-100" alt="Banner Promocional 3">
+        <img src="./assets/img/Index/Banner3.png" class="d-block w-100" alt="Banner Promocional 3">
       </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#BannerIndex" data-bs-slide="prev">
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#BannerIndex" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#BannerIndex" data-bs-slide="next">
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#BannerIndex" data-bs-slide="next">
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
-  </button>
-</div>
+    </button>
+  </div>
 
 
   <!--Container carritoCompras-->
   <div class="container" id="carrito">
-    <h1 id="titulo1Carrito">Carrito de compras</h1>
-    <div class="row rowPosition"> <!--Inicio row encabezado-->
+    <h1>Carrito de compras</h1>
+    <div class="row"> <!--Inicio row encabezado-->
       <div class="col">
         <h6>PRODUCTO</h6>
       </div>
-
       <div class="col-4 col-sm-4 col-md-6 col-lg-6">
-
-
         <div class="row">
           <div class="col-12 col-sm-12 col-md-6 col-lg-6">
-
           </div>
-
           <div class="col-12 col-sm-12 col-md-6 col-lg-6">
             <h6 class="d-none d-md-block">CANTIDAD</h6>
           </div>
         </div>
       </div>
-
       <div class="col">
-        <H6 class="d-none d-md-block">TOTAL</H6>
+        <h6 class="d-none d-md-block">TOTAL</h6>
       </div>
     </div> <!--Cierre row encabezado-->
 
   </div> <!--Cierre container carritoCompras-->
 
-  <div class="container mb-4">
-    <div> <!-- Inicio Boton continuarCompra-->
-      <form action="./carritoCompras2.html">
-        <button type="submit" class="btn btn-primary btn-lg" id="colorButton">Continuar Compra</button>
-      </form>
-    </div> <!--Cierre boton continuar compra-->
 
-  </div>
+
+
+  <!--Notas para el pedido-->
+  <div class="container mb-4">
+
+    <div class="row"> <!--Inicio row encabezado-->
+      <div class="col">
+        <u id="subrayadoNota"><a id="notaPedido" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            ¿Deseas agregar una nota a tu pedido?
+          </a></u>
+
+        <!-- Modal notas del pedido -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog estiloModal">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Nota del pedido
+                </h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                <div class="row">
+                  <div class="col">
+                    <p class="d-inline-block">Selecciona tu bolsa</p>
+                    <span class="d-inline-block" tabindex="0" data-bs-toggle="tooltip"
+                      title="Elige tu bolsa personalizada donde recibirás tu pedido.Cuando completes tu compra, ¡tu bolsa se incluirá automáticamente como un regalo especial en tu paquete!. ">
+                      <button id="buttonInfo" class="btn colorButtonRosa rounded-circle" type="button">?</button>
+                    </span>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <label>
+                      <input class="selectorBolsa" type="radio" name="test" value="small">
+                      <img class="bolsaEntrega" src="./assets/img/carritoCompras/bolsa2.png" alt="bolsa2">
+                    </label>
+                    <label>
+                      <input class="selectorBolsa" type="radio" name="test" value="small">
+                      <img class="bolsaEntrega" src="./assets/img/carritoCompras/bolsa3.png" alt="bolsa3">
+                    </label>
+                    <label>
+                      <input class="selectorBolsa" type="radio" name="test" value="small">
+                      <img class="bolsaEntrega" src="./assets/img/carritoCompras/bolsa4.png" alt="bolsa4">
+                    </label>
+                    <label>
+                      <input class="selectorBolsa" type="radio" name="test" value="small">
+                      <img class="bolsaEntrega" src="./assets/img/carritoCompras/bolsa5.png" alt="bolsa5">
+                    </label>
+                  </div>
+                </div>
+                <div class="row my-3">
+                  <div class="col">
+                    <textarea placeholder="Escibe tu nota" name="Notas para pedido" id="areaTexto"
+                      class="w-75"></textarea>
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn colorButtonAmarillo" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn colorButtonRosa">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-4 col-sm-4 col-md-6 col-lg-6">
+        <div class="row">
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          </div>
+          <div class="col-12 col-sm-12 col-md-6 col-lg-6">
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <b>
+          <p id="costoTotal">$0</p>
+        </b>
+        <div> <!-- Inicio Boton continuarCompra-->
+          <form action="./carritoCompras2.html">
+            <button type="submit" class="btn btn-lg colorButtonRosa">Continuar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div> <!-- Cierre div container-->
 
 
 
