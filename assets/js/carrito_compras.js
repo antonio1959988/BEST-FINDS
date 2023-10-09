@@ -1,4 +1,3 @@
-
 // Selecciona el carrusel por su id
 const carousel = document.getElementById('BannerIndex');
 

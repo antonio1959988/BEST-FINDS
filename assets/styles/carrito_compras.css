@@ -163,5 +163,10 @@ color: #D71787;
   
 }
 
-
+/* Estilo de barra de promociones */
+.barraPromocion{
+    background-color: #D71787;
+    color: white;
+    align-items: center;
+}
 
