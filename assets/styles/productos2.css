@@ -56,6 +56,7 @@ h4{
     width: 220px;
     margin-left: auto;
     margin-right: auto;
+    border-radius: 15px;
 }
 
 /* Color de enlaces sin formato */
@@ -81,7 +82,7 @@ h4{
 /*Formato de selectores de color */
 #tono1{
     margin: 5px;
-    background-color: #6F2222;
+    background-color: #fae1c2;
     border: none;
     width: 50px;
     height: 50px;
@@ -90,7 +91,7 @@ h4{
 
 #tono2{
     margin: 5px;
-    background-color: #B8934B;
+    background-color: #f5c69a;
     border: none;
     width: 50px;
     height: 50px;
@@ -99,7 +100,7 @@ h4{
 
 #tono3{
     margin: 5px;
-    background-color: #8E1818;
+    background-color:  #dcb18e;
     border: none;
     width: 50px;
     height: 50px;
@@ -108,11 +109,42 @@ h4{
 
 #tono4{
     margin: 5px;
-    background-color: #331C00;
+    background-color: #ac794c;
     border: none;
     width: 50px;
     height: 50px;
     border-radius: 100px;
+}
+
+#tono1:hover{
+    transform: scale(1.2); /* nivel de zoom deseado */
+    transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
+}
+
+#tono2:hover{
+    transform: scale(1.2); /* nivel de zoom deseado */
+    transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
+}
+
+#tono3:hover{
+    transform: scale(1.2); /* nivel de zoom deseado */
+    transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
+}
+
+#tono4:hover{
+    transform: scale(1.2); /* nivel de zoom deseado */
+    transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
+}
+
+#imgProductoSeleccionada{
+    max-width: 300px;
+    max-height: 300px;
+    transition: opacity 0.5s ease-in-out;
+}
+
+#imgProductoSeleccionada:hover {
+    transform: scale(1.2); /* nivel de zoom deseado */
+    transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
 }
 
 /* Contador de productos superior */
@@ -142,6 +174,10 @@ h4{
     border: none;
     font-size: 14px;
     font-weight: bold;
+}
+
+#contenedorInferiorConProductos:hover {
+    box-shadow: 0px 3px 3px 0px rgba(255, 41, 155, 0.75);
 }
 
 /* Imagen del producto de sugerencias */
