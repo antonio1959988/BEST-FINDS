@@ -9,7 +9,6 @@ body{
 
 /* Titulos */
 h1{
-    text-align: center;
     margin: 60px;
 }
 
@@ -17,11 +16,6 @@ h1{
 #carrito{
     width: 100%;
 }
-
-#titulo1Carrito {
-    text-align: center;
-}
-
 
 #imgProductos {
     width: 10rem;
@@ -38,7 +32,6 @@ h1{
     
     }
  }
-
 
 .rowPosition {
     display: flex;
@@ -67,27 +60,108 @@ h1{
     height: 350px;
 }
 
-#colorButton {
+/*Estilo boton cotinuar compra */
+.colorButtonRosa {
     background-color: #D71787;
     border-color: #D71787;
-    width: 14rem;
+    color: #fff;
 }
 
 
-#colorButton:focus {
+.colorButtonRosa:hover {
 
     /*Cuando se da click en los inputs, se crea un resplandor*/
     font-weight: bold;
     border: none;
     box-shadow: 0 0 5px #d71787;
     outline: 0px;
+    background-color: #D71787;
+    color: #fff;
 }
 
+/* Estilo para costo unitario del pedido*/
 .costo-color{
     font-size:20px;
-    text-shadow: 2px 2px 5px #F13C91 ;
     color: #D71787;
 }
 
-/*//////////////////////////////////////////////////////////////
+
+/* Estilos para NotaPedido*/
+
+#notaPedido{
+    font-size: 15px;
+    color: #F13C91;
+}
+
+#notaPedido:hover {
+    color: #D71787;
+    text-shadow: 2px 2px 35px #F13C91 ;
+}
+
+#subrayadoNota{
+    color:#D71787;
+    
+}
+
+
+/* Estilos botones modal- notas del pedido*/
+.colorButtonAmarillo {
+    background-color: #F9D423;
+    border-color: #F9D423;
+    color: black;
+}
+
+
+.colorButtonAmarillo:hover {
+
+    /*Cuando se da click en los inputs, se crea un resplandor*/
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 0 5px #F9D423;
+    outline: 0px;
+    background-color: #F9D423;
+    color: black;
+}
+ /*Estilo bolsas de entregas */
+
+ .bolsaEntrega {
+    width: 100px;
+    height: 100px;
+    padding: 2px;
+ }
+
+ .selectorBolsa{
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+ }
+
+.selectorBolsa + img {
+    cursor:pointer;
+  }
+
+ .selectorBolsa:checked + img {
+        outline: 2px solid #D71787;
+      }
+ 
+
+    /* Estilo para boton que proporciona info de las bolsas*/
+#buttonInfo{
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    padding: 0px;
+}
+
+
+
+/* Estilo costo total*/
+#costoTotal{
+font-size:x-large;
+color: #D71787;
+  
+}
+
+
 
