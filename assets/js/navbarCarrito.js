@@ -108,3 +108,23 @@ function vaciarCarrito() {
           contenedorCarrito.removeChild(contenedorCarrito.firstChild);
       }
 }
+
+function agregarProducto(e) {
+     // Delegation para agregar-carrito
+     if (e.target.classList.contains('agregar-carrito')) {
+          const producto = e.target.parentElement.parentElement;
+          // Enviamos el producto seleccionado para tomar sus datos
+          leerDatosProducto(producto);
+          mostrarNotificacion();
+     }
+}
+
+function mostrarNotificacion() {
+     const notificacion = document.querySelector('#notificacion');
+     notificacion.style.display = 'block';
+
+     // Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
+     setTimeout(() => {
+          notificacion.style.display = 'none';
+     }, 3000); // 3000 milisegundos = 3 segundos
+}
