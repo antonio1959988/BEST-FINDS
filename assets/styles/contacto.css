@@ -107,12 +107,12 @@ h1{
     
     display: none;
 }
-
+/*Este es el fondo de la pantalla
 body {
     background-image: url("/assets/img/otra\ opcion.webp");
     background-size: cover;
-    background-repeat:no-repeat ;
-}
+    background-repeat:no-repeat ; 
+}*/
 /*Imagen del container ccolor rosa*/
 .container-1 {
     
@@ -121,8 +121,8 @@ body {
     margin-left: auto; /* Corrección: "margin-left" en lugar de "margin left" */
     margin-right: auto; /* Corrección: "margin-right" en lugar de "margin-right" */
     text-align: center;
-    border-radius: 3%;
-    background-color: rgb(255, 111, 212);
+    border-radius: 15px;
+    background-color: rgba(215, 23, 135,.20);
     }
 
 
