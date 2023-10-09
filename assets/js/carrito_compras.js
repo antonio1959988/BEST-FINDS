@@ -1,4 +1,3 @@
-
 // Selecciona el carrusel por su id
 const carousel = document.getElementById('BannerIndex');
 
@@ -44,7 +43,7 @@ function agregarProductos() {
 
         let rowProducto = document.createElement("producto");
         rowProducto.setAttribute("id", `producto-${index}`) //interactuamos con el row para poder eliminarlo completo
-        rowProducto.className = "row rowPosition  mb-3";
+        rowProducto.className = "row rowPosition mb-3";
         rowProducto.innerHTML = `
         <div class="col"> <!-- div  col Imagen-->
             <img src=${producto.imagen} alt="producto1" id="imgProductos">
@@ -62,11 +61,11 @@ function agregarProductos() {
                     <!-- Seccion contador -->
                     <div class="d-inline-block">
                         <div class="input-group">
-                            <button id="decrementar-${index}" type="button" class="btn btn-number" onclick="decrementarCantidad(this); calcularPrecio(this);" > 
+                            <button id="decrementar-${index}" type="button" class="btn btn-number" onclick="decrementarCantidad(this);" > 
                                 <i class="fa-solid fa-minus"></i>
                             </button>
                             <input type="text" id="cantidad-${index}" name="cantidad" class="form-control input-number" value="1" min="1" max="100">
-                            <button id="incrementar-${index}" type="button" class="btn btn-number" onclick="incrementarCantidad(this); calcularPrecio(this);">
+                            <button id="incrementar-${index}" type="button" class="btn btn-number" onclick="incrementarCantidad(this);">
                                 <i class="fa-solid fa-plus"></i>
                             </button>
                         </div>
@@ -98,6 +97,9 @@ function incrementarCantidad(boton) {
     let inputCantidad = document.getElementById(`cantidad-${index}`);
     let cantidad = parseInt(inputCantidad.value);
     inputCantidad.value = cantidad + 1;
+
+    calcularPrecio(index);
+    calcularCostoTotal();
 }
 
 function decrementarCantidad(boton) {
@@ -107,6 +109,9 @@ function decrementarCantidad(boton) {
     if (cantidad != 1) {
         inputCantidad.value = cantidad - 1;
     }
+
+    calcularPrecio(index);
+    calcularCostoTotal();
 }
 
 
@@ -115,17 +120,44 @@ function eliminarProducto(boton) {
     let index = boton.id.split("-")[1];
     let rowProducto = document.getElementById(`producto-${index}`);
     rowProducto.remove();
+
+    
+    calcularCostoTotal();
+
 }
 
 //Calcular precio
-function calcularPrecio(boton) {
-    let index = boton.id.split("-")[1];
+function calcularPrecio(index) {
     let costo = document.getElementById(`costo-${index}`); //row
     let inputCantidad = document.getElementById(`cantidad-${index}`);
     let cantidad = parseInt(inputCantidad.value);
     let calculo = listaProductos[index].costo * cantidad;
     costo.innerHTML = `$${calculo}`;
 }
+
+
+//Funcion para calcular costo total
+
+function calcularCostoTotal() {
+    let suma = 0;
+    let cantidades = document.getElementsByClassName("costo-color");
+    let sumaTotal = document.getElementById("costoTotal");
+    for(let i = 0; i < cantidades.length; i++){
+        let cantidad = parseInt(cantidades[i].innerHTML.substring(1));
+        suma = suma + cantidad;
+    }
+    sumaTotal.innerHTML = `$${suma}`;
+
+
+    
+}
+
+
+
+
+
+
+
 
 
 

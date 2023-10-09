@@ -7,7 +7,7 @@ navbarContainer.innerHTML=`    <div class="container-fluid" id="barra">
   aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
 </button>
-<a href="./index_bf.html" target="_self"><img src="./assets/img/logoMini.jpg" alt="Lupa" class="img-fluid"
+<a href="./index_bf.html" target="_self"><img src="./assets/img/logoMini.png" alt="Lupa" class="img-fluid"
     id="logoBF"></a>
 <a href="./carrito_compras.html" target="_self"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa"
     class="img-fluid" id="imgIcono2"></a>
