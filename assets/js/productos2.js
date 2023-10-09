@@ -50,6 +50,26 @@ function agregarComentario() {
 
 botonComentario.addEventListener("click", agregarComentario);
 
+/////////////////MANIPULACION DE IMAGENES CON BOTONES//////////////////////////////////////
+$(document).ready(function () {
+    // Manejar clic en botones de color
+    $("#tono1, #tono2, #tono3, #tono4").click(function () {
+        // Obtener la ruta de la imagen desde el atributo de datos
+        var imgSrc = $(this).data("img-src");
+        
+        // Aplicar transición de opacidad
+        $("#imgProductoSeleccionada").css("opacity", "0");
+        
+        // Pequeña pausa antes de cambiar la fuente de la imagen
+        setTimeout(function () {
+            // Cambiar la fuente de la imagen principal
+            $("#imgProductoSeleccionada").attr("src", imgSrc);
+            
+            // Restaurar la opacidad
+            $("#imgProductoSeleccionada").css("opacity", "1");
+        }, 500); // 500 milisegundos (0.5 segundos) para que coincida con la duración de la transición
+    });
+});
 
 
 
@@ -57,10 +77,11 @@ botonComentario.addEventListener("click", agregarComentario);
 
 
 
-// Función que contabiliza los likes para un comentario específico
-function contabilizarLikes(comentarioId) {
 
-}
+
+
+
+
 
 
 // Llamar a la función para cada comentario en un bucle)
