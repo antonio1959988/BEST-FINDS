@@ -41,7 +41,9 @@ nav {
 
 .submenu #carritoNav {
     display: none;
-
+    max-height: 400px; /* Establece el límite de altura */
+    max-width: 500px; /* Establece el límite de anchura */
+    overflow: auto; /* Agrega una barra de desplazamiento si es necesario */
 }
 
 .submenu:hover #carritoNav {
@@ -52,9 +54,9 @@ nav {
     z-index: 1;
     background-color: white;
     padding: 20px;
-    min-height: 400px;
     min-width: 500px;
 }
+
 
 
 .button {
@@ -89,6 +91,46 @@ nav {
 .u-full-width{
     width: 100%;
 }
+
+.notificacion {
+    margin-top: 50px;
+    font-weight: bold;
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(43, 152, 21);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation-name: shake;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-15px);
+    }
+    40% {
+      transform: translateX(15px);
+    }
+    60% {
+      transform: translateX(-15px);
+    }
+    80% {
+      transform: translateX(15px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  
+  
 
 
 /* Diseño base de etiqueta body*/

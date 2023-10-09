@@ -1,7 +1,7 @@
 let navbarDiv = document.getElementById("nav-bar");
 let navbarContainer=document.createElement('nav');
 navbarContainer.className="navbar navbar-expand-lg bg-body-tertiary sticky-top";
-navbarContainer.innerHTML=`    <div class="container-fluid" id="barra">
+navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
 <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse"
   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
   aria-label="Toggle navigation">
@@ -76,11 +76,11 @@ navbarContainer.innerHTML=`    <div class="container-fluid" id="barra">
         </li>
       </ul>
     </div>
-
     <a href="./registroUsuarios.html" target="_self"><img src="./assets/icons/cuentaIcono.jpg" alt="Lupa"
         class="img-fluid" id="imgIcono"></a>
   </form>
 </div>
+<div id="notificacion" class="notificacion">¡Producto agregado al carrito!</div>
 </div>`;
 navbarDiv.appendChild(navbarContainer);
 
