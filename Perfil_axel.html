@@ -20,7 +20,7 @@
 
     <br>
     <!-- foto de perfil-->
-    <img src="./assets/img/Fotos perfil/foto perfil best 3.jpeg" alt="Logo Best Finds" class="img-fluid" id="imgPerfil">
+    <img src="./assets/img/Fotos perfil/foto perfil best 3.jpeg" alt="Logo Best Finds" id="imgPerfil" class="hidden" >
 
     <br>
 
@@ -49,36 +49,58 @@
        <div class="container">
         <div class="row">
             <div class="col-12 col-md-6 col-lg-6"> <!--Para dar responsividad en diferentes dispositivos -->
-                <div id="icons" class="icon-container"> <!--Se utilizo icons para dar estilos y lograr que ambos contenedores se mantuvieran en su posicion-->
+                <div class="icon-container"> <!--Se utilizo icons para dar estilos y lograr que ambos contenedores se mantuvieran en su posicion-->
                     <img id="icono" src="./assets/icons/icons_perfil/tarjeta-de-identificacion.png" alt="Ícono">
                 </div>
                 <div class="text-center">
-                    <h1 id="menuPerfil" class="menu-perfil">Datos personales</h1> <!--Se utilizo el id= menuPerfil para mantener el contenedor rosa encima del amarillo y tambien mantenerlo en la misma posicion-->
+                    <h1 class="menu-perfil" data-toggle="infoContainer1">Datos personales</h1> <!--Se utilizo el id= menuPerfil para mantener el contenedor rosa encima del amarillo y tambien mantenerlo en la misma posicion-->
+                    <div class="info-container hidden" id="infoContainer1">
+                        <!-- Contenido desplegable -->
+                        <p>Nombre:  Andre Perez ortiz<br>
+                        Telefono: 3526625351 <br>
+                        Correo:andre@gmail.com
+                        </p>
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-6">
-                <div id="icons" class="icon-container">
+                <div class="icon-container">
                     <img id="icono" src="./assets/icons/icons_perfil/excelencia.png" alt="Ícono">
                 </div>
                 <div class="text-center">
-                    <h1 id="menuPerfil" class="menu-perfil">Lista de deseos</h1>
+                    <h1 class="menu-perfil" data-toggle="infoContainer2">Lista de deseos</h1>
+                    <div class="info-container hidden" id="infoContainer2">
+                        <!-- Contenido desplegable -->
+                        <p>Tus deseos estan aquí
+                        </p>
+                    </div>
                 </div>
             </div>
             
             <div class="col-12 col-md-6 col-lg-6">
-                <div id="icons" class="icon-container">
+                <div class="icon-container">
                     <img id="icono" src="./assets/icons/icons_perfil/calendario.png" alt="Ícono">
                 </div>
                 <div class="text-center">
-                    <h1 id="menuPerfil" class="menu-perfil">Historial</h1>
+                    <h1 class="menu-perfil" data-toggle="infoContainer3">Historial</h1>
+                    <div class="info-container hidden" id="infoContainer3">
+                        <!-- Información para el tercer contenedor -->
+                        <p>Tus compras pasadas</p>
+                       
+                    </div>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-6">
-                <div id="icons" class="icon-container">
+                <div class="icon-container">
                     <img id="icono" src="./assets/icons/icons_perfil/configuraciones.png" alt="Ícono">
                 </div>
                 <div class="text-center">
-                    <h1 id="menuPerfil" class="menu-perfil">Configuraciones</h1>
+                    <h1 class="menu-perfil" data-toggle="infoContainer4">Configuraciones</h1>
+                    <div class="info-container hidden" id="infoContainer4">
+                        <!-- Información para el cuarto contenedor -->
+                        <p>Nombre <br> Contraseña</p>
+                        <!-- Agrega más información aquí -->
+                    </div>
                 </div>
             </div>
             <!-- <div class="col-12 col-md-6 col-lg-6">

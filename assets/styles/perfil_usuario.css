@@ -8,6 +8,7 @@
     margin-top: 30px;
 }
  
+
 /* Diseño de contenedor de icono unido del lado izquierdo del contenedor nombreUsuario color amarillo */
 #icons {
     background-color: #F9D423;
@@ -21,14 +22,6 @@
     position: relative; /* Establece la posición relativa para ambos contenedores */
 }
 
-/*agregar el icono del lado izquierdo y dentro del contenedor icons*/
-#icono {
-    width: 28px;
-    position: absolute; /* Establece la posición absoluta para el icono */
-    left: 15px; /* Ajusta el valor negativo para desplazar el icono hacia la izquierda */
-}
-
-/* Diseño de nombre de usuario centrado, en un contenedor ovalado, dividido en dos colores rosa y amarillo */
 #menuPerfil {
     background-color: #D71787;
     color: white;
@@ -43,6 +36,134 @@
     z-index: 1; /* Coloca el contenedor rosa por encima del amarillo */
     left: 40px; /* Ajusta el valor negativo para desplazar el contenedor rosa hacia la izquierda */
 }
+
+.icon-container {
+    background-color: #F9D423;
+    width: 250px;
+    height: 50px;
+    border-radius: 19px;
+    margin: auto;
+    margin-top: 30px;
+    padding-top: 10px;
+    font-size: 20px;
+    position: relative; /* Establece la posición relativa para ambos contenedores */
+}
+
+
+/*agregar el icono del lado izquierdo y dentro del contenedor icons*/
+#icono {
+    width: 28px;
+    position: absolute; /* Establece la posición absoluta para el icono */
+    left: 15px; /* Ajusta el valor negativo para desplazar el icono hacia la izquierda */
+}
+
+/* Diseño de nombre de usuario centrado, en un contenedor ovalado, dividido en dos colores rosa y amarillo */
+.menu-perfil  {
+    background-color: #D71787;
+    color: white;
+    width: 200px;
+    height: 50px;
+    border-radius: 19px;
+    margin: auto;
+    margin-top: -50px;
+    padding-top: 10px;
+    font-size: 20px;
+    position: relative; /* Establece la posición relativa para ambos contenedores */
+    z-index: 1; /* Coloca el contenedor rosa por encima del amarillo */
+    left: 40px; /* Ajusta el valor negativo para desplazar el contenedor rosa hacia la izquierda */
+}
+
+button {
+    background-color: #D71787;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 0;
+    border-radius: 19px;
+}
+
+ .hidden {
+    display: none;
+} 
+
+#infoContainer1 {
+    background-color: #F89DC8;
+    color: white;
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+    border-radius: 19px;
+    width: 75%; /* Establece un ancho relativo */
+    max-width: 280px; /* Establece un ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    position: relative;
+    left: 10px;
+    right: 0;
+}
+/* Aplica estilos adicionales para pantallas pequeñas */
+@media (max-width: 768px) {
+    #infoContainer1 {
+        width: 100%; /* Cambia el ancho para pantallas más pequeñas */
+    }
+}
+
+#infoContainer2 {
+    background-color: #F89DC8;
+    color: white;
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+    border-radius: 19px;
+    width: 75%; /* Establece un ancho relativo */
+    max-width: 280px; /* Establece un ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    position: relative;
+    left: 10px;
+    right: 0;
+}
+
+/* Aplica estilos adicionales para pantallas pequeñas */
+@media (max-width: 768px) {
+    #infoContainer2 {
+        width: 100%; /* Cambia el ancho para pantallas más pequeñas */
+    }
+}
+#infoContainer3 {
+    background-color: #F89DC8;
+    color: white;
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+    border-radius: 19px;
+    width: 75%; /* Establece un ancho relativo */
+    max-width: 280px; /* Establece un ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    position: relative;
+    left: 10px;
+    right: 0;
+}
+
+/* Aplica estilos adicionales para pantallas pequeñas */
+@media (max-width: 768px) {
+    #infoContainer3 {
+        width: 100%; /* Cambia el ancho para pantallas más pequeñas */
+    }
+}
+#infoContainer4 {
+    background-color: #F89DC8;
+    color: white;
+    padding: 10px; /* Ajusta el relleno según sea necesario */
+    border-radius: 19px;
+    width: 75%; /* Establece un ancho relativo */
+    max-width: 280px; /* Establece un ancho máximo */
+    margin: 0 auto; /* Centra horizontalmente */
+    position: relative;
+    left: 10px;
+    right: 0;
+}
+
+/* Aplica estilos adicionales para pantallas pequeñas */
+@media (max-width: 768px) {
+    #infoContainer4 {
+        width: 100%; /* Cambia el ancho para pantallas más pequeñas */
+    }
+}
+
 
 
 /* Barra divisora */
