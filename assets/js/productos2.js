@@ -1,11 +1,13 @@
 ////////////////////AGREGAR COMENTARIO/////////////////////////
 // Se obtiene el elemento del botón de agregar comentario mediante su ID
-// Se obtiene el elemento del botón de agregar comentario mediante su ID
 const botonComentario = document.getElementById('btnEnviarComentario');
 let comentarios = document.getElementById('txtComentario');
 let seccionComentarios = document.getElementById('seccionDescYComentarios');
 
+//Inicio de un contador para los likes
 var contador = 3;
+
+//Función que usa el DOM para agregar un comentario
 function agregarComentario() {
     contador++;
     let comentario = comentarios.value;
@@ -25,13 +27,14 @@ function agregarComentario() {
 
     seccionComentarios.appendChild(nuevoComentario);
     comentarios.value = "";
-
+    //Obtención y uso del contador de likes
     const botonCorazon = document.getElementById(`boton-corazon-${contador}`);
     const contadorLikes = document.getElementById(`contador-likes-${contador}`);
 
     let likes = 0;
     let Liked = false;
 
+    //Función que actualiza los likes y los incrementsa o decrementa
     function actualizarLikes() {
         if (Liked) {
             likes--;
@@ -44,13 +47,15 @@ function agregarComentario() {
         botonCorazon.classList.toggle('activo');
     }
 
+    //Al dar clic al botón de corazón, se llama a la función de actualizar likes
     botonCorazon.addEventListener('click', actualizarLikes);
 
 }
 
+//Al dar clic al botón de agregar comentario, se llama a la función de agregar comentario
 botonComentario.addEventListener("click", agregarComentario);
 
-/////////////////MANIPULACION DE IMAGENES CON BOTONES//////////////////////////////////////
+/////////////////MANIPULACIÓN DE IMÁGENES CON BOTONES//////////////////////////////////////
 $(document).ready(function () {
     // Manejar clic en botones de color
     $("#tono1, #tono2, #tono3, #tono4").click(function () {

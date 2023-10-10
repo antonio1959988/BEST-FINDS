@@ -1,5 +1,4 @@
-
-
+//Uso del DOM para crear sección de filtros en vista móvil
 let filtrosDiv = document.getElementById('filtrosDiv');
 filtrosDiv.innerHTML=`          <br>
 <h4>Filtros</h4>
@@ -53,6 +52,7 @@ filtrosDiv.innerHTML=`          <br>
   </div>
 </form>`;
 
+//Apartado para filtrar productos (por el momento solamente imprime informacióm en consola)
 document.addEventListener("DOMContentLoaded", function() {
   const btnAplicar = document.getElementById("btnAplicar");
 
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", function() {
     console.log(ordenLanzamiento);
     console.log(ordenPrecio);
     console.log(ordenCalificacion);
-    // Llama a la función de filtrado con los valores seleccionados
+    // Llamar a la función de filtrado con los valores seleccionados
     filtrarProductos(categoria, marca, ordenLanzamiento, ordenPrecio, ordenCalificacion);
   });
 

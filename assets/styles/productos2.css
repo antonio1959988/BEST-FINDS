@@ -1,4 +1,4 @@
-/* Titulos */
+/* Títulos */
 h4{
     margin-top: 20px;
 }
@@ -7,7 +7,7 @@ h4{
     text-align: left;
 }
 
-/* Descripcion del producto */
+/* Descripción del producto */
 #txtDescripcion{
     font-size: 14px;
     text-align: left;
@@ -22,13 +22,13 @@ h4{
     text-align: left;
 }
 
-/*Alineacion de filas verticalmente*/
+/*Alineación de filas verticalmente*/
 #verticalAlign{
     display: grid;
     place-items: center;
 }
 
-/* Contenedor de la seccion superior */
+/* Contenedor de la sección superior */
 #contenedor{
     border: 2px solid #d1d1d1;
     margin: 2px;
@@ -40,7 +40,7 @@ h4{
     color: #707070;
 }
 
-/* Implementacion de bordes acordes a los contenedores */
+/* Implementación de bordes acordes a los contenedores */
 #contenedorInferior, #contenedorAgregarComentario{
     border: 2px solid #d1d1d1;
     padding: 20px;
@@ -48,7 +48,7 @@ h4{
     width: 100%;
 }
 
-/* Contenedor de seccion sugerencias aplicado a cada div de producto */
+/* Contenedor de sección sugerencias aplicado a cada div de producto */
 #contenedorInferiorConProductos{
     border: 2px solid #d1d1d1;
     padding: 20px;
@@ -116,6 +116,7 @@ h4{
     border-radius: 100px;
 }
 
+/* Formato de aumento de tamaño, animación */
 #tono1:hover{
     transform: scale(1.2); /* nivel de zoom deseado */
     transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
@@ -136,12 +137,14 @@ h4{
     transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
 }
 
+/* Imagen principal del producto */
 #imgProductoSeleccionada{
     max-width: 300px;
     max-height: 300px;
     transition: opacity 0.5s ease-in-out;
 }
 
+/* Aumento de tamaño de la imagen del producto principal */
 #imgProductoSeleccionada:hover {
     transform: scale(1.2); /* nivel de zoom deseado */
     transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
@@ -154,7 +157,7 @@ h4{
     text-align: center;
 }
 
-/* Boton de la seccion principal es mas grande */
+/* Botón de la sección principal es más grande */
 #btnComprarPrincipal{
     background-color: #D71787;
     border: none;
@@ -169,9 +172,9 @@ h4{
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
 }
 
-/* /////////SECCION INFERIOR DERECHA (SUGERENCIAS)/////////////////// */
+/* /////////SECCIÓN INFERIOR DERECHA (SUGERENCIAS)/////////////////// */
 
-/* Boton de la seccion inferior es mas pequeño */
+/* Botón de la sección inferior es más pequeño */
 #btnAplicar, #btnEnviarComentario{
     margin-top: 14px;
     background-color: #D71787;
@@ -180,10 +183,12 @@ h4{
     font-weight: bold;
 }
 
+/* Evento de cambio de color */
 #btnAplicar:hover, #btnEnviarComentario:hover{
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
 }
 
+/* Evento de cambio de contorno en productos */
 #contenedorInferiorConProductos:hover {
     box-shadow: 0px 3px 3px 0px rgba(255, 41, 155, 0.75);
 }
@@ -216,9 +221,9 @@ h4{
 }
 
 
-/* ///////////////SECCION INFERIOR IZQUIERDA (DESCRIPCION Y COMENTARIOS) //////////// */
+/* ///////////////SECCIÓN INFERIOR IZQUIERDA (DESCRIPCIÓN Y COMENTARIOS) //////////// */
 
-/* Estilos de la seccion inferior con la descripcion del producto y comentarios*/
+/* Estilos de la sección inferior con la descripción del producto y comentarios*/
 #seccionDescYComentarios{
     text-align: left;
 }
@@ -228,12 +233,12 @@ h4{
     text-align: left;
 }
 
-/* Contenedor de descripcion producto */
+/* Contenedor de descripción producto */
 #acercaDeProducto{
     margin-top: 20px;
 }
 
-/* Alineacion derecha para contador de likes */
+/* Alineación derecha para contador de likes */
 #der{
     text-align: right;
 }
