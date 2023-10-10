@@ -72,6 +72,10 @@
     z-index: 1; /* Coloca el contenedor rosa por encima del amarillo */
     left: 40px; /* Ajusta el valor negativo para desplazar el contenedor rosa hacia la izquierda */
 }
+.menu-perfil:hover{
+    background-color: #F89DC8;
+}
+
 
 button {
     background-color: #D71787;
