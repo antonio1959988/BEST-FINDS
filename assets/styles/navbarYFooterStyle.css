@@ -18,18 +18,20 @@ nav {
 }
 
 #imgIcono {
-    width: 40px;
-    height: 35px;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 15px;
 }
-
+#imgIcono:hover {
+    filter: invert(38%) sepia(79%) saturate(658%) hue-rotate(301deg) brightness(88%) contrast(95%);
+}
 #imgIcono2 {
-    width: 40px;
-    height: 35px;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 15px;
 }
-
-#imgIcono3 {
-    width: 40px;
-    height: 35px;
+#imgIcono2:hover {
+    filter: invert(38%) sepia(79%) saturate(658%) hue-rotate(301deg) brightness(88%) contrast(95%);
 }
 
 /*CARRITO DE COMPRAS*/
@@ -216,7 +218,7 @@ h5 {
         text-align: center;
     }
 
-    #imgIcono3 {
+    #imgIcono2 {
         display: none;
         ;
     }
