@@ -80,12 +80,20 @@ h1 {
     font-weight: bold;
 }
 
+#contenedorFiltros button:hover {
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
 #contenedorInferior button {
     margin-top: 14px;
     background-color: #D71787;
     border: none;
     font-size: 12px;
     font-weight: bold;
+}
+
+#contenedorInferior button:hover {
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
 }
 
 #cantidadProducto {
