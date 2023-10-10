@@ -1,5 +1,7 @@
+//Array inicial para almacenar los objetos json de los productos
 var productosArray = [];
 
+// Función para cargar los datos de los productos
 document.getElementById("btnAplicar").addEventListener("click", function () {
     // Obtener los valores de los campos del formulario
     const nombre = document.getElementById("nombre").value;

@@ -1,15 +1,16 @@
-/* Titulos */
+/* Títulos */
 h1 {
     text-align: left;
     margin-top: 30px;
 }
 
-/* Parrafo principal */
+/* Párrafo principal */
 #txtInicio {
     font-size: 14px;
     text-align: left;
 }
 
+/* Nombre de cada producto*/
 #nombreProducto {
     font-size: 14px;
     display: block;
@@ -17,6 +18,7 @@ h1 {
     margin-bottom: 5px;
 }
 
+/* Precio de cada producto */
 #precio {
     font-size: 16px;
     font-weight: bold;
@@ -25,29 +27,31 @@ h1 {
     text-align: left;
 }
 
-
-/*Alineacion de filas verticalmente*/
+/*Alineación de filas verticalmente*/
 #verticalAlign {
     display: grid;
     place-items: center;
 }
 
-/* Imagen productos */
+/* Imagen productos banner*/
 #imgProductos {
     width: 600px;
     height: 250px;
 }
 
+/* Imagen individual de productos */
 #imgProducto {
     margin-bottom: 10px;
 }
 
+/* Contenedor con borde gris, parte superior zona principal */
 #contenedor {
     border: 2px solid #d1d1d1;
     margin: 2px;
     padding: 10px;
 }
 
+/* Contenedores con borde gris en la parte inferior */
 #contenedorInferior {
     border: 2px solid #d1d1d1;
     padding: 20px;
@@ -59,11 +63,12 @@ h1 {
     border-radius: 15px;
 }
 
+/* Formato de sombreado en selección de productos */
 #contenedorInferior:hover {
     box-shadow: 0px 3px 3px 0px rgba(255, 41, 155, 0.75);
 }
 
-
+/* Contenedor inferior izquierdo con fitros */
 #contenedorFiltros {
     border: 2px solid #d1d1d1;
     padding: 20px;
@@ -72,18 +77,21 @@ h1 {
     max-height: 650px;
 }
 
+/* Botón de filtros */
 #contenedorFiltros button {
     margin-top: 14px;
-    background-color: #D71787;
+    backgroónd-color: #D71787;
     border: none;
     font-size: 12px;
     font-weight: bold;
 }
 
+/* Botón de sección filtros*/
 #contenedorFiltros button:hover {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
 }
 
+/* Botón de cada producto */
 #contenedorInferior button {
     margin-top: 14px;
     background-color: #D71787;
@@ -92,23 +100,28 @@ h1 {
     font-weight: bold;
 }
 
+/* Evento de cambio de color para los botones */
 #contenedorInferior button:hover {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
 }
 
+/* Contador de producto */
 #cantidadProducto {
     text-align: center;
 }
 
+/* Formulario zona filtros */
 #formFiltros {
     text-align: left;
 }
 
+/* Eliminar formato de hipervínculo */
 #enlaceProducto {
     color: #707070;
     text-decoration: none;
 }
 
+/* Sombreado de contorno en formularios */
 .form-select,
 .form-control {
     width: 80%;

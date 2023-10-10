@@ -1,6 +1,6 @@
 /////////////////////CARRITO DE COMPRAS//////////////////////////
 
-// Variables
+// Variables 
 const carrito = document.querySelector('#carritoNav');
 const listaProducto = document.querySelector('#listaProductos');
 const contenedorCarrito = document.querySelector('#lista-carritoNav tbody');
@@ -35,7 +35,7 @@ function agregarProducto(e) {
 }
 
 
-// Lee los datos del producto
+// Leer los datos del producto
 function leerDatosProducto(producto) {
      const infoProducto = {
           imagen: producto.querySelector('img').src,
@@ -45,7 +45,7 @@ function leerDatosProducto(producto) {
           cantidad: producto.querySelector('#cantidadProducto').value
      }
 
-
+     // Revisa si un elemento ya existe en el carrito
      if( articulosCarrito.some( producto => producto.id === infoProducto.id ) ) { 
           const productos = articulosCarrito.map( producto => {
                if( producto.id === infoProducto.id ) {
