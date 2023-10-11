@@ -9,7 +9,7 @@ navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
 </button>
 <a href="./index_bf.html" target="_self"><img src="./assets/img/logoMini.png" alt="Lupa" class="img-fluid"
     id="logoBF"></a>
-<a href="./carrito_compras.html" target="_self"><img src="./assets/icons/carritoIcono.jpg" alt="Lupa"
+<a href="./carrito_compras.html" target="_self"><img src="./assets/icons/shopping-cart.svg" alt="Lupa"
     class="img-fluid" id="imgIcono2"></a>
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="lista">
@@ -46,14 +46,14 @@ navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
   </ul>
   <form class="d-flex" role="search">
     <input class="form-control ms-4" type="search" placeholder="Buscar..." aria-label="Search">
-    <a href="./productos.html" target="_self"><img src="./assets/icons/buscarIcono.jpg" alt="Lupa"
+    <a href="./productos.html" target="_self"><img src="./assets/icons/search.svg" alt="Lupa"
         class="img-fluid" id="imgIcono"></a>
 
     <div>
       <ul id="ul">
         <li class="submenu">
           <a href="./carrito_compras.html" target="_self">
-            <img src="./assets/icons/carritoIcono.jpg" alt="Lupa" class="img-fluid" id="imgIcono3">
+            <img src="./assets/icons/shopping-cart.svg" alt="Lupa" class="img-fluid" id="imgIcono">
           </a>
           <div id="carritoNav">
 
@@ -76,7 +76,7 @@ navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
         </li>
       </ul>
     </div>
-    <a href="./registroUsuarios.html" target="_self"><img src="./assets/icons/cuentaIcono.jpg" alt="Lupa"
+    <a href="./registroUsuarios.html" target="_self"><img src="./assets/icons/user.svg" alt="Lupa"
         class="img-fluid" id="imgIcono"></a>
   </form>
 </div>
@@ -94,7 +94,7 @@ footerContainer.innerHTML=`  <div class="container">
             <ul>
                 <li><a href="#" target="_blank">Preguntas frecuentes</a></li>
                 <li><a href="./Contacto.html" target="_self">Contáctanos</a></li>
-                <li><a href="./sobre_nosotros.html" target="_self">Sobre nosotros</a></li>
+                <li><a href="./sobre_nosotros.html" target="_self">Sobre nosotres</a></li>
                 <li><a href="#" target="_blank">Política de privacidad</a></li>
                 <li><a href="#" target="_blank">Términos y condiciones</a></li>
             </ul>
