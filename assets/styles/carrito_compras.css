@@ -1,44 +1,46 @@
-
-
 /* Diseño base de etiqueta body*/
-body{
+body {
     text-align: center;
-    font-family: "Roboto", sans-serif;;
+    font-family: "Roboto", sans-serif;
+    ;
     color: #707070;
 }
 
 /* Titulos */
-h1{
+h1 {
     margin: 60px;
 }
 
 /*//////////////////////////////////////////////////////*/
-#carrito{
+#carrito {
     width: 100%;
 }
 
 #imgProductos {
     width: 10rem;
     height: 10rem;
-
-
 }
 
-@media (max-width: 576px) { 
+.imgProductos2 {
+    width: 10rem;
+    height: 10rem;
+}
+
+@media (max-width: 576px) {
     #imgProductos {
         width: 8rem;
         height: 8rem;
-    
-    
+
+
     }
- }
+}
 
 
 
- /* Estilos titulos de encabezado*/
- .encabezado{
-    font-size:large;
- }
+/* Estilos titulos de encabezado*/
+.encabezado {
+    font-size: large;
+}
 
 .rowPosition {
     display: flex;
@@ -81,68 +83,62 @@ h1{
     /*Cuando se da click en los inputs, se crea un resplandor*/
     font-weight: bold;
     border: none;
-    box-shadow: 0 0 5px #d71787;
     outline: 0px;
-    background-color: #D71787;
+    background-color: #ff8c66;
     color: #fff;
 }
 
-.colorButtonRosa:hover{
-    background-color: #ff8c66;
-    width: auto;
-
-}
 
 /* Estilo para costo unitario del pedido*/
-.costo-color{
-    font-size:20px;
+.costo-color {
+    font-size: 20px;
     color: #D71787;
 }
 
 
 /* Estilos para NotaPedido*/
 
-#notaPedido{
+#notaPedido {
     font-size: 15px;
     color: #F13C91;
 }
 
 #notaPedido:hover {
     color: #D71787;
-    text-shadow: 2px 2px 35px #F13C91 ;
+    text-shadow: 2px 2px 35px #F13C91;
 }
 
-#subrayadoNota{
-    color:#D71787;
-    
+#subrayadoNota {
+    color: #D71787;
+
 }
 
- /*Estilo bolsas de entregas */
+/*Estilo bolsas de entregas */
 
- .bolsaEntrega {
+.bolsaEntrega {
     width: 100px;
     height: 100px;
     padding: 2px;
- }
+}
 
- .selectorBolsa{
+.selectorBolsa {
     position: absolute;
     opacity: 0;
     width: 0;
     height: 0;
- }
+}
 
-.selectorBolsa + img {
-    cursor:pointer;
-  }
+.selectorBolsa+img {
+    cursor: pointer;
+}
 
- .selectorBolsa:checked + img {
-        outline: 2px solid #D71787;
-      }
- 
+.selectorBolsa:checked+img {
+    outline: 2px solid #D71787;
+}
 
-    /* Estilo para boton que proporciona info de las bolsas*/
-#buttonInfo{
+
+/* Estilo para boton que proporciona info de las bolsas*/
+#buttonInfo {
     width: 20px;
     height: 20px;
     font-size: 10px;
@@ -152,16 +148,25 @@ h1{
 
 
 /* Estilo costo total*/
-#costoTotal{
-font-size:x-large;
-color: #D71787;
-  
+#costoTotal {
+    font-size: x-large;
+    color: #D71787;
+
 }
 
 /* Estilo de barra de promociones */
-.barraPromocion{
+.barraPromocion {
     background-color: #D71787;
     color: white;
     align-items: center;
 }
 
+/*Estilos botones carrusel carrito */
+.btnCarrito {
+    position: relative;
+    background-color: #D71787;
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    margin-top: 50px;
+}

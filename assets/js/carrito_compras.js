@@ -41,7 +41,7 @@ function agregarProductos() {
 
     listaProductos.map((producto, index) => { //map permite iterar sobre los elementos del array y se le agrega un indice a cada iteracion, el indice lo necesitamos para generar un ID unico para los elementos de cada row de producto con los que vamos a interactuar
 
-        let rowProducto = document.createElement("producto");
+        let rowProducto = document.createElement("div");
         rowProducto.setAttribute("id", `producto-${index}`) //interactuamos con el row para poder eliminarlo completo
         rowProducto.className = "row rowPosition mb-3";
         rowProducto.innerHTML = `
@@ -121,7 +121,7 @@ function eliminarProducto(boton) {
     let rowProducto = document.getElementById(`producto-${index}`);
     rowProducto.remove();
 
-    
+
     calcularCostoTotal();
 
 }
@@ -142,22 +142,69 @@ function calcularCostoTotal() {
     let suma = 0;
     let cantidades = document.getElementsByClassName("costo-color");
     let sumaTotal = document.getElementById("costoTotal");
-    for(let i = 0; i < cantidades.length; i++){
+    for (let i = 0; i < cantidades.length; i++) {
         let cantidad = parseInt(cantidades[i].innerHTML.substring(1));
         suma = suma + cantidad;
     }
     sumaTotal.innerHTML = `$${suma}`;
 
 
-    
+
 }
 
 
 
+/* Carrusel */
+
+function carruselProductos() {
+    let carrusel = document.getElementById("carruselProductos");
+
+    listaProductos.map((producto, index) => {
+        let contenedorProducto = document.createElement("div");
+        contenedorProducto.className = "carousel-item";
+
+        if(index == 0){
+            contenedorProducto.classList.add("active");
+        }
+
+        contenedorProducto.innerHTML = `
+            <div class="row">
+                <div class="col">
+                    <img class="imgProductos2" src=${producto.imagen}>
+                </div>
+                <div class="col">
+                    <h3 id="productoNombre-${index}">${producto.nombre}</h3>
+                    <p>${producto.descripcion}</p>
+                    <p class="d-none">${producto.costo}</p>
+                    <button id="productoCarrusel-${index}" class="btn colorButtonRosa" onclick="agregarProductoSesion(this);">Agregar al carrito</button>
+                </div>
+            </div>
+        `;
+
+        carrusel.appendChild(contenedorProducto);
+
+    });
+} 
 
 
+function agregarProductoSesion(boton){
+    let index = boton.id.split("-")[1];
+    let nombre = document.getElementById(`productoNombre-${index}`);
+    console.log(nombre.innerHTML);
+    let productos = new Array(); //let array = [];
 
+    let producto = {
+        nombre: nombre.innerHTML
+    }
+    
+    productos.push(producto);
+    sessionStorage.setItem("productos", productos);
+    /*sessionStorage.getItem("productos");*/
+    sessionStorage.getItem("productos").map(producto => {
+        console.log(producto);
+    });
 
+}
 
 
 
