@@ -125,6 +125,7 @@ h1 {
 #color-checkbox {
     box-shadow: 0 0 5px #d71787;
     border: none;
+    position: absolute;
    
   }
 /*color del check al ser precionado*/
@@ -132,4 +133,37 @@ h1 {
     background-color: #D71787; /* Cambia el color de fondo cuando está marcado  */
   }
   
+  #var, #var2, #var3, #var4{
+    width: 80%;
+    margin-left: 30px;
+  }
 
+  /* Aplicar estilos predeterminados al input con id #var1 */
+#var1 {
+    /* Estilos predeterminados */
+  }
+  
+  /* Media query para deshabilitar el input cuando el checkbox no esté seleccionado */
+  @media (max-width: 6000px) {
+    .form-check-input:not(:checked) + #var {
+      pointer-events: none;
+      opacity: 0.5;
+    }
+
+    .form-check-input:not(:checked) + #var2 {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    .form-check-input:not(:checked) + #var3 {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+
+    .form-check-input:not(:checked) + #var4 {
+        pointer-events: none;
+        opacity: 0.5;
+    }
+  }
+  
+  

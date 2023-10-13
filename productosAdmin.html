@@ -58,20 +58,23 @@
                     <br>
                     <form id="formProductos">
                         <div class="form-group">
-                            <label for="nproducto">Nombre:</label><br>
+                            <label for="nomProducto">Nombre:</label><br>
                             <input type="text" name="nombre" id="nombre" class="form-control">
                             <br>
-                            <label for="nomProducto">Descripción:</label><br>
+                            <label for="nomDescripcion">Descripción:</label><br>
                             <textarea name="comentarios" id="descripcion" 
             placeholder="Escribe aquí la desceripción del producto..." class="form-control"></textarea> 
                             <br>
-                            <label for="nomProducto">Precio:</label><br>
+                            <label for="nomPrecio">Precio:</label><br>
                             <input type="number" name="precio" id="precio" class="form-control">
                             <br>
-                            <label for="nomProducto">Fecha de Lanzamiento:</label><br>
+                            <label for="nomStock">Stock:</label><br>
+                            <input type="number" name="stock" id="stock" class="form-control">
+                            <br>
+                            <label for="nomFecha">Fecha de Lanzamiento:</label><br>
                             <input type="date" name="fecha" id="fecha" class="form-control">
                             <br>
-                            <label for="nomProducto">Categoría:</label><br>
+                            <label for="nomCategoria">Categoría:</label><br>
                             <select class="form-select" id="cboCategorias">
                                 <option disabled selected>Seleccione</option>
                                 <option value="Ojos">Ojos</option>
@@ -79,7 +82,7 @@
                                 <option value="Labios">Labios</option>
                             </select>
                             <br>
-                            <label for="nomProducto">Marca:</label><br>
+                            <label for="nomMarca">Marca:</label><br>
                             <select class="form-select" id="cboMarcas">
                                 <option disabled selected>Seleccione</option>
                                 <option value="Colourpop">Colourpop</option>
@@ -88,22 +91,22 @@
                                 <option value="Rare Beauty">Rare Beauty</option>
                             </select>
                             <br>
-                            <label for="nomProducto">Tonos disponibles:</label><br>
+                            <label for="nomVariante">Variantes disponibles:</label><br>
                             <label>
                                 <input type="checkbox" class="form-check-input" id="color-checkbox" name="Very light 04">
-                                Very light 04                  
+                                <input type="text" name="var1" id="var" class="form-control">                
                             </label><br>
                             <label>
                                 <input type="checkbox" class="form-check-input" id="color-checkbox" name="Light 04">
-                                Light 04            
+                                <input type="text" name="var2" id="var" class="form-control">           
                             </label><br>
                             <label>
                                 <input type="checkbox" class="form-check-input" id="color-checkbox" name="Medium 01">
-                                Medium 01                   
+                                <input type="text" name="var3" id="var" class="form-control">                   
                             </label><br>
                             <label>
                                 <input type="checkbox" class="form-check-input" id="color-checkbox" name="Medium Tan 01">
-                                Medium Tan 01               
+                                <input type="text" name="var4" id="var" class="form-control">              
                             </label>  
                             <br>
                             <br>

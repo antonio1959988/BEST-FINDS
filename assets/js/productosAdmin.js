@@ -11,14 +11,19 @@ document.getElementById("btnAplicar").addEventListener("click", function () {
     const categoria = document.getElementById("cboCategorias").value;
     const marca = document.getElementById("cboMarcas").value;
 
-    // Obtener los valores de los checkboxes
-    const coloresSeleccionados = [];
-    const checkboxes = document.querySelectorAll("#color-checkbox");
-    checkboxes.forEach((checkbox) => {
-        if (checkbox.checked) {
-            coloresSeleccionados.push(checkbox.name);
-        }
-    });
+    // Obtener los valores de los inputs en base a los checkboxes seleccionados
+const coloresSeleccionados = [];
+const checkboxes = document.querySelectorAll("#color-checkbox");
+const inputs = document.querySelectorAll("#var");
+checkboxes.forEach((checkbox, index) => {
+    if (checkbox.checked) {
+        coloresSeleccionados.push(inputs[index].value);
+    }
+});
+
+// Ahora, coloresSeleccionados contiene los valores de los inputs asociados a los checkboxes seleccionados
+console.log(coloresSeleccionados);
+
 
     // Crear un elemento para mostrar los datos
     const nuevoProducto = document.createElement("div");
@@ -62,3 +67,8 @@ document.getElementById("btnAplicar").addEventListener("click", function () {
     localStorage.setItem("productosArray", JSON.stringify(productosArray));
 
 });
+
+
+
+
+
