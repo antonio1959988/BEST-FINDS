@@ -64,8 +64,8 @@
           <br>
           <form id="formFiltros">
             <div class="form-group">
-              <label for="categoria">Categoría:</label><br>
-              <select class="form-select" id="cboCategorias">
+              <label for="categoria">Categoría:</label>
+              <select class="form-select" id="cboCategoria">
                 <option disabled selected>Seleccione</option>
                 <option value="Ojos">Ojos</option>
                 <option value="Rostro">Rostro</option>
@@ -73,8 +73,8 @@
               </select>
               <br>
 
-              <label for="marca">Marca:</label><br>
-              <select class="form-select" id="cboMarcas">
+              <label for="marca">Marca:</label>
+              <select class="form-select" id="cboMarca">
                 <option disabled selected>Seleccione</option>
                 <option value="Colourpop">Colourpop</option>
                 <option value="Too Faced">Too Faced</option>
@@ -84,7 +84,7 @@
               <br>
 
               <label for="lanzamiento">Lanzamiento</label>
-              <select class="form-select">
+              <select class="form-select" id="cboLanzamiento">
                 <option disabled selected>Seleccione</option>
                 <option value="fechaR-A">Más reciente a más antiguo</option>
                 <option value="fechaA-R">Más antiguo a más reciente</option>
@@ -92,7 +92,7 @@
               <br>
 
               <label for="precio">Precio</label>
-              <select class="form-select">
+              <select class="form-select" id="cboPrecio">
                 <option disabled selected>Seleccione</option>
                 <option value="costoMen-May">Menor costo a mayor costo</option>
                 <option value="costoMay-Men">Mayor costo a menor costo</option>
@@ -100,14 +100,14 @@
               <br>
 
               <label for="calificacion">Calificación</label>
-              <select class="form-select">
+              <select class="form-select" id="cboCalificacion">
                 <option disabled selected>Seleccione</option>
                 <option value="mayorLikes">Mayor número de likes</option>
                 <option value="mayorCommit">Mayor número de comentarios</option>
                 <option value="mayorVentas">Mayor número de ventas</option>
               </select>
               <br>
-              <button type="button" class="btn btn-primary" id="btnAplicar">Aplicar Filtros</button>
+              <button type="reset" class="btn btn-primary" id="btnAplicarFiltro">Restablecer Filtros</button>
             </div>
           </form>
         </div>
@@ -116,7 +116,7 @@
       <!-- Columna derecha con productos -->
       <div class="col-sm-12 col-md-8 col-lg-9" id="listaProductos">
         <!-- Inicio de fila de productos -->
-        <div class="row">
+        <div class="row" id="resultado">
           <div class="col-sm-12 col-md-6 col-lg-3">
             <a href="./productos2.html" id="enlaceProducto" target="_self">
               <div id="contenedorInferior">
@@ -132,125 +132,9 @@
                 carrito</button>
             </form>
           </div>
-        </div>
-
-        <div class="col-sm-12 col-md-6 col-lg-3">
-          <a href="./productos2.html" id="enlaceProducto" target="_self">
-            <div id="contenedorInferior">
-              <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
-                id="imgProducto">
-              <br>
-              <span id="nombreProducto">Eaze Drop Stick Blur</span>
-              <span id="precio">$1992.00</span>
-          </a>
-          <form>
-            <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-            <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="2">Agregar al
-              carrito</button>
-          </form>
-        </div>
-      </div>
-
-      <div class="col-sm-12 col-md-6 col-lg-3">
-        <a href="./productos2.html" id="enlaceProducto" target="_self">
-          <div id="contenedorInferior">
-            <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
-              id="imgProducto">
-            <br>
-            <span id="nombreProducto">Eaze Drop Stick Blur</span>
-            <span id="precio">$1992.00</span>
-        </a>
-        <form>
-          <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-          <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="3">Agregar al
-            carrito</button>
-        </form>
-      </div>
-    </div>
-
-    <div class="col-sm-12 col-md-6 col-lg-3">
-      <a href="./productos2.html" id="enlaceProducto" target="_self">
-        <div id="contenedorInferior">
-          <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid" id="imgProducto">
-          <br>
-          <span id="nombreProducto">Eaze Drop Stick Blur</span>
-          <span id="precio">$1992.00</span>
-      </a>
-      <form>
-        <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-        <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="4">Agregar al
-          carrito</button>
-      </form>
-    </div>
-  </div>
-  </div> <!-- Fin de fila de productos -->
-
-  <!-- Inicio de fila de productos -->
-  <div class="row">
-    <div class="col-sm-12 col-md-6 col-lg-3">
-      <a href="./productos2.html" id="enlaceProducto" target="_self">
-        <div id="contenedorInferior">
-          <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid" id="imgProducto">
-          <br>
-          <span id="nombreProducto">Eaze Drop Stick Blur</span>
-          <span id="precio">$1992.00</span>
-      </a>
-      <form>
-        <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-        <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="5">Agregar al
-          carrito</button>
-      </form>
-    </div>
-  </div>
-
-  <div class="col-sm-12 col-md-6 col-lg-3">
-    <a href="./productos2.html" id="enlaceProducto" target="_self">
-      <div id="contenedorInferior">
-        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid" id="imgProducto">
-        <br>
-        <span id="nombreProducto">Eaze Drop Stick Blur</span>
-        <span id="precio">$1992.00</span>
-    </a>
-    <form>
-      <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-      <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="6">Agregar al
-        carrito</button>
-    </form>
-  </div>
-  </div>
-
-  <div class="col-sm-12 col-md-6 col-lg-3">
-    <a href="./productos2.html" id="enlaceProducto" target="_self">
-      <div id="contenedorInferior">
-        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid" id="imgProducto">
-        <br>
-        <span id="nombreProducto">Eaze Drop Stick Blur</span>
-        <span id="precio">$1992.00</span>
-    </a>
-    <form>
-      <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-      <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="7">Agregar al
-        carrito</button>
-    </form>
-  </div>
-  </div>
-
-  <div class="col-sm-12 col-md-6 col-lg-3">
-    <a href="./productos2.html" id="enlaceProducto" target="_self">
-      <div id="contenedorInferior">
-        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid" id="imgProducto">
-        <br>
-        <span id="nombreProducto">Eaze Drop Stick Blur</span>
-        <span id="precio">$1992.00</span>
-    </a>
-    <form>
-      <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-      <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="8">Agregar al
-        carrito</button>
-    </form>
-  </div>
-  </div>
-  </div> <!-- Fin de fila de productos -->
+        </div> <!-- Fin fila de productos-->
+      </div> <!-- Fin columna derecha con productos -->
+  </div> <!-- Fin seccion inferior con filtros y productos>
 
 
   </div> <!-- Fin columna derecha con productos -->
@@ -274,7 +158,9 @@
   <!-- Script carrito de compras -->
   <script src="./assets/js/navbarCarrito.js"></script>
 
-
+<!-- PRUEBASS -->
+<script src="./assets/js/bdPrueba.js"></script>
+<script src="./assets/js/productosFiltros.js"></script>
 </body>
 
 </html>
