@@ -11,9 +11,10 @@ function enviarFormulario() {
 	let mensajeValue = mensaje.value;
 
 	if (nomUsuarioValue == "" || emailUsuarioValue == "" || telUsuarioValue == "" || mensajeValue == "") {
-		alert("Todos los campos son obligatorios");
+	//	alert("Todos los campos son obligatorios");
 	} else {
-		alert("Mensaje enviado correctamente");
+	//	alert("Mensaje enviado correctamente");
+	enviarMensaje();
 	}
 }
 
@@ -69,7 +70,7 @@ formulario.addEventListener('submit', (e) => {
 	e.preventDefault();
 });
 
-btnEnviar.addEventListener("click", enviarFormulario)
+
 
 var comentariosArray = [];
 
@@ -97,7 +98,24 @@ document.getElementById("colorB").addEventListener("click", function () {
 });
 
 
+//Notificación en color verde
+function enviarMensaje() {
+	
+
+				 mostrarNotificacion();
+	}
 
 
+function mostrarNotificacion() {
+	const notificacion = document.querySelector('.notificacion2');
+	notificacion.style.display = 'block';
+
+	// Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
+	setTimeout(() => {
+		 notificacion.style.display = 'none';
+	}, 3000); // 3000 milisegundos = 3 segundos
+}
+
+btnEnviar.addEventListener("click", enviarFormulario)
 
 
