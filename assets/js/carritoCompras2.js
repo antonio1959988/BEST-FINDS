@@ -24,7 +24,7 @@ let mercadoInput = document.querySelector("#mercadoPago");
  const expresionesEnvio = {
      nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
      direccion: /^[a-zA-Z0-9-ÿ\s\_\-]{1,50}$/, // Letras, numeros, guion y guion_bajo
-     colonia: /^[a-zA-Z0-9\_\-]{1,50}$/, // Letras, numeros, guion y guion_bajo
+     colonia: /^[a-zA-Z0-9-ÿ\s\_\-]{1,50}$/, // Letras, numeros, guion y guion_bajo
      ciudad: /^[a-zA-ZÀ-ÿ\s]{1,25}$/, // Letras y espacios, pueden llevar acentos.
      zip: /^\d{1,5}$/,// 7 a 14 numeros.
      telefono: /^\d{7,14}$/ // 7 a 14 numeros.
