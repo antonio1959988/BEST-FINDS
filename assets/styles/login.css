@@ -174,7 +174,42 @@ h1{
 }
 
 
-
+.notification {
+    margin-top: 50px;
+    font-weight: bold;
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(43, 152, 21);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation-name: shake;
+    animation-duration: 0.5s;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-15px);
+    }
+    40% {
+      transform: translateX(15px);
+    }
+    60% {
+      transform: translateX(-15px);
+    }
+    80% {
+      transform: translateX(15px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
 
 

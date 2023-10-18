@@ -257,7 +257,7 @@
               </div>
               <div class="col-md-2">
                 <label for="inputZip" class="form-label">Código Postal</label>
-                <input type="text" class="form-control" name="inputZip" id="inputZip" placeholder="C.P." required>
+                <input type="text" class="form-control" name="inputZip" id="inputZip" placeholder="C.P." maxlength="5" required>
                 <div class="alert  alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertinputZip">
                   No válido.
                 </div>
@@ -269,12 +269,16 @@
                   Formato no válido. Favor de ingresar solo números
                 </div>
               </div>
+
+              <div class="divInputs">
+                <button type="submit" class="btn btn-primary mb-3" id="btnProcederPago">Proceder al pago</button>
+              </div>
             </form>
 
 
-            <div class="divInputs">
+            <!-- <div class="divInputs">
               <button type="submit" class="btn btn-primary mb-3" id="btnProcederPago">Proceder al pago</button>
-            </div>
+            </div> -->
           </div>
 
         </div>
@@ -295,6 +299,7 @@
     <h1>Métodos de pago</h1>
 
     <!-- </div> -->
+    <form id="paySegment">
       <!-- Pago Paypal -->
     <div class="row" id="paymethods2">
       <div class="col-sm-8 col-md-8 col-lg-8">
@@ -351,7 +356,7 @@
     <div class="cardSection">
     <div class="row" id="paymethods2">
       
-      <form id='credit-info-content'>
+      <!-- <form id='credit-info-content'> -->
         
         <div class="col-12">
           <label for="cardNumber" class="form-label">Numero de tarjeta</label>
@@ -395,19 +400,21 @@
             </div>
           </div>
         </div>
-      </form>
+      </div>
+      </div>
+      <!-- </form> -->
     
       <!-- Boton Pagar-->
 
       <div class="divInputs">
         <button type="submit" class="btn btn-primary mb-3" id="btnPagar">Pagar</button>
       </div>
-
+    </form>
     </div>
   </div>
     <!-- </div> -->
         
-  </div>
+  
   <br>
 
 
