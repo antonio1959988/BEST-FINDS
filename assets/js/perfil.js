@@ -56,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
     setInterval(changeImage, 3000); // Cambiar cada 3 segundos (ajusta según tus necesidades)
 });
 
+//////////////////////////////////
 
 // Recuperar los datos JSON del almacenamiento local
 var usuariosArray = JSON.parse(localStorage.getItem("usuarios"));
@@ -63,8 +64,44 @@ var usuariosArray = JSON.parse(localStorage.getItem("usuarios"));
 nombreUsuario = document.getElementById("menuPerfil");
 nombreUsuario.innerHTML = usuariosArray[0].nombreUsuario;
 
+///////////////////////////////////
 
+//Recuperar datos JSON del almacenamiento local y agregarlos a datos personales del usuario registrado 
+var usuariosArray = JSON.parse(localStorage.getItem("usuarios"));
+var nombreUsuario = document.getElementById("datosPersonales");
 
+// Se crea un elemento de contraseña visible/invisible con estilos CSS personalizados
+nombreUsuario.innerHTML = `
+    Nombre: ${usuariosArray[0].nombre}<br>
+    Correo: ${usuariosArray[0].correo}<br>
+    <div id="passwordContainer">
+        <span id="password" style="display: none;">${usuariosArray[0].password}</span>
+        <button id="showPasswordButton" style="font-size: 12px; padding: 4px 8px; background-color: #F89DC8; color: white;">Mostrar Contraseña ;)</button>
+    </div>
+`;
+
+// Obtiene elementos del DOM
+var showPasswordButton = document.getElementById("showPasswordButton");
+var password = document.getElementById("password");
+
+var passwordVisible = false;
+
+// Evento al mantener presionado el botón
+showPasswordButton.addEventListener("mousedown", function () {
+    password.style.display = "inline"; // Muestra la contraseña
+});
+
+// Evento al soltar el botón
+showPasswordButton.addEventListener("mouseup", function () {
+    password.style.display = "none"; // Oculta la contraseña
+});
+
+// Evento para asegurarse de que la contraseña esté oculta al cargar la página
+window.addEventListener("load", function () {
+    password.style.display = "none"; // Oculta la contraseña al cargar la página
+});
+
+//////////////////
 
 // Obtén todos los elementos con la clase "menu-perfil"
 const menuPerfiles = document.querySelectorAll(".menu-perfil");
