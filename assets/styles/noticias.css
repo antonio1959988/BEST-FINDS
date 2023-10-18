@@ -8,11 +8,12 @@ h1{
 h6{
     font-style: italic;
     font-weight: bold;
+    font-size: 2rem;
 }
 .barraPromocion{
     background-color: #f13c91;
     color: white;
-    height: 20px;
+    height: 40px;
     align-items: center;
     position: sticky;
     top: 68px;
