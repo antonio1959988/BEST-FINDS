@@ -119,10 +119,8 @@ h1 {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
 } 
 #btnNot {
-    border-radius: 100px;
-    width: 40px;
-    height: 40px;
-    margin-top: 50px;
+   display: none;
+  
 }
 #colorL:hover {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
