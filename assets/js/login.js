@@ -74,7 +74,7 @@ document.getElementById("btnSesion").addEventListener("click", function () {
 	console.log(sesion);
 
 	// Guardar los datos de sesion en el almacenamiento local
-	//localStorage.setItem("inicioSesion", JSON.stringify(sesion));
+	localStorage.setItem("inicioSesion", JSON.stringify(sesion));
 
 	// Recuperar los datos JSON del almacenamiento local
 
@@ -82,14 +82,27 @@ document.getElementById("btnSesion").addEventListener("click", function () {
 
 	//Comparar los datos del formulario con los datos del JSON
 	if (correo == usuariosArray[0].correo && password == usuariosArray[0].password) {
-		alert("Bienvenido " + usuariosArray[0].nombreUsuario);
+		//alert("Bienvenido " + usuariosArray[0].nombreUsuario);
 		window.location.href = "/Perfil_axel.html";
+		mostrarNotificacion();
 	} else {
 		alert("Correo o contraseña incorrectos");
+		
 	}
 
 	console.log(usuariosArray);
+
 });
 
 
+//Notificacion inicio de sesion
 
+function mostrarNotificacion() {
+	const notificacion = document.querySelector('#notification');
+	notificacion.style.display = 'block';
+
+	// Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
+	setTimeout(() => {
+		 notificacion.style.display = 'none';
+	}, 3000); // 3000 milisegundos = 3 segundos
+}
