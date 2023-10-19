@@ -10,10 +10,10 @@ const expresiones = {
 	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
 }
 let campos = {
-	usuario: false,
-	nombre: false,
-	password: false,
-	correo: false,
+	Nombre: false,
+	NombreUsuario: false,
+	Password: false,
+	Correo: false,
 }
 
 //Switch para validar cada campo
@@ -76,20 +76,42 @@ inputs.forEach((input) => {
 	input.addEventListener('blur', validarFormulario);//Cada que se de click fuera del input
 });
 
+async function mostrarNotificacion() {
+	const notificacion = document.querySelector('#notificacion');
+	notificacion.style.display = 'block';
 
+	// Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
+	setTimeout(() => {
+		 notificacion.style.display = 'none';
+	}, 10000); // 3000 milisegundos = 3 segundos
+	
+	await cargarDatosAsincronos();
 
+}
+async function cargarDatosAsincronos() {
+	// Simula una tarea asíncrona con un retraso de 3 segundos (puedes reemplazar esto con tu tarea real)
+	await new Promise(resolve => setTimeout(resolve, 3000));
+  }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////
 //Creacion del objeto JSON
 var usuarios = [];
+let nombre;
+let nombreUsuario;
+let correo;
+let password;
 
 document.getElementById("btnRegistrar").addEventListener("click", function () {
 	// Obtener los valores de los campos del formulario
-	const nombre = document.getElementById("nombre").value;
-	const nombreUsuario = document.getElementById("nombreUsuario").value;
-	const correo = document.getElementById("correo").value;
-	const password = document.getElementById("password").value;
+
+	if(campos['Nombre'] && campos['NombreUsuario']&&campos['Password']&&campos['Correo']){
+		nombre = document.getElementById("nombre").value;
+		nombreUsuario = document.getElementById("nombreUsuario").value;
+		correo = document.getElementById("correo").value;
+		password = document.getElementById("password").value;
+	
+	
 
 
 	// Crear un objeto con los datos del producto
@@ -106,4 +128,5 @@ document.getElementById("btnRegistrar").addEventListener("click", function () {
 	console.log(usuarios);
 
 	localStorage.setItem("usuarios", JSON.stringify(usuarios));
+}
 });
