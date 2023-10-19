@@ -63,15 +63,15 @@ $(document).ready(function () {
         var imgSrc = $(this).data("img-src");
         
         // Aplicar transición de opacidad
-        $("#imgProductoSeleccionada").css("opacity", "0");
+        $(".imgProductoSeleccionada").css("opacity", "0");
         
         // Pequeña pausa antes de cambiar la fuente de la imagen
         setTimeout(function () {
             // Cambiar la fuente de la imagen principal
-            $("#imgProductoSeleccionada").attr("src", imgSrc);
+            $(".imgProductoSeleccionada").attr("src", imgSrc);
             
             // Restaurar la opacidad
-            $("#imgProductoSeleccionada").css("opacity", "1");
+            $(".imgProductoSeleccionada").css("opacity", "1");
         }, 500); // 500 milisegundos (0.5 segundos) para que coincida con la duración de la transición
     });
 });
@@ -95,9 +95,9 @@ $(document).ready(function () {
 /////////////////////////LOCAL STORAGE//////////////////////////////////
 
 // Recuperar los datos JSON del almacenamiento local
-/*
-var productosArray = JSON.parse(localStorage.getItem("productosArray"));
 
+//var productosArray = JSON.parse(localStorage.getItem("productosArray"));
+/*
 let nombreProducto = document.getElementById("tituloNombre");
 let precioProducto = document.getElementById("precioPrincipal");
 let descripcionProducto = document.getElementById("acercaDeProducto");

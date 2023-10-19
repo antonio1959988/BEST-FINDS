@@ -6,15 +6,26 @@ const precio = document.querySelector('#cboPrecio');
 const calificacion = document.querySelector('#cboCalificacion');
 const btnBorrarFiltros = document.querySelector('#btnAplicarFiltro');
 
+var contadorId = 0;
+
 // Datos para la busqueda
 const datosBusqueda = {
     categoria: '',
     marca: '',
-    lanzamiento : '',
+    lanzamiento: '',
     precio: '',
     calificacion: ''
 }
 
+// Recuperar los datos JSON del almacenamiento local
+var productosArray = JSON.parse(localStorage.getItem("productosArray"));
+
+// Mostrar todos los productos al dar click en el botón de borrar filtros
+btnBorrarFiltros.addEventListener('click', () => {
+    mostrarProductos(productosArray);
+});
+
+// Mostrar todos los productos al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
     mostrarProductos(productosArray);
 });
@@ -55,12 +66,12 @@ function limpiarHTML() {
     const contenedor = document.querySelector('#resultado');
 
     // limpiar los resultados anteriores
-    while(contenedor.firstChild) {
+    while (contenedor.firstChild) {
         contenedor.removeChild(contenedor.firstChild);
     }
 }
 
-function mostrarProductos(productosArray){
+function mostrarProductos(productosArray) {
     limpiarHTML();
 
     // Leer el elemento Resultado
@@ -68,10 +79,25 @@ function mostrarProductos(productosArray){
 
     // Construir el HTML de los productos
     productosArray.forEach(producto => {
-        const productoHTML = document.createElement('p');
+        contadorId++;
+        const productoHTML = document.createElement('div');
+        productoHTML.className = "col-sm-12 col-md-6 col-lg-3";
         productoHTML.innerHTML = `
-            <p>${producto.categoria} ${producto.marca} - ${producto.fecha} - ${producto.precio} - ${producto.calificacion}</p>
+        <a href="./productos2.html" id="enlaceProducto" target="_self">
+        <div id="contenedorInferior">
+          <img src="./assets/img/Productos/${producto.nombre}/${producto.colores[0]}.webp" alt="producto" class="img-fluid"
+            id="imgProducto">
+          <br>
+          <span id="nombreProducto">${producto.nombre}</span>
+          <span id="precio">$${producto.precio}</span>
+        </a>
+          <form>
+            <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+            <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="${contadorId}">Agregar al carrito</button>
+          </form>
+        </div>
         `;
+        console.log(producto);
         contenedor.appendChild(productoHTML);
     })
 }
@@ -127,38 +153,38 @@ function filtrarProductos() {
 
 // Aplica los filtros
 function filtrarCategoria(producto) {
-    if(datosBusqueda.categoria){
+    if (datosBusqueda.categoria) {
         return producto.categoria === datosBusqueda.categoria;
-    } 
+    }
     return producto;
 }
 
 function filtrarMarca(producto) {
-    if(datosBusqueda.marca){
+    if (datosBusqueda.marca) {
         return producto.marca === datosBusqueda.marca;
-    } 
+    }
     return producto;
 }
 
 function filtrarLanzamiento(producto) {
-    if(datosBusqueda.lanzamiento){
+    if (datosBusqueda.lanzamiento) {
         return producto.fecha === datosBusqueda.lanzamiento;
-    } 
+    }
     return producto;
 }
 
 
 function filtrarPrecio(producto) {
-    if(datosBusqueda.precio){
+    if (datosBusqueda.precio) {
         return producto.precio === datosBusqueda.precio;
-    } 
+    }
     return producto;
 }
 
 function filtrarCalificacion(producto) {
-    if(datosBusqueda.calificacion){
+    if (datosBusqueda.calificacion) {
         return producto.calificacion === datosBusqueda.calificacion;
-    } 
+    }
     return producto;
 }
 

@@ -14,7 +14,7 @@ h4{
 }
 
 /* Precio del producto */
-#precioPrincipal{
+.precioPrincipal{
     font-size: 22px;
     font-weight: bold;
     display: block;
@@ -138,20 +138,20 @@ h4{
 }
 
 /* Imagen principal del producto */
-#imgProductoSeleccionada{
+.imgProductoSeleccionada{
     max-width: 300px;
     max-height: 300px;
     transition: opacity 0.5s ease-in-out;
 }
 
 /* Aumento de tamaño de la imagen del producto principal */
-#imgProductoSeleccionada:hover {
+.imgProductoSeleccionada:hover {
     transform: scale(1.2); /* nivel de zoom deseado */
     transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
 }
 
 /* Contador de productos superior */
-#cantidadProductoPrincipal{
+.cantidadProductoPrincipal{
     display: block;
     width: 100px;
     text-align: center;
@@ -199,16 +199,16 @@ h4{
 }
 
 /* Formato de nombre de los productos en sugerencias */
-#nombreProducto{
-    font-size: 14px;
+.nombreProducto{
+    font-size: 18px;
     display: block;
     text-align: left;
     margin-bottom: 5px;
 }
 
 /* Formato de precio de los productos en sugerencias */
-#precio{
-    font-size: 16px;
+.precio{
+    font-size: 18px;
     font-weight: bold;
     display: block;
     margin-bottom: 10px;
