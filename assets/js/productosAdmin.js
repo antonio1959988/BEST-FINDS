@@ -37,7 +37,7 @@ document.getElementById("btnAplicar").addEventListener("click", function () {
   nuevoProducto.innerHTML = `
     <a href="./productos2.html" id="enlaceProducto" target="_self">
     <div id="contenedorInferior">
-      <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
+      <img src="./assets/img/Productos/${nombre}/${coloresSeleccionados[0]}.webp" alt="producto" class="img-fluid"
         id="imgProducto">
       <br>
       <span id="nombreProducto">${nombre}</span>

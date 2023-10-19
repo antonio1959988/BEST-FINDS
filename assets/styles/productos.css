@@ -16,7 +16,9 @@ h1 {
     display: block;
     text-align: left;
     margin-bottom: 5px;
+    height: 40px;
 }
+
 
 /* Precio de cada producto */
 #precio {
@@ -42,6 +44,7 @@ h1 {
 /* Imagen individual de productos */
 #imgProducto {
     margin-bottom: 10px;
+    max-height: 140px;
 }
 
 /* Contenedor con borde gris, parte superior zona principal */
@@ -56,7 +59,6 @@ h1 {
     border: 2px solid #d1d1d1;
     padding: 20px;
     margin-top: 12px;
-    width: 100%;
     width: 190px;
     margin-left: auto;
     margin-right: auto;
@@ -78,16 +80,16 @@ h1 {
 }
 
 /* Botón de filtros */
-#contenedorFiltros button {
+#contenedorFiltros button, #btnAplicarFiltro {
     margin-top: 14px;
-    backgroónd-color: #D71787;
+    background-color: #D71787;
     border: none;
     font-size: 12px;
     font-weight: bold;
 }
 
 /* Botón de sección filtros*/
-#contenedorFiltros button:hover {
+#contenedorFiltros button:hover, #btnAplicarFiltro:hover {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
 }
 
