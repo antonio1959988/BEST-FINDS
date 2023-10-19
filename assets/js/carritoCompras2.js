@@ -96,8 +96,8 @@ inputsEnvio.forEach((input) => {
 
 
 // Validación de formulario Tarjeta
-let formularioTarjeta = document.getElementById('credit-info-content');
-let inputsTarjeta = document.querySelectorAll('#credit-info-content input');
+let formularioTarjeta = document.getElementById('paySegment');
+let inputsTarjeta = document.querySelectorAll('#paySegment input');
 
 //Expresiones permitidas para cada campo
 const expresionesTarjeta = {
@@ -117,24 +117,24 @@ let camposTarjeta = {
 }
 
 //Switch para validar cada campo
-function validarFormularioTarjeta(t) {
+function validarFormularioTarjeta(e) {
    // console.log(t);
-   switch (t.target.name) {
+   switch (e.target.name) {
 	   case "cardNumber":
-		   validarCampoTarjeta(expresionesTarjeta.tarjeta, t.target, 'cardNumber');
+		   validarCampoTarjeta(expresionesTarjeta.tarjeta, e.target, 'cardNumber');
 		   //console.log(t);
 		   break;
 	   case "cardHolder":
-		   validarCampoTarjeta(expresionesTarjeta.nombre, t.target, 'cardHolder');
+		   validarCampoTarjeta(expresionesTarjeta.nombre, e.target, 'cardHolder');
 		   break;
 	   case "cardMonth":
-		   validarCampoTarjeta(expresionesTarjeta.mes, t.target, 'cardMonth');
+		   validarCampoTarjeta(expresionesTarjeta.mes, e.target, 'cardMonth');
 		   break;
 	   case "cardYear":
-		   validarCampoTarjeta(expresionesTarjeta.anio, t.target, 'cardYear');
+		   validarCampoTarjeta(expresionesTarjeta.anio, e.target, 'cardYear');
 		   break;
 	   case "cardCVV":
-		   validarCampoTarjeta(expresionesTarjeta.cvv, t.target, 'cardCVV');
+		   validarCampoTarjeta(expresionesTarjeta.cvv, e.target, 'cardCVV');
 		   break;
 
    }

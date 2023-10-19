@@ -356,7 +356,7 @@
     <div class="cardSection">
     <div class="row" id="paymethods2">
       
-      <!-- <form id='credit-info-content'> -->
+      <form id='credit-info-content'> 
         
         <div class="col-12">
           <label for="cardNumber" class="form-label">Numero de tarjeta</label>
@@ -386,7 +386,7 @@
             </div>
             <div class="col-4">
               <label for="cardYear" class="form-label">Año</label>
-              <input type="number" class="form-control" name="cardYear" id="cardYear">
+              <input type="number" class="form-control" name="cardYear" id="cardYear" min="23">
               <div class="alert  alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertcardYear">
                 No válido.
               </div>
@@ -400,6 +400,7 @@
             </div>
           </div>
         </div>
+      </form>
       </div>
       </div>
       <!-- </form> -->
