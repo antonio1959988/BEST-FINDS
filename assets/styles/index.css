@@ -74,6 +74,7 @@ h1 {
     display: block;
     text-align: left;
     margin-bottom: 5px;
+    height: 40px;
 }
 
 #precio {
@@ -82,6 +83,11 @@ h1 {
     display: block;
     margin-bottom: 10px;
     text-align: left;
+}
+
+.enlaceProducto{
+    text-decoration: none;
+    color: #707070;
 }
 
 
@@ -93,6 +99,7 @@ h1 {
 
 #imgProducto {
     margin-bottom: 10px;
+    max-height: 180px;
 }
 
 
