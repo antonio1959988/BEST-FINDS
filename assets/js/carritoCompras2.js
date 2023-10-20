@@ -40,7 +40,7 @@ let mercadoInput = document.querySelector("#mercadoPago");
 // }
 
 let camposEnvio = {
-	inputReciver: false,
+	inputReceiver: false,
 	inputAddress: false,
 	inputAddress2: false,
 	inputCity: false,
@@ -155,4 +155,50 @@ let validarCampoTarjeta = (expresion, input, campo) => {
 inputsTarjeta.forEach((input) => {
    input.addEventListener('keyup', validarFormularioTarjeta);//Cada que presiona una teclas
    input.addEventListener('blur', validarFormularioTarjeta);//Cada que se de click fuera del input
+});
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+//Creacion del objeto JSON
+var direccion = [];
+let receptor;
+let calle;
+let colonia;
+let ciudad;
+let estado;
+let codigoPostal;
+let telefono;
+
+document.getElementById("btnProcederPago").addEventListener("click", function () {
+	// Obtener los valores de los campos del formulario
+
+	if(camposEnvio['inputReceiver'] && camposEnvio['inputAdress'] && camposEnvio['inputAdress2'] && camposEnvio['inputCity'] && camposEnvio['inputZip'] && camposEnvio['inputPhone']){
+		receptor = document.getElementById("inputReceiver").value;
+		calle = document.getElementById("inputAdress").value;
+		colonia = document.getElementById("inputAdress2").value;
+		ciudad = document.getElementById("inputCity").value;
+		estado = document.getElementById("inputState").value;
+		codigoPostal = document.getElementById("inputZip").value;
+		telefono = document.getElementById("inputPhone").value;
+
+
+	// Crear un objeto con los datos del producto
+	const nuevaDireccion = {
+		receptor : receptor,
+		calle : calle,
+		colonia : colonia,
+		ciudad : ciudad,
+		estado : estado,
+		codigoPostal : codigoPostal,
+		telefono : telefono
+	};
+	// Agregar el nuevo producto al array de productos
+	direccion.push(nuevaDireccion);
+
+	// Mostrar los datos del producto en la consola
+	console.log("nuevo" + direccion);
+
+	localStorage.setItem("direccion", JSON.stringify(direccion));
+}
 });
