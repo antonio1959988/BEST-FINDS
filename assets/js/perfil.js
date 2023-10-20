@@ -53,7 +53,7 @@ document.addEventListener("DOMContentLoaded", function () {
     profileImage.addEventListener("click", changeImage);
 
     // Inicializar la rotación de imágenes automáticamente (opcional)
-    setInterval(changeImage, 3000); // Cambiar cada 3 segundos (ajusta según tus necesidades)
+    setInterval(changeImage, 1000); // Cambiar cada 3 segundos (ajusta según tus necesidades)
 });
 
 //////////////////////////////////
