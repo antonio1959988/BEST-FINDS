@@ -14,7 +14,7 @@ h4{
 }
 
 /* Precio del producto */
-.precioPrincipal{
+#precioPrincipal{
     font-size: 22px;
     font-weight: bold;
     display: block;
@@ -83,15 +83,14 @@ h4{
 #tono1{
     margin: 5px;
     background-color: #fae1c2;
-    border: none;
+    border:#ededed 2px solid;
     width: 50px;
     height: 50px;
-    border-radius: 100px;
+    border-radius: 15px;
 }
 
 #tono2{
     margin: 5px;
-    background-color: #f5c69a;
     border: none;
     width: 50px;
     height: 50px;
@@ -196,18 +195,20 @@ h4{
 /* Imagen del producto de sugerencias */
 #imgProducto{
     margin-bottom: 10px;
+    max-height: 180px;
 }
 
 /* Formato de nombre de los productos en sugerencias */
 .nombreProducto{
     font-size: 18px;
     display: block;
+    height: 50px;
     text-align: left;
     margin-bottom: 5px;
 }
 
 /* Formato de precio de los productos en sugerencias */
-.precio{
+#precio{
     font-size: 18px;
     font-weight: bold;
     display: block;
