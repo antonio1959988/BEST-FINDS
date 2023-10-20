@@ -10,19 +10,4 @@ const myCarousel = new bootstrap.Carousel(carousel, {
     pause: 'hover', // Pausa la transición al pasar el ratón sobre el carrusel
     
 });
-/*const myCarousel2 = new bootstrap.Carousel(carousel2, {
-    interval: interval,
-    
-});*/
 
-
-//Funcion para inicializar la sesión para el carrito 
-function inicializarSession() {
-    let productosArray = JSON.parse(sessionStorage.getItem("productosArray"));
-    if(!productosArray){
-        sessionStorage.setItem("productosArray", JSON.stringify(new Array()));
-    }
-
-}
-
-inicializarSession();
