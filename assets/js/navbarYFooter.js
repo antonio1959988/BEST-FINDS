@@ -154,3 +154,4 @@ footerContainer.innerHTML=`  <div class="container">
     </div>
     </div>`;
 footerDiv.appendChild(footerContainer);
+
