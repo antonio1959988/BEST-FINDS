@@ -14,12 +14,12 @@
 
 </head>
 
-<body>
+<body onload="agregarProductosIndex();">
     <!-- Barra de navegacion -->
     <div id="nav-bar" class="sticky-top"></div>
     <div class="barraPromocion">
         <!-- Banner promocional -->
-        <marquee direction= left>
+        <marquee direction=left>
             <h3>¡Aprovecha el envío gratis sin mínimo de compra del 5 al 29 de octubre!</h3>
         </marquee>
         <!-- cierra banner promocional -->
@@ -56,21 +56,9 @@
     <br>
     <br>
     <!--Los bestsellers-->
-    <div class="container"id ="listaProductos">
-        <div class="row" id="resultado" id="contenedorInferior">
-            <!-- Productos de LocalStorage -->
-
-            <!-- <div class="col-sm-6 col-md-6 col-lg-3">
-                <div id="contenedorInferior">
-                    <img src="./assets/img/EscapePod.png" alt="producto" class="img-fluid" id="imgProducto">
-                    <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                    <span id="precio">$1992.00</span>
-                    <form>
-                        <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                        <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="4">Agregar al carrito</button>
-                    </form>
-                </div>
-            </div>  -->
+    <div class="container">
+        <div id="listaProductos" class="row">
+            <!--En este div se van a cargar los productos dinamicamente utilizando JS-->
 
         </div>
     </div><!--Acaban los bestsellers-->
@@ -85,8 +73,7 @@
                 <div class="carousel-item active">
                     <div class="row">
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="./assets/img/Index/kaleidos.webp"
-                                alt="Kaleidos" id="logos">
+                            <img src="./assets/img/Index/kaleidos.webp" alt="Kaleidos" id="logos">
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
                             <img src="https://vectorseek.com/wp-content/uploads/2023/07/Rare-Beauty-Logo-Vector.svg-.png"
@@ -118,8 +105,7 @@
                                 alt="Tarte" id="logos">
                         </div>
                         <div class="col-sm-6 col-md-6 col-lg-3">
-                            <img src="./assets/img/Index/Jeffree_Star_Cosmetics_Logo.png"
-                                alt="Jeffree Star" id="logos">
+                            <img src="./assets/img/Index/Jeffree_Star_Cosmetics_Logo.png" alt="Jeffree Star" id="logos">
                         </div>
                     </div>
                 </div>
@@ -167,124 +153,131 @@
     <br>
     <br>
     <h1>NotiFinds</h1>
-   <!-- Carrusel de noticias -->
-<div class="container">
-    <div id="myCarousel" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-            <!-- Primer slide con 2 noticias -->
-            <div class="carousel-item active">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <!-- Card -->
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="./assets/img/Index/Noticia1.jpeg" class="img-fluid rounded-start"
-                                        alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">¡Nueva Gothic Beach!</h5>
-                                        <p class="card-text">¡Descubre los detalles de la nueva paleta del icónico y controversial Jeffree Star!</p>
-                                        <p class="card-text"><small class="text-muted">Actualizado hace 23 min</small>
-                                        </p>
-                                        <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer
-                                            más</a>
+    <!-- Carrusel de noticias -->
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Primer slide con 2 noticias -->
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <!-- Card -->
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="./assets/img/Index/Noticia1.jpeg" class="img-fluid rounded-start"
+                                            alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">¡Nueva Gothic Beach!</h5>
+                                            <p class="card-text">¡Descubre los detalles de la nueva paleta del icónico y
+                                                controversial Jeffree Star!</p>
+                                            <p class="card-text"><small class="text-muted">Actualizado hace 23
+                                                    min</small>
+                                            </p>
+                                            <a href="./noticias.html" class="btn btn-primary btn-lg" id="colorL">Leer
+                                                más</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Cierra Card -->
                         </div>
-                        <!-- Cierra Card -->
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <!-- Card -->
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="./assets/img/Noticias/noticias2EP5.webp" class="img-fluid rounded-start"
-                                        alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">La paleta más colorida</h5>
-                                        <p class="card-text">Averigua porque todos aman a la increíble Escape Pod de Kaleidos.</p>
-                                        <p class="card-text"><small class="text-muted">Actualizado hace 7 días</small>
-                                        </p>
-                                        <a href="./noticias2.html" class="btn btn-primary btn-lg" id="colorL">Leer
-                                            más</a>
+                        <div class="col-sm-12 col-md-6">
+                            <!-- Card -->
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="./assets/img/Noticias/noticias2EP5.webp"
+                                            class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">La paleta más colorida</h5>
+                                            <p class="card-text">Averigua porque todos aman a la increíble Escape Pod de
+                                                Kaleidos.</p>
+                                            <p class="card-text"><small class="text-muted">Actualizado hace 7
+                                                    días</small>
+                                            </p>
+                                            <a href="./noticias2.html" class="btn btn-primary btn-lg" id="colorL">Leer
+                                                más</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Cierra Card -->
                         </div>
-                        <!-- Cierra Card -->
                     </div>
                 </div>
-            </div>
-            <!-- Cierra Primer Slide -->
+                <!-- Cierra Primer Slide -->
 
-            <!-- Segundo slide con otras 2 noticias -->
-            <div class="carousel-item">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6">
-                        <!-- Card -->
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="./assets/img/Noticias/noticia3RB4.webp" class="img-fluid rounded-start"
-                                        alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Amamos Rare Beauty</h5>
-                                        <p class="card-text">¿Ya conoces la inclusiva e increíble marca de maquillaje de Selena Gomez?</p>
-                                        <p class="card-text"><small class="text-muted">Actualizado hace 2 semanas</small>
-                                        </p>
-                                        <a href="./noticias3.html" class="btn btn-primary btn-lg" id="colorL">Leer
-                                            más</a>
+                <!-- Segundo slide con otras 2 noticias -->
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-sm-12 col-md-6">
+                            <!-- Card -->
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="./assets/img/Noticias/noticia3RB4.webp"
+                                            class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Amamos Rare Beauty</h5>
+                                            <p class="card-text">¿Ya conoces la inclusiva e increíble marca de
+                                                maquillaje de Selena Gomez?</p>
+                                            <p class="card-text"><small class="text-muted">Actualizado hace 2
+                                                    semanas</small>
+                                            </p>
+                                            <a href="./noticias3.html" class="btn btn-primary btn-lg" id="colorL">Leer
+                                                más</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Cierra Card -->
                         </div>
-                        <!-- Cierra Card -->
-                    </div>
-                    <div class="col-sm-12 col-md-6">
-                        <!-- Card -->
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                                <div class="col-md-4">
-                                    <img src="./assets/img/Noticias/noticias4t5.jpeg" class="img-fluid rounded-start"
-                                        alt="...">
-                                </div>
-                                <div class="col-md-8">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Tarte, épica desde 1999</h5>
-                                        <p class="card-text">Traemos para ti esta increíble marca desde E.U.A.</p>
-                                        <p class="card-text"><small class="text-muted">Actualizado hace 22 horas</small>
-                                        </p>
-                                        <a href="./noticias4.html" class="btn btn-primary btn-lg" id="colorL">Leer
-                                            más</a>
+                        <div class="col-sm-12 col-md-6">
+                            <!-- Card -->
+                            <div class="card mb-3">
+                                <div class="row g-0">
+                                    <div class="col-md-4">
+                                        <img src="./assets/img/Noticias/noticias4t5.jpeg"
+                                            class="img-fluid rounded-start" alt="...">
+                                    </div>
+                                    <div class="col-md-8">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Tarte, épica desde 1999</h5>
+                                            <p class="card-text">Traemos para ti esta increíble marca desde E.U.A.</p>
+                                            <p class="card-text"><small class="text-muted">Actualizado hace 22
+                                                    horas</small>
+                                            </p>
+                                            <a href="./noticias4.html" class="btn btn-primary btn-lg" id="colorL">Leer
+                                                más</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!-- Cierra Card -->
                         </div>
-                        <!-- Cierra Card -->
                     </div>
                 </div>
+                <!-- Cierra Segundo Slide -->
             </div>
-            <!-- Cierra Segundo Slide -->
+            <!-- Cierra carousel-inner -->
+
+            <!-- Controles -->
+            <a class="carousel-control-prev" href="#myCarousel2" role="button" data-slide="prev" id="btnNot">
+                <span class="carousel-control-prev-icon"></span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel2" role="button" data-slide="next" id="btnNot">
+                <span class="carousel-control-next-icon"></span>
+            </a>
         </div>
-        <!-- Cierra carousel-inner -->
-
-        <!-- Controles -->
-        <a class="carousel-control-prev" href="#myCarousel2" role="button" data-slide="prev" id="btnNot">
-            <span class="carousel-control-prev-icon"></span>
-        </a>
-        <a class="carousel-control-next" href="#myCarousel2" role="button" data-slide="next" id="btnNot">
-            <span class="carousel-control-next-icon"></span>
-        </a>
     </div>
-</div>
-<!-- Cierra Carrusel de Noticias -->
+    <!-- Cierra Carrusel de Noticias -->
 
 
 
@@ -306,13 +299,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
+  
     <!-- Scripts JS de la pagina -->
     <script src="./assets/js/index.js"></script>
     <!-- Scripts JS de la pagina -->
     <script src="./assets/js/navbarYFooter.js"></script>
 
-    <!-- Script de funcionamiento carrito -->
-    <script src="./assets/js/navbarCarrito.js"></script>
 
 </body>
 

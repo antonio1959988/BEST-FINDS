@@ -12,26 +12,26 @@ const myCarousel = new bootstrap.Carousel(carousel, {
 
 
 //Lista de productos que se cargarán en el carrito de compras
-let listaProductos = [ //array de objetos
+let listaProductosTemporal = [ //array de objetos
     {
         id: 1,
-        nombre: "Lorem1",
+        nombre: "Eaze Drop Stick Blur",
         descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
         precio: 621,
         imagen: "./assets/img/carritoCompras/producto1.jpg"
     },
     {
         id: 2,
-        nombre: "Lorem2",
+        nombre: "Eaze Drop Stick Blur",
         descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        precio: 621,
+        precio: 1992,
         imagen: "./assets/img/carritoCompras/producto2.jpg"
     },
     {
         id: 3,
-        nombre: "Lorem3",
+        nombre: "Eaze Drop Stick Blur",
         descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        precio: 621,
+        precio: 1999,
         imagen: "./assets/img/carritoCompras/producto3.jpg"
     }
 ];
@@ -51,12 +51,13 @@ function agregarProductoCarrito(boton) {
         nombre: nombre.innerHTML,
         descripcion: descripcion.innerHTML,
         precio: precio.innerHTML,
-        total: precio.innerHTML,
-        cantidad: 1
+        cantidad: 1,
+        total: precio.innerHTML
     };
 
     agregarProductoSession(producto);
     actualizarCarrito();
+    actualizarCarritoNavBar();
     calcularCostoTotal();
 }
 
@@ -136,6 +137,7 @@ function incrementarCantidad(boton) {
 
     calcularPrecio(index);
     calcularCostoTotal();
+    actualizarCarritoNavBar();
 }
 
 function decrementarCantidad(boton) {
@@ -154,6 +156,7 @@ function decrementarCantidad(boton) {
 
     calcularPrecio(index);
     calcularCostoTotal();
+    actualizarCarritoNavBar();
 }
 
 
@@ -170,6 +173,7 @@ function eliminarProducto(boton) {
     sessionStorage.setItem("productosArray", JSON.stringify(productosArray)); //Volver a guardarlo en sesión ya modificado
 
     calcularCostoTotal();
+    actualizarCarritoNavBar();
 
 }
 
@@ -215,7 +219,7 @@ function calcularCostoTotal() {
 function carruselProductos() {
     let carrusel = document.getElementById("carruselProductos");
 
-    listaProductos.map((producto, index) => {
+    listaProductosTemporal.map((producto, index) => {
         let contenedorProducto = document.createElement("div");
         contenedorProducto.className = "carousel-item";
 
@@ -258,9 +262,11 @@ function agregarProductoSession(producto) {
     sessionStorage.setItem("productosArray", JSON.stringify(productosArray)); //Volver a guardarlo en sesión ya modificado
 }
 
-
-
-
-
-
-
+function vaciarCarrito() {
+    sessionStorage.setItem("productosArray", JSON.stringify(new Array()));
+    actualizarCarrito();
+    actualizarCarritoNavBar();
+  
+  
+  }
+  

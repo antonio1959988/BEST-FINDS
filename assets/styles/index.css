@@ -40,10 +40,11 @@
 #imgNot{
     width:100px ;
 }
-#contenedorInferior:hover{
+.contenedorInferior:hover{
     box-shadow: 0px 3px 3px 0px rgba(255, 41, 155, 0.75);
     transform: scale(1.1); /* nivel de zoom deseado */
     transition: transform 0.3s ease-in-out; /* Duración y efecto de la transición */
+    width: 87%;
 }
 .barraPromocion{
     background-color: #D71787;
@@ -69,7 +70,7 @@ h1 {
 
 
 
-#nombreProducto {
+.nombreProducto {
     font-size: 14px;
     display: block;
     text-align: left;
@@ -77,7 +78,7 @@ h1 {
     height: 40px;
 }
 
-#precio {
+.precio {
     font-size: 16px;
     font-weight: bold;
     display: block;
@@ -97,14 +98,14 @@ h1 {
 /* Imagen productos */
 
 
-#imgProducto {
+.imgProducto {
     margin-bottom: 10px;
     max-height: 180px;
 }
 
 
 
-#contenedorInferior {
+.contenedorInferior {
     border: 2px solid #d1d1d1;
     padding: 20px;
     margin: 12px;
@@ -122,7 +123,7 @@ h1 {
     height: 40px;
     margin-top: 50px;
 }
-#btnAplicar:hover {
+.btnAplicar:hover {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
 } 
 #btnNot {
@@ -134,7 +135,7 @@ h1 {
 } 
 
 
-#contenedorInferior button {
+.contenedorInferior button {
     margin-top: 14px;
     background-color: #D71787;
     border: none;
@@ -142,6 +143,6 @@ h1 {
     font-weight: bold;
 }
 
-#cantidadProducto {
+.cantidadProducto {
     text-align: center;
 }

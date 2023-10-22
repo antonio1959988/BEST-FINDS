@@ -4,19 +4,19 @@ let rutaPerfil;
 let classPerfil;
 let nomUsu;
 console.log(usuarioActivo);
-if (usuarioActivo!=null){
-  rutaPerfil='Perfil_axel';
-  classPerfil='perfilCerrar2';
-  nomUsu=usuarioActivo[0].nombreUsuario;
-}else{
-  rutaPerfil='login';
-  classPerfil='';
-  nomUsu='';
+if (usuarioActivo != null) {
+  rutaPerfil = 'Perfil_axel';
+  classPerfil = 'perfilCerrar2';
+  nomUsu = usuarioActivo[0].nombreUsuario;
+} else {
+  rutaPerfil = 'login';
+  classPerfil = '';
+  nomUsu = '';
 }
 let navbarDiv = document.getElementById("nav-bar");
-let navbarContainer=document.createElement('nav');
-navbarContainer.className="navbar navbar-expand-lg bg-body-tertiary sticky-top";
-navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
+let navbarContainer = document.createElement('nav');
+navbarContainer.className = "navbar navbar-expand-lg bg-body-tertiary sticky-top";
+navbarContainer.innerHTML = `<div class="container-fluid" id="barra">
 <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse"
   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
   aria-label="Toggle navigation">
@@ -73,7 +73,7 @@ navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
           </a>
           <div id="carritoNav">
 
-            <table id="lista-carritoNav" class="u-full-width">
+            <table class="u-full-width">
               <thead>
                 <tr>
                   <th>Imagen</th>
@@ -83,10 +83,10 @@ navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
                   <th></th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody id="listaCarritoNav"></tbody>
             </table>
 
-            <button id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</button>
+            <button id="vaciar-carrito" class="button u-full-width" onclick="vaciarCarrito();">Vaciar Carrito</button>
 
           </div>
         </li>
@@ -109,14 +109,14 @@ navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
 navbarDiv.appendChild(navbarContainer);
 
 
-document.getElementById('cerrarSesion').addEventListener('click',function(){
+document.getElementById('cerrarSesion').addEventListener('click', function () {
   localStorage.clear();
   //window.location.href = './index_bf.html';
 })
 
-let footerDiv=document.getElementById('footer');
-let footerContainer=document.createElement('footer');
-footerContainer.innerHTML=`  <div class="container">
+let footerDiv = document.getElementById('footer');
+let footerContainer = document.createElement('footer');
+footerContainer.innerHTML = `  <div class="container">
     <div class="row">
         <!-- Columna secundaria con mas informacion -->
         <div class="col-sm-12 col-md-4 col-lg-3 d-none d-md-block"> <!--Este div se oculta en tamaño sm-->
@@ -184,3 +184,63 @@ footerContainer.innerHTML=`  <div class="container">
     </div>
     </div>`;
 footerDiv.appendChild(footerContainer);
+
+//Funcion para inicializar la sesión para el carrito 
+function inicializarSession() {
+    let productosArray = JSON.parse(sessionStorage.getItem("productosArray"));
+    if (!productosArray) {
+        sessionStorage.setItem("productosArray", JSON.stringify(new Array()));
+    }
+
+}
+
+
+function actualizarCarritoNavBar() {
+  let productosArray = JSON.parse(sessionStorage.getItem("productosArray"));
+  let tableBody = document.getElementById("listaCarritoNav");
+  tableBody.innerHTML = "";
+
+  productosArray.map((producto, index) => {
+    let tableRow = document.createElement('tr');
+    tableRow.setAttribute("id", `tableRow-${index}`);
+    tableRow.innerHTML = `
+         <td>  
+              <img src="${producto.imagen}" width=100>
+         </td>
+         <td id="productoTableId-${index}" class="d-none">${producto.id}</td>
+         <td>${producto.nombre}</td>
+         <td>$${producto.precio * producto.cantidad}</td>
+         <td>${producto.cantidad} </td>
+         <td>
+              <a id="tableRowBtn-${index}" href="#" class="borrar-producto" onclick="borrarProductoNavBar(this);">x</a>
+         </td>
+    `;
+    tableBody.appendChild(tableRow);
+  });
+}
+
+function borrarProductoNavBar(boton) {
+  let productosArray = JSON.parse(sessionStorage.getItem("productosArray"));
+  let index = boton.id.split("-")[1];
+  let tableRow = document.getElementById(`tableRow-${index}`);
+  let producto = document.getElementById(`productoTableId-${index}`);
+
+  tableRow.remove();
+
+  let productoIndex = productosArray.findIndex(productoArray => productoArray.id == producto.innerHTML);
+  productosArray.splice(productoIndex, 1);
+  sessionStorage.setItem("productosArray", JSON.stringify(productosArray));
+
+  actualizarCarrito();
+}
+
+function vaciarCarrito() {
+  sessionStorage.setItem("productosArray", JSON.stringify(new Array()));
+  actualizarCarritoNavBar();
+
+
+}
+
+inicializarSession();
+actualizarCarritoNavBar();
+
