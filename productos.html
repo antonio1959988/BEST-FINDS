@@ -20,7 +20,7 @@
 
 </head>
 
-<body>
+<body onload="agregarProductos();">
   <!-- Barra de navegación -->
   <div id="nav-bar" class="sticky-top"></div>
 
@@ -34,7 +34,11 @@
       <!-- Descripción de la sección en la parte derecha -->
       <div class="col-sm-12 col-md-5 col-lg-5" id="verticalAlign">
         <h1>Productos</h1>
-        <p id="txtInicio">Nuestra colección cuidadosamente seleccionada de productos de cosméticos abarca todo lo que necesitas para realzar tu estilo personal. Desde maquillaje de calidad profesional hasta productos de cuidado de la piel y fragancias irresistibles, en Best Finds, encontrarás todo lo que necesitas para crear tu rutina de belleza ideal. Trabajamos con las mejores marcas y los productos más innovadores para garantizar que tengas acceso a lo mejor de la industria de la belleza.</p>
+        <p id="txtInicio">Nuestra colección cuidadosamente seleccionada de productos de cosméticos abarca todo lo que
+          necesitas para realzar tu estilo personal. Desde maquillaje de calidad profesional hasta productos de cuidado
+          de la piel y fragancias irresistibles, en Best Finds, encontrarás todo lo que necesitas para crear tu rutina
+          de belleza ideal. Trabajamos con las mejores marcas y los productos más innovadores para garantizar que tengas
+          acceso a lo mejor de la industria de la belleza.</p>
       </div>
     </div>
   </div>
@@ -53,7 +57,7 @@
   </div>
 
   <!-- Sección inferior con filtros y productos -->
-  <div class="container">
+  <div class="container mb-3">
     <!-- Fila inferior de filtros y productos -->
     <div class="row">
       <!-- Columna izquierda con filtros -->
@@ -114,33 +118,13 @@
       </div> <!-- Fin columna izquierda con filtros -->
 
       <!-- Columna derecha con productos -->
-      <div class="col-sm-12 col-md-8 col-lg-9" id="listaProductos">
+      <div class="col-sm-12 col-md-8 col-lg-9">
         <!-- Inicio de fila de productos -->
-        <div class="row" id="resultado">
-          <div class="col-sm-12 col-md-6 col-lg-3">
-            <a href="./productos2.html" id="enlaceProducto" target="_self">
-              <div id="contenedorInferior">
-                <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto" class="img-fluid"
-                  id="imgProducto">
-                <br>
-                <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                <span id="precio">$1992.00</span>
-            </a>
-            <form>
-              <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-              <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="1">Agregar al
-                carrito</button>
-            </form>
-          </div>
-        </div> <!-- Fin fila de productos-->
-      </div> <!-- Fin columna derecha con productos -->
-  </div> <!-- Fin seccion inferior con filtros y productos>
-
-
-  </div> <!-- Fin columna derecha con productos -->
-  </div>
-  </div>
-
+        <div id="listaProductos" class="row">
+        </div>
+      </div>
+    </div>
+  </div> <!--Fin container-->
   <!-- Pie de página -->
   <div id="footer"> </div>
 
@@ -149,18 +133,14 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
+      <!-- Script de la barra de navegación -->
+  <script src="./assets/js/navbarYFooter.js"></script>
+
   <!-- Scripts JS de la página -->
   <script src="./assets/js/productos.js"></script>
 
-  <!-- Script de la barra de navegación -->
-  <script src="./assets/js/navbarYFooter.js"></script>
-
-  <!-- Script carrito de compras -->
-  <script src="./assets/js/navbarCarrito.js"></script>
-
-<!-- PRUEBASS -->
-<script src="./assets/js/bdPrueba.js"></script>
-<script src="./assets/js/productosFiltros.js"></script>
+  <!-- PRUEBASS -->
+  <script src="./assets/js/productosFiltros.js"></script>
 </body>
 
 </html>

@@ -29,7 +29,7 @@
     <div id="nav-bar" class="sticky-top"></div>
 
     <!-- Sección principal de productos -->
-    <div class="container">
+    <div class="container" id="listaProductos">
         <!-- Contenedor con marcos grisaceos -->
         <div id="contenedor">
             <!-- Enlace de retroceso en navegación -->
@@ -40,8 +40,7 @@
             <div class="row">
                 <!-- Columna izquierda con la imagen del producto -->
                 <div class="col-md-7 col-lg-6" id="verticalAlign">
-                    <img src="./assets/img/Productos/Stretch Fluid Foundation/verylight-4.jpg" alt="Producto" class="img-fluid"
-                        id="imgProductoSeleccionada">
+                    <img src="./assets/img/Productos/Stretch Fluid Foundation/verylight-4.jpg" alt="Producto" class="img-fluid imgProductoSeleccionada" id="imgPrincipal">
                 </div>
 
                 <!--Columna derecha con nombre del producto y botones de personalización -->
@@ -51,27 +50,22 @@
                         <p id="precioPrincipal">$1999.00</p>
                         <form id="datosProducto">
                             <label for="cantidad" id="cantidadPrincipal">Cantidad</label>
-                            <input type="number" class="form-control" id="cantidadProductoPrincipal" min="0" max="100"
+                            <input type="number" class="form-control cantidadProductoPrincipal" id="cantidadProducto" min="0" max="100"
                                 value="0">
                             <div class="btn-group" role="group" aria-label="Basic example" id="colorSelector">
-                                <button type="button" class="btn btn-primary" id="tono1"
-                                    data-img-src="./assets/img/Productos/Stretch Fluid Foundation/verylight-4.jpg"></button>
-                                <button type="button" class="btn btn-primary" id="tono2"
-                                    data-img-src="./assets/img/Productos/Stretch Fluid Foundation//light-4.jpg"></button>
-                                <button type="button" class="btn btn-primary" id="tono3"
-                                    data-img-src="./assets/img/Productos/Stretch Fluid Foundation/medium-1.jpg"></button>
-                                <button type="button" class="btn btn-primary" id="tono4"
-                                    data-img-src="./assets/img/Productos/Stretch Fluid Foundation/mediumtan-1.jpg"></button>
+
                             </div>
                             <!-- Fila para implementar responsividad de botones -->
                             <div class="row">
                                 <div class="col-sm-12 col-md-12 col-lg-6">
-                                    <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Añadir al
+                                    <button type="button" class="btn btn-primary agregar-carrito" id="btnComprarPrincipal" data-id="7">Añadir al
                                         carrito</button>
                                 </div>
                                 <div class="col-sm-12 col-md-12 col-lg-6">
-                                    <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Comprar
-                                        ahora</button>
+                                    <a href="./carrito_compras.html">
+                                        <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Comprar
+                                            ahora</button>
+                                    </a>
                                 </div>
                             </div>
                             <button type="button" class="btn btn-primary" id="btnComprarPrincipal">Mostrar
@@ -106,41 +100,11 @@
                                     </div>
                                 </form>
                             </div>
-
-                            <!-- Contenedor para mostrar comentarios -->
-                            <div id="contenedorInferior">
-                                <h5>Usuario Anónimo</h5>
-                                <p id="comentario">
-                                    ¡Estoy absolutamente enamorada de "Eaze Drop Stick Blur"! La sensación de suavidad
-                                    en mis labios es increíble, y el color es simplemente espectacular. Lo he usado en
-                                    varias ocasiones y siempre recibo elogios.¡No puedo esperar para probar más tonos de
-                                    esta línea!
-                                </p>
-                                <div id="der">
-                                    <button id="boton-corazon-1" class="boton-corazon">
-                                        <!-- Apartado de like -->
-                                        <span id="contador-likes-1">0</span>
-                                        <i class="fa fa-heart"></i>
-                                    </button>
-                                </div>
+                            <div>
+                                          <!-- Aqui se despliegan los comentarios del localStorage -->
                             </div>
 
-                            <!-- Comentario de prueba -->
-                            <div id="contenedorInferior">
-                                <h5>Usuario Anónimo</h5>
-                                <p id="comentario">
-                                    El tono neutro que elegí complementa mi estilo sin verse exagerado, y la textura
-                                    suave hace que sea fácil de aplicar. Me gusta que no se sienta pesado ni pegajoso, y
-                                    dura más tiempo de lo que esperaba. Definitivamente, este labial ha ampliado mis
-                                    opciones de maquillaje y me hace sentir más seguro.
-                                </p>
-                                <div id="der">
-                                    <button id="boton-corazon-2" class="boton-corazon">
-                                        <span id="contador-likes-2">0</span>
-                                        <i class="fa fa-heart"></i>
-                                    </button>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -150,82 +114,11 @@
                     <div id="seccionSugerencias">
                         <h4>Productos Similares</h4>
                         <!-- Primera fila de productos -->
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-6">
-                                <a href="#" id="enlaceProducto">
-                                    <div id="contenedorInferiorConProductos">
-                                        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                            class="img-fluid" id="imgProducto">
-                                        <br>
-                                        <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                        <span id="precio">$1992.00</span>
-                                        <form>
-                                            <input type="number" class="form-control" id="cantidadProducto" min="0"
-                                                max="100" value="0">
-                                            <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                                carrito</button>
-                                        </form>
-                                    </div>
-                                </a>
-                            </div>
+                        <div class="row" id="resultado">
+                            <!-- Aqui se despliegan los productos del localStorage -->
 
-                            <div class="col-sm-12 col-md-12 col-lg-6">
-                                <a href="#" id="enlaceProducto">
-                                    <div id="contenedorInferiorConProductos">
-                                        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                            class="img-fluid" id="imgProducto">
-                                        <br>
-                                        <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                        <span id="precio">$1992.00</span>
-                                        <form>
-                                            <input type="number" class="form-control" id="cantidadProducto" min="0"
-                                                max="100" value="0">
-                                            <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                                carrito</button>
-                                        </form>
-                                    </div>
-                                </a>
-                            </div>
+
                         </div> <!-- Fin de la primera fila de productos -->
-
-                        <!-- Segunda fila de productos -->
-                        <div class="row">
-                            <div class="col-sm-12 col-md-12 col-lg-6">
-                                <a href="#" id="enlaceProducto">
-                                    <div id="contenedorInferiorConProductos">
-                                        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                            class="img-fluid" id="imgProducto">
-                                        <br>
-                                        <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                        <span id="precio">$1992.00</span>
-                                        <form>
-                                            <input type="number" class="form-control" id="cantidadProducto" min="0"
-                                                max="100" value="0">
-                                            <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                                carrito</button>
-                                        </form>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-sm-12 col-md-12 col-lg-6">
-                                <a href="#" id="enlaceProducto">
-                                    <div id="contenedorInferiorConProductos">
-                                        <img src="./assets/img/Productos/Eaze_Drop_Stick_Blur.webp" alt="producto"
-                                            class="img-fluid" id="imgProducto">
-                                        <br>
-                                        <span id="nombreProducto">Eaze Drop Stick Blur</span>
-                                        <span id="precio">$1992.00</span>
-                                        <form>
-                                            <input type="number" class="form-control" id="cantidadProducto" min="0"
-                                                max="100" value="0">
-                                            <button type="button" class="btn btn-primary" id="btnAplicar">Agregar al
-                                                carrito</button>
-                                        </form>
-                                    </div>
-                                </a>
-                            </div>
-                        </div> <!-- Fin de la segunda fila de productos -->
                     </div>
                 </div> <!-- Fin de la columna derecha con productos similares -->
             </div> <!-- Fin de la segunda fila con la información inferior de la página (Comentarios y sugerencuias)-->
@@ -244,6 +137,8 @@
     <!-- Script de manipulación de imágenes con boton -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
+
+
     <!-- Scripts JS de la página -->
     <script src="./assets/js/productos2.js"></script>
 
@@ -253,7 +148,8 @@
     <!-- Uso de iconos -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
-
+    <script src="./assets/js/navbarCarrito.js"></script>
+    <script src="./assets/js/ProductosVariantesSugerencias.js"></script>
 
 </body>
 

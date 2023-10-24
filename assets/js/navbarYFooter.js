@@ -1,7 +1,22 @@
+
+var usuarioActivo = JSON.parse(localStorage.getItem("usuarios"));
+let rutaPerfil;
+let classPerfil;
+let nomUsu;
+console.log(usuarioActivo);
+if (usuarioActivo != null) {
+  rutaPerfil = 'Perfil_axel';
+  classPerfil = 'perfilCerrar2';
+  nomUsu = usuarioActivo[0].nombreUsuario;
+} else {
+  rutaPerfil = 'login';
+  classPerfil = '';
+  nomUsu = '';
+}
 let navbarDiv = document.getElementById("nav-bar");
-let navbarContainer=document.createElement('nav');
-navbarContainer.className="navbar navbar-expand-lg bg-body-tertiary sticky-top";
-navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
+let navbarContainer = document.createElement('nav');
+navbarContainer.className = "navbar navbar-expand-lg bg-body-tertiary sticky-top";
+navbarContainer.innerHTML = `<div class="container-fluid" id="barra">
 <button class="navbar-toggler order-0" type="button" data-bs-toggle="collapse"
   data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
   aria-label="Toggle navigation">
@@ -45,11 +60,12 @@ navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
     </li>
   </ul>
   <form class="d-flex" role="search">
-    <input class="form-control ms-4" type="search" placeholder="Buscar..." aria-label="Search">
+    <input class="form-control ms-4 separacionDer" type="search" placeholder="Buscar..." aria-label="Search" id="inputBuscar">
+    <div class="celdaIcon">
     <a href="./productos.html" target="_self"><img src="./assets/icons/search.svg" alt="Lupa"
         class="img-fluid" id="imgIcono"></a>
-
-    <div>
+        </div>
+    <div class="celdaIcon">
       <ul id="ul">
         <li class="submenu">
           <a href="./carrito_compras.html" target="_self">
@@ -57,7 +73,7 @@ navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
           </a>
           <div id="carritoNav">
 
-            <table id="lista-carritoNav" class="u-full-width">
+            <table class="u-full-width">
               <thead>
                 <tr>
                   <th>Imagen</th>
@@ -67,26 +83,40 @@ navbarContainer.innerHTML=`<div class="container-fluid" id="barra">
                   <th></th>
                 </tr>
               </thead>
-              <tbody></tbody>
+              <tbody id="listaCarritoNav"></tbody>
             </table>
 
-            <button id="vaciar-carrito" class="button u-full-width">Vaciar Carrito</button>
+            <button id="vaciar-carrito" class="button u-full-width" onclick="vaciarCarrito();">Vaciar Carrito</button>
 
           </div>
         </li>
       </ul>
     </div>
-    <a href="./registroUsuarios.html" target="_self"><img src="./assets/icons/user.svg" alt="Lupa"
+    <div class="submenu2 celdaIcon">
+    <a href="./${rutaPerfil}.html" target="_self"><img src="./assets/icons/user.svg" alt="Lupa"
         class="img-fluid" id="imgIcono"></a>
+    <div class="perfilCerrar ${classPerfil}">
+    
+    <p id="muestraNomUsu">${nomUsu}</p>
+    <button id="cerrarSesion" class="button" type="summit">Cerrar Sesión</button>
+    
+    </div>
+    </div>
   </form>
 </div>
 <div id="notificacion" class="notificacion">¡Producto agregado al carrito!</div>
 </div>`;
 navbarDiv.appendChild(navbarContainer);
 
-let footerDiv=document.getElementById('footer');
-let footerContainer=document.createElement('footer');
-footerContainer.innerHTML=`  <div class="container">
+
+document.getElementById('cerrarSesion').addEventListener('click', function () {
+  localStorage.clear();
+  //window.location.href = './index_bf.html';
+})
+
+let footerDiv = document.getElementById('footer');
+let footerContainer = document.createElement('footer');
+footerContainer.innerHTML = `  <div class="container">
     <div class="row">
         <!-- Columna secundaria con mas informacion -->
         <div class="col-sm-12 col-md-4 col-lg-3 d-none d-md-block"> <!--Este div se oculta en tamaño sm-->
@@ -154,4 +184,3 @@ footerContainer.innerHTML=`  <div class="container">
     </div>
     </div>`;
 footerDiv.appendChild(footerContainer);
-

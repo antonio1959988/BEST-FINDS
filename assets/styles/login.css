@@ -9,7 +9,6 @@ body{
 /* Titulos Login */
 h1{
     text-align: center;
-    font-size: 64px;
     margin-top: 30px;
     color: #707070;
 }
@@ -18,13 +17,13 @@ h1{
 #txtInicio{
     text-align: center;
     font-family: "Roboto", sans-serif;;
-    font-size: 39px;
+    
     color: #707070;
 }
 #txtRecuperarContraseña{
     text-align: center;
     font-family: "Roboto", sans-serif;;
-    font-size: 39px;
+    
     color: #707070;
     text-decoration: underline;
 }
@@ -38,7 +37,29 @@ h1{
     
 }
 
-
+/* Barras laterales */
+#lateralIzq{
+    text-align: right;
+    position: relative;
+    align-items: center;
+    
+}
+#lateralDer{
+    text-align: left;
+    position: relative;
+}
+#imgLateral{
+    width: 30px;
+    max-height: fit-content;
+    height:auto;
+}
+#seccionForm{
+    margin-bottom: 20px;
+    position: relative;
+   
+    align-items: center;
+    
+}
 
 
 
@@ -68,19 +89,12 @@ h1{
 #colorB {
     background-color: #D71787;
     font-family: "Roboto", sans-serif;;
-    width: 300px;
-     height: 60px;
-     font-size: 25px;
      border-radius: 40px;
-     
      border: none;
 }
 #btnSesion{
     background-color: #D71787;
     font-family: "Roboto", sans-serif;;
-    width: 200px;
-     height: 60px;
-     font-size: 25px;
      border-radius: 40px;
      border: none;
      
@@ -98,15 +112,12 @@ h1{
 }
 #colorB2:hover {
     background-color: #ff8c66;
-    width: 180px;
+    
     /* Cambia el color de fondo al pasar el mouse por encima */
 }
 #colorB2 {
     background-color: #D71787;
     font-family: "Roboto", sans-serif;;
-    width: 200px;
-     height: 60px;
-     font-size: 25px;
      border-radius: 40px;
      margin-left: 30px;
      border: none;
@@ -147,6 +158,7 @@ h1{
     font-family: "Roboto", sans-serif; /* Cambia la fuente del texto a "Roboto" */
     display: inline;
     width: 80%;
+    border: 1px solid #707070
     
 }
 
@@ -174,7 +186,58 @@ h1{
 }
 
 
+.notification {
+    margin-top: 50px;
+    font-weight: bold;
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(43, 152, 21);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation-name: shake;
+    animation-duration: 0.5s;
+  }
+  .notification2 {
+    margin-top: 50px;
+    font-weight: bold;
+    display: none;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: rgb(152, 21, 21);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    animation-name: shake;
+    animation-duration: 0.5s;
+  }
 
+
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-15px);
+    }
+    40% {
+      transform: translateX(15px);
+    }
+    60% {
+      transform: translateX(-15px);
+    }
+    80% {
+      transform: translateX(15px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
 
 

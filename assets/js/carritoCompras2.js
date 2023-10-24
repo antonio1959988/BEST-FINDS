@@ -24,7 +24,7 @@ let mercadoInput = document.querySelector("#mercadoPago");
  const expresionesEnvio = {
      nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
      direccion: /^[a-zA-Z0-9-ÿ\s\_\-]{1,50}$/, // Letras, numeros, guion y guion_bajo
-     colonia: /^[a-zA-Z0-9\_\-]{1,50}$/, // Letras, numeros, guion y guion_bajo
+     colonia: /^[a-zA-Z0-9-ÿ\s\_\-]{1,50}$/, // Letras, numeros, guion y guion_bajo
      ciudad: /^[a-zA-ZÀ-ÿ\s]{1,25}$/, // Letras y espacios, pueden llevar acentos.
      zip: /^\d{1,5}$/,// 7 a 14 numeros.
      telefono: /^\d{7,14}$/ // 7 a 14 numeros.
@@ -40,7 +40,7 @@ let mercadoInput = document.querySelector("#mercadoPago");
 // }
 
 let camposEnvio = {
-	inputReciver: false,
+	inputReceiver: false,
 	inputAddress: false,
 	inputAddress2: false,
 	inputCity: false,
@@ -96,8 +96,8 @@ inputsEnvio.forEach((input) => {
 
 
 // Validación de formulario Tarjeta
-let formularioTarjeta = document.getElementById('credit-info-content');
-let inputsTarjeta = document.querySelectorAll('#credit-info-content input');
+let formularioTarjeta = document.getElementById('paySegment');
+let inputsTarjeta = document.querySelectorAll('#paySegment input');
 
 //Expresiones permitidas para cada campo
 const expresionesTarjeta = {
@@ -117,24 +117,24 @@ let camposTarjeta = {
 }
 
 //Switch para validar cada campo
-function validarFormularioTarjeta(t) {
+function validarFormularioTarjeta(e) {
    // console.log(t);
-   switch (t.target.name) {
+   switch (e.target.name) {
 	   case "cardNumber":
-		   validarCampoTarjeta(expresionesTarjeta.tarjeta, t.target, 'cardNumber');
+		   validarCampoTarjeta(expresionesTarjeta.tarjeta, e.target, 'cardNumber');
 		   //console.log(t);
 		   break;
 	   case "cardHolder":
-		   validarCampoTarjeta(expresionesTarjeta.nombre, t.target, 'cardHolder');
+		   validarCampoTarjeta(expresionesTarjeta.nombre, e.target, 'cardHolder');
 		   break;
 	   case "cardMonth":
-		   validarCampoTarjeta(expresionesTarjeta.mes, t.target, 'cardMonth');
+		   validarCampoTarjeta(expresionesTarjeta.mes, e.target, 'cardMonth');
 		   break;
 	   case "cardYear":
-		   validarCampoTarjeta(expresionesTarjeta.anio, t.target, 'cardYear');
+		   validarCampoTarjeta(expresionesTarjeta.anio, e.target, 'cardYear');
 		   break;
 	   case "cardCVV":
-		   validarCampoTarjeta(expresionesTarjeta.cvv, t.target, 'cardCVV');
+		   validarCampoTarjeta(expresionesTarjeta.cvv, e.target, 'cardCVV');
 		   break;
 
    }
@@ -155,4 +155,50 @@ let validarCampoTarjeta = (expresion, input, campo) => {
 inputsTarjeta.forEach((input) => {
    input.addEventListener('keyup', validarFormularioTarjeta);//Cada que presiona una teclas
    input.addEventListener('blur', validarFormularioTarjeta);//Cada que se de click fuera del input
+});
+
+
+
+///////////////////////////////////////////////////////////////////////////////////////
+//Creacion del objeto JSON
+var direccion = [];
+let receptor;
+let calle;
+let colonia;
+let ciudad;
+let estado;
+let codigoPostal;
+let telefono;
+
+document.getElementById("btnProcederPago").addEventListener("click", function () {
+	// Obtener los valores de los campos del formulario
+
+	if(camposEnvio['inputReceiver'] && camposEnvio['inputAdress'] && camposEnvio['inputAdress2'] && camposEnvio['inputCity'] && camposEnvio['inputZip'] && camposEnvio['inputPhone']){
+		receptor = document.getElementById("inputReceiver").value;
+		calle = document.getElementById("inputAdress").value;
+		colonia = document.getElementById("inputAdress2").value;
+		ciudad = document.getElementById("inputCity").value;
+		estado = document.getElementById("inputState").value;
+		codigoPostal = document.getElementById("inputZip").value;
+		telefono = document.getElementById("inputPhone").value;
+
+
+	// Crear un objeto con los datos del producto
+	const nuevaDireccion = {
+		receptor : receptor,
+		calle : calle,
+		colonia : colonia,
+		ciudad : ciudad,
+		estado : estado,
+		codigoPostal : codigoPostal,
+		telefono : telefono
+	};
+	// Agregar el nuevo producto al array de productos
+	direccion.push(nuevaDireccion);
+
+	// Mostrar los datos del producto en la consola
+	console.log("nuevo" + direccion);
+
+	localStorage.setItem("direccion", JSON.stringify(direccion));
+}
 });

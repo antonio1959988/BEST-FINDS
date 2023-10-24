@@ -11,15 +11,17 @@ h1 {
 }
 
 /* Nombre de cada producto*/
-#nombreProducto {
+.nombreProducto {
     font-size: 14px;
     display: block;
     text-align: left;
     margin-bottom: 5px;
+    height: 40px;
 }
 
+
 /* Precio de cada producto */
-#precio {
+.precio {
     font-size: 16px;
     font-weight: bold;
     display: block;
@@ -40,8 +42,9 @@ h1 {
 }
 
 /* Imagen individual de productos */
-#imgProducto {
+.imgProducto {
     margin-bottom: 10px;
+    max-height: 140px;
 }
 
 /* Contenedor con borde gris, parte superior zona principal */
@@ -52,11 +55,10 @@ h1 {
 }
 
 /* Contenedores con borde gris en la parte inferior */
-#contenedorInferior {
+.contenedorInferior {
     border: 2px solid #d1d1d1;
     padding: 20px;
     margin-top: 12px;
-    width: 100%;
     width: 190px;
     margin-left: auto;
     margin-right: auto;
@@ -64,7 +66,7 @@ h1 {
 }
 
 /* Formato de sombreado en selección de productos */
-#contenedorInferior:hover {
+.contenedorInferior:hover {
     box-shadow: 0px 3px 3px 0px rgba(255, 41, 155, 0.75);
 }
 
@@ -78,21 +80,21 @@ h1 {
 }
 
 /* Botón de filtros */
-#contenedorFiltros button {
+#contenedorFiltros button, #btnAplicarFiltro {
     margin-top: 14px;
-    backgroónd-color: #D71787;
+    background-color: #D71787;
     border: none;
     font-size: 12px;
     font-weight: bold;
 }
 
 /* Botón de sección filtros*/
-#contenedorFiltros button:hover {
+#contenedorFiltros button:hover, #btnAplicarFiltro:hover {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
 }
 
 /* Botón de cada producto */
-#contenedorInferior button {
+.contenedorInferior button {
     margin-top: 14px;
     background-color: #D71787;
     border: none;
@@ -101,12 +103,12 @@ h1 {
 }
 
 /* Evento de cambio de color para los botones */
-#contenedorInferior button:hover {
+.contenedorInferior button:hover {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
 }
 
 /* Contador de producto */
-#cantidadProducto {
+.cantidadProducto {
     text-align: center;
 }
 
@@ -116,9 +118,10 @@ h1 {
 }
 
 /* Eliminar formato de hipervínculo */
-#enlaceProducto {
+.enlaceProducto {
     color: #707070;
     text-decoration: none;
+    z-index: 1;
 }
 
 /* Sombreado de contorno en formularios */

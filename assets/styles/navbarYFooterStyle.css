@@ -18,12 +18,16 @@ nav {
 }
 
 #imgIcono {
-    width: 1.5rem;
-    height: 1.5rem;
-    margin-left: 15px;
+    width: 2.0rem;/*1.5rem*/
+    height: 2.0rem;/*1.5rem*/
+    /*margin-left: 15px;*/
+    padding: 2px;
 }
 #imgIcono:hover {
     filter: invert(38%) sepia(79%) saturate(658%) hue-rotate(301deg) brightness(88%) contrast(95%);
+}
+.celdaIcon{
+    width: 40px;
 }
 #imgIcono2 {
     width: 1.5rem;
@@ -32,6 +36,10 @@ nav {
 }
 #imgIcono2:hover {
     filter: invert(38%) sepia(79%) saturate(658%) hue-rotate(301deg) brightness(88%) contrast(95%);
+}
+
+#inputBuscar{
+    width: 100%;
 }
 
 /*CARRITO DE COMPRAS*/
@@ -58,8 +66,38 @@ nav {
     padding: 20px;
     min-width: 500px;
 }
+.separacionDer{
+    margin-right: 5px;
+}
+/*Opciones de perfil*/
+.submenu2 {
+    position: relative;
+    list-style: none;
+}
+.submenu2 .perfilCerrar {
+    display: none;
+    max-height: 300px; /* Establece el límite de altura */
+    max-width: 300px; /* Establece el límite de anchura */
+    overflow: auto; /* Agrega una barra de desplazamiento si es necesario */
+}
 
-
+.submenu2:hover .perfilCerrar2 {
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    z-index: 1;
+    background-color: white;
+    padding: 20px;
+    min-width: 100px;
+}
+#cerrarSesion{
+    width: 200px;
+}
+#muestraNomUsu{
+    font-size: large;
+    font-weight: bold;
+}
 
 .button {
     background-color: #D71787;
@@ -139,7 +177,6 @@ nav {
 body {
     text-align: center !important;
     font-family: "Roboto", sans-serif;
-    ;
     color: #707070;
 }
 

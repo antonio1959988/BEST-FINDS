@@ -4,6 +4,10 @@ const botonComentario = document.getElementById('btnEnviarComentario');
 let comentarios = document.getElementById('txtComentario');
 let seccionComentarios = document.getElementById('seccionDescYComentarios');
 
+//Recuperar informacion del usuario con el que se inicio sesion
+var usuariosArray = JSON.parse(localStorage.getItem("usuarios"));
+var nombreUsuario = usuariosArray[0].nombreUsuario;
+
 //Inicio de un contador para los likes
 var contador = 3;
 
@@ -13,7 +17,7 @@ function agregarComentario() {
     let comentario = comentarios.value;
     let nuevoComentario = document.createElement('div');
     nuevoComentario.innerHTML = `<div id="contenedorInferior">
-    <h5>Usuario Anónimo</h5>
+    <h5>${nombreUsuario}</h5>
     <p id="comentario">
         ${comentario}
     </p>
@@ -63,15 +67,15 @@ $(document).ready(function () {
         var imgSrc = $(this).data("img-src");
         
         // Aplicar transición de opacidad
-        $("#imgProductoSeleccionada").css("opacity", "0");
+        $(".imgProductoSeleccionada").css("opacity", "0");
         
         // Pequeña pausa antes de cambiar la fuente de la imagen
         setTimeout(function () {
             // Cambiar la fuente de la imagen principal
-            $("#imgProductoSeleccionada").attr("src", imgSrc);
+            $(".imgProductoSeleccionada").attr("src", imgSrc);
             
             // Restaurar la opacidad
-            $("#imgProductoSeleccionada").css("opacity", "1");
+            $(".imgProductoSeleccionada").css("opacity", "1");
         }, 500); // 500 milisegundos (0.5 segundos) para que coincida con la duración de la transición
     });
 });
@@ -95,15 +99,28 @@ $(document).ready(function () {
 /////////////////////////LOCAL STORAGE//////////////////////////////////
 
 // Recuperar los datos JSON del almacenamiento local
-/*
 var productosArray = JSON.parse(localStorage.getItem("productosArray"));
 
 let nombreProducto = document.getElementById("tituloNombre");
 let precioProducto = document.getElementById("precioPrincipal");
 let descripcionProducto = document.getElementById("acercaDeProducto");
+let imagenProducto = document.getElementById("imgPrincipal");
+let divVariante = document.getElementById("colorSelector");
 
 nombreProducto.textContent = productosArray[0].nombre;
 precioProducto.textContent = "$" + productosArray[0].precio;
 descripcionProducto.textContent = productosArray[0].descripcion;
+imagenProducto.src = "./assets/img/Productos/" + productosArray[0].nombre + "/" + productosArray[0].colores[0] + ".webp";
 
-*/
+//Ciclo para crear los botones de variantes
+for (let i = 0; i < productosArray[0].colores.length; i++) {
+
+    divVariante.innerHTML += `<button type="button" 
+    class="btn btn-primary" 
+    id="tono1" 
+    style="background-image: url('./assets/img/Productos/${productosArray[0].nombre}/${productosArray[0].colores[i]}.webp');  background-size: cover;" 
+    data-img-src="./assets/img/Productos/${productosArray[0].nombre}/${productosArray[0].colores[i]}.webp"></button>`
+
+}
+
+console.log(productosArray[4]);
