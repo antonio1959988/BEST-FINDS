@@ -86,7 +86,7 @@ document.getElementById("btnSesion").addEventListener("click", function () {
 		window.location.href = "/Perfil_axel.html";
 		mostrarNotificacion();
 	} else {
-		alert("Correo o contraseña incorrectos");
+		mostrarNotificacion2();
 		
 	}
 
@@ -104,5 +104,14 @@ function mostrarNotificacion() {
 	// Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
 	setTimeout(() => {
 		 notificacion.style.display = 'none';
+	}, 3000); // 3000 milisegundos = 3 segundos
+}
+function mostrarNotificacion2() {
+	const notificacion2 = document.querySelector('#notification2');
+	notificacion2.style.display = 'block';
+
+	// Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
+	setTimeout(() => {
+		 notificacion2.style.display = 'none';
 	}, 3000); // 3000 milisegundos = 3 segundos
 }
