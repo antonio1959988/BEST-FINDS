@@ -34,15 +34,16 @@
     <!-- Sección con barras divisoras y formulario -->
     <div class="row" id="seccionForm">
       <h1>Crear una cuenta</h1>
+
       <!-- Formulario -->
-
-
+      <!-- Barra lateral -->
       <div class="col-sm-12 col-md-2 col-lg-2" id="lateralIzq">
         <img src="./assets/img/barraBFv1_Vert.jpeg" alt="Barra lateral izquierda" id="imgLateral">
       </div>
       <div class="col-sm-12 col-md-8 col-lg-8" id="formulario">
         <form id="formFormulario" action="./login.html">
           <div class="divInputs">
+            <!--Seccion de nombre-->
             <label for="nomUsuario">Nombre:</label><br>
             <input type="text" name="nombre" id="nombre" class="form-control" 
               title="Usar letras en mayúsculas y minúsculas" required>
@@ -50,31 +51,35 @@
                 Formato no válido. Favor de ingresar solo letras en mayúsculas y minúscula.
               </div>
           </div>
+          <!--Seccion de nombre Usuario-->
           <div class="divInputs">
             <label for="apUsuario">Nombre de Usuario:</label><br>
             <input type="text"
-            name="nombreUsuario" id="nombreUsuario" class="form-control" placeholder="ejemplo: batman_14"
+            name="nombreUsuario" id="nombreUsuario" class="form-control"
               title="Usar letras en mayúsculas y minúscula" required>
               <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertNombreUsuario">
-                Formato no válido. Favor de ingresar solo letras en mayúsculas y minúscula.
+                Formato no válido. Favor de ingresar solo letras en mayúsculas, minúscula y números.
               </div>
           </div>
+          <!--Seccion de correo-->
           <div class="divInputs">
             <label for="correo">Correo electrónico:</label><br>
             <input name="correo" id="correo" type="email" class="form-control" pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
               title="Ingresa un correo valido" required>
               <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertCorreo">
-                Formato no válido. Solo se permiten letras (a-z), números(0-9) y puntos (.).
+                Formato no válido. Sigue el ejemplo: best_finds@gmail.com
               </div>
           </div>
+          <!--Seccion de contraseña-->
           <div class="divInputs">
             <label for="password">Contraseña:</label><br>
             <input type="password" name="password" id="password" class="form-control" pattern="[a-zA-Z0-9._%+-]{8,}"
               title="La contraseña debe ser mayor a 8 digitos" required>
               <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertPassword">
-                Formato no válido. Solo se permiten letras (a-z), números(0-9) y puntos (.).
+                La contraseña debe ser mayor a 4 caracteres. Solo se permiten letras (a-z), números(0-9) y puntos (.).
               </div>
           </div>
+          <!--Seccion de confirmación de contraseña-->
           <div class="divInputs">
             <label for="password">Confirma contraseña:</label><br>
             <input type="password"  name="passwordConfirmacion" id="passwordConfirmacion" class="form-control" pattern="[a-zA-Z0-9._%+-]{8,}"
@@ -83,9 +88,13 @@
                 Las constraseñas no coinciden.
               </div>
           </div>
+          <!--Aceptar terminos y condiciones-->
           <div class="divInputs">
             <input type="checkbox" class="form-check-input" id="checkinput">
-            <label for="aceptar" id="terminosYCondiciones">Aceptar Teminos y condiciones</label>
+            <label for="aceptar" id="terminosYCondiciones">Aceptar Términos y condiciones</label>
+          </div>
+          <div class="alert alert-warning position-relative start-50 translate-middle-x"  id="alertValidacion" role="alert">
+            Todos los campos son obligatorios. Por favor llena todos los datos.
           </div>
           <div class="divInputs">
             <button type="submit" class="btn btn-primary mb-3" id="btnRegistrar">Registrarme</button>
@@ -93,6 +102,7 @@
         </form>
 
       </div>
+       <!-- Barra lateral -->
       <div class="col-sm-12 col-md-2 col-lg-2" id="lateralDer">
         <img src="./assets/img/barraBFv2_Vert.jpeg" alt="Barra lateral derecha" class="img-fluid" id="imgLateral">
       </div>
@@ -102,12 +112,12 @@
   </div>
 
   <br>
+  
 
 
 
 
-
-  <!-- Pie de pagina -->
+  <!-- Pie de pagina  -->
   <div id="footer"> </div>
 
 
