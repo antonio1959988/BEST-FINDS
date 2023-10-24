@@ -184,3 +184,63 @@ footerContainer.innerHTML = `  <div class="container">
     </div>
     </div>`;
 footerDiv.appendChild(footerContainer);
+
+
+//Funcion para inicializar la sesión para el carrito 
+function inicializarSession() {
+    let productosArray = JSON.parse(sessionStorage.getItem("productosArray"));
+    if (!productosArray) {
+        sessionStorage.setItem("productosArray", JSON.stringify(new Array()));
+    }
+
+}
+
+
+function actualizarCarritoNavBar() {
+  let productosArray = JSON.parse(sessionStorage.getItem("productosArray"));
+  let tableBody = document.getElementById("listaCarritoNav");
+  tableBody.innerHTML = "";
+
+  productosArray.map((producto, index) => {
+    let tableRow = document.createElement('tr');
+    tableRow.setAttribute("id", `tableRow-${index}`);
+    tableRow.innerHTML = `
+         <td>  
+              <img src="${producto.imagen}" width=100>
+         </td>
+         <td id="productoTableId-${index}" class="d-none">${producto.id}</td>
+         <td>${producto.nombre}</td>
+         <td>$${producto.precio * producto.cantidad}</td>
+         <td>${producto.cantidad} </td>
+         <td>
+              <a id="tableRowBtn-${index}" href="#" class="borrar-producto" onclick="borrarProductoNavBar(this);">x</a>
+         </td>
+    `;
+    tableBody.appendChild(tableRow);
+  });
+}
+
+function borrarProductoNavBar(boton) {
+  let productosArray = JSON.parse(sessionStorage.getItem("productosArray"));
+  let index = boton.id.split("-")[1];
+  let tableRow = document.getElementById(`tableRow-${index}`);
+  let producto = document.getElementById(`productoTableId-${index}`);
+
+  tableRow.remove();
+
+  let productoIndex = productosArray.findIndex(productoArray => productoArray.id == producto.innerHTML);
+  productosArray.splice(productoIndex, 1);
+  sessionStorage.setItem("productosArray", JSON.stringify(productosArray));
+
+  actualizarCarrito();
+}
+
+function vaciarCarrito() {
+  sessionStorage.setItem("productosArray", JSON.stringify(new Array()));
+  actualizarCarritoNavBar();
+
+
+}
+
+inicializarSession();
+actualizarCarritoNavBar();
