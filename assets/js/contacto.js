@@ -3,20 +3,31 @@ let emailUsuario = document.getElementById("correo");
 let telUsuario = document.getElementById("telefono");
 let mensaje = document.getElementById("txtMensaje");
 let btnEnviar = document.getElementById("colorB");
-
+// MODIFICACION EVELYN
 function enviarFormulario() {
-	let nomUsuarioValue = nomUsuario.value;
-	let emailUsuarioValue = emailUsuario.value;
-	let telUsuarioValue = telUsuario.value;
-	let mensajeValue = mensaje.value;
+    let nomUsuarioValue = nomUsuario.value;
+    let emailUsuarioValue = emailUsuario.value;
+    let telUsuarioValue = telUsuario.value;
+    let mensajeValue = mensaje.value;
 
-	if (nomUsuarioValue == "" || emailUsuarioValue == "" || telUsuarioValue == "" || mensajeValue == "") {
-	//	alert("Todos los campos son obligatorios");
-	} else {
-	//	alert("Mensaje enviado correctamente");
-	enviarMensaje();
-	}
+    if (nomUsuarioValue == "" || emailUsuarioValue == "" || telUsuarioValue == "" || mensajeValue == "") {
+        document.getElementById('modalMensaje').textContent = "Todos los campos son obligatorios";
+        document.getElementById('miModal').style.display = 'block';
+    } else {
+        enviarMensaje();
+    }
 }
+// HASTA AQUI
+document.getElementById('cerrarModal').addEventListener('click', function() {
+    document.getElementById('miModal').style.display = 'none';
+});
+
+
+
+document.getElementById('cerrarModal').addEventListener('click', function() {
+    document.getElementById('miModal').style.display = 'none';
+});
+// HASTA AQUI
 
 let formulario = document.getElementById('formFormulario');
 let inputs = document.querySelectorAll('#formFormulario input');
