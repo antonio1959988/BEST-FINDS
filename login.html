@@ -21,26 +21,27 @@
     <div id="nav-bar" class="sticky-top"></div>
 
    <div id="notification" class="notification">¡Bienvenido!</div>
+   <div id="notification2" class="notification2">Correo o contraseña incorrectos</div>
     <br>
     <!-- Seccion principal -->
 
     <div class="container">
 
         <!--Este div le da el tamaño a escala deseado al formulario-->
-        <div class="row" id="tamañoFormulario">
+        <div class="row" id="seccionForm">
+            <h1>Iniciar Sesión</h1> <!-- Formulario -->
 
+            <div class="col-sm-12 col-md-2 col-lg-2" id="lateralIzq">
+                <img src="./assets/img/barraBFv1_Vert.jpeg" alt="Barra lateral izquierda" id="imgLateral">
+              </div>
+            <div class="col-sm-12 col-md-8 col-lg-8" id="formulario">
 
-            <div class="col-sm-1 col-md-1 col-lg-1">
-                <img id="col-2" src="./assets/img/barraBFv1_Vert.jpeg" alt="Barra lateral izquierda" class="img-fluid"
-                    id="imgLateral">
-            </div>
-            <div class="col-sm-10 col-md-10 col-lg-10">
-
-                <br>
-                <h1>Iniciar Sesión</h1> <!-- Formulario -->
+                
+                
                 <form id="formFormulario" action="./Perfil_axel.html">
                     <div class="mb-3">
-                        <label for="email" class="form-label" id="txtInicio">Correo electrónico</label>
+                        <label for="email" class="form-label" >Correo electrónico</label>
+                        <br>
                         <input name="correo" id="correo" type="email" class="form-control"
                             required>
                         <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert"
@@ -50,7 +51,8 @@
 
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label" id="txtInicio">Contraseña:</label>
+                        <label for="password" class="form-label" >Contraseña:</label>
+                        <br>
                         <input type="password" name="password" id="password" class="form-control" 
                          required>
                         <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertPassword">
@@ -61,11 +63,7 @@
 
 
 
-                    <div class="mb-3 form-check" id="centrado">
-                        <label class="form-check-label" for="exampleCheck1" id="txtInicio">Recuérdame</label>
-                        <input type="checkbox" class="form-check-input" id="check-input" name="exampleCheck1">
-
-                    </div>
+                  
                     <button type="submit" class="btn btn-primary btn-lg" id="btnSesion" onclick="login">Iniciar
                         Sesión</button>
 
@@ -92,7 +90,7 @@
                             </div>
                         </div>
                     </div>
-                    <br> <br> <br> <br> <br> <br>
+                    <br> <br> <br> 
 
                     <p>¿No tienes una cuenta?</p>
                     <div id="centrado">
@@ -104,10 +102,9 @@
 
                 </form>
             </div>
-            <div class="col-sm-1 col-md-1 col-lg-1">
-                <img id="col-2" src="./assets/img/barraBFv2_Vert.jpeg" alt="Barra lateral derecha" class="img-fluid"
-                    id="imgLateral">
-            </div>
+            <div class="col-sm-12 col-md-2 col-lg-2" id="lateralDer">
+                <img src="./assets/img/barraBFv2_Vert.jpeg" alt="Barra lateral derecha" class="img-fluid" id="imgLateral">
+              </div>
 
 
         </div>
