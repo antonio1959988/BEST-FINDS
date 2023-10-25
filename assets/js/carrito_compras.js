@@ -259,6 +259,7 @@ function agregarProductoSession(producto) {
     } else {
         productosArray.push(producto);
     }
+    mostrarNotificacion();
     sessionStorage.setItem("productosArray", JSON.stringify(productosArray)); //Volver a guardarlo en sesión ya modificado
 }
 
@@ -270,3 +271,12 @@ function vaciarCarrito() {
   
   }
   
+  function mostrarNotificacion() {
+	const notificacion = document.querySelector('.notificacion');
+	notificacion.style.display = 'block';
+
+	// Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
+	setTimeout(() => {
+		 notificacion.style.display = 'none';
+	}, 1000); // 3000 milisegundos = 3 segundos
+}

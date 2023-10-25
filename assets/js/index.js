@@ -103,11 +103,13 @@ function agregarProductosIndex() {
         divProducto.className = "col-sm-6 col-md-6 col-lg-3";
         divProducto.innerHTML = `
             <div class="contenedorInferior">
+            <a href="./productos2.html" class="enlaceProducto" target="_self">
                 <p id="productoId-${index}" class="d-none">${producto.id}</p>
                 <p id="productoDescripcion-${index}" class="d-none">${producto.descripcion}</p>
                 <img id="productoImagen-${index}" src=${producto.imagen} alt="producto" class="imgProducto img-fluid" >
                 <span id="productoNombre-${index}" class="nombreProducto">${producto.nombre}</span>
                 <span id="productoPrecio-${index}" class="precio">$${producto.precio}</span>
+                </a>
                 <input id="productoCantidad-${index}"  type="number" class="form-control cantidadProducto" min="1" max="100" value="1">
                 <button id="agregarCarrito-${index}" type="button" class="btn btn-primary btnAplicar" onclick="agregarProductoSession(this); actualizarCarritoNavBar();"  >Agregar al carrito</button>
             
@@ -147,7 +149,17 @@ function agregarProductoSession(boton) {
     } else {
         productosArray.push(producto);
     }
+    mostrarNotificacion();
     sessionStorage.setItem("productosArray", JSON.stringify(productosArray)); //Volver a guardarlo en sesión ya modificado
 
 }
 
+function mostrarNotificacion() {
+	const notificacion = document.querySelector('.notificacion');
+	notificacion.style.display = 'block';
+
+	// Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
+	setTimeout(() => {
+		 notificacion.style.display = 'none';
+	}, 1000); // 3000 milisegundos = 3 segundos
+}

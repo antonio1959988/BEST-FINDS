@@ -62,56 +62,43 @@ document.getElementById("btnSesion").addEventListener("click", function () {
 	const correo = document.getElementById("correo").value;
 	const password = document.getElementById("password").value;
 
-	// Crear un objeto con los datos del producto
+	// Crear un objeto con los datos de la sesión
 	const nuevaSesion = {
 		correo: correo,
 		password: password,
 	};
-	// Agregar el nuevo producto al array de productos
+
+	// Agregar la nueva sesión al array de sesiones
 	sesion.push(nuevaSesion);
 
-	// Mostrar los datos del producto en la consola
+	// Mostrar los datos de la sesión en la consola
 	console.log(sesion);
 
-	// Guardar los datos de sesion en el almacenamiento local
+	// Guardar los datos de la sesión en el almacenamiento local
 	localStorage.setItem("inicioSesion", JSON.stringify(sesion));
 
 	// Recuperar los datos JSON del almacenamiento local
-
 	var usuariosArray = JSON.parse(localStorage.getItem("usuarios"));
 
-	//Comparar los datos del formulario con los datos del JSON
-	if (correo == usuariosArray[0].correo && password == usuariosArray[0].password) {
-		//alert("Bienvenido " + usuariosArray[0].nombreUsuario);
-		window.location.href = "/Perfil_axel.html";
-		mostrarNotificacion();
+	// Comparar los datos del formulario con los datos del JSON
+	if (usuariosArray && correo == usuariosArray[0].correo && password == usuariosArray[0].password) {
+		document.getElementById('modalMensaje').textContent = `Bienvenido ${usuariosArray[0].nombreUsuario}, en un momento serás redirigido a tu perfil.`;
+		document.getElementById('miModal').style.display = 'block';
+
+		// Esperar 3 segundos antes de redirigir a la página de perfil
+		setTimeout(function () {
+			window.location.href = "/Perfil_axel.html";
+		}, 6000);
 	} else {
-		mostrarNotificacion2();
-		
+		document.getElementById('modalMensaje').textContent = "Datos incorrectos.";
+		document.getElementById('miModal').style.display = 'block';
+		console.log(usuariosArray);
 	}
-
-	console.log(usuariosArray);
-
 });
 
 
-//Notificacion inicio de sesion
+// HASTA AQUI
+document.getElementById('cerrarModal').addEventListener('click', function() {
+    document.getElementById('miModal').style.display = 'none';
+});
 
-function mostrarNotificacion() {
-	const notificacion = document.querySelector('#notification');
-	notificacion.style.display = 'block';
-
-	// Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
-	setTimeout(() => {
-		 notificacion.style.display = 'none';
-	}, 3000); // 3000 milisegundos = 3 segundos
-}
-function mostrarNotificacion2() {
-	const notificacion2 = document.querySelector('#notification2');
-	notificacion2.style.display = 'block';
-
-	// Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
-	setTimeout(() => {
-		 notificacion2.style.display = 'none';
-	}, 3000); // 3000 milisegundos = 3 segundos
-}

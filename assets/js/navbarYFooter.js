@@ -24,8 +24,10 @@ navbarContainer.innerHTML = `<div class="container-fluid" id="barra">
 </button>
 <a href="./index_bf.html" target="_self"><img src="./assets/img/logoMini.png" alt="Lupa" class="img-fluid"
     id="logoBF"></a>
-<a href="./carrito_compras.html" target="_self"><img src="./assets/icons/shopping-cart.svg" alt="Lupa"
-    class="img-fluid" id="imgIcono2"></a>
+    <a href="./carrito_compras.html" target="_self" class="d-lg-none">
+    <img src="./assets/icons/shopping-cart.svg" alt="Lupa" class="img-fluid" id="imgIcono2">
+  </a>
+  
 <div class="collapse navbar-collapse" id="navbarSupportedContent">
   <ul class="navbar-nav ms-auto mb-2 mb-lg-0" id="lista">
     <li class="nav-item">
@@ -120,13 +122,13 @@ footerContainer.innerHTML = `  <div class="container">
     <div class="row">
         <!-- Columna secundaria con mas informacion -->
         <div class="col-sm-12 col-md-4 col-lg-3 d-none d-md-block"> <!--Este div se oculta en tamaño sm-->
+        <br>
+        <br>
             <h5>Más Información</h5>
             <ul>
-                <li><a href="#" target="_blank">Preguntas frecuentes</a></li>
+                <li><a href="./noticias.html" target="_self">¡No olvides visitar NotiFinds!</a></li>
                 <li><a href="./Contacto.html" target="_self">Contáctanos</a></li>
                 <li><a href="./sobre_nosotros.html" target="_self">Sobre nosotres</a></li>
-                <li><a href="#" target="_blank">Política de privacidad</a></li>
-                <li><a href="#" target="_blank">Términos y condiciones</a></li>
             </ul>
         </div>
         <!-- Columna principal con logotipo y redes sociales-->
@@ -149,7 +151,6 @@ footerContainer.innerHTML = `  <div class="container">
                 </a>  
             </div>
             <!-- Secciones span para links inferiores -->
-            <span><a href="#" target="_self">Política de privacidad</a> | <a href="#" target="_blank">Términos y condiciones</a></span><br>
             <span id="licencia"><a href="./sobre_nosotros.html" target="_self">© 2023 Best Finds - Una E-commerce desarrollada por Money Makers</a></span>
             <br><br>
         </div>

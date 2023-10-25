@@ -20,9 +20,6 @@
     <!-- Barra de navegacion -->
     <div id="nav-bar" class="sticky-top"></div>
 
-   <div id="notification" class="notification">¡Bienvenido!</div>
-   <div id="notification2" class="notification2">Correo o contraseña incorrectos</div>
-    <br>
     <!-- Seccion principal -->
 
     <div class="container">
@@ -33,17 +30,16 @@
 
             <div class="col-sm-12 col-md-2 col-lg-2" id="lateralIzq">
                 <img src="./assets/img/barraBFv1_Vert.jpeg" alt="Barra lateral izquierda" id="imgLateral">
-              </div>
+            </div>
             <div class="col-sm-12 col-md-8 col-lg-8" id="formulario">
 
-                
-                
-                <form id="formFormulario" action="./Perfil_axel.html">
+
+
+                <form id="formFormulario">
                     <div class="mb-3">
-                        <label for="email" class="form-label" >Correo electrónico</label>
+                        <label for="email" class="form-label">Correo electrónico</label>
                         <br>
-                        <input name="correo" id="correo" type="email" class="form-control"
-                            required>
+                        <input name="correo" id="correo" type="email" class="form-control" required>
                         <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert"
                             id="alertCorreo">
                             Formato no valido. Solo se permiten letras (a-z), números(0-9) y puntos (.).
@@ -51,21 +47,29 @@
 
                     </div>
                     <div class="mb-3">
-                        <label for="password" class="form-label" >Contraseña:</label>
+                        <label for="password" class="form-label">Contraseña:</label>
                         <br>
-                        <input type="password" name="password" id="password" class="form-control" 
-                         required>
-                        <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert" id="alertPassword">
-                          Formato no valido. Solo se permiten letras (a-z), números(0-9) y puntos (.).
+                        <input type="password" name="password" id="password" class="form-control" required>
+                        <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert"
+                            id="alertPassword">
+                            Formato no valido. Solo se permiten letras (a-z), números(0-9) y puntos (.).
                         </div>
                     </div>
 
 
 
 
-                  
+
                     <button type="submit" class="btn btn-primary btn-lg" id="btnSesion" onclick="login">Iniciar
                         Sesión</button>
+                    <!--Modal modificacion-->
+                    <div id="miModal" class="modal">
+                        <div class="modal-contenido">
+                            <span class="cerrar" id="cerrarModal">&times;</span>
+                            <h2>Resultado de Envío</h2>
+                            <p id="modalMensaje"></p>
+                        </div>
+                    </div>
 
                     <br> <br> <br>
 
@@ -75,12 +79,12 @@
 
                         <div id="ocultar">
                             <input name="correo2" id="correo2" type="email" class="form-control"
-                            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" title="Ingresa un correo valido"
-                            required>
-                        <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert"
-                            id="alertCorreo2">
-                            Formato no valido. Solo se permiten letras (a-z), números(0-9) y puntos (.).
-                        </div>
+                                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                                title="Ingresa un correo valido" required>
+                            <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert"
+                                id="alertCorreo2">
+                                Formato no valido. Solo se permiten letras (a-z), números(0-9) y puntos (.).
+                            </div>
                             <br>
                             <br>
                             <div>
@@ -90,7 +94,7 @@
                             </div>
                         </div>
                     </div>
-                    <br> <br> <br> 
+                    <br> <br> <br>
 
                     <p>¿No tienes una cuenta?</p>
                     <div id="centrado">
@@ -103,8 +107,9 @@
                 </form>
             </div>
             <div class="col-sm-12 col-md-2 col-lg-2" id="lateralDer">
-                <img src="./assets/img/barraBFv2_Vert.jpeg" alt="Barra lateral derecha" class="img-fluid" id="imgLateral">
-              </div>
+                <img src="./assets/img/barraBFv2_Vert.jpeg" alt="Barra lateral derecha" class="img-fluid"
+                    id="imgLateral">
+            </div>
 
 
         </div>
