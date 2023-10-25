@@ -255,17 +255,10 @@ h5 {
         text-align: center;
     }
 
-    #imgIcono2 {
-        display: none;
-        ;
-    }
 }
 
 /* Media query para ocultar icono de carrito en vista lg */
 @media (min-width: 992px) {
-    #imgIcono2 {
-        display: none;
-    }
 }
 
 /* Media query para ocultar iconos centrales del footer en vista md */

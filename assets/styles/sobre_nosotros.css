@@ -92,9 +92,14 @@ h1{
     color:white;
 } 
 
+.ourPreImg {
+    transition: transform 0.3s, filter 0.3s;
+}
+
 /* Estilos para hacer que la imagen de perfil crezca */
-.ourPreImg:hover{
+.ourPreImg:hover {
     transform: scale(1.1);
     box-shadow: var(--shadow-after);
 }
+
 

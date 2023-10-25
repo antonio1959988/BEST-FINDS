@@ -14,7 +14,8 @@ function enviarFormulario() {
         document.getElementById('modalMensaje').textContent = "Todos los campos son obligatorios";
         document.getElementById('miModal').style.display = 'block';
     } else {
-        enviarMensaje();
+        document.getElementById('modalMensaje').textContent = "Mensaje enviado correctamente";
+        document.getElementById('miModal').style.display = 'block';
     }
 }
 // HASTA AQUI
@@ -109,23 +110,6 @@ document.getElementById("colorB").addEventListener("click", function () {
 });
 
 
-//Notificación en color verde
-function enviarMensaje() {
-	
-
-				 mostrarNotificacion();
-	}
-
-
-function mostrarNotificacion() {
-	const notificacion = document.querySelector('.notificacion2');
-	notificacion.style.display = 'block';
-
-	// Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
-	setTimeout(() => {
-		 notificacion.style.display = 'none';
-	}, 3000); // 3000 milisegundos = 3 segundos
-}
 
 btnEnviar.addEventListener("click", enviarFormulario)
 

@@ -25,105 +25,6 @@
 
 
 
-  <h1>Información de envio</h1>
-
-<!-- Resumen de compra -->
-<div class='container' id="resumen">
-  
-  <div class='order-info'>
-    <div class='order-info-content' id="resumenCompra">
-      <h4>Resumen de compra</h4>
-      <div class='line'></div>
-      
-      <div class="row" id="productResume">
-
-        <div class="col-4" id="productImg">
-          <img src='./assets/img/carritoCompras/producto1.jpg' class='full-width'></img>
-        </div>
-
-        
-        <div class="col-4" id="productDescription">
-          <span>Titulo</span>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-        </div>
-        
-        <div class="col-1" id="productQty">
-          <div class='Qty'>1</div>
-        </div>
-        <div class="col-3" id="productPrice">
-          $99.95
-        </div>
-      </div>
-      
-
-      <div class='line'></div>
-      
-      <div class="row" id="productResume">
-
-        <div class="col-4" id="productImg">
-          <img src='./assets/img/carritoCompras/producto2.jpg' class='full-width'></img>
-        </div>
-
-        
-        <div class="col-4" id="productDescription">
-          <span>Titulo</span>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-        </div>
-        
-        <div class="col-1" id="productQty">
-          <div class='Qty'>1</div>
-        </div>
-        <div class="col-3" id="productPrice">
-          $99.95
-        </div>
-      </div>
-
-      <div class='line'></div>
-      
-      <div class="row" id="productResume">
-
-        <div class="col-4" id="productImg">
-          <img src='./assets/img/carritoCompras/producto3.jpg' class='full-width'></img>
-        </div>
-
-        
-        <div class="col-4" id="productDescription">
-          <span>Titulo</span>
-          <p>Lorem ipsum dolor sit, amet consectetur adipisicing.</p>
-        </div>
-        
-        <div class="col-1" id="productQty">
-          <div class='Qty'>1</div>
-        </div>
-        <div class="col-3" id="productPrice">
-          $99.95
-        </div>
-      </div>
-
-      
-      <div class='line'></div>
-      <div class="row" id="total">
-      <div class="col-6" id='totalDescripcion'>
-        
-          <div class='thin dense'>VAT 19%</div>
-          <div class='thin dense'>Paquetería</div>
-          TOTAL
-        
-      </div>
-      <div class="col-6" id='totalPrecio'>  
-        
-          <div class='thin dense'>$68.75</div>
-          <div class='thin dense'>$4.95</div>
-          $435.55
-        
-      </div>
-      </div>
-    </div>
-  </div>
-
-
-</div><!--cierre resumen compra-->
-<br>
 
   <!-- Barra divisora -->
   <img src="./assets/img/barraBFv1.jpeg" alt="BarraSuperior" class="img-fluid" id="barraDivisora">
@@ -242,10 +143,6 @@
                   Formato no válido. Favor de ingresar solo números
                 </div>
               </div>
-
-              <div class="divInputs">
-                <button type="submit" class="btn btn-primary mb-3" id="btnProcederPago">Proceder al pago</button>
-              </div>
             </form>
 
 
@@ -260,6 +157,8 @@
       </div>
     </div>
   </div>
+  <br>
+  <br>
 
   <!-- Barra divisora -->
   <img src="./assets/img/barraBFv2.jpeg" alt="BarraInferior" class="img-fluid" id="barraDivisora">
@@ -381,7 +280,15 @@
       <!-- Boton Pagar-->
 
       <div class="divInputs">
-        <button type="submit" class="btn btn-primary mb-3" id="btnPagar">Pagar</button>
+        <button type="submit" class="btn btn-primary mb-3" id="btnProcederPago">Proceder al pago</button>
+      </div>
+      <!--Modal modificacion-->
+      <div id="miModal" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" id="cerrarModal">&times;</span>
+            <h2>Resultado de Envío</h2>
+            <p id="modalMensaje"></p>
+        </div>
       </div>
     </form>
     </div>

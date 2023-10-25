@@ -5,30 +5,30 @@ let payPalInput = document.querySelector("#Paypal");
 let mercadoInput = document.querySelector("#mercadoPago");
 
 
- visaInput.addEventListener("input", function(){
-    creditInfo.style.display = "block";
+visaInput.addEventListener("input", function () {
+	creditInfo.style.display = "block";
 });
- payPalInput.addEventListener("input", function(){
-    creditInfo.style.display = "none";
- });
- mercadoInput.addEventListener("input", function(){
-    creditInfo.style.display = "none";
- });//Funcion para ocultar segmento de datos de tarjeta
+payPalInput.addEventListener("input", function () {
+	creditInfo.style.display = "none";
+});
+mercadoInput.addEventListener("input", function () {
+	creditInfo.style.display = "none";
+});//Funcion para ocultar segmento de datos de tarjeta
 
 
- // Validación de formulario de Envío
- let formularioEnvio = document.getElementById('formReceiver');
- let inputsEnvio = document.querySelectorAll('#formReceiver input');
- 
- //Expresiones permitidas para cada campo
- const expresionesEnvio = {
-     nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
-     direccion: /^[a-zA-Z0-9-ÿ\s\_\-]{1,50}$/, // Letras, numeros, guion y guion_bajo
-     colonia: /^[a-zA-Z0-9-ÿ\s\_\-]{1,50}$/, // Letras, numeros, guion y guion_bajo
-     ciudad: /^[a-zA-ZÀ-ÿ\s]{1,25}$/, // Letras y espacios, pueden llevar acentos.
-     zip: /^\d{1,5}$/,// 7 a 14 numeros.
-     telefono: /^\d{7,14}$/ // 7 a 14 numeros.
- }
+// Validación de formulario de Envío
+let formularioEnvio = document.getElementById('formReceiver');
+let inputsEnvio = document.querySelectorAll('#formReceiver input');
+
+//Expresiones permitidas para cada campo
+const expresionesEnvio = {
+	nombre: /^[a-zA-ZÀ-ÿ\s]{1,40}$/, // Letras y espacios, pueden llevar acentos.
+	direccion: /^[a-zA-Z0-9-ÿ\s\_\-]{1,50}$/, // Letras, numeros, guion y guion_bajo
+	colonia: /^[a-zA-Z0-9-ÿ\s\_\-]{1,50}$/, // Letras, numeros, guion y guion_bajo
+	ciudad: /^[a-zA-ZÀ-ÿ\s]{1,25}$/, // Letras y espacios, pueden llevar acentos.
+	zip: /^\d{1,5}$/,// 7 a 14 numeros.
+	telefono: /^\d{7,14}$/ // 7 a 14 numeros.
+}
 
 //  let campos = {
 //      nombre: false,
@@ -62,7 +62,7 @@ function validarFormularioEnvio(p) {
 		case "inputAddress2":
 			validarCampoEnvio(expresionesEnvio.colonia, p.target, 'inputAddress2');
 			break;
-        case "inputCity":
+		case "inputCity":
 			validarCampoEnvio(expresionesEnvio.ciudad, p.target, 'inputCity');
 			break;
 		case "inputZip":
@@ -109,56 +109,56 @@ const expresionesTarjeta = {
 }
 
 let camposTarjeta = {
-   cardNumber: false,
-   cardHolder: false,
-   cardMonth: false,
-   cardYear: false,
-   cardCVV: false
+	cardNumber: false,
+	cardHolder: false,
+	cardMonth: false,
+	cardYear: false,
+	cardCVV: false
 }
 
 //Switch para validar cada campo
 function validarFormularioTarjeta(e) {
-   // console.log(t);
-   switch (e.target.name) {
-	   case "cardNumber":
-		   validarCampoTarjeta(expresionesTarjeta.tarjeta, e.target, 'cardNumber');
-		   //console.log(t);
-		   break;
-	   case "cardHolder":
-		   validarCampoTarjeta(expresionesTarjeta.nombre, e.target, 'cardHolder');
-		   break;
-	   case "cardMonth":
-		   validarCampoTarjeta(expresionesTarjeta.mes, e.target, 'cardMonth');
-		   break;
-	   case "cardYear":
-		   validarCampoTarjeta(expresionesTarjeta.anio, e.target, 'cardYear');
-		   break;
-	   case "cardCVV":
-		   validarCampoTarjeta(expresionesTarjeta.cvv, e.target, 'cardCVV');
-		   break;
+	// console.log(t);
+	switch (e.target.name) {
+		case "cardNumber":
+			validarCampoTarjeta(expresionesTarjeta.tarjeta, e.target, 'cardNumber');
+			//console.log(t);
+			break;
+		case "cardHolder":
+			validarCampoTarjeta(expresionesTarjeta.nombre, e.target, 'cardHolder');
+			break;
+		case "cardMonth":
+			validarCampoTarjeta(expresionesTarjeta.mes, e.target, 'cardMonth');
+			break;
+		case "cardYear":
+			validarCampoTarjeta(expresionesTarjeta.anio, e.target, 'cardYear');
+			break;
+		case "cardCVV":
+			validarCampoTarjeta(expresionesTarjeta.cvv, e.target, 'cardCVV');
+			break;
 
-   }
+	}
 }
 
 let validarCampoTarjeta = (expresion, input, campo) => {
-   if (expresion.test(input.value)) {
+	if (expresion.test(input.value)) {
 
-	   document.getElementById(`alert${campo}`).classList.remove('alert-activa');
-	   camposTarjeta[campo] = true;
-   } else {
-	   document.getElementById(`alert${campo}`).classList.add('alert-activa');
-	   camposTarjeta[campo] = false;
-   }
+		document.getElementById(`alert${campo}`).classList.remove('alert-activa');
+		camposTarjeta[campo] = true;
+	} else {
+		document.getElementById(`alert${campo}`).classList.add('alert-activa');
+		camposTarjeta[campo] = false;
+	}
 }
 
 //Se comprueba cada que se realicen los siguientes eventos
 inputsTarjeta.forEach((input) => {
-   input.addEventListener('keyup', validarFormularioTarjeta);//Cada que presiona una teclas
-   input.addEventListener('blur', validarFormularioTarjeta);//Cada que se de click fuera del input
+	input.addEventListener('keyup', validarFormularioTarjeta);//Cada que presiona una teclas
+	input.addEventListener('blur', validarFormularioTarjeta);//Cada que se de click fuera del input
 });
 
 
-
+/*
 ///////////////////////////////////////////////////////////////////////////////////////
 //Creacion del objeto JSON
 var direccion = [];
@@ -197,8 +197,73 @@ document.getElementById("btnProcederPago").addEventListener("click", function ()
 	direccion.push(nuevaDireccion);
 
 	// Mostrar los datos del producto en la consola
-	console.log("nuevo" + direccion);
+	console.log( direccion);
 
 	localStorage.setItem("direccion", JSON.stringify(direccion));
 }
 });
+*/
+
+// Espera a que se envíe el formulario de dirección
+document.getElementById("paySegment").addEventListener("submit", function (event) {
+	event.preventDefault();
+
+	// Obtén los valores de los campos de dirección
+	const inputReceiver = document.getElementById("inputReceiver").value;
+	const inputAddress = document.getElementById("inputAddress").value;
+	const inputAddress2 = document.getElementById("inputAddress2").value;
+	const inputCity = document.getElementById("inputCity").value;
+	const inputState = document.getElementById("inputState").value;
+	const inputZip = document.getElementById("inputZip").value;
+	const inputPhone = document.getElementById("inputPhone").value;
+
+	// Obtén el método de pago seleccionado
+	const paymentMethod = document.querySelector('input[name="flexRadioDefault"]:checked');
+
+	// Comprueba si alguno de los campos está vacío
+	if (
+		inputReceiver === "" ||
+		inputAddress === "" ||
+		inputCity === "" ||
+		inputState === "" ||
+		inputZip === "" ||
+		inputPhone === "" ||
+		!paymentMethod
+	) {
+		// Modal de confirmación
+		document.getElementById('modalMensaje').textContent = "Por favor, rellena todos los campos antes de enviar el formulario.";
+		document.getElementById('miModal').style.display = 'block';
+
+		// HASTA AQUI
+		document.getElementById('cerrarModal').addEventListener('click', function () {
+			document.getElementById('miModal').style.display = 'none';
+		});
+	} else {
+		// Si todos los campos están rellenados, crea el objeto JSON con los datos
+		const addressData = {
+			receiver: inputReceiver,
+			address: inputAddress,
+			address2: inputAddress2,
+			city: inputCity,
+			state: inputState,
+			zip: inputZip,
+			phone: inputPhone,
+			paymentMethod: paymentMethod.id,
+		};
+
+		// Modal de confirmación
+		document.getElementById('modalMensaje').textContent = "¡Gracias por tu compra!";
+		document.getElementById('miModal').style.display = 'block';
+
+		// HASTA AQUI
+		document.getElementById('cerrarModal').addEventListener('click', function () {
+			document.getElementById('miModal').style.display = 'none';
+		});
+
+		// Muestra el objeto JSON en la consola
+		console.log(addressData);
+
+	}
+});
+
+
