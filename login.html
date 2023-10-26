@@ -49,7 +49,7 @@
                     <div class="mb-3">
                         <label for="password" class="form-label">Contraseña:</label>
                         <br>
-                        <input type="password" name="password" id="password" class="form-control" required>
+                        <input type="password" name="password" id="password" class="form-control" required autocomplete="on">
                         <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert"
                             id="alertPassword">
                             Formato no valido. Solo se permiten letras (a-z), números(0-9) y puntos (.).
@@ -73,14 +73,14 @@
 
                     <br> <br> <br>
 
-                    <div class="mb-3">
-                        <label id="txtRecuperarContraseña" id="boton" onclick="mostrar();">Olvidé mi contraseña</label>
+                    <!--<div class="mb-3">
+                        <label id="txtRecuperarContraseña" id="boton" onclick="mostrar();">Olvidé mi contraseña</label>-->
 
 
                         <div id="ocultar">
                             <input name="correo2" id="correo2" type="email" class="form-control"
                                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
-                                title="Ingresa un correo valido" required>
+                                title="Ingresa un correo valido" required autocomplete="on">
                             <div class="alert alert-danger position-relative start-50 translate-middle-x" role="alert"
                                 id="alertCorreo2">
                                 Formato no valido. Solo se permiten letras (a-z), números(0-9) y puntos (.).
@@ -93,8 +93,8 @@
                                     Contraseña</button>
                             </div>
                         </div>
-                    </div>
-                    <br> <br> <br>
+                    
+                    <br> <br> <br> 
 
                     <p>¿No tienes una cuenta?</p>
                     <div id="centrado">
