@@ -1,5 +1,5 @@
 
-var usuarioActivo = JSON.parse(localStorage.getItem("usuarios"));
+var usuarioActivo = JSON.parse(localStorage.getItem("inicioSesion"));
 let rutaPerfil;
 let classPerfil;
 let nomUsu;
@@ -7,7 +7,7 @@ console.log(usuarioActivo);
 if (usuarioActivo != null) {
   rutaPerfil = 'Perfil_axel';
   classPerfil = 'perfilCerrar2';
-  nomUsu = usuarioActivo[0].nombreUsuario;
+  nomUsu = usuarioActivo.usuario;
 } else {
   rutaPerfil = 'login';
   classPerfil = '';
@@ -100,7 +100,7 @@ navbarContainer.innerHTML = `<div class="container-fluid" id="barra">
     <div class="perfilCerrar ${classPerfil}">
     
     <p id="muestraNomUsu">${nomUsu}</p>
-    <button id="cerrarSesion" class="button" type="summit">Cerrar Sesión</button>
+    <button id="cerrarSesion" class="button" type="button">Cerrar Sesión</button>
     
     </div>
     </div>
@@ -113,6 +113,8 @@ navbarDiv.appendChild(navbarContainer);
 
 document.getElementById('cerrarSesion').addEventListener('click', function () {
   localStorage.clear();
+  // redirigir al index despues de cerrar sesion
+  window.location.href = './index_bf.html';
   //window.location.href = './index_bf.html';
 })
 

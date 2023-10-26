@@ -94,7 +94,7 @@ fetch('http://localhost:8080/productos')
 function agregarProductos() {
   let divListaProductos = document.getElementById("listaProductos");
 
-  listaProductosTemporal.map((producto, index) => {
+  listaProductosTemporal.map((producto) => {
     let divProducto = document.createElement("div");
     divProducto.className = "col-sm-12 col-md-6 col-lg-3";
 

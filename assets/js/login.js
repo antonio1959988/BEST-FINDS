@@ -71,18 +71,32 @@ document.getElementById("btnSesion").addEventListener("click", function () {
 	// Agregar la nueva sesión al array de sesiones
 	sesion.push(nuevaSesion);
 
-	// Mostrar los datos de la sesión en la consola
-	console.log(sesion);
 
-	// Guardar los datos de la sesión en el almacenamiento local
-	localStorage.setItem("inicioSesion", JSON.stringify(sesion));
+	
 
 	// Recuperar los datos JSON del almacenamiento local
-	var usuariosArray = JSON.parse(localStorage.getItem("usuarios"));
 
-	// Comparar los datos del formulario con los datos del JSON
-	if (usuariosArray && correo == usuariosArray[0].correo && password == usuariosArray[0].password) {
-		document.getElementById('modalMensaje').textContent = `Bienvenido ${usuariosArray[0].nombreUsuario}, en un momento serás redirigido a tu perfil.`;
+
+	/*
+	fetch(`http://localhost:8080/usuarios/byCorreo?correo=${correo}`)
+		.then(res => res.json())
+		.then(json => {
+			usuariosArray = json;
+		})
+		.catch(err => console.log(err));
+*/
+	const url = `http://localhost:8080/usuarios/byCorreo?correo=${correo}`;
+	let userData;
+	fetch(url)
+		.then(response => response.json())
+		.then(userData => {
+		
+			// Guardar los datos de la sesión en el almacenamiento local
+	localStorage.setItem("inicioSesion", JSON.stringify(userData));
+			
+			// Comparar los datos del formulario con los datos del JSON
+	if (correo == userData.correo && password == userData.contrasenia) {
+		document.getElementById('modalMensaje').textContent = `Bienvenido ${userData.usuario}, en un momento serás redirigido a tu perfil.`;
 		document.getElementById('miModal').style.display = 'block';
 
 		// Esperar 3 segundos antes de redirigir a la página de perfil
@@ -92,13 +106,19 @@ document.getElementById("btnSesion").addEventListener("click", function () {
 	} else {
 		document.getElementById('modalMensaje').textContent = "Datos incorrectos.";
 		document.getElementById('miModal').style.display = 'block';
-		console.log(usuariosArray);
+		
 	}
+		})
+		.catch(error => {
+			console.error(error);
+		});
+
+		console.log(userData);
 });
+
 
 
 // HASTA AQUI
-document.getElementById('cerrarModal').addEventListener('click', function() {
-    document.getElementById('miModal').style.display = 'none';
+document.getElementById('cerrarModal').addEventListener('click', function () {
+	document.getElementById('miModal').style.display = 'none';
 });
-
