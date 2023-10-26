@@ -11,30 +11,16 @@ const myCarousel = new bootstrap.Carousel(carousel, {
 });
 
 
-//Lista de productos que se cargarán en el carrito de compras
-let listaProductosTemporal = [ //array de objetos
-    {
-        id: 1,
-        nombre: "Eaze Drop Stick Blur",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        precio: 621,
-        imagen: "./assets/img/carritoCompras/producto1.jpg"
-    },
-    {
-        id: 2,
-        nombre: "Eaze Drop Stick Blur",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        precio: 1992,
-        imagen: "./assets/img/carritoCompras/producto2.jpg"
-    },
-    {
-        id: 3,
-        nombre: "Eaze Drop Stick Blur",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        precio: 1999,
-        imagen: "./assets/img/carritoCompras/producto3.jpg"
-    }
-];
+// Lista de productos que se cargarán en el carrito de compras
+let listaProductosTemporal;
+
+fetch('http://localhost:8080/productos')
+  .then(res => res.json())
+  .then(json => {
+    listaProductosTemporal = json;
+    carruselProductos();
+  })
+  .catch(err => console.log(err));
 
 //funcion para añadir los productos al carrito
 function agregarProductoCarrito(boton) {
@@ -75,7 +61,7 @@ function actualizarCarrito() {
         rowProducto.className = "row rowPosition mb-3";
         rowProducto.innerHTML = `
         <div class="col"> <!-- div  col Imagen-->
-            <img src=${producto.imagen} alt="producto1" id="imgProductos">
+            <img src="./assets/img/Productos/${producto.nombre}/default.webp" alt="producto1" id="imgProductos">
         </div> <!-- div col imagen-->
       
         <div class="col-4 col-sm-4 col-md-6 col-lg-6"> <!--DescripcioProducto-->
@@ -230,7 +216,7 @@ function carruselProductos() {
         contenedorProducto.innerHTML = `
             <div class="row">
                 <div class="col">
-                    <img id="productoImagen-${index}" class="imgProductos2" src=${producto.imagen}>
+                    <img id="productoImagen-${index}" class="imgProductos2" src="./assets/img/Productos/${producto.nombre}/default.webp">
                 </div>
                 <div class="col">
                     <p id="productoCarruselId-${index}" class="d-none">${producto.id}</p>

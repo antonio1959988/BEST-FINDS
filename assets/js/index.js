@@ -67,91 +67,77 @@ var contadorId = 0;*/
     
 });*/
 
-//Idealmente esta informacion tiene que venir del backend - base de datos
-let listaProductosTemporal = [ //array de objetos
-    {
-        id: 1,
-        nombre: "Eaze Drop Stick Blur",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        precio: 621,
-        imagen: "./assets/img/carritoCompras/producto1.jpg"
-    },
-    {
-        id: 2,
-        nombre: "Eaze Drop Stick Blur",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        precio: 1992,
-        imagen: "./assets/img/carritoCompras/producto2.jpg"
-    },
-    {
-        id: 3,
-        nombre: "Eaze Drop Stick Blur",
-        descripcion: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        precio: 1999,
-        imagen: "./assets/img/carritoCompras/producto3.jpg"
-    }
-];
+// Lista de productos que se cargarán en el carrito de compras
+let listaProductosTemporal;
 
+fetch('http://localhost:8080/productos')
+  .then(res => res.json())
+  .then(json => {
+    listaProductosTemporal = json;
+    agregarProductos();
+  })
+  .catch(err => console.log(err));
 
+function agregarProductos() {
+  let divListaProductos = document.getElementById("listaProductos");
 
-function agregarProductosIndex() {
-    let divListaProductos = document.getElementById("listaProductos");
-
-
-    listaProductosTemporal.map((producto, index) => {
+  listaProductosTemporal.map((producto, index) => {
+    if(index <= 3){
         let divProducto = document.createElement("div");
-        divProducto.className = "col-sm-6 col-md-6 col-lg-3";
-        divProducto.innerHTML = `
-            <div class="contenedorInferior">
-            <a href="./productos2.html" class="enlaceProducto" target="_self">
-                <p id="productoId-${index}" class="d-none">${producto.id}</p>
-                <p id="productoDescripcion-${index}" class="d-none">${producto.descripcion}</p>
-                <img id="productoImagen-${index}" src=${producto.imagen} alt="producto" class="imgProducto img-fluid" >
-                <span id="productoNombre-${index}" class="nombreProducto">${producto.nombre}</span>
-                <span id="productoPrecio-${index}" class="precio">$${producto.precio}</span>
-                </a>
-                <input id="productoCantidad-${index}"  type="number" class="form-control cantidadProducto" min="1" max="100" value="1">
-                <button id="agregarCarrito-${index}" type="button" class="btn btn-primary btnAplicar" onclick="agregarProductoSession(this); actualizarCarritoNavBar();"  >Agregar al carrito</button>
-            
-            </div>
-        `;
-        divListaProductos.appendChild(divProducto);
-    });
+    divProducto.className = "col-sm-12 col-md-6 col-lg-3";
 
+    divProducto.innerHTML = `
+    <div class="contenedorInferior">
+      <a href="./productos2.html" class="enlaceProducto" target="_self">
+        <img id="productoImagen-${producto.idProducto}" src="./assets/img/Productos/${producto.nombre}/default.webp" alt="producto" class="img-fluid imgProducto">
+        <br>
+        <p id="productoId-${producto.idProducto}" class="d-none">${producto.idProducto}</p>
+        <p id="productoDescripcion-${producto.idProducto}" class="d-none">${producto.descripcion}</p>
+        <span id="productoNombre-${producto.idProducto}" class="nombreProducto">${producto.nombre}</span>
+        <span id="productoPrecio-${producto.idProducto}" class="precio">$${producto.precio}</span>
+      </a>
+      <input id="productoCantidad-${producto.idProducto}" type="number" class="form-control cantidadProducto" min="1" max="100" value="1">
+      <button id="agregarCarrito-${producto.idProducto}" type="button" class="btn btn-primary agregar-carrito" onclick="agregarProductoSession(${producto.idProducto}); actualizarCarritoNavBar();">
+        Agregar al carrito
+      </button>
+    </div>`;
+
+    divListaProductos.appendChild(divProducto);
+    }
+  });
 }
 
+function agregarProductoSession(productoId) {
+  let productosArray = JSON.parse(sessionStorage.getItem("productosArray")) || []; // Obtener el array de sesión o un array vacío si no existe
 
-function agregarProductoSession(boton) {
-    let productosArray = JSON.parse(sessionStorage.getItem("productosArray")); //Traer el array de sesión
-    let index = boton.id.split("-")[1];
-    let productoId = document.getElementById(`productoId-${index}`);
-    let imagen = document.getElementById(`productoImagen-${index}`);
-    let nombre = document.getElementById(`productoNombre-${index}`);
-    let descripcion = document.getElementById(`productoDescripcion-${index}`);
-    let precio = document.getElementById(`productoPrecio-${index}`);
-    let cantidad = document.getElementById(`productoCantidad-${index}`);
+  let producto = listaProductosTemporal.find((item) => item.idProducto === productoId);
 
-    let producto = {
-        id: productoId.innerHTML,
-        imagen: imagen.src,
-        nombre: nombre.innerHTML,
-        descripcion: descripcion.innerHTML,
-        precio: parseFloat(precio.innerHTML.substring(1)),
-        total: parseFloat(precio.innerHTML.substring(1)) * parseInt(cantidad.value),
-        cantidad: parseInt(cantidad.value)
-    };
+  if (producto) {
+    let cantidadInput = document.getElementById(`productoCantidad-${producto.idProducto}`);
+    let cantidad = parseInt(cantidadInput.value);
 
+    let productoEnCarrito = productosArray.find((item) => item.id === producto.idProducto);
 
-    let productoIndex = productosArray.findIndex(productoArray => productoArray.id == producto.id);
-    if (productoIndex >= 0) {
-        productosArray[productoIndex].cantidad += producto.cantidad;
-        productosArray[productoIndex].total = productosArray[productoIndex].cantidad * productosArray[productoIndex].precio;
+    if (productoEnCarrito) {
+      // Si el producto ya está en el carrito, actualiza la cantidad y el total
+      productoEnCarrito.cantidad += cantidad;
+      productoEnCarrito.total = productoEnCarrito.cantidad * productoEnCarrito.precio;
     } else {
-        productosArray.push(producto);
+      // Si el producto no está en el carrito, agrégalo al array
+      productosArray.push({
+        id: producto.idProducto,
+        imagen: `./assets/img/Productos/${producto.nombre}/default.webp`,
+        nombre: producto.nombre,
+        descripcion: producto.descripcion,
+        precio: parseFloat(producto.precio),
+        total: parseFloat(producto.precio) * cantidad,
+        cantidad: cantidad,
+      });
     }
-    mostrarNotificacion();
-    sessionStorage.setItem("productosArray", JSON.stringify(productosArray)); //Volver a guardarlo en sesión ya modificado
 
+    mostrarNotificacion();
+    sessionStorage.setItem("productosArray", JSON.stringify(productosArray)); // Volver a guardar el carrito en la sesión ya modificado
+  }
 }
 
 function mostrarNotificacion() {

@@ -143,6 +143,10 @@ h1 {
     font-weight: bold;
 }
 
+.contenedorInferior button:hover {
+    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+}
+
 .cantidadProducto {
     text-align: center;
 }

@@ -18,16 +18,23 @@ const datosBusqueda = {
 }
 
 // Recuperar los datos JSON del almacenamiento local
-var productosArray = JSON.parse(localStorage.getItem("productosArray"));
+var productosArray;
+
+fetch('http://localhost:8080/productos')
+    .then(res => res.json())
+    .then(json => {
+        productosArray = json;
+        agregarProductos();
+    })
+    .catch(err => console.log(err));
 
 // Mostrar todos los productos al dar click en el botón de borrar filtros
 btnBorrarFiltros.addEventListener('click', () => {
-    mostrarProductos(productosArray);
+    mostrarProductos(listaProductosTemporal); // Modificar para usar listaProductosTemporal
 });
 
-// Mostrar todos los productos al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarProductos(productosArray);
+    mostrarProductos(listaProductosTemporal); // Modificar para usar listaProductosTemporal
 });
 
 // Event Listeners para el formulario
@@ -74,33 +81,31 @@ function limpiarHTML() {
 function mostrarProductos(productosArray) {
     limpiarHTML();
 
-    // Leer el elemento Resultado
-    const contenedor = document.querySelector('#resultado');
+    const contenedor = document.getElementById('listaProductos'); // Modificar el ID para que coincida con el contenedor de productos
 
-    // Construir el HTML de los productos
     productosArray.forEach(producto => {
         contadorId++;
         const productoHTML = document.createElement('div');
         productoHTML.className = "col-sm-12 col-md-6 col-lg-3";
         productoHTML.innerHTML = `
-        <a href="./productos2.html" id="enlaceProducto" target="_self">
-        <div id="contenedorInferior">
-          <img src="./assets/img/Productos/${producto.nombre}/${producto.colores[0]}.webp" alt="producto" class="img-fluid"
-            id="imgProducto">
-          <br>
-          <span id="nombreProducto">${producto.nombre}</span>
-          <span id="precio">$${producto.precio}</span>
-        </a>
-          <form>
-            <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-            <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="${contadorId}">Agregar al carrito</button>
-          </form>
-        </div>
+            <a href="./productos2.html" id="enlaceProducto" target="_self">
+            <div id="contenedorInferior">
+                <img src="./assets/img/Productos/${producto.nombre}/${producto.variante[0]}.webp" alt="producto" class="img-fluid"
+                    id="imgProducto">
+                <br>
+                <span id="nombreProducto">${producto.nombre}</span>
+                <span id="precio">$${producto.precio}</span>
+            </a>
+            <form>
+                <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+                <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="${contadorId}">Agregar al carrito</button>
+            </form>
+            </div>
         `;
-        console.log(producto);
         contenedor.appendChild(productoHTML);
-    })
+    });
 }
+
 function noResultado() {
     limpiarHTML();
 
@@ -111,7 +116,7 @@ function noResultado() {
 }
 
 function filtrarProductos() {
-    let resultado = productosArray.filter(filtrarCategoria).filter(filtrarMarca);
+    let resultado = listaProductosTemporal.filter(filtrarCategoria).filter(filtrarMarca).filter(filtrarLanzamiento).filter(filtrarPrecio).filter(filtrarCalificacion);
 
     // Ordenar por fecha
     if (datosBusqueda.lanzamiento === "fechaR-A") {
@@ -151,7 +156,6 @@ function filtrarProductos() {
     }
 }
 
-// Aplica los filtros
 function filtrarCategoria(producto) {
     if (datosBusqueda.categoria) {
         return producto.categoria === datosBusqueda.categoria;
@@ -168,11 +172,10 @@ function filtrarMarca(producto) {
 
 function filtrarLanzamiento(producto) {
     if (datosBusqueda.lanzamiento) {
-        return producto.fecha === datosBusqueda.lanzamiento;
+        return producto.lanzamiento === datosBusqueda.lanzamiento;
     }
     return producto;
 }
-
 
 function filtrarPrecio(producto) {
     if (datosBusqueda.precio) {
@@ -187,6 +190,7 @@ function filtrarCalificacion(producto) {
     }
     return producto;
 }
+
 
 
 
