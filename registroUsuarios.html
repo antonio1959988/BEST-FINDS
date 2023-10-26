@@ -41,7 +41,7 @@
         <img src="./assets/img/barraBFv1_Vert.jpeg" alt="Barra lateral izquierda" id="imgLateral">
       </div>
       <div class="col-sm-12 col-md-8 col-lg-8" id="formulario">
-        <form id="formFormulario" action="./login.html">
+        <form id="formFormulario">
           <div class="divInputs">
             <!--Seccion de nombre-->
             <label for="nomUsuario">Nombre:</label><br>
@@ -92,8 +92,17 @@
             Todos los campos son obligatorios. Por favor llena todos los datos.
           </div>
           <div class="divInputs">
-            <button type="submit" class="btn btn-primary mb-3" id="btnRegistrar">Registrarme</button>
+            <button type="button" class="btn btn-primary mb-3" id="btnRegistrar">Registrarme</button>
+            <!--Modal modificacion-->
+            <div id="miModal" class="modal">
+              <div class="modal-contenido">
+                  <span class="cerrar" id="cerrarModal">&times;</span>
+                  <h2>Resultado de Envío</h2>
+                  <p id="modalMensaje"></p>
+              </div>
           </div>
+          </div>
+
         </form>
 
       </div>

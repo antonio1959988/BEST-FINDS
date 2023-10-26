@@ -68,7 +68,10 @@ let validarCampo = (expresion, input, campo) => {
 
 		document.getElementById(`alert${campo}`).classList.remove('alert-activa');
 		campos[campo] = true;
-	} 
+	} else {
+		document.getElementById(`alert${campo}`).classList.add('alert-activa');
+		campos[campo] = false;
+	}
 }
 
 //En caso de que se den expresiones invalidas, se muestra la alerta
@@ -76,7 +79,10 @@ let validarCampo2 = (expresion, input, campo) => {
 	if (!expresion.test(input.value)) {
 		document.getElementById(`alert${campo}`).classList.add('alert-activa');
 		campos[campo] = false;
-		
+
+	} else {
+		document.getElementById(`alert${campo}`).classList.remove('alert-activa');
+		campos[campo] = true;
 	}
 }
 
@@ -116,33 +122,103 @@ let password;
 const myInput = document.getElementById('modal');
 
 document.getElementById("btnRegistrar").addEventListener("click", function () {
+	console.log(campos);
 	// Obtener los valores de los campos del formulario
 
-	if(campos.Nombre && campos.NombreUsuario&&campos.Password &&campos.Correo){
+	if (campos.Nombre && campos.NombreUsuario && campos.Password && campos.Correo) {
 		nombre = document.getElementById("nombre").value;
 		nombreUsuario = document.getElementById("nombreUsuario").value;
 		correo = document.getElementById("correo").value;
 		password = document.getElementById("password").value;
 
 
-	// Crear un objeto con los datos del producto
-	const nuevoUsuario = {
-		nombre: nombre,
-		nombreUsuario: nombreUsuario,
-		correo: correo,
-		password: password,
-	};
-	// Agregar el nuevo producto al array de productos
-	usuarios.push(nuevoUsuario);
+		// Crear un objeto con los datos del producto
+		const nuevoUsuario = {
+			nombre: nombre,
+			usuario: nombreUsuario,
+			correo: correo,
+			contrasenia: password,
+		};
+		// Agregar el nuevo producto al array de productos
+		usuarios.push(nuevoUsuario);
 
-	// Mostrar los datos del producto en la consola
-	console.log(usuarios);
+		// Mostrar los datos del producto en la consola
+		console.log(nuevoUsuario);
 
-	localStorage.setItem("usuarios", JSON.stringify(usuarios));
+		// localStorage.setItem("usuarios", JSON.stringify(usuarios));
 
-	
-}else{
-	document.getElementById(`alertValidacion`).classList.add('alert-activa');
-}
+		fetch('http://localhost:8080/usuarios', {
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(
+				nuevoUsuario
+			)
+		})
+			.then(response => {
+				return response.json();
+			})
+			.then(data => {
+				console.log("Todo bien");
+				return data;
+			})
+
+		document.getElementById('modalMensaje').textContent = "Gracias por registrarte, en un momento serás redirigido a la página de inicio de sesión.";
+		document.getElementById('miModal').style.display = 'block';
+
+		// Esperar 6 segundos antes de redirigir a la página de perfil
+		setTimeout(function () {
+			window.location.href = "/login.html";
+		}, 6000);
+
+		/*
+		fetch('http://localhost:8080/usuarios', {
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(
+				nuevoUsuario
+			)
+		})
+			.then(response => {
+				return response.json();
+			})
+			.then(data => {
+				console.log("Todo bien");
+				return data;
+			})
+			.catch(error => {
+				console.log("Aquí hay un error", error)
+			})
+
+	/*		
+		fetch('http://localhost:8080/usuarios', {
+			method: "POST",
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(nuevoUsuario)
+		})
+			.then(response => {
+				return response.json();
+			})
+			.then(data => {
+				console.log("Todo bien");
+				return data;
+			})
+			.catch(error => {
+				console.log("Aquí hay un error", error)
+			})
+*/
+
+	} else {
+		document.getElementById(`alertValidacion`).classList.add('alert-activa');
+	}
 });
 
+// HASTA AQUI
+document.getElementById('cerrarModal').addEventListener('click', function () {
+	document.getElementById('miModal').style.display = 'none';
+});
