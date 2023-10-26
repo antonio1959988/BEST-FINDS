@@ -332,3 +332,10 @@ h1{
         opacity: 1;
     }
 }
+/*Media query para ocultar barras laterales*/
+@media (max-width: 768px){
+    #imgLateral{
+        display: none;
+    }
+}
+
