@@ -17,24 +17,24 @@ const datosBusqueda = {
     calificacion: ''
 }
 
-// Recuperar los datos JSON del almacenamiento local
-var productosArray;
-
-fetch('http://localhost:8080/productos')
-    .then(res => res.json())
-    .then(json => {
-        productosArray = json;
-        agregarProductos();
-    })
-    .catch(err => console.log(err));
-
-// Mostrar todos los productos al dar click en el botón de borrar filtros
-btnBorrarFiltros.addEventListener('click', () => {
-    mostrarProductos(listaProductosTemporal); // Modificar para usar listaProductosTemporal
+// Mostrar todos los productos al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    // Lista de productos que se cargarán en el carrito de compras
+    fetch('http://localhost:8080/productos')
+        .then(res => res.json())
+        .then(json => {
+            generarProductos(json);
+        })
+        .catch(err => console.log(err));
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    mostrarProductos(listaProductosTemporal); // Modificar para usar listaProductosTemporal
+
+function generarProductos(productosArray){
+    
+mostrarProductos(productosArray);
+// Mostrar todos los productos al dar click en el botón de borrar filtros
+btnBorrarFiltros.addEventListener('click', () => {
+    mostrarProductos(productosArray);
 });
 
 // Event Listeners para el formulario
@@ -62,12 +62,6 @@ precio.addEventListener('input', () => {
     filtrarProductos();
 });
 
-calificacion.addEventListener('input', () => {
-    datosBusqueda.calificacion = calificacion.value;
-    // Mandar llamar la función de filtrar productos
-    filtrarProductos();
-});
-
 function limpiarHTML() {
     // Leer el elemento Resultado
     const contenedor = document.querySelector('#resultado');
@@ -79,33 +73,36 @@ function limpiarHTML() {
 }
 
 function mostrarProductos(productosArray) {
+    console.log(productosArray);
     limpiarHTML();
 
-    const contenedor = document.getElementById('listaProductos'); // Modificar el ID para que coincida con el contenedor de productos
+    // Leer el elemento Resultado
+    const contenedor = document.querySelector('#resultado');
 
+    // Construir el HTML de los productos
     productosArray.forEach(producto => {
         contadorId++;
         const productoHTML = document.createElement('div');
         productoHTML.className = "col-sm-12 col-md-6 col-lg-3";
         productoHTML.innerHTML = `
-            <a href="./productos2.html" id="enlaceProducto" target="_self">
-            <div id="contenedorInferior">
-                <img src="./assets/img/Productos/${producto.nombre}/${producto.variante[0]}.webp" alt="producto" class="img-fluid"
-                    id="imgProducto">
-                <br>
-                <span id="nombreProducto">${producto.nombre}</span>
-                <span id="precio">$${producto.precio}</span>
-            </a>
-            <form>
-                <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="${contadorId}">Agregar al carrito</button>
-            </form>
-            </div>
+        <a href="./productos2.html" id="enlaceProducto" target="_self">
+        <div id="contenedorInferior">
+          <img src="./assets/img/Productos/${producto.nombre}/default.webp" alt="producto" class="img-fluid"
+            id="imgProducto">
+          <br>
+          <span id="nombreProducto">${producto.nombre}</span>
+          <span id="precio">$${producto.precio}</span>
+        </a>
+          <form>
+            <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
+            <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="${contadorId}">Agregar al carrito</button>
+          </form>
+        </div>
         `;
+        console.log(producto);
         contenedor.appendChild(productoHTML);
-    });
+    })
 }
-
 function noResultado() {
     limpiarHTML();
 
@@ -116,22 +113,19 @@ function noResultado() {
 }
 
 function filtrarProductos() {
-    let resultado = listaProductosTemporal.filter(filtrarCategoria).filter(filtrarMarca).filter(filtrarLanzamiento).filter(filtrarPrecio).filter(filtrarCalificacion);
+    let resultado = productosArray.filter(filtrarCategoria).filter(filtrarMarca);
 
-    // Ordenar por fecha
-    if (datosBusqueda.lanzamiento === "fechaR-A") {
+    // Ordenar por nombre
+    if (datosBusqueda.lanzamiento === "ordenAZ") {
         resultado = resultado.sort((a, b) => {
-            const dateA = new Date(a.fecha);
-            const dateB = new Date(b.fecha);
-            return dateB - dateA;
+            return a.nombre.localeCompare(b.nombre, undefined, { sensitivity: 'base' });
         });
-    } else if (datosBusqueda.lanzamiento === "fechaA-R") {
+    } else if (datosBusqueda.lanzamiento === "ordenZA") {
         resultado = resultado.sort((a, b) => {
-            const dateA = new Date(a.fecha);
-            const dateB = new Date(b.fecha);
-            return dateA - dateB;
+            return b.nombre.localeCompare(a.nombre, undefined, { sensitivity: 'base' });
         });
     }
+    
 
     // Ordenar por precio
     if (datosBusqueda.precio === "costoMen-May") {
@@ -156,6 +150,7 @@ function filtrarProductos() {
     }
 }
 
+// Aplica los filtros
 function filtrarCategoria(producto) {
     if (datosBusqueda.categoria) {
         return producto.categoria === datosBusqueda.categoria;
@@ -172,10 +167,11 @@ function filtrarMarca(producto) {
 
 function filtrarLanzamiento(producto) {
     if (datosBusqueda.lanzamiento) {
-        return producto.lanzamiento === datosBusqueda.lanzamiento;
+        return producto.fecha === datosBusqueda.lanzamiento;
     }
     return producto;
 }
+
 
 function filtrarPrecio(producto) {
     if (datosBusqueda.precio) {
@@ -184,22 +180,33 @@ function filtrarPrecio(producto) {
     return producto;
 }
 
-function filtrarCalificacion(producto) {
-    if (datosBusqueda.calificacion) {
-        return producto.calificacion === datosBusqueda.calificacion;
-    }
-    return producto;
+// Función para ordenar los productos por nombre alfabéticamente
+function ordenarPorNombre() {
+    productosArray.sort((a, b) => a.nombre.localeCompare(b.nombre));
+    // Limpia el contenedor antes de mostrar los productos ordenados
+    document.getElementById("listaProductos").innerHTML = "";
+    productosArray.forEach((producto) => {
+      // Crea elementos HTML para mostrar los productos
+      const nuevoProducto = document.createElement("div");
+      nuevoProducto.className = "col-sm-12 col-md-6 col-lg-3";
+      nuevoProducto.innerHTML = `
+        <a href="./productos2.html" id="enlaceProducto" target="_self">
+          <!-- Código HTML para mostrar los productos -->
+        </a>
+      `;
+      document.getElementById("listaProductos").appendChild(nuevoProducto);
+    });
+  }
+
+
+
+
+
+// ...
+// ...
+
+
+
+// ...
+
 }
-
-
-
-
-
-
-
-// ...
-// ...
-
-
-
-// ...

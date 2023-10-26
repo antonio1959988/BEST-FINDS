@@ -20,7 +20,7 @@
 
 </head>
 
-<body onload="agregarProductos();">
+<body>
   <!-- Barra de navegación -->
   <div id="nav-bar" class="sticky-top"></div>
 
@@ -34,11 +34,7 @@
       <!-- Descripción de la sección en la parte derecha -->
       <div class="col-sm-12 col-md-5 col-lg-5" id="verticalAlign">
         <h1>Productos</h1>
-        <p id="txtInicio">Nuestra colección cuidadosamente seleccionada de productos de cosméticos abarca todo lo que
-          necesitas para realzar tu estilo personal. Desde maquillaje de calidad profesional hasta productos de cuidado
-          de la piel y fragancias irresistibles, en Best Finds, encontrarás todo lo que necesitas para crear tu rutina
-          de belleza ideal. Trabajamos con las mejores marcas y los productos más innovadores para garantizar que tengas
-          acceso a lo mejor de la industria de la belleza.</p>
+        <p id="txtInicio">Nuestra colección cuidadosamente seleccionada de productos de cosméticos abarca todo lo que necesitas para realzar tu estilo personal. Desde maquillaje de calidad profesional hasta productos de cuidado de la piel y fragancias irresistibles, en Best Finds, encontrarás todo lo que necesitas para crear tu rutina de belleza ideal. Trabajamos con las mejores marcas y los productos más innovadores para garantizar que tengas acceso a lo mejor de la industria de la belleza.</p>
       </div>
     </div>
   </div>
@@ -57,7 +53,7 @@
   </div>
 
   <!-- Sección inferior con filtros y productos -->
-  <div class="container mb-3">
+  <div class="container">
     <!-- Fila inferior de filtros y productos -->
     <div class="row">
       <!-- Columna izquierda con filtros -->
@@ -87,11 +83,11 @@
               </select>
               <br>
 
-              <label for="lanzamiento">Lanzamiento</label>
+              <label for="lanzamiento">Nombre</label>
               <select class="form-select" id="cboLanzamiento">
                 <option disabled selected>Seleccione</option>
-                <option value="fechaR-A">Más reciente a más antiguo</option>
-                <option value="fechaA-R">Más antiguo a más reciente</option>
+                <option value="ordenAZ">A a la Z</option>
+                <option value="ordenZA">Z a la A</option>
               </select>
               <br>
 
@@ -102,15 +98,6 @@
                 <option value="costoMay-Men">Mayor costo a menor costo</option>
               </select>
               <br>
-
-              <label for="calificacion">Calificación</label>
-              <select class="form-select" id="cboCalificacion">
-                <option disabled selected>Seleccione</option>
-                <option value="mayorLikes">Mayor número de likes</option>
-                <option value="mayorCommit">Mayor número de comentarios</option>
-                <option value="mayorVentas">Mayor número de ventas</option>
-              </select>
-              <br>
               <button type="reset" class="btn btn-primary" id="btnAplicarFiltro">Restablecer Filtros</button>
             </div>
           </form>
@@ -118,20 +105,20 @@
       </div> <!-- Fin columna izquierda con filtros -->
 
       <!-- Columna derecha con productos -->
-      <div class="col-sm-12 col-md-8 col-lg-9">
+      <div class="col-sm-12 col-md-8 col-lg-9" id="listaProductos">
         <!-- Inicio de fila de productos -->
-        <div id="listaProductos" class="row">
+        <div class="row" id="resultado">
 
-        </div>
+         
+        </div> <!-- Fin fila de productos-->
+      </div> <!-- Fin columna derecha con productos -->
+  </div> <!-- Fin seccion inferior con filtros y productos>
 
-        <!-- Inicio de fila de productos -->
-        <div id="resultado" class="row">
 
-        </div>
+  </div> <!-- Fin columna derecha con productos -->
+  </div>
+  </div>
 
-      </div>
-    </div>
-  </div> <!--Fin container-->
   <!-- Pie de página -->
   <div id="footer"> </div>
 
@@ -140,14 +127,17 @@
     integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
     crossorigin="anonymous"></script>
 
-      <!-- Script de la barra de navegación -->
-  <script src="./assets/js/navbarYFooter.js"></script>
-
   <!-- Scripts JS de la página -->
   <script src="./assets/js/productos.js"></script>
 
-  <!-- PRUEBASS -->
-  <script src="./assets/js/productosFiltros.js"></script>
+  <!-- Script de la barra de navegación -->
+  <script src="./assets/js/navbarYFooter.js"></script>
+
+  <!-- Script carrito de compras -->
+  <script src="./assets/js/navbarCarrito.js"></script>
+
+<!-- PRUEBASS -->
+<script src="./assets/js/productosFiltros.js"></script>
 </body>
 
 </html>
