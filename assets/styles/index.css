@@ -7,6 +7,7 @@
     height: 50px;
     font-size: 20px;
     border-radius: 30px;
+    border: none;
 }
 #colorB:hover {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
@@ -18,6 +19,7 @@
     height: 40px;
     font-size: 15px;
     border-radius: 30px;
+    border: none;
 }
 #logos {
     height: 100px;
@@ -71,7 +73,7 @@ h1 {
 
 
 .nombreProducto {
-    font-size: 14px;
+    font-size: 15px;
     display: block;
     text-align: left;
     margin-bottom: 5px;
@@ -135,6 +137,7 @@ h1 {
 } 
 
 
+/* Estilo base del botón */
 .contenedorInferior button {
     margin-top: 14px;
     background-color: #D71787;
@@ -143,9 +146,17 @@ h1 {
     font-weight: bold;
 }
 
-.contenedorInferior button:hover {
-    background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
+/* Anular los estilos de Bootstrap para :active */
+.contenedorInferior button:active, 
+.contenedorInferior button.active {
+    background-color: #D71787; /* Cambia el color de fondo a rojo cuando se presiona el botón */
 }
+
+/* Cambio de color al pasar el mouse por encima */
+.contenedorInferior button:hover {
+    background-color: #ff8c66;
+}
+
 
 .cantidadProducto {
     text-align: center;
