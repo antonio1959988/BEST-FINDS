@@ -11,7 +11,7 @@ h1 {
 }
 
 /* Nombre de cada producto*/
-.nombreProducto {
+#nombreProducto {
     font-size: 14px;
     display: block;
     text-align: left;
@@ -21,7 +21,7 @@ h1 {
 
 
 /* Precio de cada producto */
-.precio {
+#precio {
     font-size: 16px;
     font-weight: bold;
     display: block;
@@ -42,7 +42,7 @@ h1 {
 }
 
 /* Imagen individual de productos */
-.imgProducto {
+#imgProducto {
     margin-bottom: 10px;
     max-height: 140px;
 }
@@ -108,7 +108,7 @@ h1 {
 }
 
 /* Contador de producto */
-.cantidadProducto {
+#cantidadProducto {
     text-align: center;
 }
 
@@ -118,10 +118,9 @@ h1 {
 }
 
 /* Eliminar formato de hipervínculo */
-.enlaceProducto {
+#enlaceProducto {
     color: #707070;
     text-decoration: none;
-    z-index: 1;
 }
 
 /* Sombreado de contorno en formularios */

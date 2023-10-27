@@ -17,24 +17,24 @@ const datosBusqueda = {
     calificacion: ''
 }
 
-// Recuperar los datos JSON del almacenamiento local
-var productosArray;
-
-fetch('http://localhost:8080/productos')
-    .then(res => res.json())
-    .then(json => {
-        productosArray = json;
-        agregarProductos();
-    })
-    .catch(err => console.log(err));
-
-// Mostrar todos los productos al dar click en el botón de borrar filtros
-btnBorrarFiltros.addEventListener('click', () => {
-    mostrarProductos(listaProductosTemporal); // Modificar para usar listaProductosTemporal
+// Mostrar todos los productos al cargar la página
+document.addEventListener('DOMContentLoaded', () => {
+    // Lista de productos que se cargarán en el carrito de compras
+    fetch('http://localhost:8080/productos')
+        .then(res => res.json())
+        .then(json => {
+            generarProductos(json);
+        })
+        .catch(err => console.log(err));
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    mostrarProductos(listaProductosTemporal); // Modificar para usar listaProductosTemporal
+
+function generarProductos(productosArray){
+    
+mostrarProductos(productosArray);
+// Mostrar todos los productos al dar click en el botón de borrar filtros
+btnBorrarFiltros.addEventListener('click', () => {
+    mostrarProductos(productosArray);
 });
 
 // Event Listeners para el formulario
@@ -62,12 +62,6 @@ precio.addEventListener('input', () => {
     filtrarProductos();
 });
 
-calificacion.addEventListener('input', () => {
-    datosBusqueda.calificacion = calificacion.value;
-    // Mandar llamar la función de filtrar productos
-    filtrarProductos();
-});
-
 function limpiarHTML() {
     // Leer el elemento Resultado
     const contenedor = document.querySelector('#resultado');
@@ -78,34 +72,73 @@ function limpiarHTML() {
     }
 }
 
+function agregarProductoSession(productoId) {
+  let productosArray = JSON.parse(sessionStorage.getItem("productosArray")) || [];
+
+  let producto = listaProductosTemporal.find((item) => item.idProducto === productoId);
+
+  if (producto) {
+    let cantidadInput = document.getElementById(`productoCantidad-${producto.idProducto}`);
+    let cantidad = parseInt(cantidadInput.value);
+
+    let productoEnCarrito = productosArray.find((item) => item.id === producto.idProducto);
+
+    if (productoEnCarrito) {
+      productoEnCarrito.cantidad += cantidad;
+      productoEnCarrito.total = productoEnCarrito.cantidad * productoEnCarrito.precio;
+    } else {
+      productosArray.push({
+        id: producto.idProducto,
+        imagen: `./assets/img/Productos/${producto.nombre}/default.webp`,
+        nombre: producto.nombre,
+        descripcion: producto.descripcion,
+        precio: parseFloat(producto.precio),
+        total: parseFloat(producto.precio) * cantidad,
+        cantidad: cantidad,
+        categoria: producto.categoria, // Agregar categoría
+        marca: producto.marca, // Agregar marca
+        lanzamiento: producto.fechaLanzamiento, // Agregar fecha de lanzamiento
+        calificacion: producto.calificacion, // Agregar calificación
+      });
+    }
+
+    mostrarNotificacion();
+    sessionStorage.setItem("productosArray", JSON.stringify(productosArray));
+  }
+}
+
 function mostrarProductos(productosArray) {
+    console.log(productosArray);
     limpiarHTML();
 
-    const contenedor = document.getElementById('listaProductos'); // Modificar el ID para que coincida con el contenedor de productos
+    // Leer el elemento Resultado
+    const contenedor = document.querySelector('#resultado');
 
+    // Construir el HTML de los productos
     productosArray.forEach(producto => {
         contadorId++;
         const productoHTML = document.createElement('div');
         productoHTML.className = "col-sm-12 col-md-6 col-lg-3";
         productoHTML.innerHTML = `
-            <a href="./productos2.html" id="enlaceProducto" target="_self">
-            <div id="contenedorInferior">
-                <img src="./assets/img/Productos/${producto.nombre}/${producto.variante[0]}.webp" alt="producto" class="img-fluid"
-                    id="imgProducto">
-                <br>
-                <span id="nombreProducto">${producto.nombre}</span>
-                <span id="precio">$${producto.precio}</span>
-            </a>
-            <form>
-                <input type="number" class="form-control" id="cantidadProducto" min="0" max="100" value="0">
-                <button type="button" class="btn btn-primary agregar-carrito" id="btnAplicar" data-id="${contadorId}">Agregar al carrito</button>
-            </form>
-            </div>
+        <div class="contenedorInferior">
+        <a href="./productos2.html" class="enlaceProducto" target="_self">
+          <img id="productoImagen-${producto.idProducto}" src="./assets/img/Productos/${producto.nombre}/default.webp" alt="producto" class="img-fluid imgProducto">
+          <br>
+          <p id="productoId-${producto.idProducto}" class="d-none">${producto.idProducto}</p>
+          <p id="productoDescripcion-${producto.idProducto}" class="d-none">${producto.descripcion}</p>
+          <span id="productoNombre-${producto.idProducto}" class="nombreProducto">${producto.nombre}</span>
+          <span id="productoPrecio-${producto.idProducto}" class="precio">$${producto.precio}</span>
+        </a>
+        <input id="productoCantidad-${producto.idProducto}" type="number" class="form-control cantidadProducto" min="1" max="100" value="1">
+        <button id="agregarCarrito-${producto.idProducto}" type="button" class="btn btn-primary agregar-carrito" onclick="agregarProductoSession(${producto.idProducto}); actualizarCarritoNavBar();">
+          Agregar al carrito
+        </button>
+      </div>
         `;
+        console.log(producto);
         contenedor.appendChild(productoHTML);
-    });
+    })
 }
-
 function noResultado() {
     limpiarHTML();
 
@@ -116,22 +149,19 @@ function noResultado() {
 }
 
 function filtrarProductos() {
-    let resultado = listaProductosTemporal.filter(filtrarCategoria).filter(filtrarMarca).filter(filtrarLanzamiento).filter(filtrarPrecio).filter(filtrarCalificacion);
+    let resultado = productosArray.filter(filtrarCategoria).filter(filtrarMarca);
 
-    // Ordenar por fecha
-    if (datosBusqueda.lanzamiento === "fechaR-A") {
+    // Ordenar por nombre
+    if (datosBusqueda.lanzamiento === "ordenAZ") {
         resultado = resultado.sort((a, b) => {
-            const dateA = new Date(a.fecha);
-            const dateB = new Date(b.fecha);
-            return dateB - dateA;
+            return a.nombre.localeCompare(b.nombre, undefined, { sensitivity: 'base' });
         });
-    } else if (datosBusqueda.lanzamiento === "fechaA-R") {
+    } else if (datosBusqueda.lanzamiento === "ordenZA") {
         resultado = resultado.sort((a, b) => {
-            const dateA = new Date(a.fecha);
-            const dateB = new Date(b.fecha);
-            return dateA - dateB;
+            return b.nombre.localeCompare(a.nombre, undefined, { sensitivity: 'base' });
         });
     }
+    
 
     // Ordenar por precio
     if (datosBusqueda.precio === "costoMen-May") {
@@ -156,6 +186,7 @@ function filtrarProductos() {
     }
 }
 
+// Aplica los filtros
 function filtrarCategoria(producto) {
     if (datosBusqueda.categoria) {
         return producto.categoria === datosBusqueda.categoria;
@@ -170,27 +201,25 @@ function filtrarMarca(producto) {
     return producto;
 }
 
-function filtrarLanzamiento(producto) {
-    if (datosBusqueda.lanzamiento) {
-        return producto.lanzamiento === datosBusqueda.lanzamiento;
-    }
-    return producto;
+
+
+
+
+function mostrarNotificacion() {
+  const notificacion = document.querySelector('.notificacion');
+  notificacion.style.display = 'block';
+
+  // Ocultar la notificación después de un tiempo (por ejemplo, 3 segundos)
+  setTimeout(() => {
+    notificacion.style.display = 'none';
+  }, 1000); // 1000 milisegundos = 1 segundo
 }
 
-function filtrarPrecio(producto) {
-    if (datosBusqueda.precio) {
-        return producto.precio === datosBusqueda.precio;
-    }
-    return producto;
-}
 
-function filtrarCalificacion(producto) {
-    if (datosBusqueda.calificacion) {
-        return producto.calificacion === datosBusqueda.calificacion;
-    }
-    return producto;
-}
 
+
+
+// Función para ordenar los productos por nombre alfabéticamente
 
 
 
@@ -203,3 +232,5 @@ function filtrarCalificacion(producto) {
 
 
 // ...
+
+}
