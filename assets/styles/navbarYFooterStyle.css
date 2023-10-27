@@ -268,3 +268,9 @@ h5 {
     }
 
 }
+
+/* CSS personalizado para cambiar --bs-btn-active-bg */
+.btn-primary {
+    --bs-btn-active-bg: #d71787;
+  }
+  

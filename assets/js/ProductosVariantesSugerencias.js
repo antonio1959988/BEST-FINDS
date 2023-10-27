@@ -1,9 +1,13 @@
-// Recuperar los datos JSON del almacenamiento local
-var productosArray = JSON.parse(localStorage.getItem("productosArray"));
-
 // Mostrar todos los productos al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
-    mostrarProductos(productosArray);
+
+     // Obteber los productos de la API
+     fetch('http://localhost:8080/productos')
+     .then(res => res.json())
+     .then(json => {
+         mostrarProductos(json);
+     })
+     .catch(err => console.log(err));
 });
 
 var contadorId = 0;
@@ -21,7 +25,7 @@ function mostrarProductos(productosArray) {
         productoHTML.innerHTML = `
         <a href="./productos2.html" id="enlaceProducto" target="_self">
         <div id="contenedorInferiorConProductos">
-          <img src="./assets/img/Productos/${producto.nombre}/${producto.colores[0]}.webp" alt="producto" class="img-fluid"
+          <img src="./assets/img/Productos/${producto.nombre}/default.webp" alt="producto" class="img-fluid"
             id="imgProducto">
           <br>
           <span id="nombreProducto" class="nombreProducto">${producto.nombre}</span>

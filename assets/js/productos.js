@@ -1,62 +1,55 @@
 //Uso del DOM para crear sección de filtros en vista móvil
 let filtrosDiv = document.getElementById('filtrosDiv');
-filtrosDiv.innerHTML=`          <br>
+filtrosDiv.innerHTML = `
+<br>
 <h4>Filtros</h4>
 <br>
 <form id="formFiltros">
   <div class="form-group">
-    <label for="categoria">Categoría:</label><br>
-    <select class="form-select" id="cboCategorias">
-        <option disabled selected>Seleccione</option>
-        <option value="Ojos">Ojos</option>
-        <option value="Rostro">Rostro</option>
-        <option value="Labios">Labios</option>
-    </select>
-    <br>
-
-    <label for="marca">Marca:</label><br>
-    <select class="form-select" id="cboMarcas">
-        <option disabled selected>Seleccione</option>
-        <option value="Colourpop">Colourpop</option>
-        <option value="Too Faced">Too Faced</option>
-        <option value="Urban Decay">Urban Decay</option>
-        <option value="Rare Beauty">Rare Beauty</option>
-    </select>
-    <br>
-
-    <label for="lanzamiento">Lanzamiento</label>
-    <select class="form-select">
+    <label for="categoria">Categoría:</label>
+    <select class="form-select" id="cboCategoria">
       <option disabled selected>Seleccione</option>
-      <option value="fechaR-A">Más reciente a más antiguo</option>
-      <option value="fechaA-R">Más antiguo a más reciente</option>
+      <option value="Ojos">Ojos</option>
+      <option value="Rostro">Rostro</option>
+      <option value="Labios">Labios</option>
+    </select>
+    <br>
+
+    <label for="marca">Marca:</label>
+    <select class="form-select" id="cboMarca">
+      <option disabled selected>Seleccione</option>
+      <option value="Colourpop">Colourpop</option>
+      <option value="Too Faced">Too Faced</option>
+      <option value="Urban Decay">Urban Decay</option>
+      <option value="Rare Beauty">Rare Beauty</option>
+    </select>
+    <br>
+
+    <label for="lanzamiento">Nombre</label>
+    <select class="form-select" id="cboLanzamiento">
+      <option disabled selected>Seleccione</option>
+      <option value="ordenAZ">A a la Z</option>
+      <option value="ordenZA">Z a la A</option>
     </select>
     <br>
 
     <label for="precio">Precio</label>
-    <select class="form-select">
+    <select class="form-select" id="cboPrecio">
       <option disabled selected>Seleccione</option>
       <option value="costoMen-May">Menor costo a mayor costo</option>
       <option value="costoMay-Men">Mayor costo a menor costo</option>
     </select>
     <br>
-
-    <label for="calificacion">Calificación</label>
-    <select class="form-select">
-      <option disabled selected>Seleccione</option>
-      <option value="mayorLikes">Mayor número de likes</option>
-      <option value="mayorCommit">Mayor número de comentarios</option>
-      <option value="mayorVentas">Mayor número de ventas</option>
-    </select>
-    <br>
-    <button type="button" class="btn btn-primary" id="btnAplicar">Aplicar Filtros</button>
+    <button type="submit" class="btn btn-primary" id="btnAplicarFiltro">Restablecer Filtros</button>
   </div>
-</form>`;
+</form>
+`;
 
 //Apartado para filtrar productos (por el momento solamente imprime informacióm en consola)
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
   const btnAplicar = document.getElementById("btnAplicar");
 
-  btnAplicar.addEventListener("click", function() {
+  btnAplicar.addEventListener("click", function () {
     // Obtiene los valores seleccionados en los filtros
     const categoria = document.getElementById("cboCategorias").value;
     const marca = document.getElementById("cboMarcas").value;

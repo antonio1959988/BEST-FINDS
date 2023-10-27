@@ -75,13 +75,13 @@ h1 {
     background-color: #D71787;
     border-color: #D71787;
     color: #fff;
+    border: none;
 }
 
 
 .colorButtonRosa:hover {
 
     /*Cuando se da click en los inputs, se crea un resplandor*/
-    font-weight: bold;
     border: none;
     outline: 0px;
     background-color: #ff8c66;
@@ -169,4 +169,9 @@ h1 {
     width: 40px;
     height: 40px;
     margin-top: 50px;
+}
+
+.btn-number:hover{
+    background-color: #D71787;
+    color: white;
 }

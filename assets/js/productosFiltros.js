@@ -72,73 +72,6 @@ function limpiarHTML() {
     }
 }
 
-function agregarProductoSession(productoId) {
-  let productosArray = JSON.parse(sessionStorage.getItem("productosArray")) || [];
-
-  let producto = listaProductosTemporal.find((item) => item.idProducto === productoId);
-
-  if (producto) {
-    let cantidadInput = document.getElementById(`productoCantidad-${producto.idProducto}`);
-    let cantidad = parseInt(cantidadInput.value);
-
-    let productoEnCarrito = productosArray.find((item) => item.id === producto.idProducto);
-
-    if (productoEnCarrito) {
-      productoEnCarrito.cantidad += cantidad;
-      productoEnCarrito.total = productoEnCarrito.cantidad * productoEnCarrito.precio;
-    } else {
-      productosArray.push({
-        id: producto.idProducto,
-        imagen: `./assets/img/Productos/${producto.nombre}/default.webp`,
-        nombre: producto.nombre,
-        descripcion: producto.descripcion,
-        precio: parseFloat(producto.precio),
-        total: parseFloat(producto.precio) * cantidad,
-        cantidad: cantidad,
-        categoria: producto.categoria, // Agregar categoría
-        marca: producto.marca, // Agregar marca
-        lanzamiento: producto.fechaLanzamiento, // Agregar fecha de lanzamiento
-        calificacion: producto.calificacion, // Agregar calificación
-      });
-    }
-
-    mostrarNotificacion();
-    sessionStorage.setItem("productosArray", JSON.stringify(productosArray));
-  }
-}
-
-function mostrarProductos(productosArray) {
-    console.log(productosArray);
-    limpiarHTML();
-
-    // Leer el elemento Resultado
-    const contenedor = document.querySelector('#resultado');
-
-    // Construir el HTML de los productos
-    productosArray.forEach(producto => {
-        contadorId++;
-        const productoHTML = document.createElement('div');
-        productoHTML.className = "col-sm-12 col-md-6 col-lg-3";
-        productoHTML.innerHTML = `
-        <div class="contenedorInferior">
-        <a href="./productos2.html" class="enlaceProducto" target="_self">
-          <img id="productoImagen-${producto.idProducto}" src="./assets/img/Productos/${producto.nombre}/default.webp" alt="producto" class="img-fluid imgProducto">
-          <br>
-          <p id="productoId-${producto.idProducto}" class="d-none">${producto.idProducto}</p>
-          <p id="productoDescripcion-${producto.idProducto}" class="d-none">${producto.descripcion}</p>
-          <span id="productoNombre-${producto.idProducto}" class="nombreProducto">${producto.nombre}</span>
-          <span id="productoPrecio-${producto.idProducto}" class="precio">$${producto.precio}</span>
-        </a>
-        <input id="productoCantidad-${producto.idProducto}" type="number" class="form-control cantidadProducto" min="1" max="100" value="1">
-        <button id="agregarCarrito-${producto.idProducto}" type="button" class="btn btn-primary agregar-carrito" onclick="agregarProductoSession(${producto.idProducto}); actualizarCarritoNavBar();">
-          Agregar al carrito
-        </button>
-      </div>
-        `;
-        console.log(producto);
-        contenedor.appendChild(productoHTML);
-    })
-}
 function noResultado() {
     limpiarHTML();
 
@@ -204,6 +137,76 @@ function filtrarMarca(producto) {
 
 
 
+function mostrarProductos(productosArray) {
+    console.log(productosArray);
+    limpiarHTML();
+  
+    // Leer el elemento Resultado
+    const contenedor = document.querySelector('#resultado');
+  
+    // Construir el HTML de los productos
+    productosArray.forEach(producto => {
+        contadorId++;
+        const productoHTML = document.createElement('div');
+        productoHTML.className = "col-sm-12 col-md-6 col-lg-3";
+        productoHTML.innerHTML = `
+        <div class="contenedorInferior">
+        <a href="./productos2.html" class="enlaceProducto" target="_self">
+          <img id="productoImagen-${producto.idProducto}" src="./assets/img/Productos/${producto.nombre}/default.webp" alt="producto" class="img-fluid imgProducto">
+          <br>
+          <p id="productoId-${producto.idProducto}" class="d-none">${producto.idProducto}</p>
+          <p id="productoDescripcion-${producto.idProducto}" class="d-none">${producto.descripcion}</p>
+          <span id="productoNombre-${producto.idProducto}" class="nombreProducto">${producto.nombre}</span>
+          <span id="productoPrecio-${producto.idProducto}" class="precio">$${producto.precio}</span>
+        </a>
+        <input id="productoCantidad-${producto.idProducto}" type="number" class="form-control cantidadProducto" min="1" max="100" value="1">
+        <button id="agregarCarrito-${producto.idProducto}" type="button" class="btn btn-primary agregar-carrito" onclick='agregarProductoSession(${producto.idProducto}, ${JSON.stringify(productosArray)}); actualizarCarritoNavBar();'>
+          Agregar al carrito
+        </button>
+      </div>
+        `;
+        console.log(producto);
+        contenedor.appendChild(productoHTML);
+    })
+  }
+}
+  function agregarProductoSession(productoId, listaProductosTemporal) {
+    console.log(productoId);
+    console.log(listaProductosTemporal);
+  
+    let productosArray = JSON.parse(sessionStorage.getItem("productosArray")) || [];
+  
+    let producto = listaProductosTemporal.find((item) => item.idProducto === productoId);
+  
+    if (producto) {
+      let cantidadInput = document.getElementById(`productoCantidad-${producto.idProducto}`);
+      let cantidad = parseInt(cantidadInput.value);
+  
+      let productoEnCarrito = productosArray.find((item) => item.id === producto.idProducto);
+  
+      if (productoEnCarrito) {
+        productoEnCarrito.cantidad += cantidad;
+        productoEnCarrito.total = productoEnCarrito.cantidad * productoEnCarrito.precio;
+      } else {
+        productosArray.push({
+          id: producto.idProducto,
+          imagen: `./assets/img/Productos/${producto.nombre}/default.webp`,
+          nombre: producto.nombre,
+          descripcion: producto.descripcion,
+          precio: parseFloat(producto.precio),
+          total: parseFloat(producto.precio) * cantidad,
+          cantidad: cantidad,
+          categoria: producto.categoria, // Agregar categoría
+          marca: producto.marca, // Agregar marca
+          lanzamiento: producto.fechaLanzamiento, // Agregar fecha de lanzamiento
+          calificacion: producto.calificacion, // Agregar calificación
+        });
+      }
+  
+      mostrarNotificacion();
+      sessionStorage.setItem("productosArray", JSON.stringify(productosArray));
+    }
+  }
 
 function mostrarNotificacion() {
   const notificacion = document.querySelector('.notificacion');
@@ -233,4 +236,3 @@ function mostrarNotificacion() {
 
 // ...
 
-}
