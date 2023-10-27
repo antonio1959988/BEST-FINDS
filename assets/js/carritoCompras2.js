@@ -229,7 +229,6 @@ document.getElementById("paySegment").addEventListener("submit", function (event
 		})
 
 
-
 		// Modal de confirmación
 		document.getElementById('modalMensaje').textContent = "¡Gracias por tu compra!";
 		document.getElementById('miModal').style.display = 'block';
@@ -243,9 +242,8 @@ document.getElementById("paySegment").addEventListener("submit", function (event
 		console.log(addressData);
 
 
-		
 
-	
+		
 	}
 });
 
