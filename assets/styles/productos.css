@@ -55,7 +55,7 @@ h1 {
 }
 
 /* Contenedores con borde gris en la parte inferior */
-#contenedorInferior {
+.contenedorInferior {
     border: 2px solid #d1d1d1;
     padding: 20px;
     margin-top: 12px;
@@ -66,7 +66,7 @@ h1 {
 }
 
 /* Formato de sombreado en selección de productos */
-#contenedorInferior:hover {
+.contenedorInferior:hover {
     box-shadow: 0px 3px 3px 0px rgba(255, 41, 155, 0.75);
 }
 
@@ -94,7 +94,7 @@ h1 {
 }
 
 /* Botón de cada producto */
-#contenedorInferior button {
+.contenedorInferior button {
     margin-top: 14px;
     background-color: #D71787;
     border: none;
@@ -103,7 +103,7 @@ h1 {
 }
 
 /* Evento de cambio de color para los botones */
-#contenedorInferior button:hover {
+.contenedorInferior button:hover {
     background-color: #ff8c66; /* Cambia el color de fondo al pasar el mouse por encima */
 }
 

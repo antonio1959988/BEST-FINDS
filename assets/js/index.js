@@ -89,7 +89,7 @@ function agregarProductos() {
     divProducto.innerHTML = `
     <div class="contenedorInferior">
       <a href="./productos2.html" class="enlaceProducto" target="_self">
-        <img id="productoImagen-${producto.idProducto}" src="./assets/img/Productos/${producto.nombre}/default.webp" alt="producto" class="img-fluid imgProducto">
+        <img id="productoIgen-${producto.idProducto}" src="./assets/img/Productos/${producto.nombre}/default.webp" alt="producto" class="img-fluid imgProducto">
         <br>
         <p id="productoId-${producto.idProducto}" class="d-none">${producto.idProducto}</p>
         <p id="productoDescripcion-${producto.idProducto}" class="d-none">${producto.descripcion}</p>
