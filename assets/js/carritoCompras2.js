@@ -158,51 +158,6 @@ inputsTarjeta.forEach((input) => {
 });
 
 
-/*
-///////////////////////////////////////////////////////////////////////////////////////
-//Creacion del objeto JSON
-var direccion = [];
-let receptor;
-let calle;
-let colonia;
-let ciudad;
-let estado;
-let codigoPostal;
-let telefono;
-
-document.getElementById("btnProcederPago").addEventListener("click", function () {
-	// Obtener los valores de los campos del formulario
-
-	if(camposEnvio['inputReceiver'] && camposEnvio['inputAdress'] && camposEnvio['inputAdress2'] && camposEnvio['inputCity'] && camposEnvio['inputZip'] && camposEnvio['inputPhone']){
-		receptor = document.getElementById("inputReceiver").value;
-		calle = document.getElementById("inputAdress").value;
-		colonia = document.getElementById("inputAdress2").value;
-		ciudad = document.getElementById("inputCity").value;
-		estado = document.getElementById("inputState").value;
-		codigoPostal = document.getElementById("inputZip").value;
-		telefono = document.getElementById("inputPhone").value;
-
-
-	// Crear un objeto con los datos del producto
-	const nuevaDireccion = {
-		receptor : receptor,
-		calle : calle,
-		colonia : colonia,
-		ciudad : ciudad,
-		estado : estado,
-		codigoPostal : codigoPostal,
-		telefono : telefono
-	};
-	// Agregar el nuevo producto al array de productos
-	direccion.push(nuevaDireccion);
-
-	// Mostrar los datos del producto en la consola
-	console.log( direccion);
-
-	localStorage.setItem("direccion", JSON.stringify(direccion));
-}
-});
-*/
 
 // Espera a que se envíe el formulario de dirección
 document.getElementById("paySegment").addEventListener("submit", function (event) {
@@ -241,15 +196,39 @@ document.getElementById("paySegment").addEventListener("submit", function (event
 	} else {
 		// Si todos los campos están rellenados, crea el objeto JSON con los datos
 		const addressData = {
-			receiver: inputReceiver,
+			//receiver: inputReceiver,
 			address: inputAddress,
 			address2: inputAddress2,
-			city: inputCity,
 			state: inputState,
 			zip: inputZip,
-			phone: inputPhone,
-			paymentMethod: paymentMethod.id,
+			city: inputCity,
+			//usuario_id: 3
+			//phone: inputPhone,
+			//paymentMethod: paymentMethod.id,
 		};
+
+		//fetch API(url, method, headers (json), body, then, catch)
+	const url = 'http://localhost:8080/direcciones';
+
+	fetch(url, {
+		method: "POST",
+		headers: {
+			'Content-Type': 'application/json'
+		},
+		body: JSON.stringify(addressData)
+	})
+		.then(response => {
+			return response.json();
+		})
+		.then(data => {
+			console.log("Todo fine", data);
+			return data;
+		})
+		.catch(error => {
+			console.log("Aquí hay un error", error);
+		})
+
+
 
 		// Modal de confirmación
 		document.getElementById('modalMensaje').textContent = "¡Gracias por tu compra!";
@@ -263,7 +242,10 @@ document.getElementById("paySegment").addEventListener("submit", function (event
 		// Muestra el objeto JSON en la consola
 		console.log(addressData);
 
+
+		
+
+	
 	}
 });
-
 
